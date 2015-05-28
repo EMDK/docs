@@ -143,12 +143,13 @@ function GA(hash){
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   version = window.location.pathname.split('/')[2];
+  screenName = $("h1").text()
   ga('create', 'UA-63523200-1', 'auto');
   ga('send', 'pageview', version + '/' + hash);
   ga('send', 'screenview', {
 	  'appName': 'EMDK Docs',
 	  'appVersion': version,
-	  'screenName': hash
+	  'screenName': screenName
   });
   console.log('sending stats for ' + hash + ":" + version);
 }
@@ -158,7 +159,7 @@ function GA(hash){
 function loadHash()
 {
 	var hash = location.hash.replace("#","");
-	GA(hash);
+
 	loadDoc(hash);
 }
 
@@ -370,7 +371,7 @@ function loadDoc(key){
 	html = html.replace(/<pre><code>(.*)/g,'<pre class="prettyprint"><code>');
 
 	$("#markdownDoc").html(html);
-	
+	GA(key);
 	//Clear old ToC
 	if(toc != null)
 	{
