@@ -3,7 +3,7 @@ require 'rdiscount'
 require 'rest-client'
 require 'json'
 class Docs
-	@@version = ENV['version'].nil? ? "edge/" : ENV['version']
+	@@version = ENV['version'].nil? ? "edge/" : ENV['version']+'/'
 	@@apifolder = @@version + AppConfig['api_md']
 	@@guidesfolder = @@version + AppConfig['guides_md']
 	@@docsjson = @@version + AppConfig['docs_json']

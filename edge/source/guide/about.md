@@ -28,6 +28,14 @@ Although EMDK for Android has been designed to work with all Symbol mobile compu
 
 ## What's New
 
+**EMDK for Android v3.1 Update 1**
+
+* New Profile Manager Features
+* Smart Cradle APIs for MC18
+* NFC APIs
+* Payment APIs
+* Dex APIs
+
 **EMDK for Android v3.1**
 
 * TC55 KitKat and TC75 KitKat are now supported
