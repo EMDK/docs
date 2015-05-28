@@ -144,9 +144,8 @@ function GA(hash){
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-63523200-1', 'auto');
-  ga('set', 'page', hash);
-  ga('send', 'pageview');
-
+  ga('send', 'pageview', hash);
+  console.log('sending stats for ' + hash);
 }
 
 
