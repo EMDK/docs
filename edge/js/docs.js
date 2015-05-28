@@ -144,7 +144,7 @@ function GA(hash){
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   version = window.location.pathname.split('/')[2];
   ga('create', 'UA-63523200-1', 'auto');
-  ga('send', 'pageview', hash);
+  ga('send', 'pageview', version + '/' + hash);
   ga('send', 'screenview', {
 	  'appName': 'EMDK Docs',
 	  'appVersion': version,
