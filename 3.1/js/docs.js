@@ -137,6 +137,22 @@ $(document).ready(function(){
 	});
 });
 
+function GA(hash){
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  version = window.location.pathname.split('/')[2];
+  screenName = $("h1").text();
+  ga('create', 'UA-63523200-1', 'auto');
+  ga('send', 'pageview', version + '/' + hash);
+  ga('send', 'screenview', {
+	  'appName': 'EMDK Docs',
+	  'appVersion': version,
+	  'screenName': screenName
+  });
+  console.log('sending stats for ' + hash + ":" + version + ":" + screenName);
+}
 //Load document based on hash
 function loadHash()
 {
@@ -351,6 +367,7 @@ function loadDoc(key){
 	html = html.replace(/<pre><code>(.*)/g,'<pre class="prettyprint"><code>');
 
 	$("#markdownDoc").html(html);
+	GA(key);
 	
 	//Clear old ToC
 	if(toc != null)
