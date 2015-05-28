@@ -3,46 +3,54 @@ require 'rdiscount'
 require 'rest-client'
 require 'json'
 class Docs
+	@@version = ENV['version'].nil? ? "edge/" : ENV['version']
+	@@apifolder = @@version + AppConfig['api_md']
+	@@guidesfolder = @@version + AppConfig['guides_md']
+	@@docsjson = @@version + AppConfig['docs_json']
 	def self.generate_json_index
-	  index_hash = []
-	  puts "Generating JSON Index: #{AppConfig['offline_eb_mapping']}"
-	  apiMD = File.join(AppConfig['api_md'],"**","*.md")
-	  apiFiles = Dir.glob(apiMD)
-	  api_mapping = []
-	  apiFiles.each do |fileName|
-	    basename = fileName.gsub(AppConfig['api_md'],'')
-	    parent = Pathname(fileName.gsub(basename,'')).each_filename.to_a.last
-      	md = File.read(fileName)
-	    if md.match(/#(.*)$/).nil? 
-	    	title = basename.gsub('.md','')
-	    else
+		index_hash = []
+
+		if ENV['version'].nil?
+			puts "no 'version' parameter specified : using 'edge'"
+		end
+		puts "Generating JSON Index: #{@@docsjson}"
+		apiMD = File.join(@@apifolder,"**","*.md")
+		apiFiles = Dir.glob(apiMD)
+		api_mapping = []
+		apiFiles.each do |fileName|
+		basename = fileName.gsub(@@apifolder,'')
+		parent = Pathname(fileName.gsub(basename,'')).each_filename.to_a.last
+			md = File.read(fileName)
+		if md.match(/#(.*)$/).nil? 
+			title = basename.gsub('.md','')
+		else
 		    title = md.match(/#(.*)$/)[1]
-	    end
-		
-	    puts "\n\nProcessing API: #{title} in #{basename}"
-	    # Change links in MD to use hash scheme #parent folder-filename
-	    md = convert_api_links md,basename.gsub('.md','')
-	    hash_object =   {
-	    	:key => "#{parent}-#{basename.gsub('.md','')}",
-	      :name => title,
-	      :md => md
-	    }
-	    api_object = {
-	    	:name => hash_object[:name],
-	    	:link => "##{hash_object[:key]}"
-	    }
-	    api_mapping.push api_object
-	    index_hash.push hash_object    
+		end
+
+		puts "\n\nProcessing API: #{title} in #{basename}"
+		# Change links in MD to use hash scheme #parent folder-filename
+		md = convert_api_links md,basename.gsub('.md','')
+		hash_object =   {
+			:key => "#{parent}-#{basename.gsub('.md','')}",
+		  :name => title,
+		  :md => md
+		}
+		api_object = {
+			:name => hash_object[:name],
+			:link => "##{hash_object[:key]}"
+		}
+		api_mapping.push api_object
+		index_hash.push hash_object    
 	  end
 
-	  guidesMD = File.join(AppConfig['guides_md'],"**","*.md")
+	  guidesMD = File.join(@@guidesfolder,"**","*.md")
 	  guidesFiles = Dir.glob(guidesMD)
 
 	  guidesFiles.each do |fileName|
-	    basename = fileName.gsub(AppConfig['guides_md'],'')
+	    basename = fileName.gsub(@@guidesfolder,'')
 	    parent = Pathname(fileName.gsub(basename,'')).each_filename.to_a.last
 	    hash_key = parent + "-"+ basename.gsub('/','-')
-      	md = File.read(fileName)
+	  	md = File.read(fileName)
 	    if md.match(/#(.*)$/).nil? 
 	    	title = basename.gsub('.md','')
 	    else
@@ -62,14 +70,10 @@ class Docs
 	    index_hash.push hash_object    
 	  end
 
-	  outputfile = "#{AppConfig['offline_eb_mapping']}"
+	  outputfile = "#{@@docsjson}"
 		File.open("#{outputfile}", 'w') {|f| 
 			f.write("var docs = #{index_hash.to_json};") 
 		}
-		# outputfile = "#{AppConfig['offline_eb_mapping']}.menu_api.js"
-		# File.open("#{outputfile}", 'w') {|f| 
-		# 	f.write("items : #{api_mapping.to_json}") 
-		# }
 	end
 
 	#this method will change the links in Javadocs to links
@@ -125,7 +129,7 @@ class Docs
 		# Classname.blah
 
 		# Check if class file exists
-		fileCheck = AppConfig['api_md']+className.gsub('.','-')+'.md'
+		fileCheck = @@apifolder+className.gsub('.','-')+'.md'
 		if File.file?(fileCheck)
 			puts "\n ---- NO ENUM"
 			return false
