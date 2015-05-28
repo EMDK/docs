@@ -151,7 +151,7 @@ function GA(hash){
 	  'appVersion': version,
 	  'screenName': screenName
   });
-  console.log('sending stats for ' + hash + ":" + version);
+  console.log('sending stats for ' + hash + ":" + version + ":" + screenName);
 }
 
 
