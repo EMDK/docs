@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EMDK For Android 2.0</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+
+        <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">
+        <link rel="stylesheet" href="MultiLevelPushMenu_v2.1.4/jquery.multilevelpushmenu_grey.css">
+		<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="jquery.tocify.js-master/libs/jquery.ui.all.css" rel="stylesheet">
+		<link rel="stylesheet" href="jquery.tocify.js-master/src/stylesheets/jquery.tocify.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/docs.css">
+		<link type="text/css" rel="stylesheet" href="css/prettify.css"/>
+	
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/Markdown.Converter.js"></script>
+		<script type="text/javascript" src="js/jquery.highlight.js"></script>
+		<script type="text/javascript" src="js/fuse.js"></script>
+		<script type="text/javascript" src="docs/docs.js"></script>
+		<script type="text/javascript" src="docs/menu.js"></script>
+		<script type="text/javascript" src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="MultiLevelPushMenu_v2.1.4/jquery.multilevelpushmenu.js"></script>
+        <script type="text/javascript" src="js/modernizr.min.js"></script>
+		<script type="text/javascript" src="jquery.tocify.js-master/libs/jquery-ui-1.9.1.custom.min.js"></script>
+		<script type="text/javascript" src="jquery.tocify.js-master/src/javascripts/jquery.tocify.js"></script>
+		<script type="text/javascript" src="js/prettify.js"></script>
+	
+		<script>
+			var toc = null;
+			var spanHighlights  = null;
+			var spanLoc = 0;
+			var spanHolder = null;
+			
+			$(document).ready(function(){
+
+				// HTML markup implementation, overlap mode
+				$( '#menu' ).multilevelpushmenu({
+					menu:menuStrcture,
+					containersToPush: [$( '#pushobj' )],
+					overlapWidth: 32,
+					//Setup the look of the menu
+					wrapperClass: 'mlpm_w',
+					menuInactiveClass: 'mlpm_inactive',
+					menuHeight: '100%',
+					menuWidth:'200px',
+					
+					
+					//Get links to work
+					onItemClick: function() {
+						// Get Anchor href
+						$item = arguments[2]
+						var itemHref = $item.find( 'a:first' ).attr( 'href' );
+						// Redirecting the page
+						location.href = itemHref;
+						 if (itemHref.indexOf("#api-") == 0){
+						 	//don't collapse API links in menu
+						 }
+						 else{
+						 	$('#menu').multilevelpushmenu('collapse');
+						 }
+					},
+					onGroupItemClick: function() {
+						// Get Anchor href
+						$item = arguments[2]
+						var itemHref = $item.find( 'a:first' ).attr( 'href' );
+						//console.log(itemHref);
+						// Redirecting the page
+						if (itemHref != '#'){
+						 location.href = itemHref;
+						 if (itemHref.indexOf("#api-") == 0){
+						 	//don't collapse API links in menu
+						 }
+						 else{
+						 	$('#menu').multilevelpushmenu('collapse');
+						 }
+						}
+					},
+					onExpandMenuStart: function(){
+						var hash = location.hash.replace("#","");
+						//console.log('ExpandStart'+hash);
+						$menuLevelHolder = arguments[1];
+						//console.log($menuLevelHolder);
+						// syncMenu(hash);
+					}
+
+				});
+				
+				//Cutom ToC siszing
+				sizeTOC();
+				
+				//Clear Search
+				$("#searchBox").val("");
+			
+				//Bind Search
+				$("#searchBox").keyup(function() {
+					search();
+				});
+				
+				//Search popover
+				$("#searchBox").popover();
+				
+				
+				
+				//Check for url change
+				$(window).on('hashchange', function(e)
+				{
+					var hash = location.hash.replace("#","");
+					loadDoc(hash);
+				});
+				
+				//Check for page re size
+				$(window).resize(function() {
+					$("#menu").multilevelpushmenu('redraw');
+					sizeTOC();
+				});
+
+				loadDoc('guide-about');
+				
+				//Check for placeholder
+				if (document.createElement("input").placeholder == undefined) {
+					$("#searchBox").val("Search");
+					$("#searchBox").css("color", "#999999");
+					
+					$("#searchBox").blur(function() {
+						if($("#searchBox").val() == "")
+						{
+							$("#searchBox").val("Search");
+							$("#searchBox").css("color", "#999999");
+						}
+					});
+					
+					$("#searchBox").focus(function() {
+						if($("#searchBox").val() == "Search")
+						{
+							$("#searchBox").val("");
+							$("#searchBox").css("color", "#555555");
+						}
+					});
+				}
+				
+			});
+			//Custom function for resizing TOC to allow for scrollable list
+			function sizeTOC()	
+			{
+				var newHeight = $(window).height();
+				newHeight -= $("#docsHeader").outerHeight(true);
+				newHeight -=  $(".levelHolderClass h2").outerHeight(true);
+				
+				var uls = $(".levelHolderClass ul");
+				
+				for(var i = 0; i<uls.size(); i++)
+				{
+					if($($(uls[i]).parent()).children().size() == 2)
+					{
+						$(uls[i]).css("height", newHeight + 'px' );
+					}
+					else if($($(uls[i]).parent()).children().size() > 2)
+					{
+						var offset = $($($(uls[i]).parent()).children()[1]).outerHeight(true);
+						$(uls[i]).css("height", (newHeight -  offset)+ 'px' );
+					}
+				}
+			}			
+			function syncMenu(hash){
+					//console.log(hash);
+					// Try to expand the menu to the doc being shown
+					menuMatches = getObjects(menuStrcture, 'link', '#' + hash);
+					if (menuMatches.length>0){
+						// Need to get Menu name from link
+						theMenuName = menuMatches[0].name; //test
+						// get the Menu item
+						theItem = $( '#menu' ).multilevelpushmenu( 'finditemsbyname' , theMenuName );
+						//get  parent which should be the menu level
+						pathToRoot = $('#menu').multilevelpushmenu('pathtoroot', theItem);
+						parentItem = pathToRoot[pathToRoot.length-2];
+						// Expand menu to that level
+						$( '#menu' ).multilevelpushmenu( 'expand' , $(parentItem));
+
+					}				
+			}
+
+			//Loads a doc by doc Key
+			function loadDoc(key)
+			{
+				//Load doc
+				var converter = new  Markdown.Converter();
+				var key_scrollto = '';
+				if(key.split("?").length>1)
+				{
+					// Get key for scroll to
+					key_scrollto = decodeURI(key.split("?")[1]);
+					//reset key to be main doc key
+					key = key.split("?")[0];
+					//console.log(key_scrollto);
+				}
+				var html = converter.makeHtml(getByKey(key).md);
+
+				//change code blocks
+				html = html.replace(/<pre><code>(.*)/g,'<pre class="prettyprint"><code>');
+
+				$("#markdownDoc").html(html);
+				
+				//Clear old ToC
+				if(toc != null)
+				{
+					$("#toc").remove();
+					toc = null;
+				}
+				$("#pushobj").append('<div id="toc" class="panel panel-primary"> <div class="panel-heading">IN THIS DOCUMENT &nbsp;<i class="pull-right cursorPointer fa fa-minus-square"></i><i class="pull-right cursorPointer fa fa-plus-square"></i></div><div id="inThisdoc"><div id="tocList"></div><div id="tocNav"><div id="tocNavText"></div><button type="button" class="btn btn-primary" id="btnPrevious">Previous</button><button type="button" class="btn btn-primary" id="btnNext">Next</button></div></div></div>');
+				
+				//Create new ToC
+				toc = $("#tocList").tocify({
+					selectors: "h2,h3",
+					context: "#markdownDoc",
+					history:false,
+					scrollTo:52
+				}).data("toc-tocify");
+				
+				//Setup toc
+				$('#toc .fa-plus-square').hide()
+				$('#toc .fa-minus-square').show()
+
+				$('#toc .fa-plus-square').click(function() {
+					$('#toc .fa-plus-square').hide();
+					$('#toc .fa-minus-square').show();
+
+					$('#inThisdoc').show();
+				});	
+				$('#toc .fa-minus-square').click(function() {
+					$('#toc .fa-plus-square').show();
+					$('#toc .fa-minus-square').hide();
+
+					$('#inThisdoc').hide();
+				});	
+				
+				//Setup toc buttons
+				$('#btnNext').click(function() {
+					if(spanHolder != null)
+					{
+						$(spanHolder).removeClass("highlightSelected");
+						spanHolder = null;
+					}
+				
+					if(spanLoc + 1 < spanHighlights.length)
+					{
+						spanLoc++;
+						scrollTo(spanHighlights[spanLoc]);
+						spanHolder = spanHighlights[spanLoc];
+						$(spanHolder).addClass("highlightSelected");
+					}
+					else
+					{
+						spanLoc = 0;
+						scrollTo(spanHighlights[spanLoc]);
+						spanHolder = spanHighlights[spanLoc];
+						$(spanHolder).addClass("highlightSelected");
+					}
+				});
+				$('#btnPrevious').click(function() {
+					if(spanHolder != null)
+					{
+						$(spanHolder).removeClass("highlightSelected");
+						spanHolder = null;
+					}
+				
+					if(spanLoc > 0)
+					{
+						spanLoc--;
+						scrollTo(spanHighlights[spanLoc]);
+						spanHolder = spanHighlights[spanLoc];
+						$(spanHolder).addClass("highlightSelected");
+					}
+					else
+					{
+						spanLoc = spanHighlights.length - 1;
+						scrollTo(spanHighlights[spanLoc]);
+						spanHolder = spanHighlights[spanLoc];
+						$(spanHolder).addClass("highlightSelected");
+					}
+				});
+				
+				//hide if nothing to show
+				if ($("#tocList").html() == ''){
+					$('#toc').hide();
+				}
+				else{
+					$('#toc').show();
+				}
+				
+				//Scroll to top
+				scroll_position = 0;
+				if (key_scrollto != ''){
+					if($('H3').filter(function() { return $.text([this]) == key_scrollto; }).length>0){
+						scroll_position = $('H3').filter(function() { return $.text([this]) == key_scrollto; }).first().offset().top-$('#docsHeader').outerHeight();
+
+					}
+
+				}
+				//console.log(scroll_position);
+				$("html, body").animate({ scrollTop: scroll_position }, 500);
+						!function ($) {
+						    $(function(){
+						      window.prettyPrint && prettyPrint()
+						    })
+				  }(window.jQuery);
+				
+				//Get H tags
+				var hTags = $("#markdownDoc :header");
+				for(var i = 0; i<hTags.length; i++)
+				{
+					//Allow for line wrap on pirod
+					$(hTags[i]).html($(hTags[i]).html().replace(/\./g, '.&#8203;'));   
+				}	
+				
+				//Highlighttext
+				setTimeout(function(){
+					highlightText();
+				},1000);
+			}
+			
+			//Scroll to the specified item
+			function scrollTo(item)
+			{
+				$("html, body").animate({ scrollTop: $(item).offset().top -  $("#docsHeader").outerHeight(true)}, 500);
+			}
+			
+			function getByKey(key) 
+			{
+			    var found = null;
+
+			    for (var i = 0; i < docs.length; i++) 
+				{
+			        var element = docs[i];
+
+			        if (element.key == key) 
+					{
+			           found = element;
+			       } 
+			    }
+				
+				return found;
+			}
+			
+			function highlightText()
+			{
+				//Unhighlight any selections 
+				$("#markdownDoc").unhighlight();
+				
+				//Highlight for each work in search
+				var words = $("#searchBox").val().split(" "); 
+				for(var i = 0; i<words.length; i++)
+				{
+					$("#markdownDoc").highlight(words[i]);
+				}		
+
+				//Highlight for each work in search
+				spanHighlights = $(".highlight");
+				
+				//Do we have highlights 
+				if(spanHighlights.length > 0)
+				{
+					//Scroll to first highlight
+					spanLoc = 0;
+					spanHolder = null;
+					scrollTo(spanHighlights[spanLoc]);
+					spanHolder = spanHighlights[spanLoc];
+					$(spanHolder).addClass("highlightSelected");
+					
+					//Display in this doc info 
+					$("#tocNav").show();
+					$("#tocNavText").text('There are ' + spanHighlights.length + ' results in the document.');
+				}
+				else
+				{
+					spanLoc = 0;
+					spanHolder = null;
+					$("#tocNav").hide();
+					$("#tocNavText").text("");
+				}
+			}
+			function search()
+			{
+				highlightText();
+					
+				var options = {
+					caseSensitive: false,
+					includeScore: false,
+					shouldSort: true,
+					threshold: 0.5,
+					location: 0,
+					distance: 10000,
+					maxPatternLength: 32,
+					keys: ["md", "name"]
+				};
+					
+				var fuse = new Fuse(docs, options); // "list" is the item array
+					
+				var result = fuse.search($("#searchBox").val());
+					
+				var html = "";
+				for(var i = 0; i<result.length; i++)
+				{
+					html += '<li><a href="#' + result[i].key + '">' + result[i].name.replace(/\./g, '.&#8203;') + '</a></li>';
+				}
+				
+				if(result.length>0)
+				{
+					//Show results
+					var popover = $("#searchBox").data('bs.popover');
+					popover.options.content = '<div id="searchRes"><ul class="nav nav-list">' + html +'</ul></div>';
+					
+					$("#searchBox").popover("show");
+					// Handler for search results click
+					$('#searchRes li').click(function() {
+
+						//Hide Search results	
+					  	$("#searchBox").popover("hide");
+					  	//collapse menu
+					  	$('#menu').multilevelpushmenu('collapse');
+
+					});	
+
+					//handler for closing popover		
+					$('.popover-title').click(function() {
+						$("#searchBox").popover("hide");
+					});		
+				}
+				else
+				{
+					//Show results
+					$("#searchBox").popover("hide");
+				}
+			}
+
+			// to use when finding object in menu json
+			function getObjects(obj, key, val) {
+			    var objects = [];
+			    for (var i in obj) {
+			        if (!obj.hasOwnProperty(i)) continue;
+			        if (typeof obj[i] == 'object') {
+			            objects = objects.concat(getObjects(obj[i], key, val));
+			        } else if (i == key && obj[key] == val) {
+			            objects.push(obj);
+			        }
+			    }
+			    return objects;
+			}
+		</script>
+		
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		
+		<div id="docsHeader">
+			EMDK For Android 2.0
+			<input type="text" id="searchBox" class="form-control fixed-width-270" placeholder="Search" data-placement="bottom" data-html="true" data-original-title=" Search Results &nbsp;<i class='pull-right cursorPointer fa fa-minus-square'></i>" data-trigger="manual">
+		</div>
+		
+		<div id="pushobj">	
+
+			<div id="markdownDoc">
+
+			</div>			
+		</div>
+		
+        <div id="menu">
+            
+        </div>
+<script>
+  !function ($) {
+    $(function(){
+      window.prettyPrint && prettyPrint()
+    })
+  }(window.jQuery)
+</script>        
+    </body>
+</html>
