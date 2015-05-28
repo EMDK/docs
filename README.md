@@ -17,12 +17,23 @@ You can report issues on the documentation by [filing an issue](https://github.c
 
 > You must have a GitHub account to file issues
 
+## Downloading an Offline Version
+You can clone this repository to download the documentation for offline use as well as be able to see detailed changes from versions you have.
+
+	git clone https://github.com/EMDK/docs.git
+	cd docs
+	cd [VersionFolder]
+	-> open index.html in that folder
+
+### Getting Offline Updates
+Once you have cloned the repository, then you can simply do a `git pull` to get all of the latest updates and [see detailed differences](https://github.com/EMDK/docs/commits/gh-pages)
+
 ## Contributing
 The source of the documentation is in the `gh-pages` branch under a version specific folder. Checkout this branch and work in the `source` folder below the specific version that is editing.
 
 * version
   * source
-    *sub folders
+    * sub folders
 
 Each guide is developed in Markdown format (not GitHub flavored markdown) 
 
