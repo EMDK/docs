@@ -378,7 +378,7 @@ function loadDoc(key){
 		$("#toc").remove();
 		toc = null;
 	}
-	$("#pushobj").append('<div id="toc" class="panel panel-primary"> <div class="panel-heading">IN THIS DOCUMENT &nbsp;<i class="pull-right cursorPointer fa fa-minus-square"></i><i class="pull-right cursorPointer fa fa-plus-square"></i></div><div id="inThisdoc"><div id="tocList"></div><div id="tocNav"><div id="tocNavText"></div><button type="button" class="btn btn-primary" id="btnPrevious"><i class="fa fa-arrow-circle-left"></i> Previous</button><button type="button" class="btn btn-primary" id="btnNext">Next <i class="fa fa-chevron-circle-right"></i></button></div></div></div>');
+	$("#pushobj").append('<div id="toc" class="panel panel-primary"> <div class="panel-heading">IN THIS DOCUMENT &nbsp;<i class="pull-right icon-bug fa fa-bug" title="Report a Doc Issue"></i><i class="pull-left cursorPointer fa fa-minus-square"></i><i class="pull-left cursorPointer fa fa-plus-square"></i></div><div id="inThisdoc"><div id="tocList"></div><div id="tocNav"><div id="tocNavText"></div><button type="button" class="btn btn-primary" id="btnPrevious"><i class="fa fa-arrow-circle-left"></i> Previous</button><button type="button" class="btn btn-primary" id="btnNext">Next <i class="fa fa-chevron-circle-right"></i></button></div></div></div>');
 	
 	//Create new ToC
 	toc = $("#tocList").tocify({
@@ -388,6 +388,12 @@ function loadDoc(key){
 		scrollTo:52
 	}).data("toc-tocify");
 	
+	$(".icon-bug").parent().click(function(){
+	    var url = "http://github.com/emdk/docs/issues/new?title=Doc Issue:" + document.title + '&body=' + encodeURIComponent('Page: ' + window.location.href + ' came from: ' + document.referrer);
+	    window.open(url);
+
+	});
+
 	//Setup toc
 	$('#toc .fa-plus-square').hide()
 	$('#toc .fa-minus-square').show()
