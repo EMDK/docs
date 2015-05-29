@@ -1,0 +1,24 @@
+#ReadCardMessage.Screen1 
+
+The ReadCardMessage class provides option configure the messages displayed on the payment device while reading the card data on payment device.
+
+
+**Version:**
+
+1.0
+
+
+##Public Fields
+###message1
+The message to be displayed on read card request in the second line.
+
+**Type:**
+
+java.lang.String
+
+###message2
+The message to be displayed on read card request in the third line.
+
+**Type:**
+
+java.lang.String 
