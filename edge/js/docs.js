@@ -389,7 +389,7 @@ function loadDoc(key){
 	}).data("toc-tocify");
 	
 	$(".icon-bug").parent().click(function(){
-	    var url = "http://github.com/emdk/docs/issues/new?title=Doc Issue:" + document.title + '&body=' + encodeURIComponent('Page: ' + window.location.href + ' came from: ' + document.referrer);
+	    var url = "http://github.com/emdk/docs/issues/new?title=Doc Issue:" + document.title + '&body=' + encodeURIComponent('Page: ' + window.location.href);
 	    window.open(url);
 
 	});
