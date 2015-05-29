@@ -465,7 +465,7 @@ var menuStrcture = [
 												link: '#guide-profiles-access',
 											},
 											{
-												name: 'Analytics Manager <span class="label label-primary">New</span>',
+												name: 'Analytics Manager',
 												link: '#guide-profiles-analytics',
 											},
 											{
@@ -473,15 +473,23 @@ var menuStrcture = [
 												link: '#guide-profiles-app',
 											},
 											{
-												name: 'Browser Manager <span class="label label-primary">New</span>',
+												name: 'Audio Manager <span class="label label-primary">New</span>',
+												link: '#guide-profiles-audio',
+											},
+											{
+												name: 'Battery Manager <span class="label label-primary">New</span>',
+												link: '#guide-profiles-battery',
+											},
+											{
+												name: 'Browser Manager',
 												link: '#guide-profiles-browser',
 											},
 											{
-												name: 'Camera Manager <span class="label label-primary">New</span>',
+												name: 'Camera Manager',
 												link: '#guide-profiles-camera',
 											},
 											{
-												name: 'Cellular Manager <span class="label label-primary">New</span>',
+												name: 'Cellular Manager',
 												link: '#guide-profiles-cellular',
 											},
 											{
@@ -493,20 +501,32 @@ var menuStrcture = [
 												link: '#guide-profiles-clock',
 											},
 											{
-												name: 'Dev Admin <span class="label label-primary">New</span>',
+												name: 'Component Manager <span class="label label-primary">New</span>',
+												link: '#guide-profiles-component',
+											},
+											{
+												name: 'Dev Admin',
 												link: '#guide-profiles-devadmin',
 											},
 											{
-												name: 'Display Manager <span class="label label-primary">New</span>',
+												name: 'DHCP Manager <span class="label label-primary">New</span>',
+												link: '#guide-profiles-dhcp',
+											},
+											{
+												name: 'Display Manager',
 												link: '#guide-profiles-display',
 											},
 											{
-												name: 'Encrypt Manager <span class="label label-primary">New</span>',
+												name: 'Encrypt Manager',
 												link: '#guide-profiles-encrypt',
 											},
 											{
 												name: 'GPRS Manager',
 												link: '#guide-profiles-gprs',
+											},
+											{
+												name: 'KeyMap Manager <span class="label label-primary">New</span>',
+												link: '#guide-profiles-keymap',
 											},
 											{
 												name: 'Persistence Manager',
@@ -517,11 +537,11 @@ var menuStrcture = [
 												link: '#guide-profiles-power',
 											},
 											{
-												name: 'PowerKey Manager <span class="label label-primary">New</span>',
+												name: 'PowerKey Manager',
 												link: '#guide-profiles-powerkey',
 											},
 											{
-												name: 'SD Card  Manager <span class="label label-primary">New</span>',
+												name: 'SD Card  Manager',
 												link: '#guide-profiles-sdcard',
 											},
 											{
@@ -529,7 +549,7 @@ var menuStrcture = [
 												link: '#guide-profiles-settings',
 											},
 											{
-												name: 'Threat  Manager <span class="label label-primary">New</span>',
+												name: 'Threat  Manager',
 												link: '#guide-profiles-threat',
 											},
 											{
@@ -537,7 +557,7 @@ var menuStrcture = [
 												link: '#guide-profiles-touch',
 											},
 											{
-												name: 'UI  Manager <span class="label label-warning">Updated</span>',
+												name: 'UI  Manager',
 												link: '#guide-profiles-ui',
 											},
 											{
@@ -549,7 +569,7 @@ var menuStrcture = [
 												link: '#guide-profiles-wifi',
 											},
 											{
-												name: 'Wireless  Manager <span class="label label-warning">Updated</span>',
+												name: 'Wireless  Manager',
 												link: '#guide-profiles-wireless',
 											},
 											{

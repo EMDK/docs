@@ -22,6 +22,12 @@ The [Analytics Manager](../guide/profiles/analytics) profile feature allows you 
 ###App Manager 
 The [App Manager](../guide/profiles/app) profile feature allows you to install, upgrade, remove, enable, disable applications from the device. It also allows you to change the current application launcher, clear recent app list and much more.
 
+###Audio Manager 
+The [Audio Manager](../guide/profiles/audio) profile feature allows you to manage enhanced audio volume control configurations like Mute/Vibrate State and Current Active Profile.
+
+###Battery Manager 
+Zebra's Device batteries store information in their internal memory, for instance, the number of charge cycles a battery has accumulated. The [Battery Manager](../guide/profiles/battery) profile feature allows the developer to modify that Decommission Threshold from its factory setting.
+
 ###Browser Manager 
 The [Browser Manager](../guide/profiles/browser) profile feature allows you to control the web browser on the device. For example you can set the browser homepage.
 
