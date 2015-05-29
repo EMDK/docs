@@ -388,7 +388,7 @@ function loadDoc(key){
 		scrollTo:52
 	}).data("toc-tocify");
 	
-	$(".icon-bug").parent().click(function(){
+	$(".icon-bug").click(function(){
 	    var url = "http://github.com/emdk/docs/issues/new?title=Doc Issue:" + document.title + '&body=' + encodeURIComponent('Page: ' + window.location.href);
 	    window.open(url);
 
