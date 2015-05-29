@@ -74,4 +74,4 @@ Password required to decrypt the private key (*.PFX, *.P12, *.PKCS12).
 Provide the name(alias) that will uniquely identify the certificate. The key store or trusted CA store will be searched for a record with the same alias name. If the record is found, it removes the key store or trusted CA store. 
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=CertMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=CertMgr&os=All&embed=true"></iframe> 

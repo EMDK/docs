@@ -38,5 +38,5 @@ An Android application that uses Android Device Admin API's must also be added t
 > NOTE: The state of being a device admin or not for an application does not restrict an application from being installed or launched. 
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=DevAdmin&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=DevAdmin&os=All&embed=true"></iframe> 
 

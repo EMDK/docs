@@ -75,6 +75,6 @@ This profile feature will allow your application format an SDCard.
 >Note: When formating an encrypted SDCard, the result would be a formated **un-encrypted** SDCard.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=EncryptMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=EncryptMgr&os=All&embed=true"></iframe> 
 
 

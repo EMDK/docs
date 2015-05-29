@@ -187,6 +187,6 @@ A device can be used to capture the alias being used for the certificate being i
 * Enable Restricted Settings UI - When enabled the Wi-Fi settings will be in Read-Only mode.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=Wi-Fi&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=Wi-Fi&os=All&embed=true"></iframe> 
 
 

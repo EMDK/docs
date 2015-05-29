@@ -33,4 +33,4 @@ This profile feature will allow your application to control the visibility of th
 This profile feature will allow your application to control the visibility of the Auto Screen Lock option in the Power Key Menu( Menu that appears when power button is long pressed).
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=PowerKeyMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=PowerKeyMgr&os=All&embed=true"></iframe> 

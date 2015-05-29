@@ -21,4 +21,4 @@ This feature will allow you to control a devices ability to use cellular data wh
 This feature will allow your application to control background data usage on devices equipped with a cellular radio. You can independently set the state as well as if it is enabled or disabled.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=CellularMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=CellularMgr&os=All&embed=true"></iframe> 

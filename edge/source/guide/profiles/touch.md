@@ -21,6 +21,6 @@ Specify Touch Mode to interact with User Interface on the device.
 * Glove and Finger - Set the Touch Mode to Glove and Finger.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=TouchMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=TouchMgr&os=All&embed=true"></iframe> 
 
 

@@ -66,4 +66,4 @@ The time zone for Bangalore is GMT+05:30. So the parameters to use for Clock wou
 Note the change of date as well as time. In this case, as the device converts this to local time, the date and time will both automatically be set properly when the offset is applied.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=Clock&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=Clock&os=All&embed=true"></iframe> 

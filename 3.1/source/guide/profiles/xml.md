@@ -25,6 +25,6 @@ Specify the XML processing mode to use
 * Catch error, Execute remainder
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=XmlMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=XmlMgr&os=All&embed=true"></iframe> 
 
 

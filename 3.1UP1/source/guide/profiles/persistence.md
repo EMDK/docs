@@ -57,5 +57,5 @@ During the installation on the TC55, the EMDK Device Runtime package creates the
 This problem can be fixed by reinstalling the EMDK Device Runtime Package on the TC55.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=PersistMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=PersistMgr&os=All&embed=true"></iframe> 
 

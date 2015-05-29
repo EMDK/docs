@@ -41,6 +41,6 @@ Enabling the PTP protocol would allow an external workstation to access a device
 
 ## Feature Compatibility
 
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=UsbMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=UsbMgr&os=All&embed=true"></iframe> 
 
 

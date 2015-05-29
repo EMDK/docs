@@ -16,4 +16,4 @@ This profile feature will allow your application to set how many seconds a devic
 
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=DisplayMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=DisplayMgr&os=All&embed=true"></iframe> 

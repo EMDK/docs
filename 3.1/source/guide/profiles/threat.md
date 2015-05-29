@@ -43,4 +43,4 @@ This profile feature will allow your application to enable or disable Threat det
 
 ## Feature Compatibility
 
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=ThreatMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=ThreatMgr&os=All&embed=true"></iframe> 

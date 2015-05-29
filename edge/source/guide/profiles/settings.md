@@ -33,6 +33,6 @@ Enable or disable the ability to access the `Airplane Mode` option in the Settin
 Enable or disable the ability to access the `Applications` option in the Settings application.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=SettingsMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=SettingsMgr&os=All&embed=true"></iframe> 
 
 

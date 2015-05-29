@@ -26,7 +26,7 @@ allow you to enable/disable the browsers form field save/recall feature.
 
 ## Feature Compatibility
 
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=BrowserMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=BrowserMgr&os=All&embed=true"></iframe> 
 
 
 

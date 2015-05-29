@@ -23,4 +23,4 @@ This option will allow you to enable/disable the front camera.
 This option will allow you to enable/disable the rear camera.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=CameraMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=CameraMgr&os=All&embed=true"></iframe> 

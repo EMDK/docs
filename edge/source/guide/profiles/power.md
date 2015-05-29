@@ -50,6 +50,6 @@ Will initiate an OS Update using the provided OS Update Zip File
 > Note: The OS Update file should already exist on the device. When using this feature on the TC55 the update package must be placed on the external SD card. Any attempt to use the internal SD card for this purpose will fail.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=PowerMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=PowerMgr&os=All&embed=true"></iframe> 
 
 

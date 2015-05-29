@@ -61,4 +61,4 @@ The application info dialog shows detailed information about the application as 
 > Note: This feature is supported on devices that are running KitKat versions of Android like the TC70.
 
 ## Feature Compatibility
-<iframe src="http://cfh463.github.io/docs.emdk/compare.html#mx=4.3&csp=AppMgr&os=All&embed=true"></iframe> 
+<iframe src="compare.html#mx=4.3&csp=AppMgr&os=All&embed=true"></iframe> 
