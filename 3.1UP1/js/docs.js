@@ -387,13 +387,13 @@ function loadDoc(key){
 		history:false,
 		scrollTo:52
 	}).data("toc-tocify");
-
+	
 	$(".icon-bug").click(function(){
 	    var url = "http://github.com/emdk/docs/issues/new?title=Doc Issue:" + document.title + '&body=' + encodeURIComponent('Page: ' + window.location.href);
 	    window.open(url);
 
 	});
-	
+
 	//Setup toc
 	$('#toc .fa-plus-square').hide()
 	$('#toc .fa-minus-square').show()

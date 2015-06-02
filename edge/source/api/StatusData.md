@@ -1,42 +1,53 @@
 #StatusData
+
 StatusData class provides access to scanner status.
 
+
+
 **Example Usage:**
+	
+	:::java	
+	 	
+	 	statusData.getState();
 
-    :::java
-    statusData.getState();
-
-**Version:**
-
-1.0
 
 ##Public Methods
-###getFriendlyName()
-Returns the friendly name of scanner for which the status data is returned.
 
-**Returns:**
+### getState
 
-java.lang.String - Returns scanner index to the supported devices list.
+**public ScannerStates getState()**
 
-###getState()
 Returns the scan event state.
 
 **Returns:**
 
-com.symbol.emdk.barcode.[StatusData.ScannerStates](StatusData#StatusData.ScannerStates)
+com.symbol.emdk.barcode.StatusData.ScannerStates
+
+### getFriendlyName
+
+**public String getFriendlyName()**
+
+Returns the friendly name of scanner for which the status data is returned.
+
+**Returns:**
+
+java.lang.String
 
 ##Public Enums
+
 ###StatusData.ScannerStates
+
 Defines the different states of the barcode scanner.
 
 **Values:**
 
-**IDLE** - Scanner is enabled but no reads are pending.
+* **IDLE**
 
-**WAITING** - Scanner has issued reads request and is waiting for trigger event. 
+* **WAITING**
 
-**SCANNING** - Scanner beam is on and it is acquiring data.
+* **SCANNING**
 
-**DISABLED** - Scanner is not enabled.
+* **DISABLED**
 
-**ERROR** - An error has occurred.
+* **ERROR**
+

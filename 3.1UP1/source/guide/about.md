@@ -31,6 +31,11 @@ Although EMDK for Android has been designed to work with all Symbol mobile compu
 **EMDK for Android v3.1 Update 1**
 
 * New Profile Manager Features
+	* [Audio Manager](../guide/profiles/audio)-  allows you to manage enhanced audio volume control configurations
+	* [Battery Manager](../guide/profiles/audio)- allows the developer to modify that Decommission Threshold from its factory setting
+	* [Component Manager](../guide/profiles/audio)- allows you to manage the state of Components, such as a devices Ethernet Port
+	* [DHCP Manager](../guide/profiles/audio)- allows you to control various DHCP configuration options.
+	* [KeyMap Manager](../guide/profiles/audio)- allows you to remap functionality of keys.
 * Smart Cradle APIs for MC18
 * NFC APIs
 * Payment APIs

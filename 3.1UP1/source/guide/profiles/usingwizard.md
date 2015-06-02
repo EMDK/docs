@@ -22,6 +22,12 @@ The [Analytics Manager](../guide/profiles/analytics) profile feature allows you 
 ###App Manager 
 The [App Manager](../guide/profiles/app) profile feature allows you to install, upgrade, remove, enable, disable applications from the device. It also allows you to change the current application launcher, clear recent app list and much more.
 
+###Audio Manager 
+The [Audio Manager](../guide/profiles/audio) profile feature allows you to manage enhanced audio volume control configurations like Mute/Vibrate State and Current Active Profile.
+
+###Battery Manager 
+Zebra's Device batteries store information in their internal memory, for instance, the number of charge cycles a battery has accumulated. The [Battery Manager](../guide/profiles/battery) profile feature allows the developer to modify that Decommission Threshold from its factory setting.
+
 ###Browser Manager 
 The [Browser Manager](../guide/profiles/browser) profile feature allows you to control the web browser on the device. For example you can set the browser homepage.
 
@@ -29,9 +35,7 @@ The [Browser Manager](../guide/profiles/browser) profile feature allows you to c
 The [Camera Manager](../guide/profiles/camera) profile feature allows you to control access to the cameras in a device. For example you can disable the user from using all cameras on the device.
 
 ###Cellular Manager 
-The [Cellular Manager](../guide/profiles/cellular) profile feature allows you to configure options of the cellular radio on your device. For example you can turn
-off data roaming
-
+The [Cellular Manager](../guide/profiles/cellular) profile feature allows you to configure options of the cellular radio on your device. For example you can turn off data roaming.
 
 ###Cert Manager 
 The [Cert Manager](../guide/profiles/cert) profile feature allows you to install or uninstall certificates that can be used identify your device for a variety of purposes, including VPN or Wi-Fi network access as well as authentication to servers by apps such as Email or Chrome.
@@ -39,9 +43,14 @@ The [Cert Manager](../guide/profiles/cert) profile feature allows you to install
 ###Clock
 The [Clock Manager](../guide/profiles/clock) profile feature allows you to set the devices current date, time and timezone. 
 
+###Component Manager 
+The [Component Manager](../guide/profiles/component) profile feature allows you to manage the state of Components, such as a device's Ethernet Port.
 
 ###Device Admin Manager 
 The [Device Admin Manager](../guide/profiles/devadmin) profile feature allows you to manage applications allowed configure settings on the device.
+
+###DHCP Manager 
+The [DHCP Manager](../guide/profiles/dhcp) profile feature allows you to control various DHCP configuration options.
 
 ###Display Manager 
 The [Display Manager](../guide/profiles/display) profile feature allows you to control the screen timeout value to conserve power.
@@ -51,6 +60,9 @@ The [Encrypt Manager](../guide/profiles/encrypt) profile feature allows you to s
 
 ###GPRS Manager 
 The [GPRS Manager](../guide/profiles/gprs) profile feature allows you to configure GPRS APN settings for a carrier's network.
+
+###KeyMap Manager 
+The [KeyMap Manager](../guide/profiles/key) profile feature allows you remap the usage of the device's hardware keys.
 
 ###Persistence Manager 
 The [Persistence Manager](../guide/profiles/persistence) profile feature allows you to keep the MX features persistent on a device even after a reset.
