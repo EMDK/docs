@@ -301,7 +301,7 @@
 				    .text( instance.settings.backText )
 				    .appendTo( $backItem ),
 				    $backItemIcon = $( "<i />" )
-				    .prop( { "class" : ( ( instance.settings.direction == 'rtl' ) ? "floatLeft " : "floatRight " ) + instance.settings.backItemIcon } )
+				    .prop( { "class" : ( ( instance.settings.direction == 'rtl' ) ? "floatRight " : "floatLeft iconSpacing_ltr " ) + instance.settings.backItemIcon } )
 				    .prependTo( $backItemAnchor );
 				$backItemAnchor.bind( clickEventType , function(e){
 					backItemAnchorClick(e, $levelHolder);
@@ -327,7 +327,7 @@
 			// Create item group DOM element
 			function createItemGroupIcon( $itemAnchor ) {
 				var $itemGroupIcon = $( "<i />" )
-					.attr( { "class" : ( ( instance.settings.direction == 'rtl' ) ? " floatRight iconSpacing_rtl " : " floatLeft iconSpacing_ltr " ) + instance.settings.groupIcon } )
+					.attr( { "class" : ( ( instance.settings.direction == 'rtl' ) ? " floatLeft iconSpacing_rtl " : " floatRight iconSpacing_ltr " ) + instance.settings.groupIcon } )
 					.prependTo( $itemAnchor );
 			}
 
@@ -347,7 +347,7 @@
 				    .html( item.name )
 				    .appendTo( $item ),
 				    $itemIcon = $( "<i />" )
-					.prop( { "class" : ( ( instance.settings.direction == 'rtl' ) ? "floatLeft " : "floatRight " ) + item.icon } )
+					.prop( { "class" : ( ( instance.settings.direction == 'rtl' ) ? "floatRight " : "floatLeft iconSpacing_ltr " ) + item.icon } )
 				    .prependTo( $itemAnchor );
 				if(item.items) {
 					$itemAnchor.bind( clickEventType , function(e){
