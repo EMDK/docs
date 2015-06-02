@@ -1,0 +1,38 @@
+###MifarePlusSL3Results
+
+.
+
+**Values:**
+
+* **SUCCESS**
+
+* **FAILURE**
+
+* **AUTH_ERROR**
+
+* **TOO_MANY_OPEARATIONS**
+
+* **INAVLID_MAC**
+
+* **INVALID_BLOCK**
+
+* **BLOCK_NOT_EXIST**
+
+* **CONDINTION_NOT_SATISFIED**
+
+* **INVALID_LENGTH**
+
+* **MANIPULATION_ERROR**
+
+* **NOT_ENABLED**
+
+* **ALREADY_ENABLED**
+
+* **SAM_ERROR**
+
+* **NOT_VALUE_BLOCK**
+
+* **INVALID_VALUE**
+
+* **UNDEFINED**
+
