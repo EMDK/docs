@@ -15,7 +15,8 @@ $(document).ready(function(){
 		menuInactiveClass: 'mlpm_inactive',
 		menuHeight: '100%',
 		menuWidth:'200px',
-		
+		backItemIcon: 'fa fa-angle-left',
+  		groupIcon: 'fa fa-angle-right',  
 		
 		//Get links to work
 		onItemClick: function() {
