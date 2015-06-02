@@ -1,20 +1,81 @@
 #SimulScanTemplateElement
 
-The TemplateElement class represents elements nested directly under the tag in an XML template file.
+The TemplateElement class represents elements nested directly under the tag in 
+ an XML template file.
 
+
+
+##Constructors
+
+**SimulScanTemplateElement**
+
+
+
+Parameters:
+
+Throws:
+
+**SimulScanTemplateElement**
+
+
+
+Parameters:
+
+**number**
+
+
+
+int
+
+**name**
+
+
+
+java.lang.String
+
+Throws:
+
+##Public interfaces
+
+java.io.Serializable
 
 ##Public Methods
-###getName()
-Returns the friendly name of the element.
+
+### getName
+
+**public String getName()**
+
+Returns the friendly name of the element
 
 **Returns:**
 
-String The element's name.
+java.lang.String
 
+### getRegionNumber
 
-###getRegionNumber()
-Returns the region number of the element.
+**public int getRegionNumber()**
+
+Returns the region number of the element
 
 **Returns:**
 
-int The element's region number.
+int
+
+##Public Fields
+
+###name
+
+
+
+**Type:**
+
+java.lang.String
+
+###number
+
+
+
+**Type:**
+
+int
+

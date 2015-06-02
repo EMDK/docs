@@ -1,79 +1,110 @@
 #ScannerConfig.DecoderParams.Matrix2of5
 
-The Matrix2of5 class provides access to parameters that are available for the Matrix2of5 decoder.
+The Matrix2of5 class provides access to parameters that are
+ available for the Matrix2of5 decoder.
+
+
 
 ##Public Fields
 
-###enabled
-Returns whether or not the Decoder is currently enabled.
-
-**Example Usage:**
-
-    :::java
-    boolean isEnabled = matirx2of5.enabled;
-
-
-**Type:**
-
-boolean
-
-
 ###length1
+
 Used to set decode lengths. The valid range is 0 to 55.
-
-**Example Usage:**
-
-    :::java
-    matrix2of5.length1 = 10;
+ 
+ <p>
+ <blockquote>
+ 
+ <pre>
+ {@code
+ 	Example Usage:
+ 	matrix2of5.length1 = 10;
+ }
+ </pre>
+ 
+ </blockquote>
 
 **Type:**
 
 int
 
 ###length2
+
 Used to set decode lengths. The valid range is 0 to 55.
-
-**Example Usage:**
-
-    :::java
-    matrix2of5.length2 = 0;
+ 
+ <p>
+ <blockquote>
+ 
+ <pre>
+ {@code
+ 	Example Usage:
+ 	matrix2of5.length2 = 0;
+ }
+ </pre>
+ 
+ </blockquote>
 
 **Type:**
 
 int
 
 ###redundancy
+
 Sets the reader to read the bar code twice before accepting data.
-
-**Example Usage:**
-
-    :::java
-    matrix2of5.redundancy = false;
+ 
+ <p>
+ <blockquote>
+ 
+ <pre>
+ {@code
+ 	Example Usage:
+ 	matrix2of5.redundancy = false;
+ }
+ </pre>
+ 
+ </blockquote>
 
 **Type:**
 
 boolean
 
 ###reportCheckDigit
+
 Transmit Matrix 2 of 5 data with or without the check digit.
-
-**Example Usage:**
-
-    :::java
-    matrix2of5.reportCheckDigit = true;
+ 
+ <p>
+ <blockquote>
+ 
+ <pre>
+ {@code
+ 	Example Usage:
+ 	matrix2of5.reportCheckDigit = true;
+ }
+ </pre>
+ 
+ </blockquote>
 
 **Type:**
 
 boolean
 
 ###verifyCheckDigit
-Enable this feature to check the integrity of all Matrix 2 of 5 symbols to verify that the data complies with a specified check digit algorithm.
 
-**Example Usage:**
-
-    :::java
-    matrix2of5.verifyCheckDigit = true;
+Enable this feature to check the integrity of all Matrix 2 of 5
+ symbols to verify that the data complies with a specified check
+ digit algorithm
+ <p>
+ <blockquote>
+ 
+ <pre>
+ {@code
+ 	Example Usage:
+ 	matrix2of5.verifyCheckDigit = true;
+ }
+ </pre>
+ 
+ </blockquote>
 
 **Type:**
 
 boolean
+

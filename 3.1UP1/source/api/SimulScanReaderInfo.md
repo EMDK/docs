@@ -2,49 +2,120 @@
 
 SimulScanReaderInfo provides information of the reader device.
 
+
+
 **Example Usage:**
+	
+	:::java	
+	 	
+	 	readerInfo.getFriendlyName();
 
-	:::java
-	readerInfo.getFriendlyName();
+
+##Constructors
+
+**SimulScanReaderInfo**
 
 
-**Version:**
 
-1.0
+Parameters:
+
+**rdInfo**
+
+
+
+com.symbol.emdk.emdkservice.simulscan.SvcSimulScanDeviceInfo
+
+Throws:
 
 ##Public Methods
-###getFriendlyName()
+
+### getFriendlyName
+
+**public String getFriendlyName()**
+
 Returns the friendly name of the Device.
+ 
+ 
 
 **Example Usage:**
-
-	:::java
+	
+	:::java	
 	String name = readerInfo.getFriendlyName();
+	
+	
+	
+
 
 **Returns:**
 
-String Returns the friendly name.
+java.lang.String
 
-###getDeviceType()
-Returns the reader device type.
+### getDeviceType
+
+**public DeviceType getDeviceType()**
+
+Returns the reader device type
+ 
+ 
 
 **Example Usage:**
-
-	:::java
+	
+	:::java	
 	SimulScanDeviceType deviceType = readerInfo.getDeviceType();
+	
+	
+	
+
 
 **Returns:**
 
-[SimulScanDeviceType](SimulScanReaderInfo#SimulScanReaderInfo.SimulScanDeviceType) Returns the SimulScanDeviceType.
+com.symbol.emdk.simulscan.SimulScanReaderInfo.DeviceType
 
+##Public Fields
+
+###deviceIdentifier
+
+
+
+**Type:**
+
+com.symbol.emdk.simulscan.SimulScanManager.DeviceIdentifier
+
+###deviceType
+
+
+
+**Type:**
+
+com.symbol.emdk.simulscan.SimulScanReaderInfo.DeviceType
+
+###readerIndex
+
+
+
+**Type:**
+
+int
+
+###friendlyName
+
+
+
+**Type:**
+
+java.lang.String
 
 ##Public Enums
-###SimulScanReaderInfo.SimulScanDeviceType
+
+###SimulScanReaderInfo.DeviceType
+
+List of supported scanner device type.
 
 **Values:**
 
-**CAMERA** - The Scanner device class is camera.
+* **CAMERA**
 
-**IMAGER** - The scanner device class is imager.
+* **IMAGER**
 
-**UNDEFINED** - The scanner device class is not defined.
+* **UNDEFINED**
+

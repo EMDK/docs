@@ -3,74 +3,118 @@
 The SimulScanRegion class represents a processed SimulScanTemplateRegion.
 
 
+
+##Constructors
+
+**SimulScanRegion**
+
+
+
+Parameters:
+
+Throws:
+
+**SimulScanRegion**
+
+
+
+Parameters:
+
+**name**
+
+
+
+java.lang.String
+
+**image**
+
+
+
+YuvImage
+
+**data**
+
+
+
+java.lang.Object
+
+**number**
+
+
+
+int
+
+**processingMode**
+
+
+
+com.symbol.emdk.simulscan.RegionType
+
+**absConfidence**
+
+
+
+int
+
+**relConfidence**
+
+
+
+int
+
+Throws:
+
 ##Public Methods
-###getRegionType()
-Returns the processed data type of this region.
+
+### getRegionType
+
+**public RegionType getRegionType()**
+
+Returns the processed data type of this region
 
 **Returns:**
 
-[RegionType](SimulScanRegion#SimulScanRegion.RegionType)
+com.symbol.emdk.simulscan.RegionType
 
+### getImage
 
-###getImage()
-Returns the captured region image.
+**public YuvImage getImage()**
+
+Returns the captured region image
 
 **Returns:**
 
-android.graphics.YuvImage
+YuvImage
 
+### getAbsoluteConfidence
 
-###getAbsoluteConfidence()
-Returns the absolute confidence of OCR results.
+**public int getAbsoluteConfidence()**
+
+Returns the absolute confidence of OCR results
 
 **Returns:**
 
 int
 
+### getRelativeConfidence
 
-###getRelativeConfidence()
+**public int getRelativeConfidence()**
+
 Returns the relative confidence of OCR results
 
 **Returns:**
 
 int
 
+### getData
 
-###getData()
-Returns the processed data. The type of the returned object will depend on the RegionType as described below,
+**public Object getData()**
 
-
-**Data Type**
-
-OCR - String
-
-OMR - Integer
-
-BARCODE - String
-
-PICTURE - byte[]
-
-
-**Specified by:**
-
-getData in class [SimulScanElement](SimulScanElement)
-
+Returns the processed data.
+ The type of the returned object will depend on the RegionType as described below,
+ 
 
 **Returns:**
 
 java.lang.Object
 
-##Public Enums
-###SimulScanRegion.RegionType
-
-**Values:**
-
-**OCR** - Data type is OCR.
-
-**OMR** - Data type is OMR.
-
-**BARCODE** - Data type is BARCODE.
-
-**PICTURE** - Data type is PICTURE.
-
-**UNKNOWN** - Data type is UNKNOWN.

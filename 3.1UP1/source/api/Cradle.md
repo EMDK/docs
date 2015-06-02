@@ -18,7 +18,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 
@@ -34,7 +34,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 
@@ -50,7 +50,7 @@ boolean
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 
@@ -66,7 +66,7 @@ com.symbol.emdk.personalshopper.CradleInfo
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 
@@ -90,7 +90,7 @@ com.symbol.emdk.personalshopper.CradleResults
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 
@@ -112,7 +112,7 @@ com.symbol.emdk.personalshopper.CradleResults
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 

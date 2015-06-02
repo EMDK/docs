@@ -1,34 +1,32 @@
 #InterfaceConfig
 
-.
+The InterfaceConfig class provides access to configure the payment device information required to interface with the payment device.
 
 
 
 ##Public Fields
 
-###displayBluetoothAddressBarcode
+###deviceName
 
-When using Bluetooth (Imager) scanners, the pairing process between the mobile computer and Bluetooth scanner
-  may require scanning the Bluetooth address of the mobile computer.  If this value is set to true, 
-  the Bluetooth address will be displayed as a barcode when the Scanner.enable() function is called. 
-  This feature eliminates the need to open the external tools such as Bluetooth Pairing Utility in order to 
-  display the pairing barcode. Also if the user wants to set this parameter he/she should use the InterfaceConfig 
-  class before calling Scanner.enable().
-  
-  Note: If the Bluetooth scanner has already connected, it will not display the barcode during Scanner.enable() 
-  even though this parameter is set to true.
+Payment device name. To enable the payment device, either the payment device name or its must MAC address must be provided before calling the enable method.
+ Providing device name involves Bluetooth device discovery to get the specified Bluetooth device.
+ Establishing connection with payment device using MAC address will be quicker than device name.
+ This requires the manual pairing of the payment device before calling enable method.
+ This device name or MAC address must be set before calling the enable method.
 
 **Type:**
 
-boolean
+java.lang.String
 
-###connectionEstablishTime
+###macAddress
 
-Timeout in seconds that Scanner.enable() will block before returning if an external scanner connection is not established. 
- This is currently applicable to Bluetooth scanners only. Also if the user wants to set this parameter he/she should 
- use the InterfaceConfig class before calling Scanner.enable().
+Payment device mac address. To enable the payment device, either the payment device name or its must address must be provided before calling the enable method.
+ Providing device name involves Bluetooth device discovery to get the specified Bluetooth device.
+ Establishing connection with payment device using MAC address will be quicker than device name.
+ This requires the manual pairing of the payment device before calling enable method.
+ This device name or MAC address must be set before calling the enable method.
 
 **Type:**
 
-int
+java.lang.String
 

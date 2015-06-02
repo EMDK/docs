@@ -1,21 +1,48 @@
 #SimulScanManagerHelper
 
+Helper class.
+
+
 
 ##Constructors
-###SimulScanManagerHelper()
 
+**SimulScanManagerHelper**
+
+
+
+Parameters:
+
+Throws:
 
 ##Public Methods
-###getInstance(android.content.Context context, com.symbol.emdk.EMDKServiceConnection emdkServiceConnection)
 
+### getInstance
+
+**public SimulScanManager getInstance( context,  emdkServiceConnection)**
+
+
+
+**Parameters:**
+
+context
+
+emdkServiceConnection
 
 **Returns:**
 
-[SimulScanManager](SimulScanManager)
+com.symbol.emdk.simulscan.SimulScanManager
+
+### release
+
+**public void release(SimulScanManager simulscanmanager)**
 
 
-###release([SimulScanManager](SimulScanManager) simulscanmanager)
+
+**Parameters:**
+
+simulscanmanager
 
 **Returns:**
 
 void
+

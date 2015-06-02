@@ -6,7 +6,7 @@ var menuStrcture = [
 			{
 				name: 'About The EMDK',
 				link: '#guide-about',
-			},		
+			},
 			{
 				name: 'Getting Started',
 				icon: 'fa fa-rocket',
@@ -402,13 +402,23 @@ var menuStrcture = [
 								
 							},
 							{
-								name: 'ScanAndPair APIs',
+								name: 'ScanAndPair APIs (Java)',
 								link: '#guide-reference-EMDKList?ScanAndPair APIs',
 								
 							},
 							{
-								name: 'SimulScan APIs',
+								name: 'SimulScan APIs (Java)',
 								link: '#guide-reference-EMDKList?SimulScan APIs',
+								
+							},
+							{
+								name: 'Personal Shopper APIs (Java)',
+								link: '#guide-reference-EMDKList?Personal Shopper APIs',
+								
+							},
+							{
+								name: 'Secure NFC APIs (Java)',
+								link: '#guide-reference-EMDKList?Secure NFC APIs',
 								
 							},
 							{
@@ -423,7 +433,7 @@ var menuStrcture = [
 											{
 												name: 'EMDK Profiles Overview',
 												link: '#guide-profiles-usingwizard',
-											},	
+											},
 											{
 												name: 'Data Capture',
 												link: '#',
@@ -435,7 +445,7 @@ var menuStrcture = [
 															{
 																name: 'Activity Selection',
 																link: '#guide-profiles-profileactivity',
-															},														
+															},
 															{
 																name: 'Barcode',
 																link: '#guide-profiles-profilebarcode',

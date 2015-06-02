@@ -3,29 +3,36 @@
 This class holds additional data information.
 
 
-**Version:**
-
-1.0
-
 
 ##Public Methods
-###getTip()
+
+### getTip
+
+**public double getTip()**
+
 Returns the tip value.
 
 **Returns:**
 
-Tip value as double.
+double
 
-###getCashBack()
+### getCashBack
+
+**public double getCashBack()**
+
 Returns the cash back value entered.
 
 **Returns:**
 
-Cashback value as double.
+double
 
-###getSurchargeIndicator()
-Returns the surcharge value is accepted by the user or not.
+### getSurchargeIndicator
+
+**public boolean getSurchargeIndicator()**
+
+Returns the surcharge value is accepted by the user or not..
 
 **Returns:**
 
-boolean - Checks whether the surcharge value is accepted by the user or not.
+boolean
+

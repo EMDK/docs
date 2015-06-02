@@ -2,70 +2,83 @@
 
 SimulScanStatusData class provides access to reader status.
 
+
+
 **Example Usage:**
+	
+	:::java	
+	 	
+	 	SimulScanStatusData.getState();
 
-	:::java
-	SimulScanStatusData.getState();
-
-
-**Version:**
-
-1.0
 
 ##Constructors
-###SimulScanStatusData()
+
+**SimulScanStatusData**
 
 
-##Public Fields
-###extendedInfo
 
-**Type:**
+Parameters:
 
-[SimulScanStatusData.ExtendedInfo](SimulScanStatusData.ExtendedInfo)
-
+Throws:
 
 ##Public Methods
-###getState()
-Returns the the current status.
+
+### getState
+
+**public SimulScanStatus getState()**
+
+Returns the the current status
 
 **Returns:**
 
-[SimulScanStatus](SimulScanStatusData#SimulScanStatusData.SimulScanStatus)
+com.symbol.emdk.simulscan.SimulScanStatusData.SimulScanStatus
 
+### getFriendlyName
 
-###getFriendlyName()
-Returns the friendly name of the Reader from which the SimulScanStatusData object was from.
+**public String getFriendlyName()**
+
+Returns the friendly name of the Reader from which the SimulScanStatusData 
+ object was from
 
 **Returns:**
 
 java.lang.String
 
+##Public Fields
 
+###ssdcStatus
+
+
+
+**Type:**
+
+com.symbol.emdk.simulscan.SimulScanStatusData.SimulScanStatus
+
+###friendlyName
+
+
+
+**Type:**
+
+java.lang.String
 
 ##Public Enums
-###SimulScanStatusData.ExtendedStatus
-
-**Values:**
-
-**NONE** - No extended error.
-
-**PROCESS_TIMEOUT** - Timeout occurred during processing.
-
-**IDENTIFICATION_TIMEOUT** - Timeout occurred during identification.
-
 
 ###SimulScanStatusData.SimulScanStatus
 
+.
+
 **Values:**
 
-**DISABLED** - Disabled called successfully on reader.
+* **DISABLED**
 
-**ENABLED** - Enabled reader successfully.
+* **ENABLED**
 
-**SCANNING** - Successfully started scanning.
+* **SCANNING**
 
-**IDLE** - Finished scanning.
+* **IDLE**
 
-**ERROR** - Error occurred.
+* **ERROR**
 
-**UNKNOWN** - Unknown status.
+* **UNKNOWN**
+

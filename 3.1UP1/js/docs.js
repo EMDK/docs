@@ -18,7 +18,6 @@ $(document).ready(function(){
 		backItemIcon: 'fa fa-angle-left',
   		groupIcon: 'fa fa-angle-right',  
 		
-		
 		//Get links to work
 		onItemClick: function() {
 			// Get Anchor href

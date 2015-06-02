@@ -18,7 +18,7 @@ com.symbol.emdk.personalshopper.CradleConfig.CradleLocation
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 
@@ -38,7 +38,7 @@ int
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 
@@ -58,7 +58,7 @@ int
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 
@@ -74,7 +74,7 @@ boolean
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.CradleException**
+com.symbol.emdk.personalshopper.CradleException
 
 
 
