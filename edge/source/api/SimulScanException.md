@@ -1,15 +1,54 @@
 #SimulScanException
 
-The SimulScan APIs throws SimulScanException when an error occurs. The error could be due to:
+The SimulScan APIs throws SimulScanException when an error occurs.
 
-1. Incorrect use of APIs.
-2. Or in case of an unexpected error.
 
+
+##Constructors
+
+**SimulScanException**
+
+
+
+Parameters:
+
+**sscdresults**
+
+
+
+com.symbol.emdk.simulscan.SimulScanResults
+
+Throws:
+
+**SimulScanException**
+
+
+
+Parameters:
+
+**readerResult**
+
+
+
+com.symbol.emdk.simulscan.SimulScanResults
+
+**description**
+
+
+
+java.lang.String
+
+Throws:
 
 ##Public Methods
-###getResult()
+
+### getResult
+
+**public SimulScanResults getResult()**
+
 Returns the SimulScanResults object that provides additional information on the exception.
 
 **Returns:**
 
-[SimulScanResults](SimulScanManager#SimulScanManager.SimulScanResults)
+com.symbol.emdk.simulscan.SimulScanResults
+

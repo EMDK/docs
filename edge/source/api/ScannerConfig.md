@@ -67,7 +67,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 
 

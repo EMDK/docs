@@ -74,7 +74,7 @@ com.symbol.emdk.barcode.ScannerConfig
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 
 
@@ -107,7 +107,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 Exception will be throw if any error occurs while setting the parameters.
 
@@ -136,7 +136,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 The exception will thrown if the scanner enable fails.
 
@@ -165,7 +165,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 The exception will thrown if the scanner disable fails.
 
@@ -183,7 +183,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 
 
@@ -221,7 +221,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 
 
@@ -247,7 +247,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 The exception will thrown if error occurs during the
              cancelRead request.
@@ -320,7 +320,7 @@ com.symbol.emdk.barcode.InterfaceConfig
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 
 
@@ -340,7 +340,7 @@ void
 
 **Throws:**
 
-**com.symbol.emdk.barcode.ScannerException**
+com.symbol.emdk.barcode.ScannerException
 
 
 

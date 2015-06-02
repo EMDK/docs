@@ -1,0 +1,44 @@
+###SimulScanResults
+
+Defines all the error codes the SimulScan API returns.
+
+**Values:**
+
+* **SUCCESS**
+
+* **ALREADY_SCANNING**
+
+* **ALREADY_STOPPED_SCANNING**
+
+* **READER_ALREADY_ENABLED**
+
+* **READER_IN_USE**
+
+* **READER_ALREADY_DISABLED**
+
+* **FEATURE_NOT_SUPPORTED**
+
+* **READER_NOT_ENABLED**
+
+* **INVALID_OBJECT**
+
+* **FAILED_TO_LOAD_TEMPLATE**
+
+* **FAILED_TO_SET_TEMPLATE**
+
+* **TEMPLATE_NOT_SET**
+
+* **INVALID_VALUE**
+
+* **NO_DATA_LISTENER**
+
+* **EMDK_NOT_OPENED**
+
+* **READER_INIT_FAILED**
+
+* **READER_DEINIT_FAILED**
+
+* **UNDEFINED**
+
+* **FAILURE**
+

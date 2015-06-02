@@ -2,56 +2,74 @@
 
 The SimulScanData object gives scanning result.
 
+
+
 **Example Usage:**
-
-	:::java
-	public void onSimulScanData(SimulScanData simulscanData) {
-
-		Date timestamp = new Date(simulscanData.getTimestamp());
-		List<SimulScanElement> simulscanDataElements = simulscanData.getElements();
-		List<SimulScanRegion> simulscanDataRegions = new ArrayList<SimulScanRegion>(); 
-		for (SimulScanElement curElement : simulscanDataElements)
-		{
-			if (curElement instanceof SimulScanRegion) {
-				Log.d(TAG, ((SimulScanRegion) curElement).getName());
-			} else if (curElement instanceof SimulScanGroup) {	
-				List<SimulScanRegion> regionsInGroup = ((SimulScanGroup)curElement).getRegions();
-				for (SimulScanRegion curRegion : regionsInGroup){
-					Log.d(TAG, “Group:”+ ((SimulScanGroup)curElement).getName() +” Region:”+ ((SimulScanRegion) curRegion).getName());
+	
+	:::java	
+	 	
+		public void onSimulScanData(SimulScanData simulscanData) {
+	
+			Date timestamp = new Date(simulscanData.getTimestamp());
+			List<SimulScanElement> simulscanDataElements = simulscanData.getElements();
+			List<SimulScanRegion> simulscanDataRegions = new ArrayList<SimulScanRegion>();
+			for (SimulScanElement curElement : simulscanDataElements)
+			{
+				if (curElement instanceof SimulScanRegion) {
+					Log.d(TAG, ((SimulScanRegion) curElement).getName());
+				} else if (curElement instanceof SimulScanGroup) {
+					List<SimulScanRegion> regionsInGroup = ((SimulScanGroup)curElement).getRegions();
+					for (SimulScanRegion curRegion : regionsInGroup){
+						Log.d(TAG, Group:+ ((SimulScanGroup)curElement).getName() + Region:+ ((SimulScanRegion) curRegion).getName());
+					}
 				}
 			}
-		}
- 	}
 
-
-**Version:**
-
-1.0
 
 ##Constructors
-###SimulScanData()
 
+**SimulScanData**
+
+
+
+Parameters:
+
+Throws:
+
+##Public interfaces
+
+java.io.Serializable
 
 ##Public Methods
-###getTimestamp()
-Returns the time at which the data was scanned.
+
+### getTimestamp
+
+**public String getTimestamp()**
+
+Returns the time at which the data was captured.
+ The time format is "YYYY-MM-DD HH:MM:SS.nnnnnnnnn"
 
 **Returns:**
 
-Returns time stamp as Date object
+java.lang.String
 
+### getTemplate
 
-###getTemplate()
+**public SimulScanTemplate getTemplate()**
+
 Returns the scanned template.
 
 **Returns:**
 
-Returns [SimulScanTemplate](SimulScanTemplate) template object
+com.symbol.emdk.simulscan.SimulScanTemplate
 
+### getElements
 
-###getElements()
+**public List getElements()**
+
 Returns a list of scanned elements.
 
 **Returns:**
 
-Returns a List object of [SimulScanElement](SimulScanElement) objects
+java.util.List
+
