@@ -6,7 +6,7 @@ var menuStrcture = [
 			{
 				name: 'About The EMDK',
 				link: '#guide-about',
-			},		
+			},
 			{
 				name: 'Getting Started',
 				icon: 'fa fa-rocket',
@@ -402,13 +402,23 @@ var menuStrcture = [
 								
 							},
 							{
-								name: 'ScanAndPair APIs',
+								name: 'ScanAndPair APIs (Java)',
 								link: '#guide-reference-EMDKList?ScanAndPair APIs',
 								
 							},
 							{
-								name: 'SimulScan APIs',
+								name: 'SimulScan APIs (Java)',
 								link: '#guide-reference-EMDKList?SimulScan APIs',
+								
+							},
+							{
+								name: 'Personal Shopper APIs (Java)',
+								link: '#guide-reference-EMDKList?Personal Shopper APIs',
+								
+							},
+							{
+								name: 'Secure NFC APIs (Java)',
+								link: '#guide-reference-EMDKList?Secure NFC APIs',
 								
 							},
 							{
@@ -423,7 +433,7 @@ var menuStrcture = [
 											{
 												name: 'EMDK Profiles Overview',
 												link: '#guide-profiles-usingwizard',
-											},	
+											},
 											{
 												name: 'Data Capture',
 												link: '#',
@@ -435,7 +445,7 @@ var menuStrcture = [
 															{
 																name: 'Activity Selection',
 																link: '#guide-profiles-profileactivity',
-															},														
+															},
 															{
 																name: 'Barcode',
 																link: '#guide-profiles-profilebarcode',
@@ -465,7 +475,7 @@ var menuStrcture = [
 												link: '#guide-profiles-access',
 											},
 											{
-												name: 'Analytics Manager',
+												name: 'Analytics Manager <span class="label label-primary">New</span>',
 												link: '#guide-profiles-analytics',
 											},
 											{
@@ -473,23 +483,15 @@ var menuStrcture = [
 												link: '#guide-profiles-app',
 											},
 											{
-												name: 'Audio Manager <span class="label label-primary">New</span>',
-												link: '#guide-profiles-audio',
-											},
-											{
-												name: 'Battery Manager <span class="label label-primary">New</span>',
-												link: '#guide-profiles-battery',
-											},
-											{
-												name: 'Browser Manager',
+												name: 'Browser Manager <span class="label label-primary">New</span>',
 												link: '#guide-profiles-browser',
 											},
 											{
-												name: 'Camera Manager',
+												name: 'Camera Manager <span class="label label-primary">New</span>',
 												link: '#guide-profiles-camera',
 											},
 											{
-												name: 'Cellular Manager',
+												name: 'Cellular Manager <span class="label label-primary">New</span>',
 												link: '#guide-profiles-cellular',
 											},
 											{
@@ -501,32 +503,20 @@ var menuStrcture = [
 												link: '#guide-profiles-clock',
 											},
 											{
-												name: 'Component Manager <span class="label label-primary">New</span>',
-												link: '#guide-profiles-component',
-											},
-											{
-												name: 'Dev Admin',
+												name: 'Dev Admin <span class="label label-primary">New</span>',
 												link: '#guide-profiles-devadmin',
 											},
 											{
-												name: 'DHCP Manager <span class="label label-primary">New</span>',
-												link: '#guide-profiles-dhcp',
-											},
-											{
-												name: 'Display Manager',
+												name: 'Display Manager <span class="label label-primary">New</span>',
 												link: '#guide-profiles-display',
 											},
 											{
-												name: 'Encrypt Manager',
+												name: 'Encrypt Manager <span class="label label-primary">New</span>',
 												link: '#guide-profiles-encrypt',
 											},
 											{
 												name: 'GPRS Manager',
 												link: '#guide-profiles-gprs',
-											},
-											{
-												name: 'KeyMap Manager <span class="label label-primary">New</span>',
-												link: '#guide-profiles-keymap',
 											},
 											{
 												name: 'Persistence Manager',
@@ -537,11 +527,11 @@ var menuStrcture = [
 												link: '#guide-profiles-power',
 											},
 											{
-												name: 'PowerKey Manager',
+												name: 'PowerKey Manager <span class="label label-primary">New</span>',
 												link: '#guide-profiles-powerkey',
 											},
 											{
-												name: 'SD Card  Manager',
+												name: 'SD Card  Manager <span class="label label-primary">New</span>',
 												link: '#guide-profiles-sdcard',
 											},
 											{
@@ -549,7 +539,7 @@ var menuStrcture = [
 												link: '#guide-profiles-settings',
 											},
 											{
-												name: 'Threat  Manager',
+												name: 'Threat  Manager <span class="label label-primary">New</span>',
 												link: '#guide-profiles-threat',
 											},
 											{
@@ -557,7 +547,7 @@ var menuStrcture = [
 												link: '#guide-profiles-touch',
 											},
 											{
-												name: 'UI  Manager',
+												name: 'UI  Manager <span class="label label-warning">Updated</span>',
 												link: '#guide-profiles-ui',
 											},
 											{
@@ -569,7 +559,7 @@ var menuStrcture = [
 												link: '#guide-profiles-wifi',
 											},
 											{
-												name: 'Wireless  Manager',
+												name: 'Wireless  Manager <span class="label label-warning">Updated</span>',
 												link: '#guide-profiles-wireless',
 											},
 											{

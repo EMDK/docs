@@ -1,172 +1,193 @@
 #ScanDataCollection
 
-The ScanDataCollection object gives scanning result and the collection of [ScanData](Collection.ScanData).
+The ScanDataCollection object gives scanning result and the collection of ScanData.
+
+
 
 **Example Usage:**
+	
+	:::java	
+	 	
+	 	@Override
+		public void onData(ScanDataCollection scanDataCollection) {
+	
+			if(scanDataCollection != null && scanDataCollection.getResult() == ScannerResults.SUCCESS) {
+				
+				ArrayList<ScanData> scanData = scanDataCollection.getScanData();
+				
+				for(ScanData data : scanData ) {
+					
+					String barcodeDate = data.getData();
+					LABEL_TYPE labelType = data.getLabelType();
+					String timeStamp = scanData.getTimeStamp();
+				}
+			}
+		 }
 
-	:::java
-	Override:
-    public void onData(ScanDataCollection scanDataCollection)
-    { 
-      if(scanDataCollection != null && scanDataCollection.getResult() == SCANNER_RESULTS.SUCCESS) { 
-       ArrayList<ScanData> scanData = scanDataCollection.getScanData(); 
-       for(ScanData data : scanData ) { 
-        String barcodeDate = data.getData(); 
-        LABEL_TYPE labelType = data.getLabelType(); 
-        String timeStamp = scanData.getTimeStamp(); 
-       } 
-      }  
-    }
-
-**Version:**
-
-1.0
 
 ##Public Methods
-###getFriendlyName()
+
+### getFriendlyName
+
+**public String getFriendlyName()**
+
 Returns the friendly name of scanner for which the data is returned.
 
 **Returns:**
 
-java.lang.String - Returns scanner index to the supported devices list.
+java.lang.String
 
-###getResult()
+### getResult
+
+**public ScannerResults getResult()**
+
 This method used to obtain the scanned result.
+ 
+ 
 
 **Example Usage:**
-
-	:::java
+	
+	:::java	
 	ScannerResults results = scanDataCollection.getResult();
+	
+	
+	
+
 
 **Returns:**
 
-[ScannerResults](BarcodeManager#BarcodeManager.ScannerResults) object
+com.symbol.emdk.barcode.ScannerResults
 
-###getScanData()
+### getScanData
+
+**public ArrayList getScanData()**
+
 This method is used to obtain the scanned data list.
+ 
+ 
 
 **Example Usage:**
+	
+	:::java	
+	ArrayList<ScanData> scanDataList = scanDataCollection.getScanData()
+	
+	
+	
 
-	:::java
-	ArrayList<ScanData> scanDataList = scanDataCollection.getScanData();
 
 **Returns:**
 
-java.util.ArrayList&lt;com.symbol.emdk.barcode.[ScanDataCollection.ScanData](Collection.ScanData)&gt; - Returns the collection of scan data.
+java.util.ArrayList
 
 ##Public Enums
+
 ###ScanDataCollection.LabelType
+
 List of label types of the scanner data.
-
-**Example Usage:**
-
-	:::java
-	LABEL_TYPE.CODE39
 
 **Values:**
 
-**AUSPOSTAL** - The AUSTRALIAN POSTAL symbology.
+* **AUSPOSTAL**
 
-**AZTEC** - The AZTEC symbology
+* **AZTEC**
 
-**BOOKLAND** - The BOOKLAND EAN symbology.
+* **BOOKLAND**
 
-**CANPOSTAL** - The CANADIAN POSTAL symbology.
+* **CANPOSTAL**
 
-**CHINESE_2OF5** - The CHINESE_2OF5 symbology.
+* **CHINESE_2OF5**
 
-**CODABAR** - The CODABAR symbology.
+* **CODABAR**
 
-**CODE11** - The CODE-11 symbology.
+* **CODE11**
 
-**CODE128** - The CODE-128 symbology.
+* **CODE128**
 
-**CODE32** - The CODE-32 symbology.
+* **CODE32**
 
-**CODE39** - The CODE-39 symbology.
+* **CODE39**
 
-**CODE93** - The CODE-93 symbology.
+* **CODE93**
 
-**COMPOSITE_AB** - The COMPOSITE AB symbology.
+* **COMPOSITE_AB**
 
-**COMPOSITE_C** - The COMPOSITE C symbology.
+* **COMPOSITE_C**
 
-**COUPON** - The COUPON CODE symbology.
+* **COUPON**
 
-**D2OF5** - The Discrete 2 of 5 symbology.
+* **D2OF5**
 
-**DATAMATRIX** - The DATAMATRIX symbology.
+* **DATAMATRIX**
 
-**DUTCHPOSTAL** - The DUTCH POSTAL symbology.
+* **DUTCHPOSTAL**
 
-**DATABAR_COUPON** - The databar coupon symbology.
+* **DATABAR_COUPON**
 
-**EAN128** - The EAN-128 symbology.
+* **EAN128**
 
-**EAN13** - The EAN-13 symbology.
+* **EAN13**
 
-**EAN8** - The EAN-8 symbology.
+* **EAN8**
 
-**GS1_DATABAR** - The GS1_DATABAR symbology.
+* **GS1_DATABAR**
 
-**GS1_DATABAR_EXP** - The GS1_DATABAR_EXP symbology.
+* **GS1_DATABAR_EXP**
 
-**GS1_DATABAR_LIM** - The GS1_DATABAR_LIM symbology.
+* **GS1_DATABAR_LIM**
 
-**HANXIN*** - The HANXIN symbology.
+* **I2OF5**
 
-**I2OF5** - The Interleaved 2 of 5 symbology.
+* **IATA2OF5**
 
-**IATA2OF5** - The IATA 2 of 5 symbology.
+* **ISBT128**
 
-**ISBT128** - The ISBT 128 symbology.
+* **JAPPOSTAL**
 
-**JAPPOSTAL** - The JAPANESE POSTAL symbology.
+* **KOREAN_3OF5**
 
-**KOREAN_3OF5** - The KOREAN 3OF5 symbology.
+* **MATRIX_2OF5**
 
-**MAILMARK** - The MAILMARK symbology.
+* **MAXICODE**
 
-**MATRIX_2OF5** - The MATRIX 2OF5 symbology.
+* **MICROPDF**
 
-**MAXICODE** - The MAXICODE symbology.
+* **MICROQR**
 
-**MICROPDF** - The MICRO PDF symbology.
+* **MSI**
 
-**MICROQR** - The MICRO QR symbology.
+* **OCR**
 
-**MSI** - The MSI symbology.
+* **PDF417**
 
-**OCR** - The OCR symbology.
+* **QRCODE**
 
-**PDF417** - The PDF 417 symbology.
+* **SIGNATURE**
 
-**QRCODE** - The QRCODE symbology.
+* **TLC39**
 
-**SIGNATURE** - The Signature symbology.
+* **TRIOPTIC39**
 
-**TLC39** - The TCIF Linked CODE 39 symbology.
+* **UKPOSTAL**
 
-**TRIOPTIC39** - The TRIOPTIC 3 of 9 symbology.
+* **UPCA**
 
-**UKPOSTAL** - The UK POSTAL symbology.
+* **UPCE0**
 
-**UPCA** - The UPC-A symbology.
+* **UPCE1**
 
-**UPCE0** - The UPC-E0 symbology.
+* **US4STATE**
 
-**UPCE1** - The UPC-E1 symbology.
+* **US4STATE_FICS**
 
-**US4STATE** - The US4STATE symbology.
+* **USPLANET**
 
-**US4STATE_FICS** - The US4STATE_FICS symbology
+* **USPOSTNET**
 
-**USPLANET** - The US PLANET symbology.
+* **WEBCODE**
 
-**USPOSTNET** - The US POSTNET symbology.
+* **MAILMARK**
 
-**WEBCODE** - The Scanlet WEBCODE symbology.
+* **HANXIN**
 
-**UNDEFINED** - The Symbology is unknown or not defined.
-
+* **UNDEFINED**
 
