@@ -11,10 +11,10 @@ The CompositeAB class provides access to parameters that are
 
 Gets and Sets UCC Link Mode using
  @link ScannerConfig.UccLinkMode} enum;
+
  
  
- 
- 
+
  
  
 

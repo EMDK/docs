@@ -6,11 +6,11 @@ Defines all the error codes the MifareSAM APIs returns.
 
 * **SUCCESS**
 
+* **EMDK_NOT_OPENED**
+
 * **NFC_DISABLED**
 
 * **SAM_NOT_AVAILABLE**
-
-* **EMDK_NOT_OPENED**
 
 * **FAILURE**
 

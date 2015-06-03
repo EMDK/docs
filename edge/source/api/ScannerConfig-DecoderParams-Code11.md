@@ -10,10 +10,10 @@ The Code11 class provides access to parameters that are available for
 ###length1
 
 Use to set decode length. The supported range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -33,10 +33,10 @@ int
 ###length2
 
 Use to set decode length. The supported range is 0 to 55
+
  
  
- 
- 
+
  
  
 
@@ -56,10 +56,10 @@ int
 ###redundancy
 
 Sets the reader to read the bar code twice before accepting data.
+
  
  
- 
- 
+
  
  
 
@@ -82,10 +82,10 @@ Check the integrity of all Code 11 symbols to verify that the
  data complies with the specified check digit algorithm. This
  selects the check digit mechanism for the decoded Code 11 bar
  code. Use enum @link ScannerConfig.VerifyCheckDigit}.
+
  
  
- 
- 
+
  
  
 
@@ -105,10 +105,10 @@ com.symbol.emdk.barcode.ScannerConfig.VerifyCheckDigit
 ###reportCheckDigit
 
 Transmit Code 11 data with or without the check digit.
+
  
  
- 
- 
+
  
  
 

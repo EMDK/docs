@@ -10,10 +10,10 @@ The Code128 class provides access to parameters that are available
 ###length1
 
 Use to set decode lengths. The supported range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -33,10 +33,10 @@ int
 ###length2
 
 Use to set decode lengths. The supported range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -56,10 +56,10 @@ int
 ###redundancy
 
 Sets the reader to read the bar code twice before accepting data.
+
  
  
- 
- 
+
  
  
 
@@ -79,10 +79,10 @@ boolean
 ###enablePlain
 
 Flag to enable other sub types besides GS1-128 and ISBT-128
+
  
  
- 
- 
+
  
  
 
@@ -104,7 +104,7 @@ boolean
 Flag to enable EAN128 subtype.
  
  
- 
+
  
  
 
@@ -126,7 +126,7 @@ boolean
 Flag to enable ISBT128 .
  
  
- 
+
  
  
 
@@ -147,10 +147,10 @@ boolean
 
 Select an option for concatenating pairs of ISBT code types. Use
  enum @link ScannerConfig.Isbt128ContactMode}.
+
  
  
- 
- 
+
  
  
 
@@ -174,10 +174,10 @@ The ISBT specification includes a table that lists several types
  Concat Mode is set, enable Check ISBT T able to concatenate only
  those pairs found in this table. Other types of ISBT codes are
  not concatenated.
+
  
  
- 
- 
+
  
  
 
@@ -202,10 +202,10 @@ The scanner of fers four levels of decode security for Code 128
  between security and scanner aggressiveness, so choose only that
  level of security necessary for any given application. Use enum
  @link ScannerConfig.SecurityLevel}.
+
  
  
- 
- 
+
  
  
 

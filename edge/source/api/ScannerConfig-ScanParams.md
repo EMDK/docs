@@ -13,10 +13,10 @@ A Code ID character identifies the code type of a scanned bar code.
  This is useful when the reader is decoding more than one code type.
  Select a code ID character to insert between the prefix and the
  decoded symbol. Use enum @link ScannerConfig.CodeIdType}.
+
  
  
- 
- 
+
  
  
 
@@ -37,10 +37,10 @@ com.symbol.emdk.barcode.ScannerConfig.CodeIdType
 
 Select an audio tone to sound upon a good decode.
  The valid audio files from the RingTone manager can be used for audio feedback.
+
  
  
- 
- 
+
  
  
 
@@ -50,7 +50,7 @@ Select an audio tone to sound upon a good decode.
 	
 	:::java	
 	 	
-	 	scanParams.decodeAudioFeedbackURI = "system/media/audio/notifications/decode-short.wav"; 
+	 	scanParams.decodeAudioFeedbackURI = "system/media/audio/notifications/decode-short.wav";
 		scanParams.decodeAudioFeedbackUri = "sdcard/sample-audio.wav";
 		scanParams.decodeAudioFeedbackUri = "sdcard/sample-audio.ogg";
 		scanParams.decodeAudioFeedbackUri = "/sdcard/sample-audio.wav";
@@ -63,10 +63,10 @@ java.lang.String
 ###decodeHapticFeedback
 
 Enable the device to vibrate upon a good decode.
+
  
  
- 
- 
+
  
  
 
@@ -87,10 +87,10 @@ boolean
 
 Decode LED ON duration upon successful decode in milliseconds.
  This value can be from 0ms to 1000ms with a step of 25ms.
+
  
  
- 
- 
+
  
  
 
@@ -109,12 +109,12 @@ int
 
 ###audioStreamType
 
-The audio stream type refers to type of streaming on which the scan beep should be played. 
+The audio stream type refers to type of streaming on which the scan beep should be played.
  The decodeAudioFeedbackUri specified must be available for the audio streaming type specified.
+
  
  
- 
- 
+
  
  
 
@@ -134,10 +134,10 @@ com.symbol.emdk.barcode.ScannerConfig.AudioStreamType
 ###decodeLEDFeedback
 
 Decoding LED Notification.
+
  
  
- 
- 
+
  
  
 

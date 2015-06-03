@@ -10,10 +10,10 @@ The Msi class provides access to parameters that are available for
 ###length1
 
 Use to set decode lengths. The range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -33,10 +33,10 @@ int
 ###length2
 
 Use to set decode lengths. The range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -56,10 +56,10 @@ int
 ###redundancy
 
 Sets the reader to read the bar code twice before accepting data.
+
  
  
- 
- 
+
  
  
 
@@ -81,10 +81,10 @@ boolean
 With MSI symbols, one check digit is mandatory and always
  verified by the reader. The second check digit is optional. Use
  enum @link ScannerConfig.CheckDigit}.
+
  
  
- 
- 
+
  
  
 
@@ -106,10 +106,10 @@ com.symbol.emdk.barcode.ScannerConfig.CheckDigit
 Two algorithms are possible for the verification of the second
  MSI check digit. Select the algorithm used to encode the check
  digit. Use enum @link ScannerConfig.CheckDigitScheme}.
+
  
  
- 
- 
+
  
  
 
@@ -129,10 +129,10 @@ com.symbol.emdk.barcode.ScannerConfig.CheckDigitScheme
 ###reportCheckDigit
 
 Transmit MSI data with or without the check digit.
+
  
  
- 
- 
+
  
  
 

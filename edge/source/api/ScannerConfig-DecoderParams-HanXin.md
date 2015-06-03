@@ -10,12 +10,12 @@ The HanXin class provides access to parameters that are available for
 ###hanXinInverse
 
 Check the inverse of the HanXin decoder
- 
+
  code. Use enum @link ScannerConfig.HanXinInverse}.
+
  
  
- 
- 
+
  
  
 

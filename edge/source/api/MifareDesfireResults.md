@@ -8,6 +8,8 @@
 
 * **FAILURE**
 
+* **EMDK_NOT_OPENED**
+
 * **NOT_ENABLED**
 
 * **INVALID_SAM_KEY**
@@ -17,8 +19,6 @@
 * **SAM_AUTHENTICATION_ERROR**
 
 * **INVALID_VALUE**
-
-* **EMDK_NOT_OPENED**
 
 * **ALREADY_ENABLED**
 

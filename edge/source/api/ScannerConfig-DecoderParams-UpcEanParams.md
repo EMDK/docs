@@ -16,12 +16,12 @@ The UPCEAN class provides access to parameters that are available for the UPC/EA
 ###booklandCode
 
 Flag to enable Bookland code decoding.
- Any EAN which begins with the 978 prefix is called a Bookland EAN barcode 
+ Any EAN which begins with the 978 prefix is called a Bookland EAN barcode
  and is used on books and book related products internationally.
+
  
  
- 
- 
+
  
  
 
@@ -42,10 +42,10 @@ boolean
 
 Specifies the bookland format to use. Use enum
  @link ScannerConfig.BooklandFormat}.
+
  
  
- 
- 
+
  
  
 
@@ -67,10 +67,10 @@ com.symbol.emdk.barcode.ScannerConfig.BooklandFormat
 If this is set it converts DataBar bar codes to UPC/EAN format.
  For this setting to work UPC/EAN symbologies must be enabled. A
  check in the checkbox indicates that the option is enabled.
+
  
  
- 
- 
+
  
  
 
@@ -91,10 +91,10 @@ boolean
 
 Enables Coupon code decoding. Note that in order to successfully
  decode Coupon codes, all of the correct decoders must be enabled.
+
  
  
- 
- 
+
  
  
 
@@ -122,10 +122,10 @@ boolean
 ###randomWeightCheckDigit
 
 Flag to enable random weight check digit verification.
+
  
  
- 
- 
+
  
  
 
@@ -150,10 +150,10 @@ The scanner of fers four levels of decode security for UPC/EAN
  decode speed, so be sure to choose only that level of security
  necessary for the application. Use enum
  @link ScannerConfig.SecurityLevel}.
+
  
  
- 
- 
+
  
  
 
@@ -173,10 +173,10 @@ com.symbol.emdk.barcode.ScannerConfig.SecurityLevel
 ###supplemental2
 
 Flag to enable length 2 supplementals.
+
  
  
- 
- 
+
  
  
 
@@ -196,10 +196,10 @@ boolean
 ###supplemental5
 
 Flag to enable length 5 supplementals.
+
  
  
- 
- 
+
  
  
 
@@ -219,10 +219,10 @@ boolean
 ###supplementalMode
 
 The supplemental mode. Use enum @link ScannerConfig.SupplementalMode}.
+
  
  
- 
- 
+
  
  
 
@@ -247,10 +247,10 @@ Retry count for auto-discriminating for supplementals. Possible
  following values: Supplementals Auto, Supplementals Smart,
  Supplementals 378-379 , Supplementals 978-979, Supplementals 977
  or Supplementals 414-419-434-439 (2 to 20, default 10).
+
  
  
- 
- 
+
  
  
 
@@ -276,12 +276,12 @@ Used to differentiate between old coupon (UPC/EAN and Code128)
  coupon format. If an interim coupon is presented to the scanner,
  it will read old or new portion of it, depending on the report
  mode setting.
- 
+
  Use enum @link ScannerConfig.CouponReport}.
+
  
  
- 
- 
+
  
  
 
@@ -300,7 +300,7 @@ com.symbol.emdk.barcode.ScannerConfig.CouponReport
 
 ###eanZeroExtend
 
-Enable this parameter to add five leading zeros to decoded 
+Enable this parameter to add five leading zeros to decoded
   EAN-8 symbols to make them compatible in format to EAN-13 symbols.
   Disable this to transmit EAN-8 symbols as is
 

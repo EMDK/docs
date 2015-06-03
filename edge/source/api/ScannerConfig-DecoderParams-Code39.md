@@ -10,10 +10,10 @@ The Code39 class provides access to parameters that are available for
 ###length1
 
 Use to set decode lengths. The valid range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -33,10 +33,10 @@ int
 ###length2
 
 Use to set decode lengths. The valid range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -60,10 +60,10 @@ Enable this feature to check the integrity of all Code 39 symbols
  algorithm. The digital scanner decodes only those Code 39 symbols
  that include a modulo 43 check digit. Enable this feature only if
  the Code 39 symbols contain a modulo 43 check digit.
+
  
  
- 
- 
+
  
  
 
@@ -83,10 +83,10 @@ boolean
 ###reportCheckDigit
 
 Transmit Code 39 data with or without the check digit.
+
  
  
- 
- 
+
  
  
 
@@ -107,10 +107,10 @@ boolean
 
 Code 39 Full ASCII is a variant of Code 39 that pairs characters
  to encode the full ASCII character set.
+
  
  
- 
- 
+
  
  
 
@@ -130,10 +130,10 @@ boolean
 ###redundancy
 
 Sets the reader to read the bar code twice before accepting data.
+
  
  
- 
- 
+
  
  
 
@@ -154,10 +154,10 @@ boolean
 
 Code 32 is a variant of Code 39 used by the Italian
  pharmaceutical industry.
+
  
  
- 
- 
+
  
  
 
@@ -178,10 +178,10 @@ boolean
 
 Scan the appropriate bar code to enable or disable adding the
  prefix character "A" to all Code 32 bar codes.
+
  
  
- 
- 
+
  
  
 
@@ -202,10 +202,10 @@ boolean
 
 Options: Security level 0 , Security Level 1 , Security Level 2
  and Security Level 3. Use enum @link ScannerConfig.SecurityLevel}.
+
  
  
- 
- 
+
  
  
 

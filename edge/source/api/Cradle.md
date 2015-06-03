@@ -77,6 +77,8 @@ com.symbol.emdk.personalshopper.CradleException
 This unlocks terminal from cradle and flashes the LED.
  The timeout represents the duration in which the terminal remains unlocked in the
  cradle before becoming locked again. This is in seconds and the range is from 10 (minimum) to 30 (maximum) seconds.
+ Continuous unlock may lead to heating up of hardware which may lead to unlock failure . This failure will be 
+ indicated through blinking of cradle Red Led's .Unlock will fail until hardware gets cool down .
 
 **Parameters:**
 

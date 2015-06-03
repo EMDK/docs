@@ -14,7 +14,10 @@ Data specific to the AV1 Sam Mode.
 
 ###useLogicalChannelForCMacCalculation
 
-Use logical channel for CMAC calculation or not.
+useLogicalChannelForCMacCalculation - False: Do not use logical
+ channel for CMAC calculation. True: Use logical channel for CMAC
+ calculation. **This is not supported, hence application should
+ pass false**
 
 **Type:**
 
@@ -22,8 +25,9 @@ boolean
 
 ###useSecretKeyForCrypto
 
-False: Generate session key by authentication.
- True: Use secret key for crypto.
+useSecretKeyForCrypto - False: Generate session key by
+ authentication. True: Use secret key for crypto. **This is not
+ supported, hence application should pass false.**
 
 **Type:**
 
@@ -31,7 +35,10 @@ boolean
 
 ###samDiverseParams
 
-Diversification parameters for current key. If diversification is not required by current key then this parameter should be NULL.
+samDiverseParams Diversification parameters for current key.If
+ diversification is not required by current key then this
+ parameter should be NULL. **This is not supported, hence
+ application should pass null.**
 
 **Type:**
 

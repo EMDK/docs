@@ -55,16 +55,7 @@ Provides access to MIFARE DESFire properties and I/O operations on an IsoDep
 	 								samKey.keyNum = 0x00;
 	 								samKey.keyVer = 0x00;
 	
-	 			   					if (samMode.equals(SamMode.AV1)) {
-	
-	 								mifareSam .authenticateSamAv1(authKey, samKey,
-	 								false, false, null);
-	
-	 							} else if (samMode.equals(SamMode.AV2)) {
-	
-	 								mifareSam .authenticateSamAv2(authKey, samKey,
-	 								ProtectionMode.PLAIN);
-	 							}
+	 							mifareSam.authenticateSam(authKey, samKey,null);
 	
 	 							mifareSam.close();
 	
@@ -97,6 +88,17 @@ Provides access to MIFARE DESFire properties and I/O operations on an IsoDep
 	 				if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
 	
 	 				mifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
+	
+	 					try {
+	 							if (!mifareDesfire.isEnabled()) {
+	
+	 								mifareDesfire.enable(lTag);
+	 							}
+	
+	 						} catch (MifareDesfireExpection e) {
+	 							e.printStackTrace();
+	 						}
+	
 	 				}
 	
 	 			} catch (SecureNfcException e) {
@@ -104,27 +106,29 @@ Provides access to MIFARE DESFire properties and I/O operations on an IsoDep
 	 				e.printStackTrace();
 	 			}
 	
-	 			try {
-	                mifareDesfire.enable(lTag);
 	
-	 				} catch (MifareDesfireException e) {
-	
-	 						e.printStackTrace();
-	                  }
 	 			}
 	 		}
 	
+	 		 @Override
+	       public void onDestroy() {
 	
+	          		if (mifareDesfire != null) {
+	 			try {
+	 				mifareDesfire.disable();
 	
+	 			} catch (MifareDesfireExpection e) {
 	
-	 		  @Override
-	          public void onDestroy() {
+	 				e.printStackTrace();
+	 			}
+	
+	 		}
 	 			 if(this.emdkManager != null)
 	               this.emdkManager.release();
 	 				}
 	
-	         @Override
-	           public void onClosed() {
+	        @Override
+	        public void onClosed() {
 	              this.emdkManager.release();
 	             }
 	
@@ -159,7 +163,7 @@ void
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to enable the tag.
 
 ### disable
 
@@ -168,7 +172,8 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 Disables I/O operations to the tag from IsoDep object and SAM
  communication. Also causes all blocked I/O operations on other thread to
  be canceled and return with MiFareDesfireExpection.On Tag lost connection
- needs to re-established by calling enable API in the application.
+ needs to re-established by calling enable API in the application.This is
+ a synchronous call.
 
 **Returns:**
 
@@ -178,7 +183,7 @@ void
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to disable the tag.
 
 ### authenticate
 
@@ -212,14 +217,16 @@ void
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to authenticate the
+             tag.
 
 ### getKeyVersion
 
 **public byte getKeyVersion( keyNum)**
 
 Retrieves current version of specified card key.On Tag lost connection
- needs to re-established by calling enable API in the application.
+ needs to re-established by calling enable API in the application.This is
+ a synchronous call.
 
 **Parameters:**
 
@@ -230,55 +237,12 @@ keyNum - Key number to retrieve version information.
             <blockquote>
 
             <pre>
-              {@code
-                 Example Usage:
-             public void onNewIntent(Intent intent) {
+  {@code
+   Example Usage:
 
-            if (intent != null)
-            	tagDetection(intent);
+    mifareDesfire.selectApplication(APP_ID);
 
-            }
-
-
-
- 		private void tagDetection(Intent intent) {
-
- 		if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())
- 				|| NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
- 				|| NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())) {
-
- 			 lTag	 = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-
- 				try {
-
- 				TagTechType tagType = secureNfcMgr.getTagTechType(lTag);
-
- 				if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
-
- 				mifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
- 				}
-
- 			} catch (SecureNfcException e) {
-
- 				e.printStackTrace();
- 			}
-
- 			try {
-                mifareDesfire.enable(lTag);
-
-                mifareDesfire.selectApplication(APP_ID);
-
-                mifareDesfire.getKeyVersion(keynum);
-
-                mifareDesfire.disable();
-
- 				} catch (MifareDesfireException e) {
-
- 						e.printStackTrace();
-                  }
- 			}
- 		}
- }
+     mifareDesfire.getKeyVersion(keynum);
 
  </pre>
 
@@ -292,65 +256,24 @@ byte
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to retrieves current
+             version of specified card key.
 
 ### getApplicationIDs
 
 **public int getApplicationIDs()**
 
 Retrieves AIDs of all active card applications.On Tag lost connection
- needs to re-established by calling enable API in the application.
+ needs to re-established by calling enable API in the application.This is
+ a synchronous call.
 
  
 
 **Example Usage:**
 	
 	:::java	
-	public void onNewIntent(Intent intent) {
 	
-	if (intent != null)
-	tagDetection(intent);
-	
-	}
-	
-	
-	
-	private void tagDetection(Intent intent) {
-	
-	if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())
-	|| NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
-	|| NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())) {
-	
-	lTag	 = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-	
-	try {
-	
-	TagTechType tagType = secureNfcMgr.getTagTechType(lTag);
-	
-	if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
-	
-	mifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
-	}
-	
-	} catch (SecureNfcException e) {
-	
-	e.printStackTrace();
-	}
-	
-	try {
-	mifareDesfire.enable(lTag);
-	
-	int[] getAppIDs =  mMifareDesfire.getApplicationIDs();
-	
-	mifareDesfire.disable();
-	
-	} catch (MifareDesfireException e) {
-	
-	e.printStackTrace();
-	}
-	}
-	}
-	}
+	int[] getAppIDs =  mifareDesfire.getApplicationIDs();
 	
 	</pre>
 	
@@ -365,7 +288,8 @@ int
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to retrieves AIDs of
+             all active card applications.
 
 ### getFreeMemory
 
@@ -373,7 +297,7 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 
 Gets total number of free user memory bytes available on card.On Tag lost
  connection needs to re-established by calling enable API in the
- application.
+ application.This is a synchronous call.
 
 **Returns:**
 
@@ -383,7 +307,8 @@ int
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to get the total
+             free memory available on the tag.
 
 ### getDFNames
 
@@ -391,7 +316,7 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 
 Retrieves the ISO 7816-4 DF names of all active card applications.On Tag
  lost connection needs to re-established by calling enable API in the
- application.
+ application.This is a synchronous call.
 
 
  
@@ -399,52 +324,10 @@ Retrieves the ISO 7816-4 DF names of all active card applications.On Tag
 **Example Usage:**
 	
 	:::java	
-	public void onNewIntent(Intent intent) {
 	
-	if (intent != null)
-	tagDetection(intent);
+	DFNames dfnames[] = mifareDesfire.getDFNames();
 	
-	}
-	
-	
-	
-	private void tagDetection(Intent intent) {
-	
-	if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())
-	|| NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
-	|| NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())) {
-	
-	lTag	 = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-	
-	try {
-	
-	TagTechType tagType = secureNfcMgr.getTagTechType(lTag);
-	
-	if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
-	
-	mifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
-	}
-	
-	} catch (SecureNfcException e) {
-	
-	e.printStackTrace();
-	}
-	
-	try {
-	mifareDesfire.enable(lTag);
-	
-	DFNames dfnames[] = mMifareDesfire.getDFNames();
-	
-	mifareDesfire.disable();
-	
-	
-	} catch (MifareDesfireException e) {
-	
-	e.printStackTrace();
-	}
-	}
-	}
-	
+	</pre>
 	
 	
 
@@ -457,7 +340,8 @@ com.symbol.emdk.securenfc.MifareDesfire.DFNames
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to retrieves the ISO
+             7816-4 DF names of all active card applications.
 
 ### getKeySettings
 
@@ -465,61 +349,19 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 
 Retrieves master key settings and application key settings of selected
  card application or card.On Tag lost connection needs to re-established
- by calling enable API in the application.
+ by calling enable API in the application.This is a synchronous call.
 
  
 
 **Example Usage:**
 	
 	:::java	
-	public void onNewIntent(Intent intent) {
-	
-	if (intent != null)
-	tagDetection(intent);
-	
-	}
-	
-	
-	
-	private void tagDetection(Intent intent) {
-	
-	if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())
-	|| NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
-	|| NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())) {
-	
-	lTag	 = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-	
-	try {
-	
-	TagTechType tagType = secureNfcMgr.getTagTechType(lTag);
-	
-	if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
-	
-	mifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
-	}
-	
-	} catch (SecureNfcException e) {
-	
-	e.printStackTrace();
-	}
-	
-	try {
-	mifareDesfire.enable(lTag);
 	
 	mifareDesfire.selectApplication(APP_ID);
 	
 	KeySettings keySettings = mifareDesfire.getKeySettings();
 	
-	mifareDesfire.disable();
-	
-	
-	} catch (MifareDesfireException e) {
-	
-	e.printStackTrace();
-	}
-	}
-	}
-	
+	</pre>
 	
 	
 
@@ -532,14 +374,17 @@ com.symbol.emdk.securenfc.MifareDesfire.KeySettings
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to retrieves master
+             key settings and application key settings of selected card
+             application or card.
 
 ### selectApplication
 
 **public void selectApplication( appID)**
 
 Selects specified card application.On Tag lost connection needs to
- re-established by calling enable API in the application.
+ re-established by calling enable API in the application.This is a
+ synchronous call.
 
 **Parameters:**
 
@@ -561,7 +406,8 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 
 Retrieves card version information such manufacturing, software and
  production related information.On Tag lost connection needs to
- re-established by calling enable API in the application.
+ re-established by calling enable API in the application.This is a
+ synchronous call.
 
 **Returns:**
 
@@ -571,7 +417,9 @@ com.symbol.emdk.securenfc.MifareDesfire.CardVersionInfo
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to retrieves card
+             version information such manufacturing, software and
+             production related information.
 
 ### getFileIDs
 
@@ -579,7 +427,8 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 
 Retrieves native file IDs or ISO 7816-4 file IDs of active files within
  the currently selected application.On Tag lost connection needs to
- re-established by calling enable API in the application.
+ re-established by calling enable API in the application.This is a
+ synchronous call.
 
 **Parameters:**
 
@@ -590,56 +439,14 @@ fileIDType - Type of file IDs to be retrieved.
             <blockquote>
 
             <pre>
-              {@code
-              Example Usage:
-             public void onNewIntent(Intent intent) {
-
-            if (intent != null)
-            	tagDetection(intent);
-
-            }
+ {@code
+  Example Usage:
 
 
+  mifareDesfire.selectApplication(APP_ID);
 
- 		private void tagDetection(Intent intent) {
+ int[] getFileIDs= mifareDesfire.getFileIDs(FileIDType.NATIVE or FileIDType.ISO7816);
 
- 		if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())
- 				|| NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
- 				|| NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())) {
-
- 			 lTag	 = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-
- 				try {
-
- 				TagTechType tagType = secureNfcMgr.getTagTechType(lTag);
-
- 				if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
-
- 					mifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
- 				}
-
- 			} catch (SecureNfcException e) {
-
- 				e.printStackTrace();
- 			}
-
- 			try {
-                mifareDesfire.enable(lTag);
-
-                mifareDesfire.selectApplication(APP_ID);
-
- 					 int[] getFileIDs= mifareDesfire.getFileIDs(FileIDType.NATIVE or FileIDType.ISO7816);
-
-                mifareDesfire.disable();
-
-
- 				} catch (MifareDesfireException e) {
-
- 						e.printStackTrace();
-                  }
- 			}
- 		}
- }
  </pre>
 
             </blockquote>
@@ -652,7 +459,9 @@ int
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to retrieves native
+             file IDs or ISO 7816-4 file IDs of active files within the
+             currently selected application.
 
 ### getFileSettings
 
@@ -673,54 +482,11 @@ fileID - ID of file whose settings are to be retrieved. Should be
             <pre>
               {@code
                  Example Usage:
-             public void onNewIntent(Intent intent) {
-
-            if (intent != null)
-            	tagDetection(intent);
-
-            }
-
-
-
- 		private void tagDetection(Intent intent) {
-
- 		if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())
- 				|| NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
- 				|| NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())) {
-
- 			 lTag	 = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-
- 				try {
-
- 				TagTechType tagType = secureNfcMgr.getTagTechType(lTag);
-
- 				if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
-
- 					mifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
- 				}
-
- 			} catch (SecureNfcException e) {
-
- 				e.printStackTrace();
- 			}
-
- 			try {
-                mifareDesfire.enable(lTag);
 
                 mifareDesfire.selectApplication(APP_ID);
 
  				FileSettings fileSettings = getFileSettings(fileID)
 
-                mifareDesfire.disable();
-
-
- 				} catch (MifareDesfireException e) {
-
- 						e.printStackTrace();
-                  }
- 			}
- 		}
- }
  </pre>
 
             </blockquote>
@@ -733,7 +499,8 @@ com.symbol.emdk.securenfc.MifareDesfire.FileSettings
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to retrieves file
+             settings (properties) of specified file.
 
 ### readData
 
@@ -744,6 +511,8 @@ Reads data from standard data or backup data file. Depending on
  or enciphered. Preceding authentication, either with the keys specified
  for Read or Read&Write access is required.On Tag lost connection needs to
  re-established by calling enable API in the application.
+
+ 
 
 **Parameters:**
 
@@ -767,7 +536,8 @@ byte
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to read the data
+             from the file.
 
 ### writeData
 
@@ -778,7 +548,10 @@ Writes data to standard or backup data file. Preceding authentication,
  required. Should be succeeded by commitTransaction() which validates all
  previous write access on data files without which the changes will get
  invalidated.On Tag lost connection needs to re-established by calling
- enable API in the application.
+ enable API in the application. The exception will be thrown if it fails
+ to write the data to the file.
+
+ 
 
 **Parameters:**
 
@@ -821,7 +594,8 @@ int
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to retieve the value
+             from the value file.
 
 ### credit
 
@@ -833,6 +607,8 @@ Increases a value stored in a value file with specified value.Depending
  specified for Credit or Read&Write access is required.On Tag lost
  connection needs to re-established by calling enable API in the
  application.
+
+ 
 
 **Parameters:**
 
@@ -853,7 +629,8 @@ void
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to credit the value
+             from the value file.
 
 ### debit
 
@@ -864,6 +641,8 @@ Decreases value stored in a value file with specified value.Depending on
  or enciphered. Preceding authentication, either with the keys specified
  for Debit or Read&Write access is required.On Tag lost connection needs
  to re-established by calling enable API in the application.
+
+ 
 
 **Parameters:**
 
@@ -881,7 +660,8 @@ void
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to debit the value
+             from the value file.
 
 ### readRecord
 
@@ -892,6 +672,8 @@ Reads records from cyclic or linear record file.Depending on
  or enciphered. Preceding authentication, either with the keys specified
  for Read or Read&Write access is required.On Tag lost connection needs to
  re-established by calling enable API in the application.
+
+ 
 
 **Parameters:**
 
@@ -915,7 +697,8 @@ byte
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to read the data
+             from the record.
 
 ### writeRecord
 
@@ -929,6 +712,8 @@ Writes records to cyclic or linear record file. Depending on
  record files without which the changes will get invalidated.On Tag lost
  connection needs to re-established by calling enable API in the
  application.
+
+ 
 
 **Parameters:**
 
@@ -952,7 +737,8 @@ void
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to write the data to
+             the record.
 
 ### resetRecord
 
@@ -962,6 +748,8 @@ Resets cyclic or linear record file to empty state. Preceding
  authentication, with key specified for Read&Write access is required.The
  commitTransaction() must be called after this call.On Tag lost connection
  needs to re-established by calling enable API in the application.
+
+ 
 
 **Parameters:**
 
@@ -976,7 +764,8 @@ void
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to reset the record
+             on the tag.
 
 ### commitTransaction
 
@@ -989,6 +778,8 @@ Validates all previous write access on Backup data files, Value files,
  Record file.On Tag lost connection needs to re-established by calling
  enable API in the application.
 
+ 
+
 **Returns:**
 
 void
@@ -997,7 +788,8 @@ void
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
-
+The exception will be thrown if it fails to commit the
+             transaction on the tag.
 
 ### abortTransaction
 
@@ -1010,6 +802,8 @@ Invalidates all previous write access on Backup data files, Value files,
  Record file.On Tag lost connection needs to re-established by calling
  enable API in the application.
 
+ 
+
 **Returns:**
 
 void
@@ -1018,7 +812,24 @@ void
 
 com.symbol.emdk.securenfc.MifareDesfireExpection
 
+The exception will be thrown if it fails to abort the
+             transaction on the tag.
 
+### isEnabled
+
+**public boolean isEnabled()**
+
+Checks if the connection with the tag is enabled or not.
+
+**Returns:**
+
+boolean
+
+**Throws:**
+
+com.symbol.emdk.securenfc.MifareDesfireExpection
+
+The exception will be thrown if the emdk is not opened.
 
 ##Public Enums
 

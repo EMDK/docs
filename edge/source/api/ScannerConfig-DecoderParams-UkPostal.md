@@ -10,10 +10,10 @@ The UkPostal class provides access to parameters that are available
 ###reportCheckDigit
 
 Transmit UK Postal data with or without the check digit.
+
  
  
- 
- 
+
  
  
 

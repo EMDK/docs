@@ -51,25 +51,13 @@ This class provides access to obtain the object to communicate with the
 	 							try {
 	                        		SamMode samMode = mifareSam.connect();
 	                        
-	                        		SamKey samKey = new SamKey();
-	 								samKey.keyNum = 0x00;
-	 								samKey.keyVer = 0x00;
-	 								
-	 			   					if (samMode.equals(SamMode.AV1)) {
-	 
-	 								mifareSam .authenticateSamAv1(authKey, samKey,
-	 								false, false, null);
-	 
-	 								} else if (samMode.equals(SamMode.AV2)) {
-	 
-	 									mifareSam .authenticateSamAv2(authKey, samKey,
-	 									ProtectionMode.PLAIN);
-	 								}
-	 					
-	 							mifareSam.close();
-	 
-	 					} catch (MifareSamException e) {
-	 						e.printStackTrace();
+	                        		mifareSam.authenticateSam(authKey, samKey,null);
+	                        		
+	                        		mifareSam.close();
+	                        
+	 								} catch (MifareSamException e) {
+	 						 
+	 									e.printStackTrace();
 	       			}
 	  			}
 	  		}
@@ -97,7 +85,12 @@ This class provides access to obtain the object to communicate with the
 	 					if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
 	 	
 	 					mMifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
-	 				}
+	 				 
+	 				} else if (tagType.equals(TagTechType.MIFARE_PLUS_SL3)) {
+	 	
+	 				mifarePlusSl3 = (MifarePlusSL3) secureNfcMgr
+	 								.getTagTechInstance(tagType);
+					 }
 	 
 	 			} catch (SecureNfcException e) {
 	 			
@@ -139,7 +132,7 @@ com.symbol.emdk.securenfc.SecureNfcManager.SamType
 
 com.symbol.emdk.securenfc.SecureNfcException
 
-
+The exception will be thrown if the emdk is not opened.
 
 ### getSamInstance
 
@@ -174,7 +167,7 @@ com.symbol.emdk.securenfc.SecureNfcManager.TagTechType
 
 com.symbol.emdk.securenfc.SecureNfcException
 
-
+The exception will be thrown if the emdk is not opened.
 
 ### getTagTechInstance
 

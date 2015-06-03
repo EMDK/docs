@@ -53,6 +53,7 @@ int
 The remaining time needed for the terminal to be in cradle to reach capacity that will be enough
   for a requested duration of shopping trip. 
   The default value -1 is assigned when this parameter not requested or failed to get it.
+  If Device is not charging , then this parameter is not available and displays 65535.
   Note: This parameter is not supported now. Hence returns 0xFFFFh(65535)
 
 **Type:**
@@ -63,6 +64,7 @@ int
 
 The duration in minutes in which battery was charged during the current charge cycle. 
   The default value -1 is assigned when this parameter not requested or failed to get it.
+  If Device is not charging , then this parameter is not available and displays 65535
 
 **Type:**
 

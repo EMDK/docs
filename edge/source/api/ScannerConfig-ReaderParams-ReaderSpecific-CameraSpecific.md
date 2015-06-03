@@ -16,9 +16,9 @@ com.symbol.emdk.barcode.ScannerConfig.ReaderParams.ReaderSpecific.ContinuousRead
 
 ###beamTimer
 
-Sets the maximum amount of time that the reader remains on (0 - 60,000 ms in increments of 100 ms). 
+Sets the maximum amount of time that the reader remains on (0 - 60,000 ms in increments of 100 ms).
  A value of 0 sets the reader to stay on indefinitely.
- 
+
  
  
 
@@ -39,7 +39,7 @@ int
 
 Sets the number of times a bar code is read to confirm an accurate decode.
  Use enum @link ScannerConfig.LinearSecurityLevel}.
- 
+
  
  
 
@@ -58,10 +58,10 @@ com.symbol.emdk.barcode.ScannerConfig.LinearSecurityLevel
 
 ###illuminationMode
 
-Turns camera illumination on and off. 
+Turns camera illumination on and off.
  This option is only available when camera is selected in the Barcode input Scanner selection option.
  Use enum @link ScannerConfig.IlluminationMode}.
- 
+
  
  
 
@@ -82,7 +82,7 @@ com.symbol.emdk.barcode.ScannerConfig.IlluminationMode
 
 This parameter allows the user to select decoding on inverse 1D bar codes.
  Use enum @link ScannerConfig.Inverse1DMode}.
- 
+
  
  
 
@@ -103,7 +103,7 @@ com.symbol.emdk.barcode.ScannerConfig.Inverse1DMode
 
 Configures the Viewfinder modes supported for camera scanning.
  Use enum @link ScannerConfig.ViewFinderMode}.
- 
+
  
  
 

@@ -10,10 +10,10 @@ The D2OF5 class provides access to parameters that are available for
 ###length1
 
 Used to set decode lengths. The valid range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -33,10 +33,10 @@ int
 ###length2
 
 Used to set decode lengths. The valid range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -56,10 +56,10 @@ int
 ###redundancy
 
 Sets the reader to read the bar code twice before accepting data.
+
  
  
- 
- 
+
  
  
 
