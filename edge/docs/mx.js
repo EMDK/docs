@@ -8306,6 +8306,108 @@ var mxVersions = [
                     }
                 ]
             },
+            {
+                name: 'DHCPMgr',
+                version: '',
+                features: [
+                    {
+                        name: 'All features',
+                        specifics: [
+                            {
+                                name: '',
+                                compatibility: [
+                                    {
+                                        name: 'MC40 KK',
+                                        device: 'MC40',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC18 KK',
+                                        device: 'MC18',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC92 KK',
+                                        device: 'MC92',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: 'AudioMgr',
+                version: '',
+                features: [
+                    {
+                        name: 'All features',
+                        specifics: [
+                            {
+                                name: '',
+                                compatibility: [
+                                    {
+                                        name: 'MC40 KK',
+                                        device: 'MC40',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC18 KK',
+                                        device: 'MC18',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC92 KK',
+                                        device: 'MC92',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: 'KeyMapMgr',
+                version: '',
+                features: [
+                    {
+                        name: 'All features',
+                        specifics: [
+                            {
+                                name: '',
+                                compatibility: [
+                                    {
+                                        name: 'MC40 KK',
+                                        device: 'MC40',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC18 KK',
+                                        device: 'MC18',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC92 KK',
+                                        device: 'MC92',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
 			{
                 name: 'TouchMgr',
                 version: '',

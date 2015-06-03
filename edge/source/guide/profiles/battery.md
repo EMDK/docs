@@ -22,5 +22,5 @@ This setting would be used to modify the Decommissioned Threshold for Zebra Gift
 
 * Set the threshold value of the Battery Health Percentage as an Integer ranging from 0 to 100 (value 0 for no change or not applicable)
 
-## Feature Compatibility
-<iframe src="compare.html#mx=4.3&csp=BatteryMgr&os=All&embed=true"></iframe> 
+<!--## Feature Compatibility
+<iframe src="compare.html#mx=4.3&csp=BatteryMgr&os=All&embed=true"></iframe> -->
