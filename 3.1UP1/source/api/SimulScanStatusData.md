@@ -17,10 +17,6 @@ SimulScanStatusData class provides access to reader status.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Methods
 
 ### getState

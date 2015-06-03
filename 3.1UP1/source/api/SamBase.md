@@ -10,7 +10,3 @@ SamBase is the base class for all the SAM technologies supported.
 
 
 
-Parameters:
-
-Throws:
-

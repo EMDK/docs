@@ -10,35 +10,29 @@ The SimulScanGroup class represents a processed SimulScanTemplateGroup.
 
 
 
-Parameters:
-
-Throws:
-
 **SimulScanGroup**
 
 
 
-Parameters:
+**Parameters:**
 
-**name**
+name
 
 
 
 java.lang.String
 
-**data**
+data
 
 
 
 java.lang.Object
 
-**number**
+number
 
 
 
 int
-
-Throws:
 
 ##Public Methods
 

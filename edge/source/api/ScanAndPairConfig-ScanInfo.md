@@ -10,10 +10,6 @@ This class is used by the ScanAndPairTool class.
 
 Default Constructor for ScanInfo class to assign the default values to its members.
 
-Parameters:
-
-Throws:
-
 ##Public Methods
 
 ### getScannedData

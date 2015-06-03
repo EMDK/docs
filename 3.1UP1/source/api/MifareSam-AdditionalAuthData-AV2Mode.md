@@ -10,7 +10,3 @@ Data specific to the AV2 Sam Mode.
 
 
 
-Parameters:
-
-Throws:
-

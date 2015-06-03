@@ -10,10 +10,6 @@ This class is used by the ScanAndPairTool class.
 
 Default constructor
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###deviceName

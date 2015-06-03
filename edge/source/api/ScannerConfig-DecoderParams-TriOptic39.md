@@ -11,17 +11,20 @@ The TriOptic39 class provides access to parameters that are available
 
 Sets the reader to read the bar code twice before accepting data.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	triOptic39.redundancy = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	triOptic39.redundancy = true;
+
 
 **Type:**
 

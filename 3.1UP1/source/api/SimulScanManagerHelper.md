@@ -10,10 +10,6 @@ Helper class.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Methods
 
 ### getInstance

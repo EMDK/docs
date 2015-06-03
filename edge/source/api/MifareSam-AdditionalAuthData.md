@@ -10,10 +10,6 @@ Mifare Sam additional authentication data.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###av1Mode

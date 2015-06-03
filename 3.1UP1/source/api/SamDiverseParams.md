@@ -10,10 +10,6 @@ SAM diversification parameters.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###tdeaEncRounds

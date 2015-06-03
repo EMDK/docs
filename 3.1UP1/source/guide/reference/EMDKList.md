@@ -64,8 +64,10 @@ The following APIs are used when you wish to handle all barcode scanning entirel
 * [BarcodeManager.ScannerConnectionListener](../api/BarcodeManager-ScannerConnectionListener)
 * [BarcodeManager.ScannerConnectionListener.ConnectionStatus](../api/BarcodeManager-ScannerConnectionListener-ConnectionStatus)
 
+<!--
 ###Collection
 * [Collection.ScanData](../api/Collection-ScanData)
+-->
 
 ###InterfaceConfig
 * [InterfaceConfig](../api/InterfaceConfig)

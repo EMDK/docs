@@ -19,17 +19,20 @@ Flag to enable Bookland code decoding.
  Any EAN which begins with the 978 prefix is called a Bookland EAN barcode 
  and is used on books and book related products internationally.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.booklandCode = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.booklandCode = true;
+
 
 **Type:**
 
@@ -38,19 +41,22 @@ boolean
 ###booklandFormat
 
 Specifies the bookland format to use. Use enum
- {@link ScannerConfig.BooklandFormat}.
+ @link ScannerConfig.BooklandFormat}.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.booklandFormat = BooklandFormat.ISBN_10;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.booklandFormat = BooklandFormat.ISBN_10;
+
 
 **Type:**
 
@@ -62,17 +68,20 @@ If this is set it converts DataBar bar codes to UPC/EAN format.
  For this setting to work UPC/EAN symbologies must be enabled. A
  check in the checkbox indicates that the option is enabled.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.convertDataBarToUPCEAN = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.convertDataBarToUPCEAN = true;
+
 
 **Type:**
 
@@ -83,17 +92,20 @@ boolean
 Enables Coupon code decoding. Note that in order to successfully
  decode Coupon codes, all of the correct decoders must be enabled.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.couponCode = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.couponCode = true;
+
 
 **Type:**
 
@@ -111,17 +123,20 @@ boolean
 
 Flag to enable random weight check digit verification.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.randomWeightCheckDigit = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.randomWeightCheckDigit = true;
+
 
 **Type:**
 
@@ -134,19 +149,22 @@ The scanner of fers four levels of decode security for UPC/EAN
  codes. There is an inverse relationship between security and
  decode speed, so be sure to choose only that level of security
  necessary for the application. Use enum
- {@link ScannerConfig.SecurityLevel}.
+ @link ScannerConfig.SecurityLevel}.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.securityLevel = SecurityLevel.LEVEL_0;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.securityLevel = SecurityLevel.LEVEL_0;
+
 
 **Type:**
 
@@ -156,17 +174,20 @@ com.symbol.emdk.barcode.ScannerConfig.SecurityLevel
 
 Flag to enable length 2 supplementals.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.supplemental2 = false;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.supplemental2 = false;
+
 
 **Type:**
 
@@ -176,17 +197,20 @@ boolean
 
 Flag to enable length 5 supplementals.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.supplemental5 = false;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.supplemental5 = false;
+
 
 **Type:**
 
@@ -194,19 +218,22 @@ boolean
 
 ###supplementalMode
 
-The supplemental mode. Use enum {@link ScannerConfig.SupplementalMode}.
+The supplemental mode. Use enum @link ScannerConfig.SupplementalMode}.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.supplementalMode = SupplementalMode.S_378_379;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.supplementalMode = SupplementalMode.S_378_379;
+
 
 **Type:**
 
@@ -221,17 +248,20 @@ Retry count for auto-discriminating for supplementals. Possible
  Supplementals 378-379 , Supplementals 978-979, Supplementals 977
  or Supplementals 414-419-434-439 (2 to 20, default 10).
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.supplementalRetries = 10;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.supplementalRetries = 10;
+
 
 **Type:**
 
@@ -247,19 +277,22 @@ Used to differentiate between old coupon (UPC/EAN and Code128)
  it will read old or new portion of it, depending on the report
  mode setting.
  
- Use enum {@link ScannerConfig.CouponReport}.
+ Use enum @link ScannerConfig.CouponReport}.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	upcEan.couponReport = CouponReport.OLD;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	upcEan.couponReport = CouponReport.OLD;
+
 
 **Type:**
 

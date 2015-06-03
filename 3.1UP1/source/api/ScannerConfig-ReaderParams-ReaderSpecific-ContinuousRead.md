@@ -10,10 +10,6 @@ ContinuousRead class provides access to continuous scanning related parameters.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###isContinuousScan

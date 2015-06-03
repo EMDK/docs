@@ -32,10 +32,6 @@ The SimulScanData object gives scanning result.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public interfaces
 
 java.io.Serializable

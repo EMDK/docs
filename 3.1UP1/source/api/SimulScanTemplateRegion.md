@@ -10,29 +10,23 @@ The SimulScanTemplateRegion class represents a particular region in a Template.
 
 
 
-Parameters:
-
-Throws:
-
 **SimulScanTemplateRegion**
 
 
 
-Parameters:
+**Parameters:**
 
-**number**
+number
 
 
 
 int
 
-**name**
+name
 
 
 
 java.lang.String
-
-Throws:
 
 ##Public Methods
 

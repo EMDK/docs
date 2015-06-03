@@ -10,35 +10,29 @@ The SimulScanElement abstract class represents a processed SimulScanTemplateElem
 
 
 
-Parameters:
-
-Throws:
-
 **SimulScanElement**
 
 
 
-Parameters:
+**Parameters:**
 
-**name**
+name
 
 
 
 java.lang.String
 
-**data**
+data
 
 
 
 java.lang.Object
 
-**number**
+number
 
 
 
 int
-
-Throws:
 
 ##Public interfaces
 

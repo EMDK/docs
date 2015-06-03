@@ -10,29 +10,23 @@ The SimulScanTemplateGroup class is a grouping of multiple SimulScanTemplateRegi
 
 
 
-Parameters:
-
-Throws:
-
 **SimulScanTemplateGroup**
 
 
 
-Parameters:
+**Parameters:**
 
-**number**
+number
 
 
 
 int
 
-**name**
+name
 
 
 
 java.lang.String
-
-Throws:
 
 ##Public Methods
 

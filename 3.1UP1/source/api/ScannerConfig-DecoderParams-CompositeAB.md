@@ -10,19 +10,22 @@ The CompositeAB class provides access to parameters that are
 ###uccLinkMode
 
 Gets and Sets UCC Link Mode using
- {@link ScannerConfig.UccLinkMode} enum;
+ @link ScannerConfig.UccLinkMode} enum;
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	compositeAB.uccLinkMode = UccLinkMode.ALWAYS_LINKED;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	compositeAB.uccLinkMode = UccLinkMode.ALWAYS_LINKED;
+
 
 **Type:**
 

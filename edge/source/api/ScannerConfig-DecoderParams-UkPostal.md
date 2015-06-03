@@ -11,17 +11,20 @@ The UkPostal class provides access to parameters that are available
 
 Transmit UK Postal data with or without the check digit.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	ukPostal.reportCheckDigit = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	ukPostal.reportCheckDigit = true;
+
 
 **Type:**
 

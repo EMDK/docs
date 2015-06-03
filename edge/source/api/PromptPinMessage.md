@@ -10,10 +10,6 @@ The PromptPinMessage class provides option configure the messages displayed whil
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###screen1

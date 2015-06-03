@@ -10,10 +10,6 @@ Provides access to Mifare Plus tag in security level 3 and I/O operations on an 
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Methods
 
 ### enable

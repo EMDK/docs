@@ -10,10 +10,6 @@ The Template class represents the XML template passed into the SimulScanEngine.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public interfaces
 
 java.io.Serializable

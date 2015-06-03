@@ -11,29 +11,23 @@ The TemplateElement class represents elements nested directly under the tag in
 
 
 
-Parameters:
-
-Throws:
-
 **SimulScanTemplateElement**
 
 
 
-Parameters:
+**Parameters:**
 
-**number**
+number
 
 
 
 int
 
-**name**
+name
 
 
 
 java.lang.String
-
-Throws:
 
 ##Public interfaces
 

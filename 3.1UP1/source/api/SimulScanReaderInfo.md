@@ -17,15 +17,13 @@ SimulScanReaderInfo provides information of the reader device.
 
 
 
-Parameters:
+**Parameters:**
 
-**rdInfo**
+rdInfo
 
 
 
 com.symbol.emdk.emdkservice.simulscan.SvcSimulScanDeviceInfo
-
-Throws:
 
 ##Public Methods
 

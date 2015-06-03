@@ -49,21 +49,21 @@ This is the primary object to access the SimulScan feature.
 
 
 
-Parameters:
+**Parameters:**
 
-**context**
+context
 
 
 
 Context
 
-**emdkServiceConnection**
+emdkServiceConnection
 
 
 
 com.symbol.emdk.EMDKServiceConnection
 
-Throws:
+**Throws:**
 
 com.symbol.emdk.simulscan.SimulScanException
 

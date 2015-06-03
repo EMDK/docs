@@ -10,35 +10,31 @@ The SimulScan APIs throws SimulScanException when an error occurs.
 
 
 
-Parameters:
+**Parameters:**
 
-**sscdresults**
+sscdresults
 
 
 
 com.symbol.emdk.simulscan.SimulScanResults
-
-Throws:
 
 **SimulScanException**
 
 
 
-Parameters:
+**Parameters:**
 
-**readerResult**
+readerResult
 
 
 
 com.symbol.emdk.simulscan.SimulScanResults
 
-**description**
+description
 
 
 
 java.lang.String
-
-Throws:
 
 ##Public Methods
 

@@ -11,10 +11,6 @@ The ReadCardMessage class provides option configure the
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###screen1

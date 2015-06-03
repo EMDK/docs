@@ -10,15 +10,13 @@ TagData class provides to get the TLV raw data as per EMV specification and also
 
 
 
-Parameters:
+**Parameters:**
 
-**tlvString**
+tlvString
 
 
 
 java.lang.String
-
-Throws:
 
 ##Public Methods
 

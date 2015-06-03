@@ -22,15 +22,13 @@ The SimulScanConfig class provides access to reader configuration settings.
 
 
 
-Parameters:
+**Parameters:**
 
-**svcConfig**
+svcConfig
 
 
 
 com.symbol.emdk.emdkservice.simulscan.SvcSimulScanConfig
-
-Throws:
 
 ##Public Methods
 

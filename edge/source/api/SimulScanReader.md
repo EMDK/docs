@@ -26,27 +26,25 @@ SimulScanReader class will represent and provides access to the physical Reader
 
 
 
-Parameters:
+**Parameters:**
 
-**readerInfo**
+readerInfo
 
 
 
 com.symbol.emdk.simulscan.SimulScanReaderInfo
 
-**context**
+context
 
 
 
 Context
 
-**emdkServiceConnection**
+emdkServiceConnection
 
 
 
 com.symbol.emdk.EMDKServiceConnection
-
-Throws:
 
 ##Public Methods
 

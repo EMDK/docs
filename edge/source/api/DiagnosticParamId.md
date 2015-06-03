@@ -10,10 +10,6 @@ The diagnostic parameter IDs.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###BATTERY_STATE_OF_HEALTH

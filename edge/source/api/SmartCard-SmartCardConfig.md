@@ -10,10 +10,6 @@ This class provides access to get the smart card configurations.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Methods
 
 ### getClockRate

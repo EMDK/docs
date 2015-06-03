@@ -10,10 +10,6 @@ This class provides the Status detail of ScanAndPair.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Methods
 
 ### getState

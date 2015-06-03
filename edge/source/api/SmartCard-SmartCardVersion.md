@@ -10,10 +10,6 @@ This class provides access to get the stack and SAM versions.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###cardVersion
