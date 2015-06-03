@@ -1,4 +1,4 @@
-#Personal Shopper Programmers Guide
+#Personal Shopper Programmer's Guide
 
 ##Introduction
 The EMDK for Android provides developers with a set of tools to easily create Personal shopper applications for use with the MC18 enterprise mobility device

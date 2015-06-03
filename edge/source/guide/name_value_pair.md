@@ -1,4 +1,4 @@
-#Name Value Pair Functionality User Guide
+#Name Value Pair Functionality Programmer's Guide
 
 ##Introduction
 

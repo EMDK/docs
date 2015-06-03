@@ -1,4 +1,4 @@
-#EMDK for Android SimulScan API programmers guide
+#SimulScan API programmer's guide
 
 ##Introduction
 SimulScan is an end-to-end data capture solution for extracting critical data from documents. A differentiating data capture value-add, it involves capturing fields of interest in a given document and converting it into data that an end-user application can use immediately at the point of transaction. 

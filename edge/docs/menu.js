@@ -368,11 +368,15 @@ var menuStrcture = [
 							{
 								name: 'Name-Value Pair',
 								link: '#guide-name_value_pair',
-							}//,
-							//{
-							//	name: 'Extended Status',
-							//	link: '#guide-extended_status',
-							//}
+							},
+							{
+								name: 'PersonalShopper API',
+								link: '#guide-personalshopper',
+							},
+							{
+								name: 'Secure NFC API',
+								link: '#guide-securenfc',
+							}
 						]
 					}
 				]
