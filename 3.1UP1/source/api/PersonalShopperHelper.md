@@ -10,10 +10,6 @@ PersonalShopperHelper only for internal usage.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Methods
 
 ### getInstance

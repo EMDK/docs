@@ -11,10 +11,6 @@ The BaseDecoder class is the parent decoder to all decoders and is
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###enabled

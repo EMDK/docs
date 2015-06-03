@@ -10,21 +10,19 @@ The diagnostic configuration class has to be configured before calling the get d
 
 DiagnosticsConfig Constructor
 
-Parameters:
+**Parameters:**
 
-**averageCurrent**
+averageCurrent
 
 in ma
 
 int
 
-**tripInMinutes**
+tripInMinutes
 
 in mins
 
 int
-
-Throws:
 
 ##Public Fields
 

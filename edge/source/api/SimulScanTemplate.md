@@ -1,44 +1,110 @@
 #SimulScanTemplate
 
-The Template class represents the XML template passed into the SimulScanEngine. All of the recognizable tags and attributes are placed into this class.
+The Template class represents the XML template passed into the SimulScanEngine.
 
+
+
+##Constructors
+
+**SimulScanTemplate**
+
+
+
+##Public interfaces
+
+java.io.Serializable
 
 ##Public Methods
-###getElements()
-Returns a list of SimulScanTemplateElements that are contained in this template.
+
+### getElements
+
+**public List getElements()**
+
+Returns a list of SimulScanTemplateElements that are contained in this template
 
 **Returns:**
 
-a list of [SimulScanTemplateElement](SimulScanTemplateElement) objects Returns true if reader is enabled.
+java.util.List
 
+### getHeight
 
-###getHeight()
-Returns the height of the template.
+**public int getHeight()**
 
-**Returns:**
-
-int The template's height.
-
-
-###getWidth()
-Returns the width of the template.
+Returns the height of the template
 
 **Returns:**
 
-int The template's width.
+int
 
+### getWidth
 
-###getId()
-Returns the number of the template.
+**public int getWidth()**
 
-**Returns:**
-
-int The template's number.
-
-
-###getName()
-Returns the friendly name of the template.
+Returns the width of the template
 
 **Returns:**
 
-String The template's name.
+int
+
+### getId
+
+**public int getId()**
+
+Returns the number of the template
+
+**Returns:**
+
+int
+
+### getName
+
+**public String getName()**
+
+Returns the friendly name of the template
+
+**Returns:**
+
+java.lang.String
+
+##Public Fields
+
+###elements
+
+
+
+**Type:**
+
+java.util.List
+
+###name
+
+
+
+**Type:**
+
+java.lang.String
+
+###number
+
+
+
+**Type:**
+
+int
+
+###height
+
+
+
+**Type:**
+
+int
+
+###width
+
+
+
+**Type:**
+
+int
+

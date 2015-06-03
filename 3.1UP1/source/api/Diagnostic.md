@@ -33,7 +33,7 @@ com.symbol.emdk.personalshopper.DiagnosticData
 
 **Throws:**
 
-**com.symbol.emdk.personalshopper.DiagnosticException**
+com.symbol.emdk.personalshopper.DiagnosticException
 
 
 

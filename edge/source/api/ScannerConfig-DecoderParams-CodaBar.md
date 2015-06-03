@@ -11,17 +11,20 @@ The CodaBar class provides access to parameters that are available
 
 Use to set decode lengths. The supported range is 0 to 55.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	codabar.length1 = 6;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	codabar.length1 = 6;
+
 
 **Type:**
 
@@ -31,17 +34,20 @@ int
 
 Use to set decode lengths. The supported range is 0 to 55.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	codabar.length2 = 55;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	codabar.length2 = 55;
+
 
 **Type:**
 
@@ -51,17 +57,20 @@ int
 
 Sets the reader to read the bar code twice before accepting data.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	codabar.redundancy = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	codabar.redundancy = true;
+
 
 **Type:**
 
@@ -74,17 +83,20 @@ Enable this parameter to strip the start and stop characters and
  14-character Codabar symbol. Enable this feature if the host
  system requires this data format.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	codabar.clsi_editing = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	codabar.clsi_editing = true;
+
 
 **Type:**
 
@@ -96,17 +108,20 @@ Enable this parameter to strip the start and stop characters from
  a decoded Codabar symbol. Enable this feature if the host system
  requires this data format.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	codabar.notis_editing = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	codabar.notis_editing = true;
+
 
 **Type:**
 

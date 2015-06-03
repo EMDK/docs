@@ -11,17 +11,20 @@ The Msi class provides access to parameters that are available for
 
 Use to set decode lengths. The range is 0 to 55.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	msi.length1 = 4;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	msi.length1 = 4;
+
 
 **Type:**
 
@@ -31,17 +34,20 @@ int
 
 Use to set decode lengths. The range is 0 to 55.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	msi.length2 = 55;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	msi.length2 = 55;
+
 
 **Type:**
 
@@ -51,17 +57,20 @@ int
 
 Sets the reader to read the bar code twice before accepting data.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	msi.redundancy = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	msi.redundancy = true;
+
 
 **Type:**
 
@@ -71,19 +80,22 @@ boolean
 
 With MSI symbols, one check digit is mandatory and always
  verified by the reader. The second check digit is optional. Use
- enum {@link ScannerConfig.CheckDigit}.
+ enum @link ScannerConfig.CheckDigit}.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	msi.checkDigits = CheckDigit.ONE;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	msi.checkDigits = CheckDigit.ONE;
+
 
 **Type:**
 
@@ -93,19 +105,22 @@ com.symbol.emdk.barcode.ScannerConfig.CheckDigit
 
 Two algorithms are possible for the verification of the second
  MSI check digit. Select the algorithm used to encode the check
- digit. Use enum {@link ScannerConfig.CheckDigitScheme}.
+ digit. Use enum @link ScannerConfig.CheckDigitScheme}.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	msi.check_digit_scheme = CheckDigitScheme.MOD_10_10;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	msi.check_digit_scheme = CheckDigitScheme.MOD_10_10;
+
 
 **Type:**
 
@@ -115,17 +130,20 @@ com.symbol.emdk.barcode.ScannerConfig.CheckDigitScheme
 
 Transmit MSI data with or without the check digit.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	msi.reportCheckDigit = false;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	msi.reportCheckDigit = false;
+
 
 **Type:**
 

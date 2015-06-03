@@ -3,42 +3,122 @@
 The SimulScanTemplateRegion class represents a particular region in a Template.
 
 
+
+##Constructors
+
+**SimulScanTemplateRegion**
+
+
+
+**SimulScanTemplateRegion**
+
+
+
+**Parameters:**
+
+number
+
+
+
+int
+
+name
+
+
+
+java.lang.String
+
 ##Public Methods
-###getHeight()
-Returns the height of this template region.
+
+### getHeight
+
+**public int getHeight()**
+
+Returns the height of this template region
 
 **Returns:**
 
-int The template region's height.
+int
 
+### getWidth
 
-###getWidth()
+**public int getWidth()**
+
 Returns the width of this template region
 
 **Returns:**
 
-int The template region's width
+int
 
+### getRegionType
 
-###getRegionType()
-Returns the type of data contained within this region.
+**public RegionType getRegionType()**
 
-**Returns:**
-
-[RegionType](SimulScanRegion#SimulScanRegion.RegionType) - The RegionType.
-
-
-###getX()
-Returns the X coordinate of this template region.
+Returns the type of data contained within this region
 
 **Returns:**
 
-int The X coordinate of the template region.
+com.symbol.emdk.simulscan.RegionType
+
+### getX
+
+**public int getX()**
+
+Returns the X coordinate of this template region
+
+**Returns:**
+
+int
+
+### getY
+
+**public int getY()**
+
+Returns the Y coordinate of this template region
+
+**Returns:**
+
+int
+
+##Public Fields
+
+###height
 
 
-###getY()
-Returns the Y coordinate of this template region.
 
-**returns:**
+**Type:**
 
-int The Y coordinate of the template region.
+int
+
+###width
+
+
+
+**Type:**
+
+int
+
+###x
+
+
+
+**Type:**
+
+int
+
+###y
+
+
+
+**Type:**
+
+int
+
+###regionType
+
+
+
+**Type:**
+
+com.symbol.emdk.simulscan.RegionType
+

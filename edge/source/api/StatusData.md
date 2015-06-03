@@ -1,37 +1,37 @@
 #StatusData
 
-StatusData class provides access to scanner status.
+This class provides the Status detail of ScanAndPair.
 
 
 
-**Example Usage:**
-	
-	:::java	
-	 	
-	 	statusData.getState();
+##Constructors
+
+**StatusData**
+
 
 
 ##Public Methods
 
 ### getState
 
-**public ScannerStates getState()**
+**public ScanAndPairStates getState()**
 
-Returns the scan event state.
-
-**Returns:**
-
-com.symbol.emdk.barcode.StatusData.ScannerStates
-
-### getFriendlyName
-
-**public String getFriendlyName()**
-
-Returns the friendly name of scanner for which the status data is returned.
+State of the scanAndPair or scanAndUnpair method.
 
 **Returns:**
 
-java.lang.String
+com.symbol.emdk.scanandpair.StatusData.ScanAndPairStates
+
+### getResult
+
+**public ScanAndPairResults getResult()**
+
+When the state is ERROR, this method can be used to find out the
+ exact error information.
+
+**Returns:**
+
+com.symbol.emdk.scanandpair.ScanAndPairResults
 
 ##Public Enums
 
@@ -50,4 +50,24 @@ Defines the different states of the barcode scanner.
 * **DISABLED**
 
 * **ERROR**
+
+###StatusData.ScanAndPairStates
+
+Defines the different states of the scan and pir/unpair.
+
+**Values:**
+
+* **WAITING**
+
+* **SCANNING**
+
+* **DISCOVERING**
+
+* **PAIRED**
+
+* **UNPAIRED**
+
+* **ERROR**
+
+* **UNDEFINED**
 

@@ -11,10 +11,6 @@ Samkey class will be assigned with the keys present on the MifareSam and used
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###keyNum

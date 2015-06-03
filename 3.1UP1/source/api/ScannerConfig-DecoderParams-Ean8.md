@@ -1,17 +1,15 @@
 #ScannerConfig.DecoderParams.Ean8
 
-The Ean8 class provides access to parameters that are available for the Ean8 decoder.
+The Ean8 class provides access to parameters that are available for
+ the Ean8 decoder.
+
+
 
 ##Public Fields
 
-###enabled
-Returns whether or not the Decoder is currently enabled.
+###convertToEan13
 
-**Example Usage:**
-
-    :::java
-    boolean isEnabled = ean8.enabled;
-
+Flag to convert EAN8 to EAN13.
 
 **Type:**
 

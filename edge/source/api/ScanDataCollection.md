@@ -1,6 +1,7 @@
 #ScanDataCollection
 
-The ScanDataCollection object gives scanning result and the collection of ScanData.
+The ScanDataCollection object gives scanning result and the collection of
+ ScanData.
 
 
 

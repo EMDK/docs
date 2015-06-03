@@ -3,10 +3,51 @@
 The SimulScanTemplateGroup class is a grouping of multiple SimulScanTemplateRegion items.
 
 
+
+##Constructors
+
+**SimulScanTemplateGroup**
+
+
+
+**SimulScanTemplateGroup**
+
+
+
+**Parameters:**
+
+number
+
+
+
+int
+
+name
+
+
+
+java.lang.String
+
 ##Public Methods
-###getTemplateRegions()
-Returns a list of SimulScanTemplateRegion objects that represents a collection of template regions that are contained within this SimulScanTemplateGroup.
+
+### getTemplateRegions
+
+**public List getTemplateRegions()**
+
+Returns a list of SimulScanTemplateRegion objects that represents a collection of template regions
+ 	that are contained within this SimulScanTemplateGroup
 
 **Returns:**
 
-List of [SimulScanTemplateRegion](SimulScanTemplateRegion) objects.
+java.util.List
+
+##Public Fields
+
+###regions
+
+
+
+**Type:**
+
+java.util.List
+

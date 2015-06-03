@@ -7,52 +7,52 @@ The following APIs are to be used to process EMDK features and profiles using th
 * [EMDKBase](../api/EMDKBase)
 
 ###EMDKManager
-* [EMDKManager](../api/EMDKManager) 
-* [EMDKManager.EMDKListener](../api/EMDKManager-EMDKListener) 
+* [EMDKManager](../api/EMDKManager)
+* [EMDKManager.EMDKListener](../api/EMDKManager-EMDKListener)
 
 ###EMDKResults
 * [EMDKResults](../api/EMDKResults)
 
 ###ProfileConfig
 * [ProfileConfig](../api/ProfileConfig)
-* [ProfileConfig.ActivitySelection](../api/ProfileConfig-ActivitySelection) 
-* [ProfileConfig.ActivitySelection.ActivityElement](../api/ProfileConfig-ActivitySelection-ActivityElement) 
-* [ProfileConfig.DataCapture](../api/ProfileConfig-DataCapture) 
-* [ProfileConfig.DataCapture.Barcode](../api/ProfileConfig-DataCapture-Barcode) 
-* [ProfileConfig.DataCapture.Barcode.Decoders](../api/ProfileConfig-DataCapture-Barcode-Decoders) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams](../api/ProfileConfig-DataCapture-Barcode-DecoderParams) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.Codabar](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Codabar) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.Code11](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Code11) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.Code128](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Code128) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.Code39](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Code39) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.Code93](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Code93) 
+* [ProfileConfig.ActivitySelection](../api/ProfileConfig-ActivitySelection)
+* [ProfileConfig.ActivitySelection.ActivityElement](../api/ProfileConfig-ActivitySelection-ActivityElement)
+* [ProfileConfig.DataCapture](../api/ProfileConfig-DataCapture)
+* [ProfileConfig.DataCapture.Barcode](../api/ProfileConfig-DataCapture-Barcode)
+* [ProfileConfig.DataCapture.Barcode.Decoders](../api/ProfileConfig-DataCapture-Barcode-Decoders)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams](../api/ProfileConfig-DataCapture-Barcode-DecoderParams)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.Codabar](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Codabar)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.Code11](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Code11)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.Code128](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Code128)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.Code39](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Code39)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.Code93](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Code93)
 * [ProfileConfig.DataCapture.Barcode.DecoderParams.Composite_AB](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Composite_AB)
 * [ProfileConfig.DataCapture.Barcode.DecoderParams.Discrete_2of5](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Discrete_2of5)
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.Interleaved_2of5](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Interleaved_2of5) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.Matrix_2of5](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Matrix_2of5) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.MSI](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-MSI) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.UK_Postal](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-UK_Postal) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.UPCA](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-UPCA) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.UPCE0](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-UPCE0) 
-* [ProfileConfig.DataCapture.Barcode.DecoderParams.UPCE1](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-UPCE1) 
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.Interleaved_2of5](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Interleaved_2of5)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.Matrix_2of5](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-Matrix_2of5)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.MSI](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-MSI)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.UK_Postal](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-UK_Postal)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.UPCA](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-UPCA)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.UPCE0](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-UPCE0)
+* [ProfileConfig.DataCapture.Barcode.DecoderParams.UPCE1](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-UPCE1)
 * [ProfileConfig.DataCapture.Barcode.DecoderParams.USPlanet](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-USPlanet)
 * [ProfileConfig.DataCapture.Barcode.DecoderParams.USPostnet](../api/ProfileConfig-DataCapture-Barcode-DecoderParams-USPostnet)
-* [ProfileConfig.DataCapture.Barcode.ReaderParams](../api/ProfileConfig-DataCapture-Barcode-ReaderParams) 
-* [ProfileConfig.DataCapture.Barcode.ScanParams](../api/ProfileConfig-DataCapture-Barcode-ScanParams) 
-* [ProfileConfig.DataCapture.Barcode.UpcEanParams](../api/ProfileConfig-DataCapture-Barcode-UpcEanParams) 
-* [ProfileConfig.DataCapture.MSR](../api/ProfileConfig-DataCapture-MSR) 
-* [ProfileConfig.DataCapture.DataDelivery](../api/ProfileConfig-DataCapture-DataDelivery) 
-* [ProfileConfig.DataCapture.DataDelivery.BasicDataFormatting](../api/ProfileConfig-DataCapture-DataDelivery-BasicDataFormatting) 
-* [ProfileConfig.DataCapture.DataDelivery.Intent](../api/ProfileConfig-DataCapture-DataDelivery-Intent) 
+* [ProfileConfig.DataCapture.Barcode.ReaderParams](../api/ProfileConfig-DataCapture-Barcode-ReaderParams)
+* [ProfileConfig.DataCapture.Barcode.ScanParams](../api/ProfileConfig-DataCapture-Barcode-ScanParams)
+* [ProfileConfig.DataCapture.Barcode.UpcEanParams](../api/ProfileConfig-DataCapture-Barcode-UpcEanParams)
+* [ProfileConfig.DataCapture.MSR](../api/ProfileConfig-DataCapture-MSR)
+* [ProfileConfig.DataCapture.DataDelivery](../api/ProfileConfig-DataCapture-DataDelivery)
+* [ProfileConfig.DataCapture.DataDelivery.BasicDataFormatting](../api/ProfileConfig-DataCapture-DataDelivery-BasicDataFormatting)
+* [ProfileConfig.DataCapture.DataDelivery.Intent](../api/ProfileConfig-DataCapture-DataDelivery-Intent)
 * [ProfileConfig.DataCapture.DataDelivery.Keystroke](../api/ProfileConfig-DataCapture-DataDelivery-Keystroke)
 
 ###ProfileManager
 * [ProfileManager](../api/ProfileManager)
 * [ProfileManager.DataListener](../api/ProfileManager-DataListener)
-* [ProfileManager.ResultData](../api/ProfileManager-ResultData) 
+* [ProfileManager.ResultData](../api/ProfileManager-ResultData)
 
 ###VersionManager
-* [VersionManager](../api/VersionManager) 
+* [VersionManager](../api/VersionManager)
 
 
 
@@ -64,11 +64,13 @@ The following APIs are used when you wish to handle all barcode scanning entirel
 * [BarcodeManager.ScannerConnectionListener](../api/BarcodeManager-ScannerConnectionListener)
 * [BarcodeManager.ScannerConnectionListener.ConnectionStatus](../api/BarcodeManager-ScannerConnectionListener-ConnectionStatus)
 
+<!--
 ###Collection
 * [Collection.ScanData](../api/Collection-ScanData)
+-->
 
 ###InterfaceConfig
-* [InterfaceConfig](../api/BarcodeInterfaceConfig)
+* [InterfaceConfig](../api/InterfaceConfig)
 
 ###ScanDataCollection
 * [ScanDataCollection](../api/ScanDataCollection)
@@ -147,7 +149,7 @@ The following APIs are used when you wish to handle all barcode scanning entirel
 
 
 ## ScanAndPair APIs
-The ScanAndPair API provides simple methods to scan a Bluetooth barcode (Bluetooth name or address) of a remote device and pair/unpair with the Bluetooth device. 
+The ScanAndPair API provides simple methods to scan a Bluetooth barcode (Bluetooth name or address) of a remote device and pair/unpair with the Bluetooth device.
 
 ###ScanAndPairManager
 * [ScanAndPairManager](../api/ScanAndPairManager)
@@ -236,3 +238,121 @@ Customers can interactively capture documents and obtain meaningful data present
 
 ###SimulScanTemplateRegion
 * [SimulScanTemplateRegion](../api/SimulScanTemplateRegion)
+
+## Personal Shopper APIs
+The following API's are used to control the MC18(Personal Shopper) Cradle. Enabling your
+application to perform tasks such as unlocking the cradle to allow the MC18 to be removed.
+
+
+###PersonalShopper
+* [PersonalShopper](../api/PersonalShopper)
+
+###PersonalShopperHelper
+* [PersonalShopperHelper](../api/PersonalShopperHelper)
+
+###Cradle
+* [Cradle](../api/Cradle)
+
+###CradleConfig
+* [CradleConfig](../api/CradleConfig)
+* [CradleConfig.CradleLocation](../api/CradleConfig-CradleLocation)
+
+###CradleException
+* [CradleException](../api/CradleException)
+
+###CradleInfo
+* [CradleInfo](../api/CradleInfo)
+
+###CradleLedFlashInfo
+* [CradleLedFlashInfo](../api/CradleLedFlashInfo)
+
+###CradleResults
+* [CradleResults](../api/CradleResults)
+
+###Diagnostic
+* [Diagnostic](../api/Diagnostic)
+
+###DiagnosticConfig
+* [DiagnosticConfig](../api/DiagnosticConfig)
+
+###DiagnosticData
+* [DiagnosticData](../api/DiagnosticData)
+
+###DiagnosticException
+* [DiagnosticException](../api/DiagnosticException)
+
+###DiagnosticResults
+* [DiagnosticResults](../api/DiagnosticResults)
+
+
+## Secure NFC APIs
+
+###SecureNfcManager
+* [SecureNfcManager](../api/SecureNfcManager)
+* [SecureNfcManager-SamType](../api/SecureNfcManager-SamType)
+* [SecureNfcManager-TagTechTyp](../api/SecureNfcManager-TagTechType)
+* [SecureNfcManagerHelper](../api/SecureNfcManagerHelper)
+* [SecureNfcResults](../api/SecureNfcResults)
+* [SecureNfcException](../api/SecureNfcException)
+
+###SmartCard
+* [SmartCard](../api/SmartCard)
+* [SmartCard.SmartCardConfig](../api/SmartCard-SmartCardConfig)
+* [SmartCard.SmartCardProtocolType](../api/SmartCard-SmartCardProtocolType)
+* [SmartCard.SmartCardVersion](../api/SmartCard-SmartCardVersion)
+* [SmartCard](../api/SmartCard)
+* [SmartCardException](../api/SmartCardException)
+* [SmartcardResult](../api/SmartcardResult)
+
+###MifareDesfire
+* [MifareDesfire](../api/MifareDesfire)
+* [MifareDesfire.AppKeySettings](../api/MifareDesfire-AppKeySettings)
+* [MifareDesfire.AuthenticateType](../api/MifareDesfire-AuthenticateType)
+* [MifareDesfire.CardVersionInfo-HardwareInfo](../api/MifareDesfire-CardVersionInfo-HardwareInfo)
+* [MifareDesfire.CardVersionInfo-ManufacturerInfo](../api/MifareDesfire-CardVersionInfo-ManufacturerInfo)
+* [MifareDesfire.CardVersionInfo-SoftwareInfo](../api/MifareDesfire-CardVersionInfo-SoftwareInfo)
+* [MifareDesfire.CardVersionInfo](../api/MifareDesfire-CardVersionInfo)
+* [MifareDesfire.CreditType](../api/MifareDesfire-CreditType)
+* [MifareDesfire.DFNames](../api/MifareDesfire-DFNames)
+* [MifareDesfire.FileAccessRights](../api/MifareDesfire-FileAccessRights)
+* [MifareDesfire.FileCommMode](../api/MifareDesfire-FileCommMode)
+* [MifareDesfire.FileIDType](../api/MifareDesfire-FileIDType)
+* [MifareDesfire.FileSettings](../api/MifareDesfire-FileSettings)
+* [MifareDesfire.FileTypeSpecificSettings](../api/MifareDesfire-FileTypeSpecificSettings)
+* [MifareDesfire.KeySettings](../api/MifareDesfire-KeySettings)
+* [MifareDesfire.MasterKeySettingsType](../api/MifareDesfire-MasterKeySettingsType)
+* [MifareDesfire.RecordFileSettings](../api/MifareDesfire-RecordFileSettings)
+* [MifareDesfire.ValueFileSettings](../api/MifareDesfire-ValueFileSettings)
+* [MifareDesfireExpection](../api/MifareDesfireExpection)
+* [MifareDesfireResults](../api/MifareDesfireResults)
+
+###MifarePlusSL3
+* [MifarePlusSL3](../api/MifarePlusSL3)
+* [MifarePlusSL3Exception](../api/MifarePlusSL3Exception)
+* [MifarePlusSL3Results](../api/MifarePlusSL3Results)
+
+###MifareSam
+* [MifareSam](../api/MifareSam)
+* [MifareSam.AdditionalAuthData-AV1Mode](../api/MifareSam-AdditionalAuthData-AV1Mode)
+* [MifareSam.AdditionalAuthData-AV2Mode](../api/MifareSam-AdditionalAuthData-AV2Mode)
+* [MifareSam.AdditionalAuthData](../api/MifareSam-AdditionalAuthData)
+* [MifareSam.ProtectionMode](../api/MifareSam-ProtectionMode)
+* [MifareSam.SamInfo-HardwareInfo](../api/MifareSam-SamInfo-HardwareInfo)
+* [MifareSam.SamInfo-ManufacturerInfo](../api/MifareSam-SamInfo-ManufacturerInfo)
+* [MifareSam.SamInfo-SoftwareInfo](../api/MifareSam-SamInfo-SoftwareInfo)
+* [MifareSam.SamInfo](../api/MifareSam-SamInfo)
+* [MifareSam.SamMode](../api/MifareSam-SamMode)
+* [MifareSamException](../api/MifareSamException)
+* [MifareSamResults](../api/MifareSamResults)
+
+###SamBase
+* [SamBase](../api/SamBase)
+
+###SamDiverseParams
+* [SamDiverseParams](../api/SamDiverseParams)
+ 
+###SamKey
+* [SamKey](../api/SamKey)
+
+###TagTechBase
+* [TagTechBase](../api/TagTechBase)

@@ -10,15 +10,13 @@ The diagnostic data.
 
 
 
-Parameters:
+**Parameters:**
 
-**svcDiagnosticData**
+svcDiagnosticData
 
 
 
 com.symbol.emdk.emdkservice.diagnostic.SvcDiagnosticData
-
-Throws:
 
 ##Public Fields
 

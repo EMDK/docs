@@ -10,10 +10,6 @@ Data specific to the AV1 Sam Mode.
 
 
 
-Parameters:
-
-Throws:
-
 ##Public Fields
 
 ###useLogicalChannelForCMacCalculation

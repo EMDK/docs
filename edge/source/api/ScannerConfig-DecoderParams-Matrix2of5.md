@@ -11,17 +11,20 @@ The Matrix2of5 class provides access to parameters that are
 
 Used to set decode lengths. The valid range is 0 to 55.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	matrix2of5.length1 = 10;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	matrix2of5.length1 = 10;
+
 
 **Type:**
 
@@ -31,17 +34,20 @@ int
 
 Used to set decode lengths. The valid range is 0 to 55.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	matrix2of5.length2 = 0;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	matrix2of5.length2 = 0;
+
 
 **Type:**
 
@@ -51,17 +57,20 @@ int
 
 Sets the reader to read the bar code twice before accepting data.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	matrix2of5.redundancy = false;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	matrix2of5.redundancy = false;
+
 
 **Type:**
 
@@ -71,17 +80,20 @@ boolean
 
 Transmit Matrix 2 of 5 data with or without the check digit.
  
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	matrix2of5.reportCheckDigit = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	matrix2of5.reportCheckDigit = true;
+
 
 **Type:**
 
@@ -92,17 +104,20 @@ boolean
 Enable this feature to check the integrity of all Matrix 2 of 5
  symbols to verify that the data complies with a specified check
  digit algorithm
- <p>
- <blockquote>
  
- <pre>
- {@code
- 	Example Usage:
- 	matrix2of5.verifyCheckDigit = true;
- }
- </pre>
  
- </blockquote>
+ 
+ 
+ 
+
+
+
+**Example Usage:**
+	
+	:::java	
+	 	
+	 	matrix2of5.verifyCheckDigit = true;
+
 
 **Type:**
 

@@ -1,0 +1,52 @@
+###com.symbol.emdk.emdkservice.barcode.ScannerResults
+
+Defines all the error codes the barcode scanning API returns.
+
+**Values:**
+
+* **SUCCESS**
+
+* **ALREADY_SCANNING**
+
+* **SCANNER_IN_USE**
+
+* **VF_ERROR**
+
+* **INVALID_VALUE**
+
+* **SCAN_PARAM_NOT_SUPPORTED**
+
+* **SCAN_DATA_FAILURE**
+
+* **SCAN_PARAM_READ_ONLY**
+
+* **LENGTH_MISMATCH**
+
+* **SCANNER_OPERATION_FAILURE**
+
+* **FEATURE_NOT_SUPPORTED**
+
+* **SCANNER_NOT_SUPPORTED**
+
+* **FAILURE**
+
+* **SCANNER_NOT_ENABLED**
+
+* **SCANNER_TIMED_OUT**
+
+* **INVALID_OBJECT**
+
+* **NO_DATA_LISTENER**
+
+* **TRIGGER_KEY_REG_FAILED**
+
+* **TRIGGER_KEY_IN_USE**
+
+* **TRIGGER_KEY_UNREG_FAILED**
+
+* **SCANNER_INIT_FAILURE**
+
+* **SCANNER_DEINIT_FAILURE**
+
+* **UNDEFINED**
+

@@ -10,27 +10,25 @@ The class for provides access to the cradle location.
 
 Constructor
 
-Parameters:
+**Parameters:**
 
-**wall**
-
-
-
-int
-
-**row**
+wall
 
 
 
 int
 
-**column**
+row
 
 
 
 int
 
-Throws:
+column
+
+
+
+int
 
 ##Public Fields
 

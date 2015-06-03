@@ -10,27 +10,25 @@ The class to hold the LED Flash settings.
 
 Constructor to instantiate the CradleLEDConfig.
 
-Parameters:
+**Parameters:**
 
-**onDuration**
-
-
-
-int
-
-**offDuration**
+onDuration
 
 
 
 int
 
-**smoothEffect**
+offDuration
+
+
+
+int
+
+smoothEffect
 
 
 
 boolean
-
-Throws:
 
 ##Public Fields
 
