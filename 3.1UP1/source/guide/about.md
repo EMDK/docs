@@ -18,13 +18,17 @@ Since Google released Android Studio, the ADT bundle is no longer available for 
 ## Devices Supported
 Although EMDK for Android has been designed to work with all Symbol mobile computers running Android, the following devices have been used for validation:
 
+* MC18 - KitKat
 * MC32 - OS Update image v00002 or higher (JellyBean)
 * MC40 - OS Update image v02.08.0520 or higher (JellyBean)
+* MC40 - KitKat
 * MC67 - OS Update image v01.28.14 or higher (JellyBean)
+* MC92 - KitKat
 * TC55 - OS Update image v01.74.00 or higher (JellyBean)
 * TC55 - KitKat
 * TC70 - OS Update image v11.24.14 or higher (KitKat)
 * TC75 - KitKat
+
 
 ## What's New
 
@@ -32,14 +36,20 @@ Although EMDK for Android has been designed to work with all Symbol mobile compu
 
 * New Profile Manager Features
 	* [Audio Manager](../guide/profiles/audio)-  allows you to manage enhanced audio volume control configurations
-	* [Battery Manager](../guide/profiles/audio)- allows the developer to modify that Decommission Threshold from its factory setting
-	* [Component Manager](../guide/profiles/audio)- allows you to manage the state of Components, such as a devices Ethernet Port
-	* [DHCP Manager](../guide/profiles/audio)- allows you to control various DHCP configuration options.
-	* [KeyMap Manager](../guide/profiles/audio)- allows you to remap functionality of keys.
-* Smart Cradle APIs for MC18
-* NFC APIs
-* Payment APIs
-* Dex APIs
+	* [Battery Manager](../guide/profiles/battery)- allows the developer to modify that Decommission Threshold from its factory setting
+	* [Component Manager](../guide/profiles/component)- allows you to manage the state of Components, such as a devices Ethernet Port
+	* [DHCP Manager](../guide/profiles/dhcp)- allows you to control various DHCP configuration options.
+	* [KeyMap Manager](../guide/profiles/keymap)- allows you to remap functionality of keys.
+* New Device Support
+	* MC18 - KitKat
+	* MC40 - KitKat
+	* MC92 - KitKat
+* New API's
+	* [PersonalShopper APIs](../guide/reference/EMDKList?PersonalShopper) for MC18
+	* [NFC APIs](../guide/reference/EMDKList?SecureNfcManager)
+* New Guides
+	* Personal Shopper
+	* NFC
 
 **EMDK for Android v3.1**
 
@@ -107,7 +117,7 @@ The EMDK for Android offers access to the device's Barcode capabilities through 
 The EMDK for Android will continue to support the [DataCapture](../guide/reference/refdatacaptureintent) and [Battery Intent](../guide/reference/refbatteryintent) APIs that were previously available on individual device types. 
 
 <a name="faqs"></a>
-
+<!--
 ## Frequently Asked Questions
 **Q: Where can I download a copy of the EMDK for Android?**
 
@@ -326,7 +336,7 @@ The intent of the EMDK is to provide developers with commonly required programma
 </tr>
 </table>
 
-
+-->
 
 
 
