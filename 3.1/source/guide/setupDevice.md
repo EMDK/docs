@@ -48,7 +48,7 @@ The device will be reboot after the device update completes.
 Before installing EMDK device runtime on GMS devices, you must enable the enterprise-grade features like Mobility Extensions (MX). To download enterprise enabler for your device, go to [https://portal.motorolasolutions.com/Support/US-EN](https://portal.motorolasolutions.com/Support/US-EN) and search for "Enterprise Enabler" along with the device name.
 
 ## Modify Device Runtime Installation Behavior
-The EMDK device runtime update application will skip the EMDK runtime install if a device has an EMDK runtime version higher than the install version. The EMDK device runtime installation behavior can be modified by pushing an EMDK install mode configuration (emdkosupdateconfig.xml) to the "/enterprise/usr/" folder on a devices internal storage. This overrides the default settings of the application. This XML will be removed automatically once the update is successful.
+The EMDK device runtime update application will skip the EMDK runtime install if a device has an EMDK runtime version higher than the install version. The EMDK device runtime installation behavior can be modified by pushing an EMDK install mode configuration (`emdkosupdateconfig.xml`) to the `/enterprise/usr/` folder on a devices internal storage. This overrides the default settings of the application. This XML will be removed automatically once the update is successful.
 
 >NOTE: **This process is not required to use the default installation behavior.**
 
@@ -57,23 +57,32 @@ The EMDK device runtime update application will skip the EMDK runtime install if
 		:::xml
 		<?xml version="1.0" encoding="utf-8"?>
 		<wap-provisioningdoc>
-		        <parm name="InstallMode" value="skip"/>          
+		        <parm name="InstallMode" value="skip"/>
+		        <parm name="RemoveInstaller" value="true"/>          
 		    </characteristic>
 		</wap-provisioningdoc>
 
 
 **InstallMode Parm Value Options:**
+This determines the install behavior when the existing version on the device is higher than the version being installed. The default install mode is `skip`. 
 
 * **auto** - Displays alert box during installation and waits for the user input
 * **overwrite** - Overwrite and continue installation
 * **skip** - Skip and continue installation. This is the default
 * **cancel** - Exit the installation
 
+**RemoveInstaller Parm Value Options:**
+Removes the EMDK OS Update application on successful update.
+
+* **true** - Removes the EMDK OS Update application on successful update (Default).
+* **false** - Don't remove the EMDK OS Update application on successful update.
+
+>Note: Supported in EMDKOS Update App v3.1.24 or higher.
 
 **EMDK Device Runtime Installation Steps**
 
-1. Create emdkosupdateconfig.xml and push into /enterprise/usr/ to modify the default behavior.
-2. Push the EmdkOSUpdateApp_[version].apk to a supported Symbol device.
+1. Create `emdkosupdateconfig.xml` and push into `/enterprise/usr/` to modify the default behavior.
+2. Push the `EmdkOSUpdateApp_[version].apk` to a supported Symbol device.
 3. Install EmdkOSUpdateApp application.
 4. Launch installed EmdkOSUpdateApp application.
 
