@@ -36,16 +36,20 @@ Although EMDK for Android has been designed to work with all Symbol mobile compu
 
 * New Profile Manager Features
 	* [Audio Manager](../guide/profiles/audio)-  allows you to manage enhanced audio volume control configurations
-	* [Battery Manager](../guide/profiles/audio)- allows the developer to modify that Decommission Threshold from its factory setting
-	* [Component Manager](../guide/profiles/audio)- allows you to manage the state of Components, such as a devices Ethernet Port
-	* [DHCP Manager](../guide/profiles/audio)- allows you to control various DHCP configuration options.
-	* [KeyMap Manager](../guide/profiles/audio)- allows you to remap functionality of keys.
+	* [Battery Manager](../guide/profiles/battery)- allows the developer to modify that Decommission Threshold from its factory setting
+	* [Component Manager](../guide/profiles/component)- allows you to manage the state of Components, such as a devices Ethernet Port
+	* [DHCP Manager](../guide/profiles/dhcp)- allows you to control various DHCP configuration options.
+	* [KeyMap Manager](../guide/profiles/keymap)- allows you to remap functionality of keys.
 * New Device Support
 	* MC18 - KitKat
 	* MC40 - KitKat
 	* MC92 - KitKat
-* [PersonalShopper APIs](../guide/reference/EMDKList?PersonalShopper) for MC18
-* [NFC APIs](../guide/reference/EMDKList?SecureNfcManager)
+* New API's
+	* [PersonalShopper APIs](../guide/reference/EMDKList?PersonalShopper) for MC18
+	* [NFC APIs](../guide/reference/EMDKList?SecureNfcManager)
+* New Guides
+	* Personal Shopper
+	* NFC
 
 **EMDK for Android v3.1**
 
