@@ -14,7 +14,8 @@ The following code snippets illustrate the typical usage of the Personal Shopper
 **Get access to EMDKManager class to access different features supported**
     
     :::java
-    EMDKManager emdk = emdkManager.getEMDKManager(getApplicationContext(), this);
+    EMDKManager emdkManager = EMDKManager.getEMDKManager(getApplicationContext(), this);
+
 
 
 **Create an instance of the personal shopper feature class**
