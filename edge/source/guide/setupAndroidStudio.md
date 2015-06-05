@@ -6,10 +6,16 @@
 1. Go to [http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html)
 2. Download `Android Studio 1.x`
 
-> NOTE: Android Studio should be installed on your computer before running the EMDK for Andriod installer. 
+>NOTE: Android Studio should be installed on your computer before running the EMDK for Andriod installer.
+
 
 ### Installing EMDK for Android
 
+>NOTE: Before installing EMDK For Android Update 1, you must first install the full version, EMDK for Android v3.1 [EMDK-A-030109.exe]. To Obtain v3.1, go to http://support.symbol.com, and search for `EMDK for Android` using Search Support. Download Version 3.1. Then follow the steps below:
+
+###Install version 3.1
+
+`If you already have v3.1 installed, skip to Install version 3.1 Update 1 below.`
 
 1. Run the EMDK 3.1 Installer as Administrator, Then Click Next.
 
@@ -22,10 +28,34 @@
 3. Click next or select a custom install location by clicking Browse and then click next.
 
 	![img](images/setup/emdkInstall03.png)
- 
+
 4. Continue installing EMDK for Android in Android studio by selecting the `Use Android Studio` radio button ( As Shown ) and select Next.
 
 	![img](images/setup/emdkInstall04.png)
+
+
+###Install version 3.1 Update 1
+
+1. Run the EMDK 3.1 Update 1 Installer as Administrator, Then Click **Next >**.
+
+	![img](images/setup/install31UD1_AS_1.png)
+
+2. Backup your samples, or select **Next >** to Continue.
+
+	![img](images/setup/install31UD1_AS_2.png)
+
+3. Click **I Agree** after reading the License Agreement to continue the installation.
+
+	![img](images/setup/install31UD1_AS_3.png)
+
+4. When instalation completes, select **Next >**
+
+	![img](images/setup/install31UD1_AS_5.png)
+
+5. Then select **Finish**
+
+	![img](images/setup/install31UD1_AS_6.png)
+
 
 
 ##EMDK for Android development with Android Studio
@@ -48,7 +78,7 @@ In order to enable EMDK development in your project, you must first add the EMDK
 	>Android Studio will display your project when Gradle build process is complete.
 
 To verify that the EMDK has been added to your project.
- 
+
 1. Go to File \> Project Structure.
 
 2. Click on app under Modules in the Project Structure Window's left-pane.
@@ -58,7 +88,7 @@ To verify that the EMDK has been added to your project.
 > Symbol Technologies, Inc.:EMDK 3.0 (API 16):16
 
 > Symbol Technologies, Inc.:EMDK 3.0 (API 19):19
-> 
+>
 >![img](images/setup/as_image12.png)
 
 
@@ -84,7 +114,7 @@ Starting with a previously created Project with a minimum API level of 16 or 19
 4. Select "Import JAR or AAR Package" from the list More Modules then Click Next
 
 5. Click Browse button and locate the EMDK jar file (com.symbol.emdk.jar) from the SDK add-on folder and click OK
-	
+
 	![img](images/setup/as_image25.png)
 
 	>The new module will eventualy appear in the left-pane of the project structure window.
@@ -149,6 +179,5 @@ Select "Import Non-Android Studio project"
 	![img](images/setup/as_image47.png)
 
 5. Connect a Symbol Android device via USB, and select Run from the Run menu.
-	
+
 	![img](images/setup/as_image48.png)
-	
