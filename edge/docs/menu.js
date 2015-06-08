@@ -73,10 +73,10 @@ var menuStrcture = [
 												name: 'Modifying Profiles',
 												link: '#guide-tutorial-tutModifyBarcodeProfileSettings',
 											},
-											//{
-											//	name: 'Browser Manager',
-											//	link: '#guide-tutorial-tutMxBrowserManager',
-											//},
+											{
+												name: 'Browser Manager',
+												link: '#guide-tutorial-tutMxBrowserManager',
+											},
 											{
 												name: 'Camera Manager',
 												link: '#guide-tutorial-tutMxCameraManager',
