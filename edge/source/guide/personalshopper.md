@@ -12,7 +12,7 @@ The EMDK for Android provides developers with a set of tools to easily create Pe
 The following code snippets illustrate the typical usage of the Personal Shopper feature type to use the smart cradle interfaces and Diagnostic Interface on MC18 device
 
 **Get access to EMDKManager class to access different features supported**
-    
+
     :::java
     EMDKManager emdkManager = EMDKManager.getEMDKManager(getApplicationContext(), this);
 
@@ -22,7 +22,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
 
     :::java
     PersonalShopper  personalShopper = (PersonalShopper)this.emdkManager.getInstance(FEATURE_TYPE.PERSONALSHOPPER);
-  
+
     if(personalShopper == null)
     {
     	//This feature is not supported on the device in use.
@@ -39,6 +39,8 @@ The following code snippets illustrate the typical usage of the Personal Shopper
     }
 
 
+##CradleInfo
+
 **To fetch the cradle information like firmware version, part number, serial number, HW id etc**
 
     :::java
@@ -48,7 +50,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
            e.printStackTrace();
     }
 
-
+##Unlock
 **To unlock the cradle for a specific duration with LED blinks**
 
 >NOTE: To unlock without flashing, keep the onDuration as 0.
@@ -57,7 +59,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
     try {
            CradleLedFlashInfo ledFlashInfo = new CradleLedFlashInfo(onDuration, offDuration, smoothEnable);
            CradleResults result = personalShopper.cradle.unlock(unlockDuration, ledFlashInfo);
-    					
+
            if(result == CradleResults.SUCCESS){
                  // Successfully unlocked the device
            }
@@ -68,7 +70,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
            e.printStackTrace();
     }
 
-
+##Flash LEDs
 **To flash the cradle leds**
 
 >NOTE: To stop the flashing before the flashCount, call the flashLED again with onDuration as 0
@@ -77,7 +79,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
     try {
            CradleLedFlashInfo ledFlashInfo = new CradleLedFlashInfo(onDuration, offDuration, smoothEnable);
            CradleResults result = personalShopper.cradle.flashLed(flashCount, ledFlashInfo);
-    					
+
            if(result == CradleResults.SUCCESS){
                  // Successfully flashed the leds
            }
@@ -87,15 +89,15 @@ The following code snippets illustrate the typical usage of the Personal Shopper
     }catch (CradleException e) {
            e.printStackTrace();
     }
-    
 
 
+##Cradle Config
 **To fetch the charge rate**
 
     :::java
     try {
            boolean fastChargeState = personalShopper.cradle.config.getFastChargingState();
-           				
+
            if(fastChargeState == true){
                  // Fast charge enabled
            }
@@ -123,7 +125,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
     :::java
     try {
            CradleLocation location = personalShopper.cradle.config.getLocation();
-    
+
            if(location!=null){
                  // location.row, location.column, location.wall successfully read.
            }
@@ -141,7 +143,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
     try {
            CradleLocation location = personalShopper.cradle.config.new CradleLocation(wall,row,col);
            personalShopper.cradle.config.setLocation(location);
-    
+
     }catch (CradleException e) {
            e.printStackTrace();
     }
@@ -158,8 +160,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
     }
 
 
-
-
+##Diagnostic
 **To get Diagnostic interface, use the ‘diagnostic’ member variable of the personalShopper object**
 
 To get Diagnostic Parameters like Battery state of health, State of charge , Time to Empty , Manufacturing Date, Required Charging time , Charging elapsed time ,Days since battery replaced and time since last reboot.
@@ -169,8 +170,7 @@ To get Diagnostic Parameters like Battery state of health, State of charge , Tim
     DiagnosticParamId diagnosticparamID = new DiagnosticParamId();
     DiagnosticData diagnosticData = personalShopper.diagnostic.getDiagnosticData(diagnosticparamID.ALL,
     new  DiagnosticConfig(AvgCurrent,shoppingtrip));
-    
+
     }catch (DiagnosticException e) {
            e.printStackTrace();
     }
-
