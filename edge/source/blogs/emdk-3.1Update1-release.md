@@ -18,7 +18,7 @@ This update brings Five new profile features, two new APIs and support for 3 mor
 **New APIs**
 
 * Personal Shopper APIs - This API allows the developer to control the MC18 smart cradle, and retrieve diagnostic information such as battery capacity.
-* Secure NFC -
+* Secure NFC - This API provides encryption for nfc transtacitons and provides support for MifareDesfire tags.
 
 
 **New Devices**

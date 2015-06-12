@@ -1,7 +1,7 @@
 #SimulScan API programmer's guide
 
 ##Introduction
-SimulScan is an end-to-end data capture solution for extracting critical data from documents. A differentiating data capture value-add, it involves capturing fields of interest in a given document and converting it into data that an end-user application can use immediately at the point of transaction. 
+SimulScan is an end-to-end data capture solution for extracting critical data from documents. A differentiating data capture value-add, it involves capturing fields of interest in a given document and converting it into data that an end-user application can use immediately at the point of transaction.
 
 SimulScan customers benefit from:
 
@@ -14,7 +14,7 @@ Customers can interactively capture documents and obtain meaningful data present
 ##Determining device support
 
 - Supported devices : TC55, TC75
-- SimulScan v1.8 
+- SimulScan v1.8
 - EMDK v3.1.x
 
 
@@ -32,11 +32,11 @@ Customers can interactively capture documents and obtain meaningful data present
 	- Once this is complete, the License Information should be updated to reflect the fact that a license is installed
 
 
-##Getting started with EMDK’s SimulScan APIs
+##Getting started
 
 ###Initialize EMDK manager
 
-Follow the [“Basic Scanning Tutorial using Barcode API”](../guide/tutorial/tutBasicScanningAPI) to 
+Follow the [“Basic Scanning Tutorial using Barcode API”](../guide/tutorial/tutBasicScanningAPI) to
 set up your project for the EMDK.
 
 >Note: It is recommended to release EMDKManager in onDestroy() and onClose() (Service disconnected unexpectedly)
@@ -93,12 +93,12 @@ First register data and status listener to the SimulScanReader object. The liste
 			// TODO Auto-generated method stub
 		}
 	}
-	
+
 	....
 
 	SimulScanTestApp m_ SimulScanTestApp = new SimulScanTestApp();
 	try {
-		selectedSimulScanReader.addSimulScanStatusListener(m_ SimulScanTestApp);	selectedSimulScanReader.addSimulScanDataListener(m_ SimulScanTestApp); 
+		selectedSimulScanReader.addSimulScanStatusListener(m_ SimulScanTestApp);	selectedSimulScanReader.addSimulScanDataListener(m_ SimulScanTestApp);
 	} catch (SimulScanException e) {
 		e.printStackTrace();
 	}
@@ -119,7 +119,7 @@ Once the barcode is enabled, we will must set a valid template for the reader. T
 
 	SimulScanMultiTemplate multiTemplate = new SimulScanMultiTemplate(Uri.fromFile("/file/path"));
 	if(multiTemplate != null)
-		config.multiTemplate = multiTemplate;				
+		config.multiTemplate = multiTemplate;
 	//optionally set other configs
 	config.enableAutoCapture = true;
 	 config.enableResultConfirmation = true;
@@ -129,7 +129,7 @@ Once the barcode is enabled, we will must set a valid template for the reader. T
 	 selectedSimulScanReader.setConfig(config);
 
 To create SimulScan templates use the “Template Builder" graphical tool web tool at https://simulscan.zebra.com/.
- Template builder help can be found there at https://simulscan.zebra.com/Content/Help/WebHelp/index.htm. 
+ Template builder help can be found there at https://simulscan.zebra.com/Content/Help/WebHelp/index.htm.
  After creating the templates, copy the template XML to your device and use the “new SimulScanMultiTemplate()” API to open the created template.
 
 After setting a template we can start a scan using the SimulScanReader.read() API. The read request can be canceled by issuing a cancelRead(). If a read() is submitted while another read is pending, the method call will fail. It is recommended to check whether a read is pending by calling isReadPending() before submitting a read().
@@ -160,7 +160,7 @@ When we are done with scanning, we must release the scanner hardware resources f
 			}
 		} catch (SimulScanException e) {
 			e.printStackTrace();
-		}		
+		}
 		super.onStop();
 	}
 
@@ -181,7 +181,7 @@ The valid configuration parameters are as follows:
 - processingTimeout : Amount of time in milliseconds to wait before timing out processing
 
 	:::java
-	SimulScanConfig config = selectedSimulScanReader.getConfig();			
+	SimulScanConfig config = selectedSimulScanReader.getConfig();
 
 	config.enableAutoCapture = true;
 	 config.enableResultConfirmation = true;
@@ -192,39 +192,39 @@ The valid configuration parameters are as follows:
 
 ###Handling onSimulScanStatus events
 
-EMDK will generate onSimulSCanStatus events when there is a change in state in a particular SimulScanReader. Use the SimulScanStatusData object in the onSimulScanScanStatus callback method to get information on the status. 
+EMDK will generate onSimulSCanStatus events when there is a change in state in a particular SimulScanReader. Use the SimulScanStatusData object in the onSimulScanScanStatus callback method to get information on the status.
 
 	:::java
 	@Override
 	public void onSimulScanStatus(SimulScanStatusData statusData) {
 
 		// Print the friendly name of the Reader that originated the status update
-		Log.v(TAG, "Reader: "+ statusData.getFriendlyName());	
+		Log.v(TAG, "Reader: "+ statusData.getFriendlyName());
 		// Handle the various state changes
 		switch (statusData.getState()) {
 			case DISABLED:
 				Log.v(TAG, "onDisabled");
 				break;
-			case ENABLED: 
+			case ENABLED:
 				Log.v(TAG, "onEnabled");
-				break; 
-			case SCANNING: 
+				break;
+			case SCANNING:
 				Log.v(TAG, "Scanning");
-				break; 
-			case IDLE: 
+				break;
+			case IDLE:
 				Log.v(TAG, "Idle");
-				break; 
-			case ERROR: 
+				break;
+			case ERROR:
 			Log.e(TAG, "ERROR: " + statusData.extendedInfo. getExtendedStatusDescription ());
-				break; 
-			case UNKNOWN: 
-			default: 
-				break; 
+				break;
+			case UNKNOWN:
+			default:
+				break;
 		}
 	}
 
 
-Use the SimulScanStatusData’s getFriendlyName() API to get the friendly name of the SimulScanReader that has generated the Status event and use the getState() API to get the SimulScanStatus object with the status change information. 
+Use the SimulScanStatusData’s getFriendlyName() API to get the friendly name of the SimulScanReader that has generated the Status event and use the getState() API to get the SimulScanStatus object with the status change information.
 
 The list of valid states are as follows:
 
@@ -235,7 +235,7 @@ The list of valid states are as follows:
 - SCANNING : Successfully started scanning
 - UNKNOWN : Known status
 
-For additional error information use the Extended info parameter of the SimulScanStatusData object. 
+For additional error information use the Extended info parameter of the SimulScanStatusData object.
 
 >Note: If you plan to do any significant processing during the onSimulScanStatus callback, you should do so in a background thread so that it does not block the UI thread.
 
@@ -249,14 +249,14 @@ EMDK will generate onSimulScanData events after a successful scan. Use the Simul
 	public void onSimulScanData(SimulScanData simulscanData) {
 			Date timestamp = new Date(simulscanData.getTimestamp());
 			List<SimulScanElement> simulscanDataElements = simulscanData.getElements();
-			List<SimulScanRegion> simulscanDataRegions = new ArrayList<SimulScanRegion>(); 
-			for (SimulScanElement curElement : simulscanDataElements) 
+			List<SimulScanRegion> simulscanDataRegions = new ArrayList<SimulScanRegion>();
+			for (SimulScanElement curElement : simulscanDataElements)
 			{
 				if (curElement instanceof SimulScanRegion) {
 					Log.d(TAG, ((SimulScanRegion) curElement).getName());
-				} else if (curElement instanceof SimulScanGroup) {	
+				} else if (curElement instanceof SimulScanGroup) {
 					List<SimulScanRegion> regionsInGroup = ((SimulScanGroup)curElement).getRegions();
-					for (SimulScanRegion curRegion : regionsInGroup){ 
+					for (SimulScanRegion curRegion : regionsInGroup){
 						Log.d(TAG, “Group:”+ ((SimulScanGroup)curElement).getName() +” Region:”+ ((SimulScanRegion) curRegion).getName());
 					}
 				}
@@ -290,3 +290,8 @@ RegionType as shown in the table below:
 ###Important considerations
 
 Due to a known issue with the Symbol SimulScan framework version 1.8, the orientation of your application must be fixed preferably using the AndroidManifest.xml. Failing to do so may cause your application to hang if the orientation changes during a scan.
+
+
+##SimulScan Default Templates
+
+The SimulScan default templates are available under `"/enterprise/device/settings/datawedge/templates"`. Although this path is not accessible via the file browser on devices having latest images, it is possible to access the path programmatically and get templates copied to any other location preferred by the application. The application must obtain the SimulScanManager instance before attempting to copy these templates from above location.
