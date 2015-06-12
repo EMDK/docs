@@ -10,7 +10,7 @@ This update brings Five new profile features, two new APIs and support for 3 mor
 **New Profile Features:**
 
 * Audio Volumen UI Manager - This feature allows the developer to modify various UI elements in a devices Audio settings menu.
-* Battery Manager -  This feature allows the developer to set the number of charge cycles a Smart or Gifted battery can accumulated before being flagged for replacemnt.
+* Battery Manager -  This feature allows the developer to set the number of charge cycles a Smart or Gifted battery can accumulated before being flagged for replacement.
 * Component Manager - This profile feature allows the developer to control usage of a devices Ethernet port.
 * DHCP Option Manager -  This profile feature allows the developer to set various DHCP clinet options for a device.
 * Key Mapping Manger - This profile feature allows the developer to remap the behaviour a key will exhibit when pressed.
