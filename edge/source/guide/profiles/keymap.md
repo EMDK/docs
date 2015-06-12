@@ -37,7 +37,7 @@ A **Key Table** is a list of behaviors a key will exhibit when pressed. The **Ba
 
 ###Send key-code
 
-Select this behavior to modify which key-code is sent when a key is pressed. A list of possible key-codes are listed below. When modifying a key-code to be sent, you may also choose to select the state of a modifier key. For instance, if you where to modify the "A" key to send a "B" key-code, and set the **SHIFT state** to **Forced ON**, the physical Shift keys state would be disregard and a capital "B" would be sent.
+Select this behavior to modify which key-code is sent when a key is pressed. A list of possible key-codes are listed below. When modifying a key-code to be sent, you may also choose to select the state of a modifier key. For instance, if you where to modify the "A" key to send a "B" key-code, and set the **SHIFT state** to **Forced ON**, the physical Shift keys state would be disregard and a capital "B" would be sent. Enable modifier keys by clicking the **Andvanced** checkbox under send key-code.
 
 
 ###Send trigger
