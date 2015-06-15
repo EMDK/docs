@@ -1635,6 +1635,149 @@ var mxVersions = [
                     }
                 ]
             },
+            {
+                name: 'BatteryMgr',
+                version: '',
+                features: [
+                    {
+                        name: 'Set Battery Usage Decommissioned Threshold',
+                        specifics: [
+                            {
+                                name: 'Smart Battery',
+                                compatibility: [
+                                    {
+                                        name: 'MC40 KK',
+                                        device: 'MC40',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC92 KK',
+                                        device: 'MC92',
+                                        os: 'KK',
+                                        notes: ''
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Set Battery Percent Decommissioned Threshold',
+                        specifics: [
+                            {
+                                name: 'Gifted Battery',
+                                compatibility: [
+                                    {
+                                        name: 'MC18 KK',
+                                        device: 'MC18',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: 'ComponentMgr',
+                version: '',
+                features: [
+                    {
+                        name: 'Enable/Disable Ethernet',
+                        specifics: [
+                            {
+                                name: '',
+                                compatibility: [
+                                    {
+                                        name: 'MC40 KK',
+                                        device: 'MC40',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC92 KK',
+                                        device: 'MC92',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC18 KK',
+                                        device: 'MC18',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'TC55 KK',
+                                        device: 'TC55',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'TC70 KK',
+                                        device: 'TC70',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'TC75 KK',
+                                        device: 'TC75',
+                                        os: 'KK',
+                                        notes: ''
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Turn on/off Ethernet',
+                        specifics: [
+                            {
+                                name: '',
+                                compatibility: [
+                                    {
+                                        name: 'MC40 KK',
+                                        device: 'MC40',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC92 KK',
+                                        device: 'MC92',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'MC18 KK',
+                                        device: 'MC18',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'TC55 KK',
+                                        device: 'TC55',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'TC70 KK',
+                                        device: 'TC70',
+                                        os: 'KK',
+                                        notes: ''
+                                    },
+                                    {
+                                        name: 'TC75 KK',
+                                        device: 'TC75',
+                                        os: 'KK',
+                                        notes: ''
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
 			{
                 name: 'BrowserMgr',
                 version: '',
