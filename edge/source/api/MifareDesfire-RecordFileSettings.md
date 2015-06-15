@@ -26,3 +26,11 @@ Maximum number of records that can be stored Value for linear record
 
 int
 
+###currentNumOfRecords
+
+Current number of records present in the file
+
+**Type:**
+
+int
+

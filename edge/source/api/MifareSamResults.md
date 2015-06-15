@@ -32,5 +32,13 @@ Defines all the error codes the MifareSAM APIs returns.
 
 * **INVALID_HOST_KEY**
 
+* **MEMORY_FAILURE**
+
+* **KEY_VER_NOT_FOUND**
+
+* **INVALID_KEY_ENTRY_OR_KUC**
+
+* **AUTH_COND_NOT_SATISFIED**
+
 * **UNDEFINED**
 

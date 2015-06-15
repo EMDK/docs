@@ -4,7 +4,7 @@
 
 1. Go to http://developer.android.com/sdk/index.html.
 
-	
+
 	![img](images/setup/mac/image3.png)
 
 2. Click on the "Download Android Studio for Mac" button.
@@ -34,8 +34,8 @@ In order to develop EMDK apps on Android Studio, API's 16 and 19 Android platfor
 
 1. Launch Android Studio from Start Programs
 2. Go to Tools / Android / SDK Manager
-3. Check that the status of Android 4.1.2 (API 16) and Android 4.4.2 (API 19) SDK Platforms is "Installed". 
-4. If either SDK platform is not installed check the SDK check mark, click Install Packages, and follow the on screen instructions. When the install is complete, restart Android Studio. 
+3. Check that the status of Android 4.1.2 (API 16) and Android 4.4.2 (API 19) SDK Platforms is "Installed".
+4. If either SDK platform is not installed check the SDK check mark, click Install Packages, and follow the on screen instructions. When the install is complete, restart Android Studio.
 
 	![img](images/setup/mac/image4.png)
 
@@ -47,15 +47,15 @@ In order to develop EMDK apps on Android Studio, API's 16 and 19 Android platfor
 3. Check the status of Android SDK Build-tools 21.1.x or newer is "Installed".
 4. If Android SDK Build-tools 21.1.x or newer is not installed check the SDK check mark, click Install Packages, and follow the on screen instructions. When the install is complete, restart Android Studio.
 
-	![img](images/setup/mac/image5.png)	
+	![img](images/setup/mac/image5.png)
 
-##Setting up Android Studio for EMDK development
+##Installing EMDK v3.1
 
 ###Prerequisites
 
 - Android Studio 1.1.x or newer
 	- Android API 16, API 19 platforms
-	- Android SDK Build-tools 21.1.x or newer 
+	- Android SDK Build-tools 21.1.x or newer
 
 The following items can be found in [EMDK for Mac installation zip file](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip):
 
@@ -72,7 +72,7 @@ The following items can be found in [EMDK for Mac installation zip file](https:/
 ###EMDK SDK add-on Integration
 To add the EMDK 3.1 APIs to the Android SDK please refer the following instructions:
 
-1. Navigate to the /Users/**username**/Library/Android/sdk/add-ons directory. 
+1. Navigate to the /Users/**username**/Library/Android/sdk/add-ons directory.
 
 	![img](images/setup/mac/image6.png)
 
@@ -100,7 +100,7 @@ Configuring Mac OS X with EMDK Wizard core components
 
 EMDK Wizard plug-in integration into Android Studio
 
-1. Launch Finder and go to Applications (on the left side panel) 
+1. Launch Finder and go to Applications (on the left side panel)
 
 	![img](images/setup/mac/image12.png)
 
@@ -123,11 +123,25 @@ Now the “EMDK” menu should appear in the Android Studio menu bar:
 ![img](images/setup/mac/image16.png)
 
 
-##Resolving JDK version conflict 
+##Installing EMDK v3.1 Update1
+
+>NOTE: The EMDK for Android v3.1( [EMDK_3.1_05202015_MAC](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip) ) must be installed on Mac OSX prior to installing this update.
+
+1. Install full [EMDK for Android 3.1](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip)  (refer to instructions above)
+2. Download and unzip [EMDK for Android 3.1 Update1](https://s3.amazonaws.com/emdk/EMDK_3.1_UPDATE1_MAC.zip)
+3. Update the SDK Add-on by copying the contents of \EMDK_3.1_UPDATE1_MAC\SDK\ to /Users/<user>/Library/Android/sdk/add-ons/
+		>NOTE: this update is for API 19 only
+
+4. Update the EMDK Wizard plug-in by copying the contents of \EMDK_3.1_UPDATE1_MAC\Symbol EMDK for Android\ to /Users/Shared/Symbol EMDK for Android/
+
+
+
+
+##Resolving JDK version conflict
 
 This section will provide the required steps to modify the Info.plist of the Android Studio.app, in order to enable the support for plug-ins built using **JDK 7**.
 
-Android Studio 1.1.0 is configured with **JDK 6**. Once the EMDK Wizard plug-in has been installed on Android Studio, if there is a JDK version conflict the following symptoms can be observed. 
+Android Studio 1.1.0 is configured with **JDK 6**. Once the EMDK Wizard plug-in has been installed on Android Studio, if there is a JDK version conflict the following symptoms can be observed.
 
 Notification stating an internal IDE error.
 
@@ -156,7 +170,7 @@ If the JRE version is 1.6.x the EMDK Wizard plug-in for Android studio will fail
 1. Launch Finder > click on Applications on the left side pane > locate the Android Studio.app
 
 	![img](images/setup/mac/image22.png)
- 
+
 
 2. Right click on the Android Studio.app > select Show Package Contents
 
@@ -192,7 +206,7 @@ The ADB connectivity on Mac OS X for Symbol Android devices will not be successf
 To add the Symbol Vendor ID to ADB:
 
 1. Enter the following command using a terminal: `echo 0x05e0 >> ~/.android/adb_usb.ini`
-2. Next, navigate to the ADB directory: `cd /Users/<user>/Library/Android/sdk/platform-tools/` 
+2. Next, navigate to the ADB directory: `cd /Users/<user>/Library/Android/sdk/platform-tools/`
 3. Stop the the adb service if it is running: `./adb kill-server`
-3. Connect a Symbol Android device and enter the following command verify the list of attached devices: 
+3. Connect a Symbol Android device and enter the following command verify the list of attached devices:
 	`./adb devices`

@@ -1541,7 +1541,7 @@ var mxVersions = [
 
                                 ]
                             }
-							
+
                         ]
                     },
                     {
@@ -4696,7 +4696,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     },
                                     {
@@ -5167,7 +5167,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5178,7 +5178,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5189,7 +5189,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5200,7 +5200,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5211,7 +5211,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5222,7 +5222,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5238,7 +5238,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5249,7 +5249,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5265,7 +5265,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5276,7 +5276,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5287,7 +5287,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5298,7 +5298,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5309,7 +5309,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5320,7 +5320,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5331,7 +5331,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5342,7 +5342,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5353,7 +5353,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -5364,7 +5364,7 @@ var mxVersions = [
                                     {
                                         name: '',
                                         device: '',
-                                        os: '',	
+                                        os: '',
                                         notes: ''
                                     }
                                 ]
@@ -6237,7 +6237,7 @@ var mxVersions = [
 							{
                                 name: 'Enterprise Reset',
                                 compatibility: [
-                                    
+
                                     {
                                         name: 'TC70 JB',
                                         device: 'TC70',
@@ -6261,7 +6261,7 @@ var mxVersions = [
 							{
                                 name: 'Factory Reset',
                                 compatibility: [
-                                    
+
                                     {
                                         name: 'TC70 JB',
                                         device: 'TC70',
@@ -6285,7 +6285,7 @@ var mxVersions = [
 							{
                                 name: 'Full Device Wipe',
                                 compatibility: [
-                                    
+
                                     {
                                         name: 'TC70 JB',
                                         device: 'TC70',
@@ -8576,7 +8576,7 @@ var mxVersions = [
                                     },
                                 ]
                             },
-                            
+
 						]
 					},
 					{
@@ -12439,5 +12439,5 @@ var mxVersions = [
 			}
         ]
     },
-	
+
 ]

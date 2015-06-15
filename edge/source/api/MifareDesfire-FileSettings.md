@@ -6,21 +6,21 @@
 
 ##Public Fields
 
-###mFileType
+###fileType
 
 File type
 
 **Type:**
 
-byte
+com.symbol.emdk.securenfc.MifareDesfire.FileType
 
-###mCommSettings
+###commMode
 
-File communication settings
+File communication mode
 
 **Type:**
 
-byte
+com.symbol.emdk.securenfc.MifareDesfire.FileCommMode
 
 ###accessRights
 

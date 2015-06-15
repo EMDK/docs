@@ -12,20 +12,20 @@ The ScanParams class provides access to scanning
 A Code ID character identifies the code type of a scanned bar code.
  This is useful when the reader is decoding more than one code type.
  Select a code ID character to insert between the prefix and the
- decoded symbol. Use enum @link ScannerConfig.CodeIdType}.
+ decoded symbol. Use enum ScannerConfig.CodeIdType.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	scanParams.codeIdType = CODE_ID_TYPE.NONE;
 
 
@@ -38,23 +38,25 @@ com.symbol.emdk.barcode.ScannerConfig.CodeIdType
 Select an audio tone to sound upon a good decode.
  The valid audio files from the RingTone manager can be used for audio feedback.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	scanParams.decodeAudioFeedbackURI = "system/media/audio/notifications/decode-short.wav";
 		scanParams.decodeAudioFeedbackUri = "sdcard/sample-audio.wav";
 		scanParams.decodeAudioFeedbackUri = "sdcard/sample-audio.ogg";
 		scanParams.decodeAudioFeedbackUri = "/sdcard/sample-audio.wav";
 
+    //Note: To achieve no feedback (silent) upon a good decode, specify an empty string as below:
+		//scanParams.decodeAudioFeedbackURI = "";
 
 **Type:**
 
@@ -64,18 +66,18 @@ java.lang.String
 
 Enable the device to vibrate upon a good decode.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	scanParams.decodeHapticFeedback = true;
 
 
@@ -88,18 +90,18 @@ boolean
 Decode LED ON duration upon successful decode in milliseconds.
  This value can be from 0ms to 1000ms with a step of 25ms.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	scanParams.decodeLEDTime = 75;
 
 
@@ -112,18 +114,18 @@ int
 The audio stream type refers to type of streaming on which the scan beep should be played.
  The decodeAudioFeedbackUri specified must be available for the audio streaming type specified.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	scanParams.audioStreamType = AudioStreamType.RINGER;
 
 
@@ -135,22 +137,21 @@ com.symbol.emdk.barcode.ScannerConfig.AudioStreamType
 
 Decoding LED Notification.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	scanParams.decodeLEDFeedback = true;
 
 
 **Type:**
 
 boolean
-

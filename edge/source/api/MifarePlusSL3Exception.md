@@ -1,6 +1,7 @@
 #MifarePlusSL3Exception
 
-.
+The methods of MifarePlusSL3 object throws MifarePlusSL3Exception when an error
+ occurs.
 
 
 

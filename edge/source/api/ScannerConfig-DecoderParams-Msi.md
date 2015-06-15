@@ -11,18 +11,18 @@ The Msi class provides access to parameters that are available for
 
 Use to set decode lengths. The range is 0 to 55.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	msi.length1 = 4;
 
 
@@ -34,18 +34,18 @@ int
 
 Use to set decode lengths. The range is 0 to 55.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	msi.length2 = 55;
 
 
@@ -57,18 +57,18 @@ int
 
 Sets the reader to read the bar code twice before accepting data.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	msi.redundancy = true;
 
 
@@ -80,20 +80,20 @@ boolean
 
 With MSI symbols, one check digit is mandatory and always
  verified by the reader. The second check digit is optional. Use
- enum @link ScannerConfig.CheckDigit}.
+ enum ScannerConfig.CheckDigit.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	msi.checkDigits = CheckDigit.ONE;
 
 
@@ -105,20 +105,20 @@ com.symbol.emdk.barcode.ScannerConfig.CheckDigit
 
 Two algorithms are possible for the verification of the second
  MSI check digit. Select the algorithm used to encode the check
- digit. Use enum @link ScannerConfig.CheckDigitScheme}.
+ digit. Use enum ScannerConfig.CheckDigitScheme.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	msi.check_digit_scheme = CheckDigitScheme.MOD_10_10;
 
 
@@ -130,22 +130,21 @@ com.symbol.emdk.barcode.ScannerConfig.CheckDigitScheme
 
 Transmit MSI data with or without the check digit.
 
- 
- 
 
- 
- 
+
+
+
+
 
 
 
 **Example Usage:**
-	
-	:::java	
-	 	
+
+	:::java
+
 	 	msi.reportCheckDigit = false;
 
 
 **Type:**
 
 boolean
-

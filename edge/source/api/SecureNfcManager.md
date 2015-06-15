@@ -6,114 +6,114 @@ This class provides access to obtain the object to communicate with the
 
 
 **Example Usage:**
-	
-	:::java	 
-	 
+
+	:::java
+
 	 public class MainActivity  extends Activity implements EMDKListener {
-	  
+
 	             SecureNfcManager secureNfcManager;
 	             EMDKManager emdkManager;
 	  		   SamType samType;
 	 			  MifareSam mifareSam ;
-	  
+
 	             @Override
 	             protected void onCreate(Bundle savedInstanceState) {
-	  
+
 	                EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
 	             }
-	  
+
 	             @Override
 	             public void onOpened(EMDKManager emdkManager) {
-	                   
+
 	                   this.emdkManager = emdkManager;
 	                  this.secureNfcManager = (secureNfcManager)
 	 					this.emdkManager.getInstance(FEATURE_TYPE.SECURENFC);
-	  				
+
 	  				if(this.secureNfcManager != null){
-	  							
+
 	  					try{
-	  
+
 	 						 samType = secureNfcManager.getAvailableSam();
-	 
+
 	 						} catch (SecureNfcException e) {
-	             						
+
 	             				e.printStackTrace();
 	             			}
-	 							
+
 	 						if (samType.equals(SamType.MIFARE)) {
-	 
+
 	 						mifareSam = (MifareSam) secureNfcMgr.getSamInstance(samType);
-	  
+
 	  						}
-	  
+
 	            			if(mifareSam != null){
-	         
+
 	 							try {
 	                        		SamMode samMode = mifareSam.connect();
-	                        
+
 	                        		mifareSam.authenticateSam(authKey, samKey,null);
-	                        		
+
 	                        		mifareSam.close();
-	                        
+
 	 								} catch (MifareSamException e) {
-	 						 
+
 	 									e.printStackTrace();
 	       			}
 	  			}
 	  		}
 	       }
-	             
+
 	       public void onNewIntent(Intent intent) {
-	 		
+
 	 				if (intent != null)
 	 					tagDetection(intent);
 	 			}
-	 
+
 	 		private void tagDetection(Intent intent) {
-	 		
+
 	 		if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())
 	 				|| NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
 	 				|| NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())) {
-	 
+
 	 			 lTag	 = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-	 
-	 			
+
+
 	 			try {
-	 
+
 	 				TagTechType tagType = secureNfcMgr.getTagTechType(lTag);
-	 
+
 	 					if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
-	 	
+
 	 					mMifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
-	 				 
+
 	 				} else if (tagType.equals(TagTechType.MIFARE_PLUS_SL3)) {
-	 	
+
 	 				mifarePlusSl3 = (MifarePlusSL3) secureNfcMgr
 	 								.getTagTechInstance(tagType);
-					 }
-	 
+	 			 }
+
 	 			} catch (SecureNfcException e) {
-	 			
+
 	 				e.printStackTrace();
 	 			}
-	 
+
 	 			}
 	 		}
-	  
+
 	 		    @Override
 	           public void onDestroy() {
 	 				if(this.emdkManager != null)
 	                   this.emdkManager.release();
 	 				}
-	  
+
 	           @Override
 	            public void onClosed() {
 	                this.emdkManager.release();
 	             }
-	 
-	  
+
+
 	 	}
-	 
+
 
 
 ##Public Methods
@@ -185,6 +185,29 @@ tagType
 
 com.symbol.emdk.securenfc.TagTechBase
 
+### getPassThruApduInstance
+
+**public PassThruApduProcessor getPassThruApduInstance()**
+
+Returns the PassThruApduProcessor object to securely communicate with
+ contactless smart cards at the Application Protocol Data Unit (APDU)
+ level using the SAM. This method is designed for the NFC applications to
+ perform secure communication with the contactless secure cards (tags) at
+ the low level protocol. The audience of this class is for secure NFC
+ application developers with good understanding and expertise of the
+ secure technology they use, including the cards (tags) and SAM
+ documentation, features and protocol.
+
+ Note: This is recommended only for the secure NFC application developers
+ who is interested getting the full control on the APDU. Other can use the
+ SecureNfcManager.getTagTechInstance which provides simple API to
+ securely communicate with the Smart card/tags for the supported tag
+ technologies.
+
+**Returns:**
+
+com.symbol.emdk.securenfc.PassThruApduProcessor
+
 ##Public Enums
 
 ###SecureNfcManager.SamType
@@ -216,4 +239,3 @@ NFC tag types.
 * **FELICA**
 
 * **UNDEFINED**
-

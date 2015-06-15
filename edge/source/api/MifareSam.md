@@ -4,6 +4,70 @@ Provides access to MIFARE SAM properties and I/O operations on an SAM object.
 
 
 
+**Example Usage:**
+	
+	:::java	 
+	  
+	 	
+	 	public class MainActivity extends Activity implements EMDKListener {
+	 
+	 		SecureNfcManager secureNfcManager;
+	 		EMDKManager emdkManager;
+	 		SamType samType;
+	 		MifareSam mifareSam;
+	 
+	 		
+	 		protected void onCreate(Bundle savedInstanceState) {
+	 
+	 			EMDKResults results = EMDKManager.getEMDKManager(
+	 					getApplicationContext(), this);
+	 		}
+	 
+	 		
+	 		public void onOpened(EMDKManager emdkManager) {
+	 
+	 			this.emdkManager = emdkManager;
+	 
+	 			this.secureNfcManager = (secureNfcManager) this.emdkManager
+	 					.getInstance(FEATURE_TYPE.SECURENFC);
+	 
+	 			if (this.secureNfcManager != null) {
+	 
+	 				samType = secureNfcManager.getAvailableSam();
+	 
+	 				if (samType.equals(SamType.MIFARE)) {
+	 					mifareSam = (MifareSam) secureNfcMgr
+	 							.getSamInstance(samType);
+	 					if (mifareSam != null) {
+	 						try {
+	 							SamMode samMode = mifareSam.connect();
+	 
+	 							mifareSam.authenticateSam(authKey, samKey, null);
+	 
+	 							mifareSam.close();
+	 						} catch (MifareSamException e) {
+	 							e.printStackTrace();
+	 						}
+	 					}
+	 				}
+	 			}
+	 		}
+	 
+	 		
+	 		public void onDestroy() {
+	 			if (this.emdkManager != null)
+	 				this.emdkManager.release();
+	 		}
+	 
+	 		
+	 		public void onClosed() {
+	 			this.emdkManager.release();
+	 		}
+	 
+	 	}
+	 
+
+
 ##Public Methods
 
 ### connect
