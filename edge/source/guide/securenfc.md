@@ -64,7 +64,7 @@ The APIs provided by this class are used to determine the type of SAM available 
 
 
 
-**Determine the type of tag detected by the device and get the instance MifareDesfire object**
+**Determine the type of tag detected by the device and get the instance MifareDesfire & MifarePlusSl3**
 
 		:::java
 		public void onNewIntent(Intent intent) {
