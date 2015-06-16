@@ -1,6 +1,6 @@
 # Configuring A Device
 
->NOTE: Devices will need to be updated with the EMDK for Android Device Runtime v3.1.18
+>NOTE: Devices will need to be updated with the latest EMDK for Android Device Runtime
 
 ##	Installing EMDK for Android Device Runtime using Deployment utility
 

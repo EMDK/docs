@@ -49,7 +49,7 @@ To check which API's you have installed:
 
 
 ### Installing EMDK for Android
->NOTE: Before installing EMDK For Android Update 1, you must first install the full version, EMDK for Android v3.1 [EMDK-A-030109.exe]. To Obtain v3.1, go to http://support.symbol.com, and search for `EMDK for Android` using Search Support. Download Version 3.1. Then follow the steps below:
+>NOTE: Before installing EMDK For Android Update 1, you must first install the full version, EMDK for Android v3.1 [EMDK-A-030109.exe]. To Obtain v3.1, go to [http://portal.zebra.com/Support/US-EN](http://portal.zebra.com/Support/US-EN), and search for `EMDK for Android` using Search Support. Download Version 3.1. Then follow the steps below:
 
 ###Install version 3.1
 

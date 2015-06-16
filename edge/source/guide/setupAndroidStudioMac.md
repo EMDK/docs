@@ -60,14 +60,14 @@ In order to develop EMDK apps on Android Studio, API's 16 and 19 Android platfor
 The following items can be found in [EMDK for Mac installation zip file](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip):
 
 - Latest EMDK add-ons
-	 - \EMDK_3.1_04202015_MAC\SDK\addon-symbol-emdk_v3.1_API-16
-	 - \EMDK_3.1_04202015_MAC\SDK\aaddon-symbol-emdk_v3.1_API-19
+	 - \EMDK_3.1_05202015_MAC\SDK\addon-symbol-emdk_v3.1_API-16
+	 - \EMDK_3.1_05202015_MAC\SDK\aaddon-symbol-emdk_v3.1_API-19
 - Latest EMDK Wizard core components
-	- \EMDK_3.1_04202015_MAC\Symbol EMDK for Android
+	- \EMDK_3.1_05202015_MAC\Symbol EMDK for Android
 - Latest EMDK Wizard plug-in for Android Studio
-	- \EMDK_3.1_04202015_MAC\Android Studio\com.symbol.emdk.wizard.intellijIdea_3.1.18
+	- \EMDK_3.1_05202015_MAC\Android Studio\com.symbol.emdk.wizard.intellijIdea_3.1.18
 - Latest EMDK device runtime
-	- \EMDK_3.1_04202015_MAC\Device Runtime\EmdkOSUpdateApp_v3.1.24.apk
+	- \EMDK_3.1_05202015_MAC\Device Runtime\EmdkOSUpdateApp_v3.1.24.apk
 
 ###EMDK SDK add-on Integration
 To add the EMDK 3.1 APIs to the Android SDK please refer the following instructions:
@@ -125,9 +125,9 @@ Now the “EMDK” menu should appear in the Android Studio menu bar:
 
 ##Installing EMDK v3.1 Update1
 
->NOTE: The EMDK for Android v3.1( [EMDK_3.1_05202015_MAC](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip) ) must be installed on Mac OSX prior to installing this update.
+>NOTE: The EMDK for Android v3.1( [EMDK_3.1_MAC](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip) ) must be installed on Mac OSX prior to installing this update.
 
-1. Install full [EMDK for Android 3.1](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip)  (refer to instructions above)
+1. Install the full [EMDK for Android 3.1](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip)  (refer to instructions above)
 2. Download and unzip [EMDK for Android 3.1 Update1](https://s3.amazonaws.com/emdk/EMDK_3.1_UPDATE1_MAC.zip)
 3. Update the SDK Add-on by copying the contents of \EMDK_3.1_UPDATE1_MAC\SDK\ to /Users/<user>/Library/Android/sdk/add-ons/
 		>NOTE: this update is for API 19 only
