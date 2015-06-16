@@ -17,10 +17,10 @@
 
 2. Open terminal and navigate to the ADB directory.
 
-	`cd /Users/<user>/Library/Android/sdk/platform-tools/` 
+	`cd /Users/<user>/Library/Android/sdk/platform-tools/`
 
 3. Connect a Symbol Android device and enter the following commands to restart the ADB and verify the list of attached devices.
-	
+
 	`./adb kill-server`
 
 	`./adb devices`
@@ -58,13 +58,13 @@ The EMDK device runtime update application will skip the EMDK runtime install if
 		<?xml version="1.0" encoding="utf-8"?>
 		<wap-provisioningdoc>
 		        <parm name="InstallMode" value="skip"/>
-		        <parm name="RemoveInstaller" value="true"/>          
+		        <parm name="RemoveInstaller" value="true"/>
 		    </characteristic>
 		</wap-provisioningdoc>
 
 
 **InstallMode Parm Value Options:**
-This determines the install behavior when the existing version on the device is higher than the version being installed. The default install mode is `skip`. 
+This determines the install behavior when the existing version on the device is higher than the version being installed. The default install mode is `skip`.
 
 * **auto** - Displays alert box during installation and waits for the user input
 * **overwrite** - Overwrite and continue installation
