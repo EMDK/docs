@@ -247,9 +247,6 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 ###PersonalShopper
 * [PersonalShopper](../api/PersonalShopper)
 
-###PersonalShopperHelper
-* [PersonalShopperHelper](../api/PersonalShopperHelper)
-
 ###Cradle
 * [Cradle](../api/Cradle)
 
@@ -291,7 +288,6 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 * [SecureNfcManager](../api/SecureNfcManager)
 * [SecureNfcManager-SamType](../api/SecureNfcManager-SamType)
 * [SecureNfcManager-TagTechTyp](../api/SecureNfcManager-TagTechType)
-* [SecureNfcManagerHelper](../api/SecureNfcManagerHelper)
 * [SecureNfcResults](../api/SecureNfcResults)
 * [SecureNfcException](../api/SecureNfcException)
 
@@ -310,6 +306,7 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 * [MifareDesfire.FileCommMode](../api/MifareDesfire-FileCommMode)
 * [MifareDesfire.FileIDType](../api/MifareDesfire-FileIDType)
 * [MifareDesfire.FileSettings](../api/MifareDesfire-FileSettings)
+* [MifareDesfire.FileType](../api/MifareDesfire-FileType)
 * [MifareDesfire.FileTypeSpecificSettings](../api/MifareDesfire-FileTypeSpecificSettings)
 * [MifareDesfire.KeySettings](../api/MifareDesfire-KeySettings)
 * [MifareDesfire.MasterKeySettingsType](../api/MifareDesfire-MasterKeySettingsType)
