@@ -66,15 +66,15 @@ java.lang.String
 
 **Values:**
 
-* **DISABLED**
+* **DISABLED** - Disabled called successfully on reader
 
-* **ENABLED**
+* **ENABLED** - Enabled reader successfully
 
-* **SCANNING**
+* **SCANNING** - Successfully started scanning
 
-* **IDLE**
+* **IDLE** - Finished scanning
 
-* **ERROR**
+* **ERROR** - Error occurred
 
-* **UNKNOWN**
+* **UNKNOWN** - Unknown status
 

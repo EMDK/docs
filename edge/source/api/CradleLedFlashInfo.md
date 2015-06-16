@@ -55,4 +55,3 @@ Enable or disable the smooth effect of the LED blinking
 **Type:**
 
 boolean
-

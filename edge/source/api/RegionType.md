@@ -4,13 +4,13 @@ The data type contained within the region.
 
 **Values:**
 
-* **UNKNOWN**
+* **UNKNOWN** - Data type is Unknown.
 
-* **OCR**
+* **OCR** - Data type is OCR.
 
-* **OMR**
+* **OMR** - Data type is OCR.
 
-* **BARCODE**
+* **BARCODE** - Data type is Barcode.
 
-* **PICTURE**
+* **PICTURE** - Data type is picture.
 

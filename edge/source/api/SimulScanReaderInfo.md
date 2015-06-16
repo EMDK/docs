@@ -111,9 +111,9 @@ List of supported scanner device type.
 
 **Values:**
 
-* **CAMERA**
+* **CAMERA** - The Scanner device class is camera.
 
-* **IMAGER**
+* **IMAGER** - The scanner device class is imager.
 
-* **UNDEFINED**
+* **UNDEFINED** - The scanner device class is not defined.
 

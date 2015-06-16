@@ -41,15 +41,15 @@ Defines the different states of the barcode scanner.
 
 **Values:**
 
-* **IDLE**
+* **IDLE** - Scanner is enabled but no reads are pending.
 
-* **WAITING**
+* **WAITING** - Scanner has issued reads request and is waiting for trigger event.
 
-* **SCANNING**
+* **SCANNING** - Scanner beam is on and it is acquiring data.
 
-* **DISABLED**
+* **DISABLED** - Scanner is not enabled.
 
-* **ERROR**
+* **ERROR** - An error has occurred.
 
 ###StatusData.ScanAndPairStates
 
@@ -57,17 +57,18 @@ Defines the different states of the scan and pir/unpair.
 
 **Values:**
 
-* **WAITING**
+* **WAITING** - Scanner is waiting for hard trigger press
 
-* **SCANNING**
+* **SCANNING** - Scanner beam is on and it is acquiring data.
 
-* **DISCOVERING**
+* **DISCOVERING** - Discovering the Bluetooth device to be paired.
 
-* **PAIRED**
+* **PAIRED** - The Bluetooth device is paired.
 
-* **UNPAIRED**
+* **UNPAIRED** - The Bluetooth device is unpaired.
 
-* **ERROR**
+* **ERROR** - Error occurred during the scan and pair or unpair.
+  Call StatusData .getResult() for error information.
 
-* **UNDEFINED**
+* **UNDEFINED** - Undefined. This is the initial state.
 

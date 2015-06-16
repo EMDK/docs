@@ -5,47 +5,47 @@ This is the primary object to access the barcode scanning feature.
 
 
 **Example Usage:**
-	
-	:::java	
-	 
+
+	:::java
+
 	 	public class MainActivity extends Activity implements EMDKListener,
 			StatusListener, DataListener, ScannerConnectionListener {
-	
+
 	    @Override
 		  protected void onCreate(Bundle savedInstanceState) {
-	   
+
 	    //..
 	    EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
-	   
-	   }	
-	
+
+	   }
+
 	   @Override
 		public void onOpened(EMDKManager emdkManager) {
 			this.emdkManager = emdkManager;
 		 }
-	 
+
 	  //...
 	  barcodeManager = (BarcodeManager)this.emdkManager.getInstance(FEATURE_TYPE.BARCODE);
-	
+
 	  //...
 	  Scanner scanner = barcodeManager.getDevice(DeviceIdentifier.DEFAULT);
 	  scanner.enable();
 	  scanner.addDataListener(callbackObj);
 	  scanner.addStatusListener(callbackObj);
 	  scanner.read();
-	  
+
 	  //...
 	  scanner.cancelRead();
-	  
+
 	  //...
 	  scanner.disable();
-	  
+
 	  //..
-	  
+
 	  EMDKManager.release(FEATURE_TYPE.BARCODE);
-	  
+
 	  }
-	  
+
 
 
 ##Public Methods
@@ -65,7 +65,7 @@ java.util.List
 **public Scanner getDevice(ScannerInfo scannerInfo)**
 
 This method returns the scanner object if the scanner info specified is valid
- and scanner info object can obtain from the BarcoderManager.getSupportedDevices(). 
+ and scanner info object can obtain from the BarcoderManager.getSupportedDevices().
  The scanner object created will be singleton object for a specific scanner.
 
 **Parameters:**
@@ -146,5 +146,4 @@ Defines specific scanner devices of each type.
 
 * **INTERNAL_LASER1**
 
-* **BLUETOOTH_IMAGER1**
-
+* **BLUETOOTH_IMAGER1** 

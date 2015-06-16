@@ -6,59 +6,59 @@ Provides access to MIFARE DESFire properties and I/O operations on an IsoDep
 
 
 **Example Usage:**
-	
-	:::java	
-	  
+
+	:::java
+
 	 public class MainActivity  extends Activity implements EMDKListener {
-	
+
 	 SecureNfcManager secureNfcManager;
 	 EMDKManager emdkManager;
 	 SamType samType;
 	 MifareDesfire mifaredesfire;
 	 MifareSam mifareSam;
-	
+
 	  protected void onCreate(Bundle savedInstanceState) {
-	
+
 	   EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
 	  }
-	
+
 	 public void onOpened(EMDKManager emdkManager) {
-	
+
 	  this.emdkManager = emdkManager;
-	
+
 	   this.secureNfcManager = (secureNfcManager)
 	 				this.emdkManager.getInstance(FEATURE_TYPE.SECURENFC);
-	
+
 	 	if(this.secureNfcManager != null){
-	
+
 	 	try{
-	
+
 	 		samType = secureNfcManager.getAvailableSam();
-	
+
 	 		} catch (SecureNfcException e) {
-	
+
 	    		e.printStackTrace();
 	  	}
-	
+
 	 	if (samType.equals(SamType.MIFARE)) {
-	
+
 	 		mifareSam = (MifareSam) secureNfcMgr.getSamInstance(samType);
-	
+
 	  }
-	
+
 	    if(mifareSam != null){
-	
+
 	 		try {
 	     	SamMode samMode = mifareSam.connect();
-	
+
 	      SamKey samKey = new SamKey();
 	 		samKey.keyNum = 0x00;
 	 		samKey.keyVer = 0x00;
-	
+
 	 		mifareSam.authenticateSam(authKey, samKey,null);
-	
+
 	 	    mifareSam.close();
-	
+
 	 		} catch (MifareSamException e) {
 	 	    	e.printStackTrace();
 	  	  }
@@ -445,7 +445,7 @@ Reads data from standard data or backup data file. Depending on
 
 
 
- 
+
 
 **Parameters:**
 
@@ -508,7 +508,7 @@ Writes data to standard or backup data file. Preceding authentication,
  invalidated.On Tag lost connection needs to re-established by calling
  enable API in the application.
 
- 
+
 
 **Parameters:**
 
@@ -566,7 +566,7 @@ Increases a value stored in a value file with specified value.Depending
  connection needs to re-established by calling enable API in the
  application.
 
- 
+
 
 **Parameters:**
 
@@ -600,7 +600,7 @@ Decreases value stored in a value file with specified value.Depending on
  for Debit or Read&Write access is required.On Tag lost connection needs
  to re-established by calling enable API in the application.
 
- 
+
 
 **Parameters:**
 
@@ -631,7 +631,7 @@ Reads records from cyclic or linear record file.Depending on
  for Read or Read&Write access is required.On Tag lost connection needs to
  re-established by calling enable API in the application.
 
- 
+
 
 **Parameters:**
 
@@ -671,7 +671,7 @@ Writes records to cyclic or linear record file. Depending on
  connection needs to re-established by calling enable API in the
  application.
 
- 
+
 
 **Parameters:**
 
@@ -708,7 +708,7 @@ Resets cyclic or linear record file to empty state. Preceding
  commitTransaction() must be called after this call.On Tag lost connection
  needs to re-established by calling enable API in the application.
 
- 
+
 
 **Parameters:**
 
@@ -737,7 +737,7 @@ Validates all previous write access on Backup data files, Value files,
  Record file.On Tag lost connection needs to re-established by calling
  enable API in the application.
 
- 
+
 
 **Returns:**
 
@@ -761,7 +761,7 @@ Invalidates all previous write access on Backup data files, Value files,
  Record file.On Tag lost connection needs to re-established by calling
  enable API in the application.
 
- 
+
 
 **Returns:**
 
@@ -798,47 +798,44 @@ File Communication Mode.
 
 **Values:**
 
-* **PLAIN**
+* **PLAIN** - Plain communication
 
-* **MACED**
+* **MACED** - Plain communication secured by MACing. This is not supported.
 
-* **ENCIPHERED**
+* **ENCIPHERED** - Fully enciphered communication. This is supported for authentication
+ type NATIVE (TDEA-DESFire). It is not supported for authentication
+ type ISO & AES.
 
 ###MifareDesfire.CreditType
 
-.
-
 **Values:**
 
-* **STANDARD**
+* **STANDARD** - Standard credit
 
-* **LIMITED**
+* **LIMITED** - Limited increase of a value without having full Read&Write
+ permissions to the file
 
 ###MifareDesfire.FileIDType
 
-.
-
 **Values:**
 
-* **NATIVE**
+* **NATIVE** - Native file ID: 1 byte long
 
-* **ISO7816**
+* **ISO7816** - ISO 7816-4 complaint file ID: 2 byte long
 
 ###MifareDesfire.FileType
 
-.
-
 **Values:**
 
-* **STANDARD**
+* **STANDARD** - Standard data file
 
-* **BACKUP**
+* **BACKUP** - Back up data file
 
-* **VALUE**
+* **VALUE** - Value file
 
-* **LINEAR_RECORD**
+* **LINEAR_RECORD** - Linear record file
 
-* **CYCLIC_RECORD**
+* **CYCLIC_RECORD** - Cyclic record file
 
 ###MifareDesfire.AuthenticateType
 
@@ -846,9 +843,8 @@ Authentication mode.
 
 **Values:**
 
-* **NATIVE**
+* **NATIVE** - Authentication Type is Native.
 
-* **ISO**
+* **ISO** - Authentication Type is ISO. Not supported.
 
-* **AES**
-
+* **AES** - Authentication Type is AES. Not Supported

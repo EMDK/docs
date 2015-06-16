@@ -4,13 +4,13 @@
 
 **Values:**
 
-* **STANDARD**
+* **STANDARD** - Standard data file
 
-* **BACKUP**
+* **BACKUP** - Back up data file
 
-* **VALUE**
+* **VALUE** - Value file
 
-* **LINEAR_RECORD**
+* **LINEAR_RECORD** - Linear record file
 
-* **CYCLIC_RECORD**
+* **CYCLIC_RECORD** - Cyclic record file
 

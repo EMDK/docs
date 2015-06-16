@@ -4,11 +4,11 @@
 
 **Values:**
 
-* **SUCCESS**
+* **SUCCESS** - Success
 
-* **FAILURE**
+* **FAILURE** - Failure
 
-* **EMDK_NOT_OPENED**
+* **EMDK_NOT_OPENED** - The EMDK is not opened.
 
-* **UNDEFINED**
+* **UNDEFINED** - Error code not defined.
 

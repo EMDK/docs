@@ -4,25 +4,24 @@ Defines all the error codes the cradle API returns.
 
 **Values:**
 
-* **SUCCESS**
+* **SUCCESS** - Success.
 
-* **FAILURE**
+* **FAILURE** - Failure
 
-* **ALREADY_ENABLED**
+* **ALREADY_ENABLED** - Already enabled.
 
-* **ALREADY_UNLOCKED**
+* **ALREADY_UNLOCKED** - Already unlocked.
 
-* **ALREADY_DISABLED**
+* **ALREADY_DISABLED** - Already disabled.
 
-* **ALREADY_IN_USE**
+* **ALREADY_IN_USE** - Already in use
 
-* **FEATURE_NOT_SUPPORTED**
+* **FEATURE_NOT_SUPPORTED** - Feature not supported.
 
-* **INVALID_VALUE**
+* **INVALID_VALUE** - Invalid value
 
-* **NOT_ENABLED**
+* **NOT_ENABLED** - Not enabled
 
-* **INVALID_OBJECT**
+* **INVALID_OBJECT** - Invalid Object
 
-* **UNDEFINED**
-
+* **UNDEFINED** - Error code not defined.

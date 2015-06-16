@@ -169,11 +169,11 @@ Protection mode.
 
 **Values:**
 
-* **PLAIN**
+* **PLAIN** - No protection
 
-* **MAC**
+* **MAC** - MAC protection. Not Supported.
 
-* **FULL**
+* **FULL** - Full protection (MACing and encryption). Not Supported.
 
 ###MifareSam.SamMode
 
@@ -181,9 +181,9 @@ SAM modes.
 
 **Values:**
 
-* **AV1**
+* **AV1** - MIFARE SAM is in AV1 mode
 
-* **AV2**
+* **AV2** - MIFARE SAM is in AV2 mode
 
-* **UNDEFINED**
+* **UNDEFINED** - MIFARE SAM is in invalid mode
 

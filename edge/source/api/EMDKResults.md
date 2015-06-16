@@ -125,7 +125,7 @@ Defines all the status codes the library returns.
 
 * **PROCESSING** - The processing of profile started, the result will be returned through the data listener callback registered.
 
-* **NO_DATA_LISTENER** - The asynchronous method (Ex: processProfileAsync) is issued without adding the data listener.   
+* **NO_DATA_LISTENER** - The asynchronous method (Ex: processProfileAsync) is issued without adding the data listener.
 
 
 ###EMDKResults.EXTENDED_STATUS_CODE
@@ -145,9 +145,9 @@ Defines all the extended status codes the library returns.
 
 * **FEATURE_TYPE_NOT_FOUND_IN_CONFIG** -Feature type not found in the profile in current EMDKConfig.xml.
 
-* **FEATURE_NAME_NOT_FOUND_IN_CONFIG** - Feature name not found for the feature in current EMDKConfig.xml.	
+* **FEATURE_NAME_NOT_FOUND_IN_CONFIG** - Feature name not found for the feature in current EMDKConfig.xml.
 
-* **FEATURE_NAME_NOT_FOUND_EXTRADATA** - The feature name not found in extraData. 
+* **FEATURE_NAME_NOT_FOUND_EXTRADATA** - The feature name not found in extraData.
 	* Returned in: com.symbol.emdk.emdkservice.ProfileService.setProfile(String, String) when specifying feature name (emdk_name) in the criteria.
 
 * **FEATURE_TYPE_NOT_FOUND_IN_EXTRADATA** - The feature type not found in extraData.
@@ -188,4 +188,3 @@ Defines all the extended status codes the library returns.
 		* com.symbol.emdk.emdkservice.ProfileService.setProfile(String, String)
 
 * **APP_NOT_ALLOWED_TO_SUBMIT_XML** - Permission error. Application is not allowed to submit xml.
-
