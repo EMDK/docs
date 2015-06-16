@@ -10,17 +10,17 @@ The name field is used by the EMDK to identify this particular feature parameter
 ## Main Functionality
 
 * Set Battery Usage Decommissioned Threshold
-* Set Battery Usage Decommissioned Threshold
+* Set Battery Percentage Decommissioned Threshold
 
-## Battery Usage Decommissioned Threshold
+##Smart Battery Threshold
 This setting would be used to modify the Decommissioned Threshold for Zebra Smart Batteries.
 
 * Set the threshold value of the Battery Usage Number as an Integer ranging from 0 to 65535 (value 0 for no change or not applicable)
 
-## Battery Usage Decommissioned Threshold
+##Gifted Battery Threshold
 This setting would be used to modify the Decommissioned Threshold for Zebra Gifted Batteries.
 
 * Set the threshold value of the Battery Health Percentage as an Integer ranging from 0 to 100 (value 0 for no change or not applicable)
 
-<!--## Feature Compatibility
-<iframe src="compare.html#mx=4.3&csp=BatteryMgr&os=All&embed=true"></iframe> -->
+## Feature Compatibility
+<iframe src="compare.html#mx=4.3&csp=BatteryMgr&os=All&embed=true"></iframe>

@@ -32,59 +32,59 @@ Configures which scanning device to use for data capture.
 ## Decoders
 Configures which bar code decoders are enabled or disabled. For best performance disable all unnecessary decoders. By default the most commonly used decoders are enabled (shown below with an asterisk). The supported decoders are:
 
-* Australian Postal 
+* Australian Postal
 * Aztec
 * Canadian Postal
-* Chinese 2 of 5 
+* Chinese 2 of 5
 * Codabar*
 * Code 11
 * Code 39*
-* Code 93 
-* Code 128* 
+* Code 93
+* Code 128*
 * Composite AB
-* Composite C 
-* Datamatrix* 
-* Discrete 2 of 5 
+* Composite C
+* Datamatrix*
+* Discrete 2 of 5
 * Dutch Postal
 * EAN-8*
 * EAN-13*
-* GS1 DataBar* 
+* GS1 DataBar*
 * GS1 DataBar Expanded*
-* GS1 DataBar Limited 
+* GS1 DataBar Limited
 * HAN XIN
-* Japanese Postal 
+* Japanese Postal
 * Korean 3 of 5
 * Interleaved 2 of 5
-* Matrix 2 of 5 
+* Matrix 2 of 5
 * Maxicode*
 * MAIL MARK
 * MicroPDF
 * MicroQR
-* MSI 
+* MSI
 * PDF417*
-* QR Code* 
+* QR Code*
 * Signature
 * TLC 39
 * Trioptic 39
 * UK Postal
 * UPC-A*
-* UPC-E0* 
+* UPC-E0*
 * UPC-E1
 * US4State
-* US4state FICS 
-* USPostnet 
+* US4state FICS
+* USPostnet
 * USPlanet
 * Webcode
 
 ## UPCA
-* Report Check Digit - The check digit is the last character of the symbol used to verify the integrity of the data. Enables or disables this option. 
+* Report Check Digit - The check digit is the last character of the symbol used to verify the integrity of the data. Enables or disables this option.
 * Preamble - Preamble characters are part of the UPC symbol consisting of Country Code and System Character. There are three options for transmitting a UPCA preamble:
 	* Preamble None - Transmit no preamble.
 	* Preamble Sys Char - Transmit System Character only (default).
 	* Preamble Country and Sys Char - Transmit System Character and Country Code ("0" for USA). Select the appropriate option to match the host system.
 
 ## UPCE0
-* Report Check Digit - The check digit is the last character of the symbol used to verify the integrity of the data. Enables or disables this option. 
+* Report Check Digit - The check digit is the last character of the symbol used to verify the integrity of the data. Enables or disables this option.
 * Preamble - Preamble characters are part of the UPC symbol consisting of Country Code and System Character. There are three options for transmitting a UPCE0 preamble:
 	* Preamble Sys Char - Transmit System Character only.
 	* Preamble Country and Sys Char - Transmit System Character and Country Code ("0" for USA).
@@ -94,15 +94,15 @@ Configures which bar code decoders are enabled or disabled. For best performance
 ## Code128
 * Length1 - Use to set decode lengths (default - 0).
 * Length2 - Use to set decode lengths (default - 55).
-* Redundancy - Sets the reader to read the bar code twice before accepting data. 
+* Redundancy - Sets the reader to read the bar code twice before accepting data.
 * Enable Plain Code 128 - Flag to enable other 128 sub types (besides GS1-128 and ISBT-128).
-* Enable GS1-128 - Set the GS1 128 subtype. 
-* Enable ISBT128 - Set the ISBT128 subtype. 
+* Enable GS1-128 - Set the GS1 128 subtype.
+* Enable ISBT128 - Set the ISBT128 subtype.
 * ISBT128 Concatenation Mode - Select an option for concatenating pairs of ISBT code types:
 	* Concat Mode Never - Do not concatenate pairs of ISBT codes encountered (default).
 	* Concat Mode Always - There must be two ISBT codes in order to decode and perform concatenation. Does not decode single ISBT symbols.
 	* Concat Mode Auto - Decodes and concatenates pairs of ISBT codes immediately. If only a single ISBT symbol is present, the device must decode the symbol the number of times set via Redundancy - Code128 before transmitting its data to confirm that there is no additional ISBT symbol.
-* Check ISBT Table - The ISBT specification includes a table that lists several types of ISBT bar codes that are commonly used in pairs. If ISBT128 Concat Mode is set, enable Check ISBT Table to concatenate only those pairs found in this table. Other types of ISBT codes are not concatenated. 
+* Check ISBT Table - The ISBT specification includes a table that lists several types of ISBT bar codes that are commonly used in pairs. If ISBT128 Concat Mode is set, enable Check ISBT Table to concatenate only those pairs found in this table. Other types of ISBT codes are not concatenated.
 * Security Level - The scanner offers four levels of decode security for Code 128 bar codes. Select increasing levels of security for decreasing levels of bar code quality. There is an inverse relationship between security and scanner aggressiveness, so choose only that level of security necessary for any given application.
 	* Security Level 0 - This setting allows the scanner to operate in its most aggressive state, while providing sufficient security in decoding most "in-spec" bar codes.
 	* Security Level 1 - This setting eliminates most misdecodes.
@@ -113,12 +113,12 @@ Configures which bar code decoders are enabled or disabled. For best performance
 
 
 ## Code39
-* Length1 - Use to set decode lengths. 
+* Length1 - Use to set decode lengths.
 * Length2 - Use to set decode lengths 4.
 * Verify Check Digit - Enable this feature to check the integrity of all Code 39 symbols to verify that the data complies with a specified check digit algorithm. The digital scanner decodes only those Code 39 symbols that include a modulo 43 check digit. Enable this feature only if the Code 39 symbols contain a modulo 43 check digit (default - disabled).
-* Report Check Digit - Transmit Code 39 data with or without the check digit. 
+* Report Check Digit - Transmit Code 39 data with or without the check digit.
 * Full ASCII - Code 39 Full ASCII is a variant of Code 39 that pairs characters to encode the full ASCII character set. To enable or disable Code 39 Full ASCII,
-* Redundancy - Sets the reader to read the bar code twice before accepting data. 
+* Redundancy - Sets the reader to read the bar code twice before accepting data.
 * Convert Code39 To Code32 - Code 32 is a variant of Code 39 used by the Italian pharmaceutical industry. Scan the appropriate bar code below to enable or disable converting Code 39 to Code 32.
 * Report Code32 Prefix - Scan the appropriate bar code to enable or disable adding the prefix character "A" to all Code 32 bar codes.
 * Security Level - Options: Security level 0, Security Level 1, Security Level 2 and Security Level 3.
@@ -127,13 +127,13 @@ Configures which bar code decoders are enabled or disabled. For best performance
 ## Interleaved 2of5
 * Length1 - Use to set decode lengths.
 * Length2 - Use to set decode lengths.
-* Redundancy - Sets the reader to read the bar code twice before accepting data. 
+* Redundancy - Sets the reader to read the bar code twice before accepting data.
 * Check Digit
-	* No Check Digit - A check digit is not used. 
+	* No Check Digit - A check digit is not used.
 	* USS Check Digit - Select to check the integrity of all Interleaved 2 of 5 symbols to verify the data complies with either the Uniform Symbology Specification (USS) check digit algorithm.
 	* OPCC Check Digit - Select to check the integrity of all Interleaved 2 of 5 symbols to verify the data complies with either the Optical Product Code Council (OPCC) check digit algorithm.
-* Report Check Digit - Transmit Interleaved 2 of 5 data with or without the check digit. 
-* Convert ITF-14 To EAN13 - Convert 14-character Interleaved 2 of 5 bar codes to EAN-13, and transmit as EAN-13. The Interleaved 2 of 5 bar code must be enabled and must have a leading zero and a valid EAN-13 check digit. 
+* Report Check Digit - Transmit Interleaved 2 of 5 data with or without the check digit.
+* Convert ITF-14 To EAN13 - Convert 14-character Interleaved 2 of 5 bar codes to EAN-13, and transmit as EAN-13. The Interleaved 2 of 5 bar code must be enabled and must have a leading zero and a valid EAN-13 check digit.
 * Security Level - The scanner offers four levels of decode security. Select increasing levels of security for decreasing levels of barcode quality.
 * I2of5 Reduced Quiet Zone - I2of5 Reduced Quiet Zone
 
@@ -159,14 +159,14 @@ Configures which bar code decoders are enabled or disabled. For best performance
 ## Codabar
 * Length1 - Use to set decode lengths.
 * Length2 - Use to set decode lengths.
-* Redundancy - Sets the reader to read the bar code twice before accepting data. 
+* Redundancy - Sets the reader to read the bar code twice before accepting data.
 * CLSI Editing - Enable this parameter to strip the start and stop characters and insert a space after the first, fifth, and tenth characters of a 14-character Codabar symbol. Enable this feature if the host system requires this data format.
 * NOTIS Editing - Enable this parameter to strip the start and stop characters from a decoded Codabar symbol. Enable this feature if the host system requires this data format.
 
 ## MSI
 * Length 1 - Use to set decode lengths.
 * Length 2 - Use to set decode lengths.
-* Redundancy - Sets the reader to read the bar code twice before accepting data. 
+* Redundancy - Sets the reader to read the bar code twice before accepting data.
 * Check Digit - With MSI symbols, one check digit is mandatory and always verified by the reader. The second check digit is optional.
 	* One Check Digit - Verify one check digit.
 	* Two Check Digits - Verify two check digits.
@@ -174,27 +174,27 @@ Configures which bar code decoders are enabled or disabled. For best performance
 Select the algorithm used to encode the check digit.
 	* Mod-11-10 - First check digit is MOD 11 and second check digit is MOD 10.
 	* Mod-10-10 - Both check digits are MOD 10.
-* Report Check Digit - Transmit MSI data with or without the check digit. 
+* Report Check Digit - Transmit MSI data with or without the check digit.
 
 ## Code93
 * Length1 - Use to set decode lengths.
 * Length2 - Use to set decode lengths.
-* Redundancy - Sets the reader to read the bar code twice before accepting data. 
+* Redundancy - Sets the reader to read the bar code twice before accepting data.
 
 ## Discrete 2 of 5
 * Length1 - Use to set decode lengths.
 * Length2 - Use to set decode lengths.
-* Redundancy - Sets the reader to read the bar code twice before accepting data. 
+* Redundancy - Sets the reader to read the bar code twice before accepting data.
 
 ## Code11
 * Length1 - Use to set decode lengths.
 * Length2 - Use to set decode lengths.
-* Redundancy - Sets the reader to read the bar code twice before accepting data. 
+* Redundancy - Sets the reader to read the bar code twice before accepting data.
 * Verify Check Digit - Check the integrity of all Code 11 symbols to verify that the data complies with the specified check digit algorithm. This selects the check digit mechanism for the decoded Code 11 bar code.
 	* No Check Digit - Do not verify check digit.
 	* 1 Check Digit - Bar code contains one check digit.
 	* 2 Check Digits - bar code contains two check digits.
-* Report Check DIgit - Transmit Code 11 data with or without the check digit. 
+* Report Check DIgit - Transmit Code 11 data with or without the check digit.
 
 ## HAN XIN
 * HAN XIN Inverse - HAN XIN Inverse
@@ -202,12 +202,12 @@ Select the algorithm used to encode the check digit.
 ##Matrix 2 of 5
 * Length1 - Use to set decode lengths.
 * Length2 - Use to set decode lengths.
-* Redundancy - Sets the reader to read the bar code twice before accepting data. 
-* Report Check Digit - Transmit Matrix 2 of 5 data with or without the check digit. 
+* Redundancy - Sets the reader to read the bar code twice before accepting data.
+* Report Check Digit - Transmit Matrix 2 of 5 data with or without the check digit.
 * Verify Check Digit - Enable this feature to check the integrity of all Matrix 2 of 5 symbols to verify that the data complies with a specified check digit algorithm.
 
 ## UPCE1
-* Report Check Digit - The check digit is the last character of the symbol used to verify the integrity of the data. Enables or disables this option. 
+* Report Check Digit - The check digit is the last character of the symbol used to verify the integrity of the data. Enables or disables this option.
 * Preamble - Preamble characters are part of the UPC symbol consisting of Country Code and System Character. There are three options for transmitting a UPCE1 preamble:
 	* Preamble Sys Char - Transmit System Character only.
 	* Preamble Country and Sys Char - Transmit System Character and Country Code ("0" for USA).
@@ -215,7 +215,7 @@ Select the algorithm used to encode the check digit.
 * Convert UPCE1 To UPCA - Enable this to convert UPCE1 decoded data to UPC-A format before transmission. After conversion, the data follows UPC-A format and is affected by UPC-A programming selections. Disable this to transmit UPCE1 decoded data as UPCE1 data, without conversion.
 
 ## Decode Lengths
-The allowable decode lengths are specified by options Length1 and Length2 as follows: 
+The allowable decode lengths are specified by options Length1 and Length2 as follows:
 
 * Variable length: Decode symbols containing any number of characters.
 	* Set both Length1 and Length2 to 0.
@@ -234,8 +234,8 @@ Allows the configuration of the parameters that apply to more than one UPC or EA
 	* Level 1 - As bar code quality levels diminish, certain characters become prone to misdecodes before others (i.e., 1, 2, 7, 8). If the scanner is misdecoding poorly printed bar codes, and the misdecodes are limited to these characters, select this security level.
 	* Level 2 - If the scanner is misdecoding poorly printed bar codes, and the misdecodes are not limited to characters 1, 2, 7, and 8, select this security level.
 	* Level 3 - If the scanner is still misdecoding, select this security level. Be advised, selecting this option is an extreme measure against misdecoding severely out of spec bar codes. Selecting this level of security can significantly impair the decoding ability of the scanner. If this level of security is necessary, try to improve the quality of the bar codes.
-* Supplemental2 - Enables or disables this option. 
-* Supplemental5 - Enables or disables this option. 
+* Supplemental2 - Enables or disables this option.
+* Supplemental5 - Enables or disables this option.
 * Supplemental Mode
 	* No Supplementals - the scanner is presented with a UPC/EAN plus supplemental symbol, the
 	scanner decodes UPC/EAN and ignores the supplemental characters.
@@ -248,7 +248,7 @@ Allows the configuration of the parameters that apply to more than one UPC or EA
 	* Supplemental 977 - Enables (auto-discriminate) supplemental for UPC/EAN codes starting with 977. Disables reading of supplementals for another UPC/EAN barcode not starting with 977. Tries to scan the supplemental if it is present. If the supplemental scanning failed, then the main bar code is returned.
 * Retry Count - Retry count for auto-discriminating for supplementals. Possible values are 2 to 20 inclusive. Note that this flag is only considered if Supplemental Mode - UPC EAN is set to one of the following values: Supplementals Auto, Supplementals Smart, Supplementals 378-379, Supplementals 978-979, Supplementals 977 or Supplementals 414-419-434-439 (2 to 20).
 * Random Weight Check Digit - Enable random weight check digit verification.
-* Bookland - Enable or disable this option. 
+* Bookland - Enable or disable this option.
 * Coupon - Enables Coupon code decoding. Note that in order to successfully decode Coupon codes, all
 of the correct decoders must be enabled.
 * Coupon Report Mode - Enables one of the coupon report modes
@@ -302,7 +302,7 @@ Allows the configuration of parameters specific to the selected bar code reader.
 * Different Symbol Timeout - Suppress decoding another symbol within this time interval in Continuous Trigger Mode. From 0 to 5000, Steps of 500. Eg: 0, 500, 1000, 1500...
 * Illumination mode - Enable/Disable illumination depending on ambient light conditions
 * LCD Mode - Enables or disables LCD mode. LCD mode enhances the ability of the imager to read bar codes from LCD displays such as cellphones (Scan Module Only).
-	* Disable - Disables the LCD mode. 
+	* Disable - Disables the LCD mode.
 	* Enable - Enables LCD mode.
 
 	NOTE When using the LCD mode, a degradation in performance may be observed and the aiming crosshair may blink until the bar code is decoded.
@@ -320,7 +320,7 @@ Allows the configuration of parameters specific to the selected bar code reader.
 	* Level 0
 	* Level 1
 	* Level 2
-	* Level 3 
+	* Level 3
 
 * Viewfinder Mode - Configures the Viewfinder modes supported for camera scanning.
 	* Viewfinder Enabled - Enables only the viewfinder.
@@ -333,18 +333,19 @@ Allows the configuration of Code Id and decode feedback options.
 	* Code ID Type None - No prefix (default).
 	* Code ID Type Aim - A standards based three character prefix.
 	* Code ID Type Symbol - A Symbol defined single character prefix.
-	
+
 	NOTE Not all ringtones are fully supported as decode tones. Ringtones of longer length may be truncated when used as a decode tone. The recommendation is to test the selected tone for operation before deployment to a customer site.
 * Volume Type
-	* Ringer and Notifications
+	* Ringer
 	* Music and Media
 	* Alarms
+	* Notification
 * Decode Audio Feedback - Select an audio tone to sound upon a good decode.
 * Decode Haptic Feedback - Enable the MC40 to vibrate upon a good decode.
 * BT Disconnect On Exit - Enable/Disable Bluetooth disconnect on exit.
 * Connection Idle Time - If a bluetooth scanner associated application is opened, Bluetooth scanner will be automatically disconnected after this Connection Time duration of inactivity. From 60 to 1800, Steps of 5. Eg: 60, 65, 70, 75...
 * Decode Feedback LED Timer - Time for which Good Decode LED Notification Runs
-* Display BT Address Barcode - If this value is set to true, the Bluetooth Pairing Utility Application will be opened when the enable method is called 
+* Display BT Address Barcode - If this value is set to true, the Bluetooth Pairing Utility Application will be opened when the enable method is called
 * Decoding LED Notification - Time for which Good Decode LED Notification Runs
 * Engine Decode LED - Controls Engines' decode LED behavior
 	* Disabled
@@ -356,6 +357,6 @@ Allows the configuration of Code Id and decode feedback options.
 ## Output Data
 In order for your application to receive the barcode data, you must specify one or more Output features. Please  refer to their reference documentation for more information.
 
-* [Intent](../guide/profiles/profileintent) 
+* [Intent](../guide/profiles/profileintent)
 * [Keystroke](../guide/profiles/profilekeystroke)
 * [IP](../guide/profiles/profileIP)

@@ -10,10 +10,10 @@ The TriOptic39 class provides access to parameters that are available
 ###redundancy
 
 Sets the reader to read the bar code twice before accepting data.
+
  
  
- 
- 
+
  
  
 

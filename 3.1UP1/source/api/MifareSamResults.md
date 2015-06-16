@@ -6,11 +6,11 @@ Defines all the error codes the MifareSAM APIs returns.
 
 * **SUCCESS**
 
+* **EMDK_NOT_OPENED**
+
 * **NFC_DISABLED**
 
 * **SAM_NOT_AVAILABLE**
-
-* **EMDK_NOT_OPENED**
 
 * **FAILURE**
 
@@ -31,6 +31,14 @@ Defines all the error codes the MifareSAM APIs returns.
 * **SAM_KEY_DISABLED**
 
 * **INVALID_HOST_KEY**
+
+* **MEMORY_FAILURE**
+
+* **KEY_VER_NOT_FOUND**
+
+* **INVALID_KEY_ENTRY_OR_KUC**
+
+* **AUTH_COND_NOT_SATISFIED**
 
 * **UNDEFINED**
 

@@ -21,9 +21,9 @@ void
 ###alwaysScan
 
 Specifies if a scan should always be performed to get the Bluetooth address
- or name of the remote device. If set to true, the provided mBluetoothInfo.mDeviceName or 
+ or name of the remote device. If set to true, the provided mBluetoothInfo.mDeviceName or
  mBluetoothInfo.mDeviceAddress properties are ignored and scanning is always done. If set to false,
- then scanning is skipped and the provided mBluetoothInfo.Address or mBluetoothInfo.Name properties 
+ then scanning is skipped and the provided mBluetoothInfo.Address or mBluetoothInfo.Name properties
  are directly used for pairing.
 
 **Type:**
@@ -32,7 +32,7 @@ java.lang.Boolean
 
 ###bluetoothInfo
 
-Specifies the Bluetooth related information. The settings provided through this object are used 
+Specifies the Bluetooth related information. The settings provided through this object are used
  for pairing/unpairing.
 
 **Type:**
@@ -42,9 +42,9 @@ com.symbol.emdk.scanandpair.ScanAndPairConfig.BluetoothInfo
 ###notificationType
 
 Specifies the notification related information. When using the ScanAndPair() and ScanAndUnPair() methods,
- notifications can be provided to the user to indicate the progress of the operation. This object provides 
- access to the settings for the notifications. The default value for NotificationType is BEEPER. 
- For more information on notifications refer to the {@link NotificationType} class.
+ notifications can be provided to the user to indicate the progress of the operation. This object provides
+ access to the settings for the notifications. The default value for NotificationType is BEEPER.
+ For more information on notifications refer to the NotificationType class.
 
 **Type:**
 
@@ -53,7 +53,7 @@ com.symbol.emdk.scanandpair.ScanAndPairConfig.NotificationType
 ###scanInfo
 
 Specifies the scanning related information. The settings provided through this object are used for scanning
- the barcode. It also exposes the scanned data. NOTE: The maximum allowed length of the barcode that can be 
+ the barcode. It also exposes the scanned data. NOTE: The maximum allowed length of the barcode that can be
  scanned is 123 characters.
 
 **Type:**
@@ -109,4 +109,3 @@ Provides the list of supported trigger types.
 * **SOFT**
 
 * **HARD**
-

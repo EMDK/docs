@@ -295,14 +295,6 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 * [SecureNfcResults](../api/SecureNfcResults)
 * [SecureNfcException](../api/SecureNfcException)
 
-###SmartCard
-* [SmartCard](../api/SmartCard)
-* [SmartCard.SmartCardConfig](../api/SmartCard-SmartCardConfig)
-* [SmartCard.SmartCardProtocolType](../api/SmartCard-SmartCardProtocolType)
-* [SmartCard.SmartCardVersion](../api/SmartCard-SmartCardVersion)
-* [SmartCard](../api/SmartCard)
-* [SmartCardException](../api/SmartCardException)
-* [SmartcardResult](../api/SmartcardResult)
 
 ###MifareDesfire
 * [MifareDesfire](../api/MifareDesfire)
@@ -350,7 +342,7 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 
 ###SamDiverseParams
 * [SamDiverseParams](../api/SamDiverseParams)
- 
+
 ###SamKey
 * [SamKey](../api/SamKey)
 

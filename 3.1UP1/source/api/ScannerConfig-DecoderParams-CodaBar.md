@@ -10,10 +10,10 @@ The CodaBar class provides access to parameters that are available
 ###length1
 
 Use to set decode lengths. The supported range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -33,10 +33,10 @@ int
 ###length2
 
 Use to set decode lengths. The supported range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -56,10 +56,10 @@ int
 ###redundancy
 
 Sets the reader to read the bar code twice before accepting data.
+
  
  
- 
- 
+
  
  
 
@@ -82,10 +82,10 @@ Enable this parameter to strip the start and stop characters and
  insert a space after the first, fifth, and tenth characters of a
  14-character Codabar symbol. Enable this feature if the host
  system requires this data format.
+
  
  
- 
- 
+
  
  
 
@@ -107,10 +107,10 @@ boolean
 Enable this parameter to strip the start and stop characters from
  a decoded Codabar symbol. Enable this feature if the host system
  requires this data format.
+
  
  
- 
- 
+
  
  
 

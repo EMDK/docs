@@ -73,10 +73,10 @@ var menuStrcture = [
 												name: 'Modifying Profiles',
 												link: '#guide-tutorial-tutModifyBarcodeProfileSettings',
 											},
-											//{
-											//	name: 'Browser Manager',
-											//	link: '#guide-tutorial-tutMxBrowserManager',
-											//},
+											{
+												name: 'Browser Manager',
+												link: '#guide-tutorial-tutMxBrowserManager',
+											},
 											{
 												name: 'Camera Manager',
 												link: '#guide-tutorial-tutMxCameraManager',
@@ -312,6 +312,10 @@ var menuStrcture = [
 								link: '#guide-sample-samplesimulscan',
 							},
 							{
+								name: 'PersonalShopper Sample',
+								link: '#guide-sample-samplespersonalshopper',
+							},
+							{
 								name: 'Platform Intent Samples',
 								link: '#',
 								items: [
@@ -368,11 +372,15 @@ var menuStrcture = [
 							{
 								name: 'Name-Value Pair',
 								link: '#guide-name_value_pair',
-							}//,
-							//{
-							//	name: 'Extended Status',
-							//	link: '#guide-extended_status',
-							//}
+							},
+							{
+								name: 'PersonalShopper API',
+								link: '#guide-personalshopper',
+							},
+							{
+								name: 'Secure NFC API',
+								link: '#guide-securenfc',
+							}
 						]
 					}
 				]
@@ -394,32 +402,32 @@ var menuStrcture = [
 							{
 								name: 'Core and ProfileManager APIs',
 								link: '#guide-reference-EMDKList',
-								
+
 							},
 							{
 								name: 'Barcode APIs (Java)',
 								link: '#guide-reference-EMDKList?Barcode APIs',
-								
+
 							},
 							{
 								name: 'ScanAndPair APIs (Java)',
 								link: '#guide-reference-EMDKList?ScanAndPair APIs',
-								
+
 							},
 							{
 								name: 'SimulScan APIs (Java)',
 								link: '#guide-reference-EMDKList?SimulScan APIs',
-								
+
 							},
 							{
 								name: 'Personal Shopper APIs (Java)',
 								link: '#guide-reference-EMDKList?Personal Shopper APIs',
-								
+
 							},
 							{
 								name: 'Secure NFC APIs (Java)',
 								link: '#guide-reference-EMDKList?Secure NFC APIs',
-								
+
 							},
 							{
 								name: 'Profile Manager Features',
@@ -614,7 +622,7 @@ var menuStrcture = [
 									}
 								]
 							}
-							
+
 						]
 					}
 				]
@@ -624,7 +632,7 @@ var menuStrcture = [
 				link: '#guide-abouthelp',
 				icon: 'fa fa-question-circle'
 			},
-			
+
 		]
 	}
 ];

@@ -8,7 +8,7 @@ The ScannerConfig class provides access to scanner configuration settings.
 	
 	:::java	
 	 	
-	 	ScannerConfig scannerConfig = scanner.getConfig(scannerConfig);  
+	 	ScannerConfig scannerConfig = scanner.getConfig(scannerConfig);
 	  scannerConfig.scanParams.decodeHapticFeedback = true;
 	  scannerConfig.decoderParams.codabar.length1 = 6;
 	  scanner.setConfig(scannerConfig);
@@ -20,7 +20,7 @@ The ScannerConfig class provides access to scanner configuration settings.
 
 **public boolean isParamSupported( param)**
 
-This method helps to check scanner config parameters supported 
+This method helps to check scanner config parameters supported
  Returns true if specified parameter is supported.
  The field name should be specify complete access path till the field in the string format.
  The scanner config object name can be any name, but following field names should exactly match the fields defined by scanner config class.
@@ -100,7 +100,7 @@ The DecoderParams class contains decoder parameters that are used by
  multiple decoder symbologies. The property provides access to such
  decoder parameters as Enabled and isSupported, among others. NOTE: When
  calling enable() after disable(), all the latest configuration parameter
- values (Config.DecoderParams, Config.ScannerParams, Config.ReaderParams) 
+ values (Config.DecoderParams, Config.ScannerParams, Config.ReaderParams)
  will be set automatically.
 
 **Type:**

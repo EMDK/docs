@@ -29,5 +29,5 @@ Once an Ethernet Port Usage enabled, This feature can be used to turn the Ethern
 * Off
 
 
-<!--## Feature Compatibility
-<iframe src="compare.html#mx=4.3&csp=ComponentMgr&os=All&embed=true"></iframe> -->
+## Feature Compatibility
+<iframe src="compare.html#mx=4.3&csp=ComponentMgr&os=All&embed=true"></iframe>

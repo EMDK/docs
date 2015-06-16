@@ -48,8 +48,8 @@ Although EMDK for Android has been designed to work with all Symbol mobile compu
 	* [PersonalShopper APIs](../guide/reference/EMDKList?PersonalShopper) for MC18
 	* [NFC APIs](../guide/reference/EMDKList?SecureNfcManager)
 * New Guides
-	* Personal Shopper
-	* NFC
+	* [Personal Shopper](../guide/personalshopper)
+	* [Secure NFC](../guide/securenfc)
 
 **EMDK for Android v3.1**
 

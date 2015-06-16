@@ -10,10 +10,10 @@ The Matrix2of5 class provides access to parameters that are
 ###length1
 
 Used to set decode lengths. The valid range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -33,10 +33,10 @@ int
 ###length2
 
 Used to set decode lengths. The valid range is 0 to 55.
+
  
  
- 
- 
+
  
  
 
@@ -56,10 +56,10 @@ int
 ###redundancy
 
 Sets the reader to read the bar code twice before accepting data.
+
  
  
- 
- 
+
  
  
 
@@ -79,10 +79,10 @@ boolean
 ###reportCheckDigit
 
 Transmit Matrix 2 of 5 data with or without the check digit.
+
  
  
- 
- 
+
  
  
 
@@ -106,7 +106,7 @@ Enable this feature to check the integrity of all Matrix 2 of 5
  digit algorithm
  
  
- 
+
  
  
 

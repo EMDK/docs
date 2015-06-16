@@ -6,57 +6,64 @@ Provides access to MIFARE SAM properties and I/O operations on an SAM object.
 
 **Example Usage:**
 	
-	:::java	
-	   public class MainActivity  extends Activity implements EMDKListener
-	                              {
+	:::java	 
 	  
-	             SecureNfcManager secureNfcManager;
-	             EMDKManager emdkManager;
-	  		    SamType samType;
-	  			MifareSam mifareSam ;
-	             @Override
-	             protected void onCreate(Bundle savedInstanceState) {
-	  
-	                EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
-	             }
-	  
-	             @Override
-	             public void onOpened(EMDKManager emdkManager) {
-	                             
-	                   this.emdkManager = emdkManager;
-	  
-	                   this.secureNfcManager = (secureNfcManager)
-	 					 this.emdkManager.getInstance(FEATURE_TYPE.SECURENFC);
-	  
-	  				 if(this.secureNfcManager != null){
-	  
-	 						samType = secureNfcManager.getAvailableSam();
+	 	
+	 	public class MainActivity extends Activity implements EMDKListener {
 	 
-	   				if (samType.equals(SamType.MIFARE)) {
-	    					mifareSam   = (MifareSam) secureNfcMgr.getSamInstance(samType);
-	         				if(mifareSam != null){
-	 							try {
-	                        			SamMode samMode = mifareSam.connect();
-	 								 } catch (MifareSamException e) {
-	 									e.printStackTrace();
-	       					   }
-	  						}
+	 		SecureNfcManager secureNfcManager;
+	 		EMDKManager emdkManager;
+	 		SamType samType;
+	 		MifareSam mifareSam;
+	 
+	 		
+	 		protected void onCreate(Bundle savedInstanceState) {
+	 
+	 			EMDKResults results = EMDKManager.getEMDKManager(
+	 					getApplicationContext(), this);
+	 		}
+	 
+	 		
+	 		public void onOpened(EMDKManager emdkManager) {
+	 
+	 			this.emdkManager = emdkManager;
+	 
+	 			this.secureNfcManager = (secureNfcManager) this.emdkManager
+	 					.getInstance(FEATURE_TYPE.SECURENFC);
+	 
+	 			if (this.secureNfcManager != null) {
+	 
+	 				samType = secureNfcManager.getAvailableSam();
+	 
+	 				if (samType.equals(SamType.MIFARE)) {
+	 					mifareSam = (MifareSam) secureNfcMgr
+	 							.getSamInstance(samType);
+	 					if (mifareSam != null) {
+	 						try {
+	 							SamMode samMode = mifareSam.connect();
+	 
+	 							mifareSam.authenticateSam(authKey, samKey, null);
+	 
+	 							mifareSam.close();
+	 						} catch (MifareSamException e) {
+	 							e.printStackTrace();
 	 						}
-	             		}
-	             }
-	             
-	            @Override
-	             public void onDestroy() {
-	 				 if(this.emdkManager != null)
-	                  this.emdkManager.release();
+	 					}
 	 				}
-	  
-	             @Override
-	             public void onClosed() {
-	               this.emdkManager.release();
-	             }
+	 			}
+	 		}
 	 
-	  
+	 		
+	 		public void onDestroy() {
+	 			if (this.emdkManager != null)
+	 				this.emdkManager.release();
+	 		}
+	 
+	 		
+	 		public void onClosed() {
+	 			this.emdkManager.release();
+	 		}
+	 
 	 	}
 	 
 
@@ -78,7 +85,8 @@ com.symbol.emdk.securenfc.MifareSam.SamMode
 
 com.symbol.emdk.securenfc.MifareSamException
 
-
+The exception will be thrown if it fails to establish
+             connection with the SAM.
 
 ### getSamInfo
 
@@ -94,15 +102,18 @@ com.symbol.emdk.securenfc.MifareSam.SamInfo
 
 com.symbol.emdk.securenfc.MifareSamException
 
-
+The exception will be thrown if it fails to
+ return manufacturing related information of the SAM.
 
 ### authenticateSam
 
 **public void authenticateSam( authKey, SamKey samKey, MifareSam.AdditionalAuthData additionalAuthData)**
 
-Performs the SAM authentication.
- If the SAM is in AV1 mode, performs mutual 3-pass authentication between host system and MIFARE SAM AV1 or MIFARE SAM AV2 set in AV1 compatibility mode.
- If the SAM is in AV2 mode, performs mutual authentication between host system and MIFARE SAM AV2 set in AV2 mode.
+Performs the SAM authentication. If the SAM is in AV1 mode, performs
+ mutual 3-pass authentication between host system and MIFARE SAM AV1 or
+ MIFARE SAM AV2 set in AV1 compatibility mode. If the SAM is in AV2 mode,
+ performs mutual authentication between host system and MIFARE SAM AV2 set
+ in AV2 mode.
 
 **Parameters:**
 
@@ -110,7 +121,7 @@ authKey - Authentication key to be used.
 
 samKey - SAM key to be used for authentication
 
-additionalAuthData - Additional authentication data and this is not supported now. It for future use only.
+additionalAuthData - Additional authentication data.
 
 **Returns:**
 
@@ -120,7 +131,8 @@ void
 
 com.symbol.emdk.securenfc.MifareSamException
 
-
+The exception will be thrown if it fails to authenticate the
+             SAM.
 
 ### close
 
@@ -136,7 +148,8 @@ void
 
 com.symbol.emdk.securenfc.MifareSamException
 
-
+The exception will be thrown if it fails to close the
+             connection with the SAM.
 
 ##Public Fields
 

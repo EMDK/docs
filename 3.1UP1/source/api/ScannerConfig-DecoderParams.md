@@ -1,7 +1,6 @@
 #ScannerConfig.DecoderParams
 
-The DecoderParams class contains decoder parameters that
- are used by multiple decoder symbologies.
+The DecoderParams class contains decoder parameters that are used by multiple decoder symbologies. The property provides access to such decoder parameters as Enabled and IsSupported, among others. NOTE: When calling enable() after disable(), all the latest configuration parameter values (Config.DecoderParams,Config.ScannerParams,Config.ReaderParams and Config.InterfaceParams) will be set	automatically.
 
 
 
@@ -333,8 +332,8 @@ com.symbol.emdk.barcode.ScannerConfig.DecoderParams.Upce1
 
 ###upcEanParams
 
-The UPCEAN class provides access to parameters that are available for the UPC/EAN decoder. 
- UPC/EAN is the family of codes which are used to identify products 
+The UPCEAN class provides access to parameters that are available for the UPC/EAN decoder.
+ UPC/EAN is the family of codes which are used to identify products
  and UPC EAN Params are the params common to these codes
 
 **Type:**
@@ -403,4 +402,3 @@ The HanXin class provides access to parameters that are available
 **Type:**
 
 com.symbol.emdk.barcode.ScannerConfig.DecoderParams.HanXin
-

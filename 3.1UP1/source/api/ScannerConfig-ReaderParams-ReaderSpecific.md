@@ -25,7 +25,7 @@ Provide access to set the imager specific settings if the scanner device is imag
 	:::java	
 	 	
 	 	if (scanner.getScannerInfo().getDeviceType() == DeviceType.IMAGER) {
-	   readerParams.readerSpecific.imagerSpecific.picklist = PickList.DISABLED;   		  
+	   readerParams.readerSpecific.imagerSpecific.picklist = PickList.DISABLED;
 	  }
 
 
@@ -46,7 +46,7 @@ Provide access to set the camera specific settings if the scanner device is came
 	:::java	
 	 	
 	 	if (scanner.getScannerInfo().getDeviceType() == DeviceType.IMAGER) {
-	   readerParams.readerSpecific.cameraSpecific.illuminationMode = IlluminationMode.ON;   		  
+	   readerParams.readerSpecific.cameraSpecific.illuminationMode = IlluminationMode.ON;
 	  }
 
 

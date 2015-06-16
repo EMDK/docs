@@ -2,10 +2,10 @@
 
 ## Install EMDK for Eclipse
 
-### Installing Eclipse 
+### Installing Eclipse
 1.	Go to [http://eclipse.org/downloads/](http://eclipse.org/downloads/).
 2.	Download `Eclipse IDE for Java Developers` 3.7.2 (Indigo) or greater.
-3.	Make a note of the name and location where you save the Eclipse on your system-you will need to refer to the standalone Eclipse directory later when installing EMDK for Android. 
+3.	Make a note of the name and location where you save the Eclipse on your system-you will need to refer to the standalone Eclipse directory later when installing EMDK for Android.
 
 > NOTE: Eclipse 3.6 (Helios) is no longer supported with the latest version of ADT.
 
@@ -15,19 +15,19 @@
 1.	Start Eclipse, then select `Help : Install New Software`.
 2.	Click `Add`, in the top-right corner.
 3.	In the Add Repository dialog that appears, enter `ADT Plugin` for the Name and the following URL for the Location: `https://dl-ssl.google.com/android/eclipse/`
-	
+
 	> NOTE: The Android Developer Tools update site requires a secure connection. Make sure the update site URL you enter starts with HTTPS.
 4.	Click `OK`.
 5.	In the Available Software dialog, select the check box next to Developer Tools and click Next.
 6.	In the next window, you'll see a list of the tools to be downloaded. `Click Next`.
 7.	Read and accept the license agreements, then click `Finish`.
-	
+
 	> NOTE: If you get a security warning saying that the authenticity or validity of the software can't be established, click OK.
 8.	When the installation completes, restart Eclipse.
 
 >NOTE: EMDK for Android requires ADT v22.3.0-887826 or higher version.
 
-### Installing Android SDK 
+### Installing Android SDK
 1.	Go to [http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html).
 2.	Click on the hyperlink [Other Download Options](http://developer.android.com/sdk/index.html#Other) or scroll down towards the section `Other Download Options`.
 3.	Look for the table under sub section `SDK Tools Only`.
@@ -35,7 +35,7 @@
 5.	Accept the License Agreement.
 6.	Click on the button `Download installer_r24-windows.exe`.
 7.	Double-click the downloaded executable to start the installation.
-8.	Make a note of the name and location where you save the Android SDK on your system, as you will need to refer to the standalone Android SDK directory later when installing EMDK for Android. 
+8.	Make a note of the name and location where you save the Android SDK on your system, as you will need to refer to the standalone Android SDK directory later when installing EMDK for Android.
 
 
 ### Configuring the Android Developer Tools (ADT) for EMDK
@@ -44,11 +44,16 @@ The EMDK requires Android API's 16 and 19 to be Installed.
 To check which API's you have installed:
 
 1. In Eclipse go to `Window` then `Android SDK Manager`
-2. Check that the status of `Android 1.1.2 (API 16)` and `Android  4.4.2 (API 19)` SDK Platforms status is `Installed`. 
-3. If either SDK platform is not installed check the SDK check mark, click `Install Packages`, and follow the on screen instructions. When the install is complete restart Eclipse. 
+2. Check that the status of `Android 1.1.2 (API 16)` and `Android  4.4.2 (API 19)` SDK Platforms status is `Installed`.
+3. If either SDK platform is not installed check the SDK check mark, click `Install Packages`, and follow the on screen instructions. When the install is complete restart Eclipse.
 
 
 ### Installing EMDK for Android
+>NOTE: Before installing EMDK For Android Update 1, you must first install the full version, EMDK for Android v3.1 [EMDK-A-030109.exe]. To Obtain v3.1, go to http://support.symbol.com, and search for `EMDK for Android` using Search Support. Download Version 3.1. Then follow the steps below:
+
+###Install version 3.1
+
+`If you already have v3.1 installed, skip to Install version 3.1 Update 1 below.`
 
 1. Run the EMDK 3.1 Installer as Administrator, Then Click Next.
 
@@ -61,7 +66,7 @@ To check which API's you have installed:
 3. Click next or select a custom install location by clicking Browse and then click next.
 
 	![img](images/setup/emdkInstall03.png)
- 
+
 4. Continue installing EMDK for Android in Eclipse by selecting the "Use Eclipse/ADT" radio button and then Click Next.
 >NOTE: If Android Studio is not installed on your computer this screen will look slightly different. Stating that you should exit the installer and install Android studio. Ignore those instructions if you are not installing the EMDK in Android studio at this time.
 
@@ -82,6 +87,28 @@ To check which API's you have installed:
 8. Browse for or manually enter paths to the root of both your Eclipse folder and Android SDK folder, then Click Install.
 
 	![img](images/setup/emdkInstall12.png)
+
+###Install version 3.1 Update 1
+
+1. Run the EMDK 3.1 Update 1 Installer as Administrator, Then Click **Next >**.
+
+	![img](images/setup/install31UD1_AS_1.png)
+
+2. Backup your samples, or select **Next >** to Continue.
+
+	![img](images/setup/install31UD1_AS_2.png)
+
+3. Click **I Agree** after reading the License Agreement to continue the installation.
+
+	![img](images/setup/install31UD1_AS_3.png)
+
+4. When instalation completes, select **Next >**
+
+	![img](images/setup/install31UD1_AS_5.png)
+
+5. Then select **Finish**
+
+	![img](images/setup/install31UD1_AS_6.png)
 
 ## Verifying EMDK for Android Development Environment
 
@@ -170,7 +197,7 @@ In most cases running the uninstall program will cleanly remove EMDK For Android
 3. If you have installed EMDK updates, scroll through and identify the following registry key:
 * `EMDK for Android vX.X Update(X)` where vX.X = Base version of the Installation.
 	* Example: `v3.0` when you have installed `EMDK for Android v3.0`
-* Update(X) Update version only if an update is installed. 
+* Update(X) Update version only if an update is installed.
 	* Example: `Update1` when you have installed `EMDK for Android v3.0 Update1`.
 
 4. Right-click on the above key and then click Delete. Click Yes to the prompt `Are you sure you want to delete this key and all of its subkeys?`.
@@ -233,5 +260,3 @@ In most cases running the uninstall program will cleanly remove EMDK For Android
 9. To verify, type any EMDK class/interface/method name (ex: EMDKListener) and press `F2`.
 
 	![img](images/setup/emdkJarAsLib06.png)
-
-
