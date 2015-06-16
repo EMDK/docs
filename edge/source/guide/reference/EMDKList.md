@@ -81,6 +81,9 @@ The following APIs are used when you wish to handle all barcode scanning entirel
 * [Scanner.DataListener](../api/Scanner-DataListener)
 * [Scanner.StatusListener](../api/Scanner-StatusListener)
 
+###ScannerResults
+* [ScannerResults](../api/ScannerResults)
+
 ###ScannerConfig
 * [ScannerConfig](../api/ScannerConfig)
 * [ScannerConfig.DecoderParams](../api/ScannerConfig-DecoderParams)
@@ -163,8 +166,11 @@ The ScanAndPair API provides simple methods to scan a Bluetooth barcode (Bluetoo
 ###ScanAndPairException
 * [ScanAndPairException](../api/ScanAndPairException)
 
+###ScanAndPairResults
+* [ScanAndPairResults](../api/ScanAndPairResults)
+
 ###StatusData
-* [StatusData](../api/ScanAndPairStatusData)
+* [StatusData](../api/StatusData)
 
 
 
@@ -180,6 +186,8 @@ Customers can interactively capture documents and obtain meaningful data present
 ###SimulScanManager
 * [SimulScanManager](../api/SimulScanManager)
 
+###SimulScanResults
+* [SimulScanResults](../api/SimulScanResults)
 
 ###SimulScanConfig
 * [SimulScanConfig](../api/SimulScanConfig)
@@ -218,6 +226,8 @@ Customers can interactively capture documents and obtain meaningful data present
 ###SimulScanRegion
 * [SimulScanRegion](../api/SimulScanRegion)
 
+###RegionType
+* [RegionType](../api/RegionType)
 
 ###SimulScanStatusData
 * [SimulScanStatusData](../api/SimulScanStatusData)
@@ -326,6 +336,12 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 * [MifareSam.SamInfo](../api/MifareSam-SamInfo)
 * [MifareSamException](../api/MifareSamException)
 * [MifareSamResults](../api/MifareSamResults)
+
+###PassThruApdu
+* [PassThruApduResults](../api/PassThruApduResults)
+* [PassThruApduProcessor](../api/PassThruApduProcessor)
+* [PassThruApduException](../api/PassThruApduException)
+
 
 ###SamBase
 * [SamBase](../api/SamBase)
