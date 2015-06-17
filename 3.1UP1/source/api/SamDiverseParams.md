@@ -1,6 +1,6 @@
 #SamDiverseParams
 
-SAM diversification parameters.
+SAM diversification parameters
 
 
 

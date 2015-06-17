@@ -41,7 +41,7 @@ This method returns an object instance which has derived from [EMDKBase](EMDKBas
 	{
 	ProfileManager profileManager = (ProfileManager)emdkmanager.getInstance(FEATURE_TYPE.PROFILE);
 	VersionManager versionManager = (VersionManager)emdkmanager.getInstance(FEATURE_TYPE.VERSION);
-	BarcodeManager barcodeManager = (BarcodeManager)emdkmanager.getInstance(FEATURE_TYPE.BARCODE); 
+	BarcodeManager barcodeManager = (BarcodeManager)emdkmanager.getInstance(FEATURE_TYPE.BARCODE);
 	}
 
 

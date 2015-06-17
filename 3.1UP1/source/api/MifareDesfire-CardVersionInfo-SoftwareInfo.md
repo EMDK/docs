@@ -1,6 +1,6 @@
 #MifareDesfire.CardVersionInfo.SoftwareInfo
 
-Software information.
+Software information
 
 
 

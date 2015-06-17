@@ -1,6 +1,6 @@
 #MifareSam.SamInfo.ManufacturerInfo
 
-Manufacturer information.
+Manufacturer information
 
 
 

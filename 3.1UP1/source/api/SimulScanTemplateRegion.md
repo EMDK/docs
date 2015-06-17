@@ -4,30 +4,6 @@ The SimulScanTemplateRegion class represents a particular region in a Template.
 
 
 
-##Constructors
-
-**SimulScanTemplateRegion**
-
-
-
-**SimulScanTemplateRegion**
-
-
-
-**Parameters:**
-
-number
-
-
-
-int
-
-name
-
-
-
-java.lang.String
-
 ##Public Methods
 
 ### getHeight
@@ -79,46 +55,4 @@ Returns the Y coordinate of this template region
 **Returns:**
 
 int
-
-##Public Fields
-
-###height
-
-
-
-**Type:**
-
-int
-
-###width
-
-
-
-**Type:**
-
-int
-
-###x
-
-
-
-**Type:**
-
-int
-
-###y
-
-
-
-**Type:**
-
-int
-
-###regionType
-
-
-
-**Type:**
-
-com.symbol.emdk.simulscan.RegionType
 

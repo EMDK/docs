@@ -1,6 +1,9 @@
 #PersonalShopper
 
-This is the primary class to access the cradle and diagnostics API and this class is extends the EMDKBase class.
+This is the primary class to access the cradle and diagnostics API and this class is extends the EMDKBase class.  
+This class creates the cradle instance field to communicate with the cradle.
+ 
+ 
 
 
 

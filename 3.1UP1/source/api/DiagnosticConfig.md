@@ -1,6 +1,7 @@
 #DiagnosticConfig
 
 The diagnostic configuration class has to be configured before calling the get diagnostics parameter data.
+ This class configures average current and Shopping trip in minutes.
 
 
 

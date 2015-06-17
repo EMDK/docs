@@ -1,6 +1,6 @@
 #MifareDesfire.CardVersionInfo.HardwareInfo
 
-.
+
 
 
 

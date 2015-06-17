@@ -1,6 +1,8 @@
 #SimulScanReader.StatusListerner
 
 An interface for notifying client applications to notify scan events.
+ 
+ 
 
 
 

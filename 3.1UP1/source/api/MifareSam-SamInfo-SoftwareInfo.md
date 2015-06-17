@@ -1,6 +1,6 @@
 #MifareSam.SamInfo.SoftwareInfo
 
-Software information.
+Software information
 
 
 

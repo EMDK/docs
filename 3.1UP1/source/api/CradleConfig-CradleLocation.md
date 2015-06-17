@@ -1,6 +1,7 @@
 #CradleConfig.CradleLocation
 
-The class for provides access to the cradle location.
+The class for provides access to the cradle location. 
+ The values modified will take effective only by calling setConfig().
 
 
 

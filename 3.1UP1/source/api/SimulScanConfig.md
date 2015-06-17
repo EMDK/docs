@@ -1,6 +1,8 @@
 #SimulScanConfig
 
 The SimulScanConfig class provides access to reader configuration settings.
+ 
+ 
 
 
 
@@ -15,32 +17,6 @@ The SimulScanConfig class provides access to reader configuration settings.
 	 config.audioFeedback = false;
 	 reader.setConfig(config); // Reader object must be enabled and not scanning when calling setConfig
 
-
-##Constructors
-
-**SimulScanConfig**
-
-
-
-**Parameters:**
-
-svcConfig
-
-
-
-com.symbol.emdk.emdkservice.simulscan.SvcSimulScanConfig
-
-##Public Methods
-
-### getServiceConfig
-
-**public SvcSimulScanConfig getServiceConfig()**
-
-
-
-**Returns:**
-
-com.symbol.emdk.emdkservice.simulscan.SvcSimulScanConfig
 
 ##Public Fields
 

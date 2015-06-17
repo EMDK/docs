@@ -1,8 +1,8 @@
 #MifarePlusSL3
 
 Provides access to Mifare Plus tag in security level 3 and I/O operations on
- an IsoDep Tag object.
-
+ an IsoDep Tag object. This class encapsulates all the methods required for
+ communicating with the IsoDep tag using the tag technology protocol.
 
 
 **Example Usage:**
@@ -210,22 +210,14 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 The exception will be thrown if it fails to perform firstAuthentication on the tag.
 
 
- <p>
- <blockquote>
+Example Usage:
+	
+	:::java
+	SamKey lSamKey = new SamKey();
+ 	lSamKey.keyNum = 0x10;
+ 	lSamKey.keyVer = 0x00;
 
- <pre>
- {@code
-  Example Usage:
-
-
-                SamKey lSamKey = new SamKey();
- 				  lSamKey.keyNum = 0x10;
- 				  lSamKey.keyVer = 0x00;
-
-  mifarePlusSl3.firstAuthentication(blockNo_of_the_key,lSamKey, null, null);
-
- </pre>
- </blockquote>
+  	mifarePlusSl3.firstAuthentication(blockNo_of_the_key,lSamKey, null, null);
 
 ### followingAuthentication
 
@@ -259,29 +251,16 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to perform followingAuthentication on the tag.
 
- <p>
- <blockquote>
+Example Usage:
 
- <pre>
- {@code
-  Example Usage:
+	:::java
+	SamKey lSamKey = new SamKey();
+ 	lSamKey.keyNum = 0x10;
+ 	lSamKey.keyVer = 0x00;
 
-                SamKey lSamKey = new SamKey();
- 				  lSamKey.keyNum = 0x10;
- 				  lSamKey.keyVer = 0x00;
+ 	byte[] rawdata = mifarePlusSl3.firstAuthentication(blockNo_of_the_key, lSamKey, null, null);
 
- 	byte[] rawdata = mifarePlusSl3.firstAuthentication(
- 									blockNo_of_the_key,
- 								lSamKey, null, null);
-
-                   mifarePlusSl3,followingAuthentication(
- 								blockNo_of_the_key,
- 								lSamKey, null);
-
-
- </pre>
-
- </blockquote>
+    mifarePlusSl3,followingAuthentication(blockNo_of_the_key, lSamKey, null);
 
 ### resetAuthentication
 
@@ -335,36 +314,31 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to read the data from the block.
 
-             Note: 1. The specified blocks must be authenticated before
-             calling the read, otherwise the read will fail. 2. If
-             specified blocks are located in different sectors and are not
-             authenticated with same key, then also read will fail. 3.
-             Mifare Plus S tag supports only below values of parameters
-             (as per datasheet): encrypted: false macOnCmd: true
-             macOnResponse: true 4. Parameter macOnCmd: Value false is not
-             allowed for Mifare Plus X, hence user should pass true.
+>Note: 1. The specified blocks must be authenticated before
+calling the read, otherwise the read will fail. 2. If
+specified blocks are located in different sectors and are not
+authenticated with same key, then also read will fail. 3.
+Mifare Plus S tag supports only below values of parameters
+(as per datasheet): encrypted: false macOnCmd: true
+macOnResponse: true 4. Parameter macOnCmd: Value false is not
+allowed for Mifare Plus X, hence user should pass true.
 
- <p>
- <blockquote>
 
- <pre>
- {@code
-  Example Usage:
+Example Usage:
 
-                SamKey lSamKey = new SamKey();
- 				  lSamKey.keyNum = 0x10;
- 				  lSamKey.keyVer = 0x00;
+    :::java
+    SamKey lSamKey = new SamKey();
+ 	lSamKey.keyNum = 0x10;
+ 	lSamKey.keyVer = 0x00;
 
-                mifarePlusSl3.firstAuthentication(
+   	mifarePlusSl3.firstAuthentication(
  								blockNo_of_the_key,
  								lSamKey, null, null);
 
-  			byte[] data =  mifarePlusSl3.readBlock(true, true, true,
+  	byte[] data =  mifarePlusSl3.readBlock(true, true, true,
   						BLOCK_NO, NumberOfBlocksToBeRead);
 
- </pre>
 
- </blockquote>
 
 ### writeBlock
 
@@ -395,39 +369,30 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to write the data to the block.
 
-             Note: 1. The specified blocks must be authenticated before
-             calling the write, otherwise the write will fail. 2. If
-             specified blocks are located in different sectors and are not
-             authenticated with same key, then also write will fail. 3.
-             Mifare Plus S tag supports only below values of parameters
-             (as per datasheet): encrypted: false macOnCmd: true macOnRsp:
-             true
+>Note: 1. The specified blocks must be authenticated before
+calling the write, otherwise the write will fail. 2. If
+specified blocks are located in different sectors and are not
+authenticated with same key, then also write will fail. 3.
+Mifare Plus S tag supports only below values of parameters
+(as per datasheet): encrypted: false macOnCmd: true macOnRsp:
+true
 
 
 
- <p>
- <blockquote>
+Example Usage:
 
- <pre>
- {@code
-  Example Usage:
-
-
-                SamKey lSamKey = new SamKey();
+	:::java
+	SamKey lSamKey = new SamKey();
  				  lSamKey.keyNum = 0x10;
  				  lSamKey.keyVer = 0x00;
 
-                mifarePlusSl3.firstAuthentication(
+    mifarePlusSl3.firstAuthentication(
  								blockNo_of_the_key,
  								lSamKey, null, null);
 
- 				mifarePlusSl3.writeBlock(true, true,
+ 	mifarePlusSl3.writeBlock(true, true,
  							  BLOCK_NO, dataToBeWritten);
 
-
- </pre>
-
- </blockquote>
 
 ### isValueBlock
 
@@ -454,26 +419,18 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 The exception will be thrown if it fails to perform the value block check on the given block number.
 
 
- <p>
- <blockquote>
-
- <pre>
- {@code
-  Example Usage:
-
-
-                SamKey lSamKey = new SamKey();
+Example Usage:
+	
+	:::java
+	SamKey lSamKey = new SamKey();
  				  lSamKey.keyNum = 0x10;
  				  lSamKey.keyVer = 0x00;
 
-                mifarePlusSl3.firstAuthentication(
+    mifarePlusSl3.firstAuthentication(
  								blockNo_of_the_key,
  								lSamKey, null, null);
- 				boolean value= mifarePlusSl3.isValueBlock(false,BLOCK_NO);
+ 	boolean value= mifarePlusSl3.isValueBlock(false,BLOCK_NO);
 
- </pre>
-
- </blockquote>
 
 ### readValue
 
@@ -506,34 +463,27 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to read the value from the block.
 
-             Note: 1. If sector of specified value block is not already
-             authenticated then readValue will fail. 2. If specified block
-             is not value block then readValue will fail. 3. Mifare Plus S
-             tag supports only these values of parameters (as per
-             datasheet): encrypted: false macOnCmd: true macOnRsp: true
+>Note: 1. If sector of specified value block is not already
+authenticated then readValue will fail. 2. If specified block
+is not value block then readValue will fail. 3. Mifare Plus S
+tag supports only these values of parameters (as per
+datasheet): encrypted: false macOnCmd: true macOnRsp: true
 
 
- <p>
- <blockquote>
-
- <pre>
- {@code
-  Example Usage:
-
-                SamKey lSamKey = new SamKey();
+Example Usage:
+	
+	:::java
+    SamKey lSamKey = new SamKey();
  				  lSamKey.keyNum = 0x10;
  				  lSamKey.keyVer = 0x00;
 
-                mifarePlusSl3.firstAuthentication(
+    mifarePlusSl3.firstAuthentication(
  								blockNo_of_the_key,
  								lSamKey, null, null);
 
- 				int value = mifarePlusSl3.readValue(false, true,
+ 	int value = mifarePlusSl3.readValue(false, true,
  					true, VALUE_BLOCK_NO);
 
- </pre>
-
- </blockquote>
 
 ### writeValue
 
@@ -565,36 +515,30 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to write the value to the block.
 
-             Note: 1. If sector of specified block is not already
-             authenticated then writeValue will fail. 2. This API should
-             be called when the specified data block to value block 3. To
-             perform operation on value block such as
-             increment(),incrementTransfer(),
-             decrementTransfer(),decrement(),transfer(),restore(), we need
-             to call API writeValue() first. 4. Mifare Plus S tag supports
-             only these values of parameters (as per datasheet):
-             encrypted: false macOnCmd: true macOnResponse: true.
+>Note: 1. If sector of specified block is not already
+authenticated then writeValue will fail. 2. This API should
+be called when the specified data block to value block 3. To
+perform operation on value block such as
+increment(),incrementTransfer(),
+decrementTransfer(),decrement(),transfer(),restore(), we need
+to call API writeValue() first. 4. Mifare Plus S tag supports
+only these values of parameters (as per datasheet):
+encrypted: false macOnCmd: true macOnResponse: true.
 
 
- <p>
- <blockquote>
+Example Usage:
 
- <pre>
- {@code
-  Example Usage:
-
-                SamKey lSamKey = new SamKey();
+	:::java
+	SamKey lSamKey = new SamKey();
  				  lSamKey.keyNum = 0x10;
  				  lSamKey.keyVer = 0x00;
 
-                mifarePlusSl3.firstAuthentication(
+    mifarePlusSl3.firstAuthentication(
  								blockNo_of_the_key,
  								lSamKey, null, null);
- 					mifarePlusSl3.writeValue(false,true, VALUE_BLOCK_NO,
+ 	mifarePlusSl3.writeValue(false,true, VALUE_BLOCK_NO,
  							  Value_To_Be_Written);
- </pre>
 
- </blockquote>
 
 ### increment
 
@@ -625,34 +569,27 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to increment the value in the block.
 
-             Note: 1. If sector of specified value block is not already
-             authenticated then increment will fail. 2. If specified block
-             is not value block then increment will fail.
+>Note: 1. If sector of specified value block is not already
+authenticated then increment will fail. 2. If specified block
+is not value block then increment will fail.
 
 
- <p>
- <blockquote>
+Example Usage:
 
- <pre>
- {@code
-  Example Usage:
-
-                SamKey lSamKey = new SamKey();
+	:::java
+	SamKey lSamKey = new SamKey();
  				  lSamKey.keyNum = 0x10;
  				  lSamKey.keyVer = 0x00;
 
-                mifarePlusSl3.firstAuthentication(
+    mifarePlusSl3.firstAuthentication(
  								blockNo_of_the_key,
  								lSamKey, null, null);
 
- 				mifarePlusSl3.increment(true,VALUE_BLOCK_NO,
+ 	mifarePlusSl3.increment(true,VALUE_BLOCK_NO,
  					value);
 
- 				mifarePlusSl3.transfer(true,VALUE_BLOCK_NO);
+ 	mifarePlusSl3.transfer(true,VALUE_BLOCK_NO);
 
- </pre>
-
- </blockquote>
 
 ### decrement
 
@@ -683,9 +620,9 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to decrement the value in the block.
 
-             Note: 1. If sector of specified value block is not already
-             authenticated then decrement will fail. 2. If specified block
-             is not value block then decrement will fail.
+>Note: 1. If sector of specified value block is not already
+authenticated then decrement will fail. 2. If specified block
+is not value block then decrement will fail.
 
 ### restore
 
@@ -712,9 +649,9 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to restore the value from the block to the transfer buffer.
 
-             Note: 1. If sector of specified value block is not already
-             authenticated then restore will fail. 2. If specified block
-             is not value block then restore will fail.
+>Note: 1. If sector of specified value block is not already
+authenticated then restore will fail. 2. If specified block
+is not value block then restore will fail.
 
 ### transfer
 
@@ -741,9 +678,9 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to transfer the value from the transferbuffer to the block.
 
-             Note: 1. If sector of specified value block is not already
-             authenticated then transfer will fail. 2. If specified block
-             is not value block then transfer will fail.
+>Note: 1. If sector of specified value block is not already
+authenticated then transfer will fail. 2. If specified block
+is not value block then transfer will fail.
 
 ### incrementTransfer
 
@@ -775,18 +712,14 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to do incrementTransfer on the block.
 
-             Note: 1. If sector of specified value block is not already
-             authenticated then API will fail. 2. If source block is not
-             value block then API will fail.
+>Note: 1. If sector of specified value block is not already
+authenticated then API will fail. 2. If source block is not
+value block then API will fail.
 
- <p>
- <blockquote>
-
- <pre>
- {@code
-  Example Usage:
-
-                SamKey lSamKey = new SamKey();
+Example Usage:
+	
+	:::java
+	SamKey lSamKey = new SamKey();
  				  lSamKey.keyNum = 0x10;
  				  lSamKey.keyVer = 0x00;
 
@@ -795,9 +728,7 @@ The exception will be thrown if it fails to do incrementTransfer on the block.
  								lSamKey, null, null);
  				mifarePlusSl3.incrementTransfer(true, VALUE_BLOCK_NO, VALUE_BLOCK_NO
  					value);
- </pre>
 
- </blockquote>
 
 ### decrementTransfer
 
@@ -829,9 +760,9 @@ com.symbol.emdk.securenfc.MifarePlusSL3Exception
 
 The exception will be thrown if it fails to do decrementTransfer on the block.
 
-             Note: 1. If sector of specified value block is not already
-             authenticated then API will fail. 2. If source block is not
-             value block then API will fail.
+>Note: 1. If sector of specified value block is not already
+authenticated then API will fail. 2. If source block is not
+value block then API will fail.
 
 ### isEnabled
 

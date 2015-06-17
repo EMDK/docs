@@ -81,6 +81,9 @@ The following APIs are used when you wish to handle all barcode scanning entirel
 * [Scanner.DataListener](../api/Scanner-DataListener)
 * [Scanner.StatusListener](../api/Scanner-StatusListener)
 
+###ScannerResults
+* [ScannerResults](../api/ScannerResults)
+
 ###ScannerConfig
 * [ScannerConfig](../api/ScannerConfig)
 * [ScannerConfig.DecoderParams](../api/ScannerConfig-DecoderParams)
@@ -163,8 +166,11 @@ The ScanAndPair API provides simple methods to scan a Bluetooth barcode (Bluetoo
 ###ScanAndPairException
 * [ScanAndPairException](../api/ScanAndPairException)
 
+###ScanAndPairResults
+* [ScanAndPairResults](../api/ScanAndPairResults)
+
 ###StatusData
-* [StatusData](../api/ScanAndPairStatusData)
+* [StatusData](../api/StatusData)
 
 
 
@@ -180,6 +186,8 @@ Customers can interactively capture documents and obtain meaningful data present
 ###SimulScanManager
 * [SimulScanManager](../api/SimulScanManager)
 
+###SimulScanResults
+* [SimulScanResults](../api/SimulScanResults)
 
 ###SimulScanConfig
 * [SimulScanConfig](../api/SimulScanConfig)
@@ -218,6 +226,8 @@ Customers can interactively capture documents and obtain meaningful data present
 ###SimulScanRegion
 * [SimulScanRegion](../api/SimulScanRegion)
 
+###RegionType
+* [RegionType](../api/RegionType)
 
 ###SimulScanStatusData
 * [SimulScanStatusData](../api/SimulScanStatusData)
@@ -286,8 +296,6 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 
 ###SecureNfcManager
 * [SecureNfcManager](../api/SecureNfcManager)
-* [SecureNfcManager-SamType](../api/SecureNfcManager-SamType)
-* [SecureNfcManager-TagTechTyp](../api/SecureNfcManager-TagTechType)
 * [SecureNfcResults](../api/SecureNfcResults)
 * [SecureNfcException](../api/SecureNfcException)
 
@@ -295,18 +303,13 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 ###MifareDesfire
 * [MifareDesfire](../api/MifareDesfire)
 * [MifareDesfire.AppKeySettings](../api/MifareDesfire-AppKeySettings)
-* [MifareDesfire.AuthenticateType](../api/MifareDesfire-AuthenticateType)
 * [MifareDesfire.CardVersionInfo-HardwareInfo](../api/MifareDesfire-CardVersionInfo-HardwareInfo)
 * [MifareDesfire.CardVersionInfo-ManufacturerInfo](../api/MifareDesfire-CardVersionInfo-ManufacturerInfo)
 * [MifareDesfire.CardVersionInfo-SoftwareInfo](../api/MifareDesfire-CardVersionInfo-SoftwareInfo)
 * [MifareDesfire.CardVersionInfo](../api/MifareDesfire-CardVersionInfo)
-* [MifareDesfire.CreditType](../api/MifareDesfire-CreditType)
 * [MifareDesfire.DFNames](../api/MifareDesfire-DFNames)
 * [MifareDesfire.FileAccessRights](../api/MifareDesfire-FileAccessRights)
-* [MifareDesfire.FileCommMode](../api/MifareDesfire-FileCommMode)
-* [MifareDesfire.FileIDType](../api/MifareDesfire-FileIDType)
 * [MifareDesfire.FileSettings](../api/MifareDesfire-FileSettings)
-* [MifareDesfire.FileType](../api/MifareDesfire-FileType)
 * [MifareDesfire.FileTypeSpecificSettings](../api/MifareDesfire-FileTypeSpecificSettings)
 * [MifareDesfire.KeySettings](../api/MifareDesfire-KeySettings)
 * [MifareDesfire.MasterKeySettingsType](../api/MifareDesfire-MasterKeySettingsType)
@@ -325,14 +328,18 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 * [MifareSam.AdditionalAuthData-AV1Mode](../api/MifareSam-AdditionalAuthData-AV1Mode)
 * [MifareSam.AdditionalAuthData-AV2Mode](../api/MifareSam-AdditionalAuthData-AV2Mode)
 * [MifareSam.AdditionalAuthData](../api/MifareSam-AdditionalAuthData)
-* [MifareSam.ProtectionMode](../api/MifareSam-ProtectionMode)
 * [MifareSam.SamInfo-HardwareInfo](../api/MifareSam-SamInfo-HardwareInfo)
 * [MifareSam.SamInfo-ManufacturerInfo](../api/MifareSam-SamInfo-ManufacturerInfo)
 * [MifareSam.SamInfo-SoftwareInfo](../api/MifareSam-SamInfo-SoftwareInfo)
 * [MifareSam.SamInfo](../api/MifareSam-SamInfo)
-* [MifareSam.SamMode](../api/MifareSam-SamMode)
 * [MifareSamException](../api/MifareSamException)
 * [MifareSamResults](../api/MifareSamResults)
+
+###PassThruApdu
+* [PassThruApduResults](../api/PassThruApduResults)
+* [PassThruApduProcessor](../api/PassThruApduProcessor)
+* [PassThruApduException](../api/PassThruApduException)
+
 
 ###SamBase
 * [SamBase](../api/SamBase)

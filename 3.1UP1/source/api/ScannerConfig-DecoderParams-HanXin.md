@@ -11,23 +11,24 @@ The HanXin class provides access to parameters that are available for
 
 Check the inverse of the HanXin decoder
 
- code. Use enum ScannerConfig.HanXinInverse.
+ code. Use enum  ScannerConfig.HanXinInverse.
 
+ 
+ 
 
-
-
-
-
+ 
+ 
 
 
 
 **Example Usage:**
-
-	:::java
-
+	
+	:::java	
+	 	
 	 	hanXin.hanXinInverse = HanXinInverse.DISABLED;
 
 
 **Type:**
 
 com.symbol.emdk.barcode.ScannerConfig.HanXinInverse
+

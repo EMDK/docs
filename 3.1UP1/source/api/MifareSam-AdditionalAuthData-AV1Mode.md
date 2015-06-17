@@ -1,6 +1,7 @@
 #MifareSam.AdditionalAuthData.AV1Mode
 
-Data specific to the AV1 Sam Mode.
+Data specific to the AV1 Sam Mode. **Future use only, its not
+ supported now**
 
 
 

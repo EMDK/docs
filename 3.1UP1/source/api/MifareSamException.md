@@ -1,7 +1,12 @@
 #MifareSamException
 
 The methods of MifareSam object throws MifareSamException when an error
- occurs.
+ occurs. 
+
+ The error could be due to:
+
+1. Client using the API incorrectly
+2. Or because an unexpected error occurred
 
 
 

@@ -2,6 +2,8 @@
 
 An interface for notifying client applications when the scan data is
  available.
+ 
+ 
 
 
 

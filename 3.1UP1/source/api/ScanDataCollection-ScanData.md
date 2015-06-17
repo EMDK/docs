@@ -1,6 +1,8 @@
 #ScanDataCollection.ScanData
 
 The ScanData object gives information on the barcode data scanned.
+ 
+ 
 
 
 

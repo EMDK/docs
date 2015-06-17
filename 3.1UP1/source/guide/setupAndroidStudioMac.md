@@ -60,14 +60,14 @@ In order to develop EMDK apps on Android Studio, API's 16 and 19 Android platfor
 The following items can be found in [EMDK for Mac installation zip file](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip):
 
 - Latest EMDK add-ons
-	 - \EMDK_3.1_05202015_MAC\SDK\addon-symbol-emdk_v3.1_API-16
-	 - \EMDK_3.1_05202015_MAC\SDK\aaddon-symbol-emdk_v3.1_API-19
+	 - \EMDK_3.1_MAC\SDK\addon-symbol-emdk_v3.1_API-16
+	 - \EMDK_3.1_MAC\SDK\aaddon-symbol-emdk_v3.1_API-19
 - Latest EMDK Wizard core components
-	- \EMDK_3.1_05202015_MAC\Symbol EMDK for Android
+	- \EMDK_3.1_MAC\Symbol EMDK for Android
 - Latest EMDK Wizard plug-in for Android Studio
-	- \EMDK_3.1_05202015_MAC\Android Studio\com.symbol.emdk.wizard.intellijIdea_3.1.18
+	- \EMDK_3.1_MAC\Android Studio\com.symbol.emdk.wizard.intellijIdea_3.1.18
 - Latest EMDK device runtime
-	- \EMDK_3.1_05202015_MAC\Device Runtime\EmdkOSUpdateApp_v3.1.24.apk
+	- \EMDK_3.1_MAC\Device Runtime\EmdkOSUpdateApp_v3.1.24.apk
 
 ###EMDK SDK add-on Integration
 To add the EMDK 3.1 APIs to the Android SDK please refer the following instructions:

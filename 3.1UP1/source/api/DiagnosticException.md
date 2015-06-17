@@ -1,7 +1,10 @@
 #DiagnosticException
 
 The methods of diagnostic API throws DiagnosticException when an error
- occurs.
+ occurs. The error could be due to:
+ <ol>
+ <li>Client using the API incorrectly
+ <li>Or because an unexpected error occurred
 
 
 

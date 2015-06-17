@@ -1,6 +1,8 @@
 #SimulScanStatusData
 
 SimulScanStatusData class provides access to reader status.
+ 
+ 
 
 
 
@@ -40,41 +42,23 @@ Returns the friendly name of the Reader from which the SimulScanStatusData
 
 java.lang.String
 
-##Public Fields
-
-###ssdcStatus
-
-
-
-**Type:**
-
-com.symbol.emdk.simulscan.SimulScanStatusData.SimulScanStatus
-
-###friendlyName
-
-
-
-**Type:**
-
-java.lang.String
-
 ##Public Enums
 
 ###SimulScanStatusData.SimulScanStatus
 
-.
+
 
 **Values:**
 
-* **DISABLED**
+* **DISABLED** -Disabled called successfully on reader
 
-* **ENABLED**
+* **ENABLED** -Enabled reader successfully
 
-* **SCANNING**
+* **SCANNING** -Successfully started scanning
 
-* **IDLE**
+* **IDLE** -Finished scanning
 
-* **ERROR**
+* **ERROR** -Error occurred
 
-* **UNKNOWN**
+* **UNKNOWN** -Unknown status
 

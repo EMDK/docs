@@ -1,6 +1,8 @@
 #BarcodeManager
 
 This is the primary object to access the barcode scanning feature.
+ 
+ 
 
 
 

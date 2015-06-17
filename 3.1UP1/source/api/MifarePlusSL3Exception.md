@@ -1,7 +1,11 @@
 #MifarePlusSL3Exception
 
-The methods of MifarePlusSL3 object throws MifarePlusSL3Exception when an error
- occurs.
+The methods of MifarePlusSL3 object throws MifarePlusSL3Exception when an error occurs.
+
+The error could be due to:
+
+1. Client using the API incorrectly
+2. because an unexpected error occurred
 
 
 

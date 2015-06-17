@@ -1,6 +1,8 @@
 #ScannerInfo
 
 ScannerInfo provides information of the scanner device.
+ 
+ 
 
 
 
@@ -145,42 +147,48 @@ boolean
 ###ScannerInfo.DeviceType
 
 List of supported scanner device types.
+ 
+ 
 
 **Values:**
 
-* **CAMERA**
+* **CAMERA** -The Scanner device class is camera.
 
-* **IMAGER**
+* **IMAGER** -The scanner device class is imager.
 
-* **LASER**
+* **LASER** -The scanner device class is laser.
 
-* **UNDEFINED**
+* **UNDEFINED** -The scanner device class is not defined.
 
 ###ScannerInfo.ConnectionType
 
 List of supported scanner connection types.
+ 
+ 
 
 **Values:**
 
-* **INTERNAL**
+* **INTERNAL** -The scanner device connected internally within the mobile device.
 
-* **BLUETOOTH_SSI**
+* **BLUETOOTH_SSI** -The scanner device connected via Bluetooth to the mobile device.
 
-* **SERIAL_SSI**
+* **SERIAL_SSI** -The scanner device connected via serial SSI to the mobile device.
 
-* **USB**
+* **USB** -The scanner device connected via USB to the mobile device.
 
-* **UNDEFINED**
+* **UNDEFINED** -Connection type is not defined.
 
 ###ScannerInfo.DecoderType
 
-This lists all the barcode types supported by scanners.
+This lists all the barcode types supported by scanners
+ 
+ 
 
 **Values:**
 
-* **ONE_DIMENSIONAL**
+* **ONE_DIMENSIONAL** -Barcode scanning is 1-D only.
 
-* **TWO_DIMENSIONAL**
+* **TWO_DIMENSIONAL** -Barcode scanning is 2-D. This supports both 1-D and 2-D barcode scanning.
 
-* **UNDEFINED**
+* **UNDEFINED** -Decoder type not defined.
 
