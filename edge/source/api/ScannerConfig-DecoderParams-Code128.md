@@ -146,7 +146,7 @@ boolean
 ###isbt128ConcatMode
 
 Select an option for concatenating pairs of ISBT code types. Use
- enum @link ScannerConfig.Isbt128ContactMode}.
+ enum  ScannerConfig.Isbt128ContactMode.
 
  
  
@@ -201,7 +201,7 @@ The scanner of fers four levels of decode security for Code 128
  levels of bar code quality. There is an inverse relationship
  between security and scanner aggressiveness, so choose only that
  level of security necessary for any given application. Use enum
- @link ScannerConfig.SecurityLevel}.
+  ScannerConfig.SecurityLevel.
 
  
  

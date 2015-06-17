@@ -1,6 +1,6 @@
 #MifareSam.SamInfo
 
-SAM information.
+SAM information
 
 
 

@@ -1,7 +1,11 @@
 #SecureNfcException
 
 The methods of SecureNfcException object throws SecureNfcException when an error
- occurs.
+
+ occurs. The error could be due to:
+
+1. Client using the API incorrectly
+2. Or because an unexpected error occurred
 
 
 

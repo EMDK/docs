@@ -2,6 +2,8 @@
 
 SimulScanReader class will represent and provides access to the physical Reader
  device.
+ 
+ 
 
 
 
@@ -19,32 +21,6 @@ SimulScanReader class will represent and provides access to the physical Reader
 	  reader.cancelRead();
 	  reader.disable();
 
-
-##Constructors
-
-**SimulScanReader**
-
-
-
-**Parameters:**
-
-readerInfo
-
-
-
-com.symbol.emdk.simulscan.SimulScanReaderInfo
-
-context
-
-
-
-Context
-
-emdkServiceConnection
-
-
-
-com.symbol.emdk.EMDKServiceConnection
 
 ##Public Methods
 
@@ -312,16 +288,6 @@ The client can unregister to not get status notification via callbacks.
 **Parameters:**
 
 statusListener - The StatusListerner callback object to be unregistered
-
-**Returns:**
-
-void
-
-### release
-
-**public void release()**
-
-
 
 **Returns:**
 

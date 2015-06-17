@@ -79,7 +79,7 @@ boolean
 ###verifyCheckDigit
 
 The check digit type to verify. Use enum
- @link ScannerConfig.CheckDigitType}.
+  ScannerConfig.CheckDigitType.
 
  
  
@@ -153,7 +153,7 @@ boolean
 
 Specifies security level
 
- Use enum @link ScannerConfig.SecurityLevel}.
+ Use enum  ScannerConfig.SecurityLevel.
 
  
  

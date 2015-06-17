@@ -1,6 +1,8 @@
 #Diagnostic
 
 This class provides access to fetch the diagnostics information.
+ 
+ 
 
 
 

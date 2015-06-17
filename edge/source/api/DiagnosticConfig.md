@@ -1,6 +1,7 @@
 #DiagnosticConfig
 
 The diagnostic configuration class has to be configured before calling the get diagnostics parameter data.
+ This class configures average current and Shopping trip in minutes.
 
 
 
@@ -28,7 +29,7 @@ int
 
 ###averageCurrent
 
-The average current consumption in mA.
+The average current consumption in mA. 
  When this is 0, the default value will be selected based on the running average.
 
 **Type:**
@@ -43,3 +44,4 @@ The shopping trip duration in minutes.
 **Type:**
 
 int
+

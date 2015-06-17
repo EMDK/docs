@@ -1,12 +1,7 @@
 #SimulScanTemplate
 
-The Template class represents the XML template passed into the SimulScanEngine.
-
-
-
-##Constructors
-
-**SimulScanTemplate**
+The Template class represents the XML template passed into the SimulScanEngine. 
+ All of the recognizable tags and attributes are placed into this class.
 
 
 
@@ -65,46 +60,4 @@ Returns the friendly name of the template
 **Returns:**
 
 java.lang.String
-
-##Public Fields
-
-###elements
-
-
-
-**Type:**
-
-java.util.List
-
-###name
-
-
-
-**Type:**
-
-java.lang.String
-
-###number
-
-
-
-**Type:**
-
-int
-
-###height
-
-
-
-**Type:**
-
-int
-
-###width
-
-
-
-**Type:**
-
-int
 

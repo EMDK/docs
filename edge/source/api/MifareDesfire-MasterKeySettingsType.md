@@ -1,6 +1,6 @@
 #MifareDesfire.MasterKeySettingsType
 
-Master key setting type.
+Master key setting type
 
 
 

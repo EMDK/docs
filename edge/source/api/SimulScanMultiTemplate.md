@@ -1,22 +1,10 @@
 #SimulScanMultiTemplate
 
-The SimulScanMultiTemplate class contains an entire parsed XML template file.
+The SimulScanMultiTemplate class contains an entire parsed XML template file. It may consist of many individual Template.
 
 
 
 ##Constructors
-
-**SimulScanMultiTemplate**
-
-
-
-**Parameters:**
-
-svcMultiTemplate
-
-
-
-com.symbol.emdk.emdkservice.simulscan.SvcSimulScanMultiTemplate
 
 **SimulScanMultiTemplate**
 
@@ -67,16 +55,6 @@ com.symbol.emdk.simulscan.SimulScanException
 Exception will be throw if any error occurs while creating SimulScanMultiTemplate
 
 ##Public Methods
-
-### getServiceMultiTemplate
-
-**public SvcSimulScanMultiTemplate getServiceMultiTemplate()**
-
-
-
-**Returns:**
-
-com.symbol.emdk.emdkservice.simulscan.SvcSimulScanMultiTemplate
 
 ### getTemplateName
 

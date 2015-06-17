@@ -38,7 +38,7 @@ int
 ###linearSecurityLevel
 
 Sets the number of times a bar code is read to confirm an accurate decode.
- Use enum @link ScannerConfig.LinearSecurityLevel}.
+ Use enum  ScannerConfig.LinearSecurityLevel.
 
  
  
@@ -59,7 +59,7 @@ com.symbol.emdk.barcode.ScannerConfig.LinearSecurityLevel
 ###inverse1DMode
 
 This parameter allows the user to select decoding on inverse 1D bar codes.
- Use enum @link ScannerConfig.Inverse1DMode}.
+ Use enum  ScannerConfig.Inverse1DMode.
 
  
  
@@ -80,7 +80,7 @@ com.symbol.emdk.barcode.ScannerConfig.Inverse1DMode
 ###powerMode
 
 Set scanner power mode.
- Use enum {@link ScannerConfig.PowerMode}.
+ Use enum  ScannerConfig.PowerMode.
 
 **Type:**
 

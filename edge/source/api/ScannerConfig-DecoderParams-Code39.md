@@ -201,7 +201,7 @@ boolean
 ###securityLevel
 
 Options: Security level 0 , Security Level 1 , Security Level 2
- and Security Level 3. Use enum @link ScannerConfig.SecurityLevel}.
+ and Security Level 3. Use enum  ScannerConfig.SecurityLevel.
 
  
  

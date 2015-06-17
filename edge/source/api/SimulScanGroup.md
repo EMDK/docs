@@ -4,36 +4,6 @@ The SimulScanGroup class represents a processed SimulScanTemplateGroup.
 
 
 
-##Constructors
-
-**SimulScanGroup**
-
-
-
-**SimulScanGroup**
-
-
-
-**Parameters:**
-
-name
-
-
-
-java.lang.String
-
-data
-
-
-
-java.lang.Object
-
-number
-
-
-
-int
-
 ##Public Methods
 
 ### getRegions
@@ -47,20 +17,6 @@ Returns a list of SimulScanRegion objects that represents a collection of proces
 
 java.util.List
 
-### addProcessedRegion
-
-**public boolean addProcessedRegion(SimulScanRegion region)**
-
-
-
-**Parameters:**
-
-region
-
-**Returns:**
-
-boolean
-
 ### getData
 
 **public Object getData()**
@@ -70,14 +26,4 @@ Returns additional processed data as an object of type Object
 **Returns:**
 
 java.lang.Object
-
-##Public Fields
-
-###regions
-
-
-
-**Type:**
-
-java.util.List
 

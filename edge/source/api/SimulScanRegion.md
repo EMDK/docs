@@ -4,60 +4,6 @@ The SimulScanRegion class represents a processed SimulScanTemplateRegion.
 
 
 
-##Constructors
-
-**SimulScanRegion**
-
-
-
-**SimulScanRegion**
-
-
-
-**Parameters:**
-
-name
-
-
-
-java.lang.String
-
-image
-
-
-
-YuvImage
-
-data
-
-
-
-java.lang.Object
-
-number
-
-
-
-int
-
-processingMode
-
-
-
-com.symbol.emdk.simulscan.RegionType
-
-absConfidence
-
-
-
-int
-
-relConfidence
-
-
-
-int
-
 ##Public Methods
 
 ### getRegionType

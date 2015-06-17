@@ -1,7 +1,11 @@
 #PassThruApduException
 
-The methods of PassThruApduProcessor object throws PassThruApduException when an error
- occurs.
+The methods of PassThruApduProcessor object throws PassThruApduException when an error occurs. 
+
+The error could be due to:
+
+1. Client using the API incorrectly
+2. Because an unexpected error occurred
 
 
 

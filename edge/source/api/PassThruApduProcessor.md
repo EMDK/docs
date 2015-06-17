@@ -1,7 +1,16 @@
 #PassThruApduProcessor
 
 This class is designed for the NFC applications to perform secure communication with the
- contact-less secure cards (tags) at the low level protocol.
+ contact-less secure cards (tags) at the low level protocol. The audience of this class are 
+ secure NFC application developers with good understanding and expertise of the secure technology 
+ they use, including the cards (tags) and SAM documentation, features and protocol. 
+ 
+ Note: 
+ This is recommended only for the secure NFC application developers who are interested getting the full control
+ of the APDU. Other can use the SecureNfcManager.getTagTechInstance which provides simple API to securely
+ communicate with the Smart card/tags for the supported tag technologies.
+ 
+ 
 
 
 
@@ -109,18 +118,25 @@ The enum to get the Smart Card stack and connected Smart Card versions.
 
 **Values:**
 
-* **SMART_CARD** - The version of connected smart card and this version can be obtained
+* **SMART_CARD** -The version of connected smart card and this version can be obtained
  only after successful connection.
 
-* **SMART_CARD_STACK** - Retrieves the version of the smart card stack.
+* **SMART_CARD_STACK** -Retrieves the version of the smart card stack.
 
 ###PassThruApduProcessor.ProtocolType
 
 Communication protocol between a SAM and tag.
+ The protocolType is added for future use only.
+ This parameter does not have effect on protocol used by device to communicate with SAM. 
+ TDA8029 smart card reader uses either T=0 or T=1 depending on protocol supported by the connected SAM. 
+ User can provide it as either SC_PROTOCOL_T0 or SC_PROTOCOL_T1.Communication protocol (i.e. T=0 or T=1) 
+ between TDA8029 (Smart card reader chip) and SAM is always decided by TDA8029 as per protocol supported 
+ by the connected SAM. Thus if SAM supports only T=0 protocol then TDA8029 will set communication mode as T=0, 
+ else if SAM supports only T=1 protocol then TDA8029 will set communication mode as T=1.
 
 **Values:**
 
-* **T0** - T-0 byte-oriented half duplex transmission protocol
+* **T0** -T-0 byte-oriented half duplex transmission protocol
 
-* **T1** - T-1 block-oriented half duplex transmission protocol
+* **T1** -T-1 block-oriented half duplex transmission protocol
 

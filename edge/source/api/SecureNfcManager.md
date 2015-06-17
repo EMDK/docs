@@ -2,6 +2,8 @@
 
 This class provides access to obtain the object to communicate with the
  Secure Access Module (SAM).
+ 
+ 
 
 
 
@@ -200,7 +202,7 @@ Returns the PassThruApduProcessor object to securely communicate with
  
  Note: This is recommended only for the secure NFC application developers
  who is interested getting the full control on the APDU. Other can use the
- {@link SecureNfcManager.getTagTechInstance} which provides simple API to
+  SecureNfcManager.getTagTechInstance which provides simple API to
  securely communicate with the Smart card/tags for the supported tag
  technologies.
 
@@ -216,13 +218,13 @@ Supported SAM types.
 
 **Values:**
 
-* **NONE** - No SAM available.
+* **NONE** -No SAM available.
 
-* **MIFARE** - Mifare SAM
+* **MIFARE** -Mifare SAM
 
-* **FELICA** - Felica SAM
+* **FELICA** -Felica SAM
 
-* **UNDEFINED** - SAM category is undefined.
+* **UNDEFINED** -SAM category is undefined.
 
 ###SecureNfcManager.TagTechType
 
@@ -230,13 +232,13 @@ NFC tag types.
 
 **Values:**
 
-* **MIFARE_DESFIRE** - MifareDesfire Tag
+* **MIFARE_DESFIRE** -MifareDesfire Tag
 
-* **MIFARE_PLUS_SL3** - Mifare Plus SL3 Tag
+* **MIFARE_PLUS_SL3** -Mifare Plus SL3 Tag
 
-* **MIFARE_PLUS_SL2** - Mifare Plus SL2 Tag
+* **MIFARE_PLUS_SL2** -Mifare Plus SL2 Tag
 
-* **FELICA** - Felica Tag
+* **FELICA** -Felica Tag
 
-* **UNDEFINED** - Tag category is undefined
+* **UNDEFINED** -Tag category is undefined
 

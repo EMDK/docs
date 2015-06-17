@@ -1,6 +1,6 @@
 #MifareSam.SamInfo.HardwareInfo
 
-Hardware information.
+Hardware information
 
 
 

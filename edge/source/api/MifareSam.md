@@ -1,6 +1,10 @@
 #MifareSam
 
 Provides access to MIFARE SAM properties and I/O operations on an SAM object.
+ This class encapsulates all the methods required for authenticating the host
+ with MiFare SAM.
+ 
+ 
 
 
 
@@ -165,25 +169,25 @@ java.lang.String
 
 ###MifareSam.ProtectionMode
 
-Protection mode.
+Protection mode
 
 **Values:**
 
-* **PLAIN** - No protection
+* **PLAIN** -No protection
 
-* **MAC** - MAC protection. Not Supported.
+* **MAC** -MAC protection. Not Supported.
 
-* **FULL** - Full protection (MACing and encryption). Not Supported.
+* **FULL** -Full protection (MACing and encryption). Not Supported.
 
 ###MifareSam.SamMode
 
-SAM modes.
+SAM modes
 
 **Values:**
 
-* **AV1** - MIFARE SAM is in AV1 mode
+* **AV1** -MIFARE SAM is in AV1 mode
 
-* **AV2** - MIFARE SAM is in AV2 mode
+* **AV2** -MIFARE SAM is in AV2 mode
 
-* **UNDEFINED** - MIFARE SAM is in invalid mode
+* **UNDEFINED** -MIFARE SAM is in invalid mode
 

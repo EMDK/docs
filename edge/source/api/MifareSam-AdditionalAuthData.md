@@ -1,6 +1,6 @@
 #MifareSam.AdditionalAuthData
 
-Mifare Sam additional authentication data.
+Mifare Sam additional authentication data
 
 
 

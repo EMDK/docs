@@ -1,14 +1,14 @@
 ###SecureNfcResults
 
-.
+
 
 **Values:**
 
-* **SUCCESS** - Success
+* **SUCCESS** -Success
 
-* **FAILURE** - Failure
+* **FAILURE** -Failure
 
-* **EMDK_NOT_OPENED** - The EMDK is not opened.
+* **EMDK_NOT_OPENED** -The EMDK is not opened.
 
-* **UNDEFINED** - Error code not defined.
+* **UNDEFINED** -Error code not defined.
 

@@ -296,8 +296,6 @@ application to perform tasks such as unlocking the cradle to allow the MC18 to b
 
 ###SecureNfcManager
 * [SecureNfcManager](../api/SecureNfcManager)
-* [SecureNfcManager-SamType](../api/SecureNfcManager-SamType)
-* [SecureNfcManager-TagTechTyp](../api/SecureNfcManager-TagTechType)
 * [SecureNfcResults](../api/SecureNfcResults)
 * [SecureNfcException](../api/SecureNfcException)
 

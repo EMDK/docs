@@ -1,17 +1,19 @@
 ###DiagnosticResults
 
 Defines all the error codes the diagnostic API returns.
+ <br><br>
 
 **Values:**
 
-* **SUCCESS** - Success.
+* **SUCCESS** -Success.
 
-* **FAILURE** - Failure
+* **FAILURE** -Failure
 
-* **FEATURE_NOT_SUPPORTED** - Feature not supported.
+* **FEATURE_NOT_SUPPORTED** -Feature not supported.
 
-* **INVALID_VALUE** - Invalid value
+* **INVALID_VALUE** -Invalid value
 
-* **INVALID_OBJECT** - Invalid Object
+* **INVALID_OBJECT** -Invalid Object
 
-* **UNDEFINED** - Error code not defined.
+* **UNDEFINED** -Error code not defined.
+

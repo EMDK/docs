@@ -1,6 +1,6 @@
 #MifareDesfire.CardVersionInfo.ManufacturerInfo
 
-Manufacturer information.
+Manufacturer information
 
 
 
