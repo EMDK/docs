@@ -341,6 +341,7 @@ Allows the configuration of Code Id and decode feedback options.
 	* Alarms
 	* Notification
 * Decode Audio Feedback - Select an audio tone to sound upon a good decode.
+	* The audio tones stored as Application’s private data (i.e. cache, asset) should not be specified for this field to avoid access violation. Therefore any audio tones meant for this purpose must be stored under shared public directories (Music/ , Ringtones/) or shared “external storage”.
 * Decode Haptic Feedback - Enable the MC40 to vibrate upon a good decode.
 * BT Disconnect On Exit - Enable/Disable Bluetooth disconnect on exit.
 * Connection Idle Time - If a bluetooth scanner associated application is opened, Bluetooth scanner will be automatically disconnected after this Connection Time duration of inactivity. From 60 to 1800, Steps of 5. Eg: 60, 65, 70, 75...
