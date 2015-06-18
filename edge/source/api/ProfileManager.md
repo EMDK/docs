@@ -93,7 +93,7 @@ Processes the given profile based on the data provided and the flag and return s
 
 * **profileFlag** - [ProfileManager.PROFILE_FLAG](ProfileManager.PROFILE_FLAG) If the profileFlag is set to SET, and if the given profile is not available in the EMDKConfig.xml, it will look for valid profile in extraData argument and if present, the profile will be added to the internal XML volatile repository and also applied to the device. If the profile is present in the EMDKConfig.xml, it will be applied to the device. If profileFlag is set to GET and if the profile is present in the internal repository, it will be returned in extraData.
 
-* **extraData** - [ProfileConfig](ProfileConfig) This can be used to provide data for processing action.
+* **extraData** - [ProfileConfig](ProfileConfig) This can be used to provide data for processing action. This parameter is only supported for DataCapture profile features.
 
 **Returns:**
 
@@ -198,7 +198,7 @@ If the profileFlag is set to SET, and if the given profile is not available in t
 
 If profileFlag is set to GET and if the profile is present in the internal repository, it will be returned via data listener callback.
 
-**extraData** - ProfileConfig This can be used to provide data for processing action.
+**extraData** - ProfileConfig This can be used to provide data for processing action. This parameter is only supported for DataCapture profile features.
 
 **Returns:**
 
