@@ -3,8 +3,6 @@
 The TemplateElement class represents elements nested directly under the tag in 
  an XML template file
 
-
-
 ##Public interfaces
 
 java.io.Serializable

@@ -2,8 +2,6 @@
 
 ImagerSpecific provides access to the imager specific parameters.
 
-
-
 ##Public Fields
 
 ###continuousRead
@@ -20,15 +18,11 @@ Sets the maximum amount of time that the reader remains on (0 - 60,000 ms in inc
  A value of 0 sets the reader to stay on indefinitely.
 
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	readerParams.beamTimer = 1500;
+	readerParams.beamTimer = 1500;
 
 
 **Type:**
@@ -41,15 +35,11 @@ Sets the number of times a bar code is read to confirm an accurate decode.
  Use enum  ScannerConfig.LinearSecurityLevel.
 
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	readerParams.linearSecurityLevel = LinearSecurityLevel.ALL_THRICE;
+	readerParams.linearSecurityLevel = LinearSecurityLevel.ALL_THRICE;
 
 
 **Type:**
@@ -64,15 +54,11 @@ Allows the imager to decode only the bar code that is directly under the cross-h
  Use enum  ScannerConfig.PickList.
 
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	imagerSpecific.picklist = PickList.DISABLED;
+	imagerSpecific.picklist = PickList.DISABLED;
 
 
 **Type:**
@@ -86,15 +72,11 @@ Enables or disables LCD mode.
  Use enum  ScannerConfig.LcdMode.
 
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	imagerSpecific.lcdMode = LcdMode.DISABLED;
+	imagerSpecific.lcdMode = LcdMode.DISABLED;
 
 
 **Type:**
@@ -107,15 +89,11 @@ This parameter allows the user to select decoding on inverse 1D bar codes.
  Use enum  ScannerConfig.Inverse1DMode.
 
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	imagerSpecific.inverse1DMode = Inverse1DMode.AUTO;
+	imagerSpecific.inverse1DMode = Inverse1DMode.AUTO;
 
 
 **Type:**
@@ -127,15 +105,11 @@ com.symbol.emdk.barcode.ScannerConfig.Inverse1DMode
 Illumination Brightness of the Imager. The valid range is 1 to 10.
 
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	imagerSpecific.illuminationBrightness = 2;
+	imagerSpecific.illuminationBrightness = 2;
 
 
 **Type:**

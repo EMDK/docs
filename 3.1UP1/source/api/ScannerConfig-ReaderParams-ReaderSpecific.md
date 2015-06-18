@@ -2,11 +2,9 @@
 
 ReaderSpecific class provides access to the reader specific parameters.
 
-
-
 ##Constructors
 
-**ScannerConfig.ReaderParams.ReaderSpecific**
+###ReaderSpecific
 
 
 
@@ -16,17 +14,13 @@ ReaderSpecific class provides access to the reader specific parameters.
 
 Provide access to set the imager specific settings if the scanner device is imager.
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	if (scanner.getScannerInfo().getDeviceType() == DeviceType.IMAGER) {
-	   readerParams.readerSpecific.imagerSpecific.picklist = PickList.DISABLED;
-	  }
+	if (scanner.getScannerInfo().getDeviceType() == DeviceType.IMAGER) {
+	readerParams.readerSpecific.imagerSpecific.picklist = PickList.DISABLED;
+	}
 
 
 **Type:**
@@ -37,17 +31,13 @@ com.symbol.emdk.barcode.ScannerConfig.ReaderParams.ReaderSpecific.ImagerSpecific
 
 Provide access to set the camera specific settings if the scanner device is camera.
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	if (scanner.getScannerInfo().getDeviceType() == DeviceType.IMAGER) {
-	   readerParams.readerSpecific.cameraSpecific.illuminationMode = IlluminationMode.ON;
-	  }
+	if (scanner.getScannerInfo().getDeviceType() == DeviceType.IMAGER) {
+	readerParams.readerSpecific.cameraSpecific.illuminationMode = IlluminationMode.ON;
+	}
 
 
 **Type:**

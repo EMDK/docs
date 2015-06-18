@@ -2,8 +2,6 @@
 
 LaserSpecific class provides access to the laser scanner specific parameters.
 
-
-
 ##Public Fields
 
 ###continuousRead
@@ -20,15 +18,11 @@ Sets the maximum amount of time that the reader remains on (0 - 60,000 ms in inc
  A value of 0 sets the reader to stay on indefinitely.
 
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	readerParams.beamTimer = 1500;
+	readerParams.beamTimer = 1500;
 
 
 **Type:**
@@ -41,15 +35,11 @@ Sets the number of times a bar code is read to confirm an accurate decode.
  Use enum  ScannerConfig.LinearSecurityLevel.
 
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	readerParams.linearSecurityLevel = LinearSecurityLevel.ALL_THRICE;
+	readerParams.linearSecurityLevel = LinearSecurityLevel.ALL_THRICE;
 
 
 **Type:**
@@ -62,15 +52,11 @@ This parameter allows the user to select decoding on inverse 1D bar codes.
  Use enum  ScannerConfig.Inverse1DMode.
 
  
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	readerParams.cameraSpecific.inverse_1d_mode = Inverse1DMode.AUTO;
+	readerParams.cameraSpecific.inverse_1d_mode = Inverse1DMode.AUTO;
 
 
 **Type:**

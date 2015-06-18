@@ -2,8 +2,6 @@
 
 The class to access cradle configuration.
 
-
-
 ##Public Methods
 
 ### getLocation
@@ -44,7 +42,7 @@ com.symbol.emdk.personalshopper.CradleException
 
 ### setFastChargingState
 
-**public int setFastChargingState( isFastChargingState)**
+**public int setFastChargingState(boolean isFastChargingState)**
 
 Sets fast charging state of cradle. True for fast charging and false slow charging state.
 

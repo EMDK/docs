@@ -2,8 +2,6 @@
 
 Hardware information
 
-
-
 ##Public Fields
 
 ###vendorId

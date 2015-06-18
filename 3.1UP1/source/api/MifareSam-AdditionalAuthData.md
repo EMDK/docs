@@ -2,11 +2,9 @@
 
 Mifare Sam additional authentication data
 
-
-
 ##Constructors
 
-**MifareSam.AdditionalAuthData**
+###AdditionalAuthData
 
 
 

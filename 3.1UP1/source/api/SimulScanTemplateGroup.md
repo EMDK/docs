@@ -2,8 +2,6 @@
 
 The SimulScanTemplateGroup class is a grouping of multiple SimulScanTemplateRegion items.
 
-
-
 ##Public Methods
 
 ### getTemplateRegions

@@ -1,52 +1,58 @@
 #VersionManager
+
 Version information can be captured from this class.
+ 
+ 
 
 **Example Usage:**
+	
+	:::java	
+	versionManager = (VersionManager) EMDKManager.getInstance(EMDKManager.FEATURE_TYPE.VERSION);
 
-	:::java
-	@Override
-	public void onOpened(EMDKManager emdkmanager)
-	{
-	VersionManager versionManager = (VersionManager)emdkmanager.getInstance(FEATURE_TYPE.VERSION);
-	}
-
-**Version:**
-
-1.0
 
 ##Public Methods
 
-###getVersion(VersionManager.VERSION_TYPE versionKey)
+### getVersion
 
-Gets the version of the specified [VersionManager.VERSION_TYPE](#VERSION_TYPE)
+**public String getVersion(VersionManager.VERSION_TYPE versionKey)**
+
+Gets the version of the specified  VersionManager.VERSION_TYPE
+ 
+  
 
 **Example Usage:**
-
-	:::java
+	
+	:::java	
 	versionManager.getVersion(VERSION_TYPE.EMDK)
+
 
 **Parameters:**
 
-**versionKey** - [VersionManager.VERSION_TYPE](#VERSION_TYPE)
+versionKey -  VersionManager.VERSION_TYPE
 
 **Returns:**
 
-java.lang.String - Version number
+java.lang.String
 
 ##Public Enums
 
-###VERSION_TYPE
-All the version keys for [VersionManager.getVersion(VersionManager.VERSION_TYPE)](#getVersion(VersionManager.VERSION_TYPE)) are enumerated here.
+###VersionManager.VERSION_TYPE
+
+All the version keys for  VersionManager#getVersion(VERSION_TYPE) are enumerated here.
+ 
+ 
 
 **Example Usage:**
-
-	:::java
+	
+	:::java	
 	VERSION_TYPE.EMDK
+
 
 **Values:**
 
-* **EMDK("EMDK")** - EMDK version
+* **EMDK** -EMDK version
 
-* **MX("MX")** - MX framework version
+* **MX** -MX framework version
 
-* **BARCODE("BARCODE")** - Barcode Scanner Framework version.
+* **BARCODE** -Barcode Scanner Framework version.
+

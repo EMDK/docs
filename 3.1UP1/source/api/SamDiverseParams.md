@@ -2,11 +2,9 @@
 
 SAM diversification parameters
 
-
-
 ##Constructors
 
-**SamDiverseParams**
+###SamDiverseParams
 
 
 

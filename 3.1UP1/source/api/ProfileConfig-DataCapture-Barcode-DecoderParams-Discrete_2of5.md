@@ -1,24 +1,26 @@
 #ProfileConfig.DataCapture.Barcode.DecoderParams.Discrete_2of5
+
 Holds Discrete 2 of 5 configuration settings.
 
-**Example Usage:**
+ 
 
-	:::java
+**Example Usage:**
+	
+	:::java	
 	Discrete_2of5 discrete_2of5 = profileConfig.dataCapture.barcode.decoderParams.discrete_2of5;
 
-
-**Version:**
-
-2.0
 
 ##Public Fields
 
 ###length1
+
 Used to set decode lengths (default - 0).
 
-**Example Usage:**
+ 
 
-	:::java
+**Example Usage:**
+	
+	:::java	
 	int length1 = discrete_2of5.length1;
 
 
@@ -27,11 +29,14 @@ Used to set decode lengths (default - 0).
 int
 
 ###length2
+
 Used to set decode lengths (default - 14).
 
-**Example Usage:**
+ 
 
-	:::java
+**Example Usage:**
+	
+	:::java	
 	int length2 = discrete_2of5.length2;
 
 
@@ -40,15 +45,19 @@ Used to set decode lengths (default - 14).
 int
 
 ###redundancy
-Sets the reader to read the bar code twice before accepting data (default - enabled). Use enum [ProfileConfig.ENABLED_STATE](ProfileConfig.ENABLED_STATE).
+
+Sets the reader to read the bar code twice before accepting data (default - enabled).
+ Use enum  ProfileConfig.ENABLED_STATE.
+
+ 
 
 **Example Usage:**
-
-	:::java
+	
+	:::java	
 	discrete_2of5.redundancy = ENABLED_STATE.DEFAULT;
 
 
 **Type:**
 
-com.symbol.emdk.[ProfileConfig.ENABLED_STATE](ProfileConfig.ENABLED_STATE)
+com.symbol.emdk.ProfileConfig.ENABLED_STATE
 

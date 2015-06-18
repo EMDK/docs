@@ -2,11 +2,9 @@
 
 The class to hold the LED Flash settings.
 
-
-
 ##Constructors
 
-**CradleLedFlashInfo**
+###CradleLedFlashInfo
 
 Constructor to instantiate the CradleLEDConfig.
 
@@ -16,19 +14,19 @@ onDuration
 
 
 
-int
+**Type:** int
 
 offDuration
 
 
 
-int
+**Type:** int
 
 smoothEffect
 
 
 
-boolean
+**Type:** boolean
 
 ##Public Fields
 

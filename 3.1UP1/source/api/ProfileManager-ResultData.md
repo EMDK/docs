@@ -1,56 +1,66 @@
 #ProfileManager.ResultData
+
 This class provides the Status detail of processProfileAsync method.
-
-
-**Version:**
-
-3.1
 
 ##Public Methods
 
-###getResult()
+### getResult
+
+**public EMDKResults getResult()**
+
 Class for holding status of processProfileAsync method.
 
 **Returns:**
 
-[EMDKResults](EMDKResults)
+com.symbol.emdk.EMDKResults
 
+### getProfileName
 
-###getProfileName()
+**public String getProfileName()**
+
 Returns the profile name sent in processProfileAsync method.
 
 **Returns:**
 
-String - profile name sent in processProfileAsync method.
+java.lang.String
 
+### getProfileFlag
 
-###getProfileFlag()
+**public PROFILE_FLAG getProfileFlag()**
+
 Returns the profile flag sent in processProfileAsync method.
 
 **Returns:**
 
-[ProfileManager.PROFILE_FLAG](ProfileManager#ProfileManager.PROFILE_FLAG) - Returns the [Profile Flag](ProfileManager#ProfileManager.PROFILE_FLAG) sent in processProfileAsync method.
+com.symbol.emdk.ProfileManager.PROFILE_FLAG
 
+### getProfileString
 
-###getProfileString()
+**public String getProfileString()**
+
 Returns the profile data as string requested in the processProfileAsync method.
 
 **Returns:**
 
-String - Returns the profile data as string requested in the processProfileAsync method.
+java.lang.String
 
+### getProfileDocument
 
-###getProfileDocument()
+**public Document getProfileDocument()**
+
 Returns the profile data as DOM document requested in the processProfileAsync method.
 
 **Returns:**
 
-org.w3c.dom.Document - Returns the profile data as DOM document requested in the processProfileAsync method.
+org.w3c.dom.Document
 
+### getProfileConfig
 
-###getProfileConfig()
-Returns the profile data as [ProfileConfig](ProfileConfig) object.
+**public ProfileConfig getProfileConfig()**
+
+Returns the profile data as ProfileConfig object.
 
 **Returns:**
 
-[ProfileConfig](ProfileConfig) - Returns the profile data as [ProfileConfig](ProfileConfig) object. 
+com.symbol.emdk.ProfileConfig
+

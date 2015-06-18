@@ -3,8 +3,6 @@
 The UsPlanet class provides access to parameters that are available
  for the UsPlanet decoder.
 
-
-
 ##Public Fields
 
 ###reportCheckDigit

@@ -5,21 +5,18 @@ SimulScanReader class will represent and provides access to the physical Reader
  
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	  List<SimulScanReaderInfo> readerInfoList = simulscanManager.getSupportedDevicesInfo();
-	  SimulScanReader reader = simulscanManager.getDevice(readerInfoList.get(0));
-	  reader.addDataListener(callbackObj);
-	  reader.addStatusListener(callbackObj);
-	  reader.enable();
-	  // Set template before calling read
-	  reader.read();
-	  reader.cancelRead();
-	  reader.disable();
+	List<SimulScanReaderInfo> readerInfoList = simulscanManager.getSupportedDevicesInfo();
+	SimulScanReader reader = simulscanManager.getDevice(readerInfoList.get(0));
+	reader.addDataListener(callbackObj);
+	reader.addStatusListener(callbackObj);
+	reader.enable();
+	// Set template before calling read
+	reader.read();
+	reader.cancelRead();
+	reader.disable();
 
 
 ##Public Methods
@@ -59,9 +56,6 @@ Enables the reader hardware. This method does not make the reader to scan.
 	
 	:::java	
 	reader.enable();
-	
-	
-	
 
 
 **Returns:**
@@ -89,9 +83,6 @@ Disables the reader hardware. Any pending scanned data will be lost.
 	
 	:::java	
 	reader.disable();
-	
-	
-	
 
 
 **Returns:**
@@ -128,9 +119,6 @@ Gets the current configuration settings for this reader device.
 	:::java	
 	reader.enable();
 	SimulScanConfig config = reader.getConfig();
-	
-	
-	
 
 
 **Returns:**
@@ -161,9 +149,6 @@ Changes the settings for this reader device.
 	SimulScanConfig config = reader.getConfig();
 	config.multiTemplate = template1;
 	reader.setConfig(config);
-	
-	
-	
 	
 
 
@@ -196,9 +181,6 @@ This method initiates a SimulScan read() request.
 	
 	:::java	
 	reader.read();
-	
-	
-	
 
 
 **Returns:**
@@ -222,9 +204,6 @@ This cancels any pending read() calls
 	
 	:::java	
 	reader.cancelRead();
-	
-	
-	
 
 
 **Returns:**

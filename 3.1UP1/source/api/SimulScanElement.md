@@ -2,8 +2,6 @@
 
 The SimulScanElement abstract class represents a processed SimulScanTemplateElement.
 
-
-
 ##Public interfaces
 
 java.io.Serializable

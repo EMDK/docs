@@ -3,11 +3,9 @@
 The diagnostic configuration class has to be configured before calling the get diagnostics parameter data.
  This class configures average current and Shopping trip in minutes.
 
-
-
 ##Constructors
 
-**DiagnosticConfig**
+###DiagnosticConfig
 
 DiagnosticsConfig Constructor
 
@@ -17,13 +15,13 @@ averageCurrent
 
 in ma
 
-int
+**Type:** int
 
 tripInMinutes
 
 in mins
 
-int
+**Type:** int
 
 ##Public Fields
 

@@ -2,11 +2,9 @@
 
 The diagnostic data.
 
-
-
 ##Constructors
 
-**DiagnosticData**
+###DiagnosticData
 
 
 
@@ -16,7 +14,7 @@ svcDiagnosticData
 
 
 
-com.symbol.emdk.emdkservice.diagnostic.SvcDiagnosticData
+**Type:** com.symbol.emdk.emdkservice.diagnostic.SvcDiagnosticData
 
 ##Public Fields
 

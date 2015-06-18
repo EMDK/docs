@@ -2,8 +2,6 @@
 
 Manufacturer information
 
-
-
 ##Public Fields
 
 ###uid

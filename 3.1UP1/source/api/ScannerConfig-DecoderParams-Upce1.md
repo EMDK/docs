@@ -3,8 +3,6 @@
 The Upce1 class provides access to parameters that are available for
  the Upce1 decoder.
 
-
-
 ##Public Fields
 
 ###reportCheckDigit

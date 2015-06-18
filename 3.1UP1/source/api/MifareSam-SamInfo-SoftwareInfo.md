@@ -2,8 +2,6 @@
 
 Software information
 
-
-
 ##Public Fields
 
 ###vendorId

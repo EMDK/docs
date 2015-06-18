@@ -2,8 +2,6 @@
 
 Class to communicate with the MC18 cradle.
 
-
-
 ##Public Methods
 
 ### enable
@@ -72,7 +70,7 @@ com.symbol.emdk.personalshopper.CradleException
 
 ### unlock
 
-**public CradleResults unlock( unlockDuration, CradleLedFlashInfo ledFlashInfo)**
+**public CradleResults unlock(int unlockDuration, CradleLedFlashInfo ledFlashInfo)**
 
 This unlocks terminal from cradle and flashes the LED.
  The timeout represents the duration in which the terminal remains unlocked in the
@@ -98,7 +96,7 @@ com.symbol.emdk.personalshopper.CradleException
 
 ### flashLed
 
-**public CradleResults flashLed( ledFlashCount, CradleLedFlashInfo ledFlashInfo)**
+**public CradleResults flashLed(int ledFlashCount, CradleLedFlashInfo ledFlashInfo)**
 
 The LED can be flashed to identify device location without unlocking the cradle.
 

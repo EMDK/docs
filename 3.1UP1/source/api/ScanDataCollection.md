@@ -5,29 +5,6 @@ The ScanDataCollection object gives scanning result and the collection of
  
  
 
-
-
-**Example Usage:**
-	
-	:::java	
-	 	
-	 	@Override
-		public void onData(ScanDataCollection scanDataCollection) {
-	
-			if(scanDataCollection != null && scanDataCollection.getResult() == ScannerResults.SUCCESS) {
-				
-				ArrayList<ScanData> scanData = scanDataCollection.getScanData();
-				
-				for(ScanData data : scanData ) {
-					
-					String barcodeDate = data.getData();
-					LABEL_TYPE labelType = data.getLabelType();
-					String timeStamp = scanData.getTimeStamp();
-				}
-			}
-		 }
-
-
 ##Public Methods
 
 ### getFriendlyName
@@ -52,9 +29,6 @@ This method used to obtain the scanned result.
 	
 	:::java	
 	ScannerResults results = scanDataCollection.getResult();
-	
-	
-	
 
 
 **Returns:**
@@ -73,9 +47,6 @@ This method is used to obtain the scanned data list.
 	
 	:::java	
 	ArrayList<ScanData> scanDataList = scanDataCollection.getScanData()
-	
-	
-	
 
 
 **Returns:**
@@ -89,6 +60,12 @@ java.util.ArrayList
 List of label types of the scanner data
  
  
+
+**Example Usage:**
+	
+	:::java	
+	LABEL_TYPE.CODE39
+
 
 **Values:**
 

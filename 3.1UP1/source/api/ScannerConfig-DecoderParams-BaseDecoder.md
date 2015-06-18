@@ -3,11 +3,9 @@
 The BaseDecoder class is the parent decoder to all decoders and is
  inherited by all decoders.
 
-
-
 ##Constructors
 
-**ScannerConfig.DecoderParams.BaseDecoder**
+###BaseDecoder
 
 
 

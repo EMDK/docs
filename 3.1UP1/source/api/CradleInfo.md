@@ -2,8 +2,6 @@
 
 This class holds cradle information.
 
-
-
 ##Public Methods
 
 ### getSerialNumber

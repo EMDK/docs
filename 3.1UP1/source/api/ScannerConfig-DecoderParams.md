@@ -8,8 +8,6 @@ The DecoderParams class contains decoder parameters that
  Config.ReaderParams and Config.InterfaceParams) will be set
  automatically.
 
-
-
 ##Public Fields
 
 ###australianPostal

@@ -5,15 +5,12 @@ An interface for notifying client applications when the scan data is
  
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	  public class MainActivity extends Activity implements DataListerner
-	  .. .. ..
-	  
+	public class MainActivity extends Activity implements DataListerner
+	.. .. ..
+	
 
 
 ##Public Methods

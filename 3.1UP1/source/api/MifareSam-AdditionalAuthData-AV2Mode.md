@@ -3,11 +3,9 @@
 Data specific to the AV2 Sam Mode. **Future use only, its not
  supported now**
 
-
-
 ##Constructors
 
-**MifareSam.AdditionalAuthData.AV2Mode**
+###AV2Mode
 
 
 

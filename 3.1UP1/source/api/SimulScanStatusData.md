@@ -4,18 +4,15 @@ SimulScanStatusData class provides access to reader status.
  
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	SimulScanStatusData.getState();
+	SimulScanStatusData.getState();
 
 
 ##Constructors
 
-**SimulScanStatusData**
+###SimulScanStatusData
 
 
 

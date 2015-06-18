@@ -2,11 +2,9 @@
 
 The SimulScanMultiTemplate class contains an entire parsed XML template file. It may consist of many individual Template.
 
-
-
 ##Constructors
 
-**SimulScanMultiTemplate**
+###SimulScanMultiTemplate
 
 Create SimulScanMultiTemplate object from XML string
 
@@ -16,13 +14,13 @@ simulScanManager
 
 
 
-com.symbol.emdk.simulscan.SimulScanManager
+**Type:** com.symbol.emdk.simulscan.SimulScanManager
 
 xmlString
 
 XML string
 
-java.lang.String
+**Type:** java.lang.String
 
 **Throws:**
 
@@ -30,7 +28,7 @@ com.symbol.emdk.simulscan.SimulScanException
 
 Exception will be throw if any error occurs while creating SimulScanMultiTemplate
 
-**SimulScanMultiTemplate**
+###SimulScanMultiTemplate
 
 Create SimulScanMultiTemplate object from URI to template XML
 
@@ -40,13 +38,13 @@ simulScanManager
 
 
 
-com.symbol.emdk.simulscan.SimulScanManager
+**Type:** com.symbol.emdk.simulscan.SimulScanManager
 
 fileUri
 
 URI to the template to be loaded
 
-Uri
+**Type:** Uri
 
 **Throws:**
 

@@ -57,17 +57,19 @@ In order to develop EMDK apps on Android Studio, API's 16 and 19 Android platfor
 	- Android API 16, API 19 platforms
 	- Android SDK Build-tools 21.1.x or newer
 
-The following items can be found in [EMDK for Mac installation zip file](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip):
+The following items can be found in [EMDK 3.1 for Mac installation zip file](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip):
 
-- Latest EMDK add-ons
-	 - \EMDK_3.1_MAC\SDK\addon-symbol-emdk_v3.1_API-16
-	 - \EMDK_3.1_MAC\SDK\aaddon-symbol-emdk_v3.1_API-19
-- Latest EMDK Wizard core components
-	- \EMDK_3.1_MAC\Symbol EMDK for Android
-- Latest EMDK Wizard plug-in for Android Studio
-	- \EMDK_3.1_MAC\Android Studio\com.symbol.emdk.wizard.intellijIdea_3.1.18
-- Latest EMDK device runtime
-	- \EMDK_3.1_MAC\Device Runtime\EmdkOSUpdateApp_v3.1.24.apk
+- EMDK add-ons
+	 - \SDK\addon-symbol-emdk_v3.1_API-16
+	 - \SDK\aaddon-symbol-emdk_v3.1_API-19
+- EMDK Wizard core components
+	- \Symbol EMDK for Android
+- EMDK Wizard plug-in for Android Studio
+	- \Android Studio\com.symbol.emdk.wizard.intellijIdea_3.1_20
+- EMDK device runtime
+	- \Device Update\EmdkOSUpdateApp_v3.1.32.apk
+
+>NOTE: Instructions for installing EmdkOSUpdate on Mac can be found in [Device Setup](../guide/setupDevice).
 
 ###EMDK SDK add-on Integration
 To add the EMDK 3.1 APIs to the Android SDK please refer the following instructions:
@@ -125,14 +127,28 @@ Now the “EMDK” menu should appear in the Android Studio menu bar:
 
 ##Installing EMDK v3.1 Update1
 
->NOTE: The EMDK for Android v3.1( [EMDK_3.1_MAC](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip) ) must be installed on Mac OSX prior to installing this update.
+###Prerequisites
+- [EMDK for Android 3.1](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip) - (Follow instructions above)
+
+The following items can be found in [EMDK 3.1 Update1 for Mac installation zip file](https://s3.amazonaws.com/emdk/EMDK_3.1_UPDATE1_MAC.zip):
+
+- EMDK add-ons
+	 - \SDK\aaddon-symbol-emdk_v3.1_API-19
+- EMDK Wizard core components
+	- \Symbol EMDK for Android\
+- EMDK device runtime
+	- \Device Update\EmdkOSUpdateApp_v3.1.36.apk
+
+>NOTE: Instructions for installing EmdkOSUpdate on Mac can be found in [Device Setup](../guide/setupDevice).
+
+###Manual Installation
 
 1. Install the full [EMDK for Android 3.1](https://s3.amazonaws.com/emdk/EMDK_3.1_MAC.zip)  (refer to instructions above)
 2. Download and unzip [EMDK for Android 3.1 Update1](https://s3.amazonaws.com/emdk/EMDK_3.1_UPDATE1_MAC.zip)
-3. Update the SDK Add-on by copying the contents of \EMDK_3.1_UPDATE1_MAC\SDK\ to /Users/<user>/Library/Android/sdk/add-ons/
+3. Update the SDK Add-on by copying the contents of \SDK\ to /Users/<user>/Library/Android/sdk/add-ons/
 		>NOTE: this update is for API 19 only
 
-4. Update the EMDK Wizard plug-in by copying the contents of \EMDK_3.1_UPDATE1_MAC\Symbol EMDK for Android\ to /Users/Shared/Symbol EMDK for Android/
+4. Update the EMDK Wizard plug-in by copying the contents of \Symbol EMDK for Android\ to /Users/Shared/Symbol EMDK for Android/
 
 
 
