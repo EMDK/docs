@@ -1,30 +1,36 @@
 #ProfileConfig.DataCapture.MSR
+
 Holds MSR configuration settings
 
-**Example Usage:**
+ 
 
-	:::java
+**Example Usage:**
+	
+	:::java	
 	MSR msr = profileConfig.dataCapture.msr;
 
-**Version:**
-
-2.0
 
 ##Constructors
 
-###ProfileConfig.DataCapture.MSR()
+###MSR
+
+
 
 ##Public Fields
 
 ###msr_input_enabled
-Gets and Sets MSR enabled configuration enum [ProfileConfig.ENABLED_STATE](ProfileConfig.ENABLED_STATE).
+
+Gets and Sets MSR enabled configuration enum  ProfileConfig.ENABLED_STATE.
+
+ 
 
 **Example Usage:**
-
-	:::java
+	
+	:::java	
 	msr.msr_input_enabled = ENABLED_STATE.DEFAULT;
+
 
 **Type:**
 
-com.symbol.emdk.[ProfileConfig.ENABLED_STATE](ProfileConfig.ENABLED_STATE)
+com.symbol.emdk.ProfileConfig.ENABLED_STATE
 

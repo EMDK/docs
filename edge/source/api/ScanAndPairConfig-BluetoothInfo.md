@@ -3,11 +3,9 @@
 This class is used by the ScanAndPairTool class. Specifies the Bluetooth related 
  information. The settings provided through this class are used for pairing/unpairing.
 
-
-
 ##Constructors
 
-**ScanAndPairConfig.BluetoothInfo**
+###BluetoothInfo
 
 Default constructor
 

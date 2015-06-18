@@ -3,8 +3,6 @@
 The Code128 class provides access to parameters that are available
  for the Code128 decoder.
 
-
-
 ##Public Fields
 
 ###length1
@@ -12,18 +10,11 @@ The Code128 class provides access to parameters that are available
 Use to set decode lengths. The supported range is 0 to 55.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	int length1 = code128.length1;
+	int length1 = code128.length1;
 
 
 **Type:**
@@ -35,18 +26,11 @@ int
 Use to set decode lengths. The supported range is 0 to 55.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	int length2 = code128.length2;
+	int length2 = code128.length2;
 
 
 **Type:**
@@ -58,18 +42,11 @@ int
 Sets the reader to read the bar code twice before accepting data.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code128.redundancy = true;
+	code128.redundancy = true;
 
 
 **Type:**
@@ -81,18 +58,11 @@ boolean
 Flag to enable other sub types besides GS1-128 and ISBT-128
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code128.enablePlain = false;
+	code128.enablePlain = false;
 
 
 **Type:**
@@ -103,18 +73,11 @@ boolean
 
 Flag to enable EAN128 subtype.
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code128.enableEan128 = true;
+	code128.enableEan128 = true;
 
 
 **Type:**
@@ -125,18 +88,11 @@ boolean
 
 Flag to enable ISBT128 .
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code128.enableIsbt128 = true;
+	code128.enableIsbt128 = true;
 
 
 **Type:**
@@ -149,18 +105,11 @@ Select an option for concatenating pairs of ISBT code types. Use
  enum  ScannerConfig.Isbt128ContactMode.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code128.isbt128ConcatMode = Isbt128ContactMode.NONE;
+	code128.isbt128ConcatMode = Isbt128ContactMode.NONE;
 
 
 **Type:**
@@ -176,18 +125,11 @@ The ISBT specification includes a table that lists several types
  not concatenated.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code128.checkIsbtTable = true;
+	code128.checkIsbtTable = true;
 
 
 **Type:**
@@ -204,18 +146,11 @@ The scanner of fers four levels of decode security for Code 128
   ScannerConfig.SecurityLevel.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code128.securityLevel = SecurityLevel.LEVEL_0;
+	code128.securityLevel = SecurityLevel.LEVEL_0;
 
 
 **Type:**

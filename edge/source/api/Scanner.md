@@ -5,18 +5,15 @@ Scanner class will represent and provides access to the physical scanner
  
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	  Scanner scanner = barcodeManager.getDevice(DeviceIdentifer.DEFAULT);
-	  scanner.enable();
-	  scanner.addDataListener(this);
-	  scanner.read();
-	  scanner.cancelRead();
-	  scanner.disable();
+	Scanner scanner = barcodeManager.getDevice(DeviceIdentifer.DEFAULT);
+	scanner.enable();
+	scanner.addDataListener(this);
+	scanner.read();
+	scanner.cancelRead();
+	scanner.disable();
 
 
 ##Public Methods
@@ -65,9 +62,6 @@ Gets the current configuration settings for this scanner device.
 	:::java	
 	scanner.enable();
 	ScannerConfig config = scanner.getConfig();
-	
-	
-	
 
 
 **Returns:**
@@ -94,9 +88,6 @@ Changes the settings for this scanner device. The unsupported parameters will be
 	ScannerConfig scannerConfig = scanner.getConfig();
 	scannerConfig.scanParams.decodeLEDTime = 10;
 	scanner.setConfig(scannerConfig);
-	
-	
-	
 
 
 **Parameters:**
@@ -127,9 +118,6 @@ Enables the scanner hardware. This method does not make the scanner to scan or t
 	
 	:::java	
 	scanner.enable();
-	
-	
-	
 
 
 **Returns:**
@@ -156,9 +144,6 @@ Disables the scanner hardware. Any pending scanned data will be lost.
 	
 	:::java	
 	scanner.disable();
-	
-	
-	
 
 
 **Returns:**
@@ -212,9 +197,6 @@ Starts an asynchronous Scan. The method will not turn on the scanner. It
 	
 	:::java	
 	scanner.read();
-	
-	
-	
 
 
 **Returns:**
@@ -238,9 +220,6 @@ This Cancels any pending asynchronous read() calls
 	
 	:::java	
 	scanner.cancelRead();
-	
-	
-	
 
 
 **Returns:**

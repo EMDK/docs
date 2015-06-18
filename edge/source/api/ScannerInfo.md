@@ -4,13 +4,10 @@ ScannerInfo provides information of the scanner device.
  
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	scanneInfo.getFriendlyName();
+	scanneInfo.getFriendlyName();
 
 
 ##Public Methods
@@ -37,9 +34,6 @@ Returns the friendly name of the Device.
 	
 	:::java	
 	String name = scanneInfo.getFriendlyName();
-	
-	
-	
 
 
 **Returns:**
@@ -59,9 +53,6 @@ Returns the scanner device model number. This information will be available only
 	
 	:::java	
 	String model = scanneInfo.getModel();
-	
-	
-	
 
 
 **Returns:**
@@ -80,9 +71,6 @@ Returns the scanner device type
 	
 	:::java	
 	DeviceType deviceType = scanneInfo.getDeviceType();
-	
-	
-	
 
 
 **Returns:**
@@ -101,9 +89,6 @@ Returns the scanner connection type to mobile computer
 	
 	:::java	
 	ConnectionType deviceType = scanneInfo.getConnectionType();
-	
-	
-	
 
 
 **Returns:**
@@ -123,9 +108,6 @@ Returns the barcode scanning type supported by scanner.
 	
 	:::java	
 	DecoderType decoderType = scannerInfo.getScannerInfo().getDecoderType();
-	
-	
-	
 
 
 **Returns:**
@@ -150,6 +132,12 @@ List of supported scanner device types.
  
  
 
+**Example Usage:**
+	
+	:::java	
+	DeviceType.LASER;
+
+
 **Values:**
 
 * **CAMERA** -The Scanner device class is camera.
@@ -165,6 +153,12 @@ List of supported scanner device types.
 List of supported scanner connection types.
  
  
+
+**Example Usage:**
+	
+	:::java	
+	ConnectionType.INTERNAL;
+
 
 **Values:**
 
@@ -183,6 +177,12 @@ List of supported scanner connection types.
 This lists all the barcode types supported by scanners
  
  
+
+**Example Usage:**
+	
+	:::java	
+	DecoderType.ONE_DIMENSIONAL
+
 
 **Values:**
 

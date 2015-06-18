@@ -2,8 +2,6 @@
 
 The SimulScanTemplateRegion class represents a particular region in a Template.
 
-
-
 ##Public Methods
 
 ### getHeight

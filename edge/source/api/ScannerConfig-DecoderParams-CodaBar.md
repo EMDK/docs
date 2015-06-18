@@ -3,8 +3,6 @@
 The CodaBar class provides access to parameters that are available
  for the CodaBar decoder.
 
-
-
 ##Public Fields
 
 ###length1
@@ -12,18 +10,11 @@ The CodaBar class provides access to parameters that are available
 Use to set decode lengths. The supported range is 0 to 55.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	codabar.length1 = 6;
+	codabar.length1 = 6;
 
 
 **Type:**
@@ -35,18 +26,11 @@ int
 Use to set decode lengths. The supported range is 0 to 55.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	codabar.length2 = 55;
+	codabar.length2 = 55;
 
 
 **Type:**
@@ -58,18 +42,11 @@ int
 Sets the reader to read the bar code twice before accepting data.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	codabar.redundancy = true;
+	codabar.redundancy = true;
 
 
 **Type:**
@@ -84,18 +61,11 @@ Enable this parameter to strip the start and stop characters and
  system requires this data format.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	codabar.clsi_editing = true;
+	codabar.clsi_editing = true;
 
 
 **Type:**
@@ -109,18 +79,11 @@ Enable this parameter to strip the start and stop characters from
  requires this data format.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	codabar.notis_editing = true;
+	codabar.notis_editing = true;
 
 
 **Type:**

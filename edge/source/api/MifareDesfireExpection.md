@@ -1,12 +1,12 @@
 #MifareDesfireExpection
 
 The methods of MifareDesfire object throws MifareDesfireException when an error
- occurs. The error could be due to:
- <ol>
- <li>Client using the API incorrectly
- <li>Or because an unexpected error occurred
+ occurs.
 
+The error could be due to:
 
+1. Client using the API incorrectly
+2. Or because an unexpected error occurred
 
 ##Public Methods
 
@@ -19,4 +19,3 @@ Returns the MifareDesfireResults.
 **Returns:**
 
 com.symbol.emdk.securenfc.MifareDesfireResults
-

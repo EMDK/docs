@@ -3,8 +3,6 @@
 The Upce0 class provides access to parameters that are available for
  the Upce0 decoder.
 
-
-
 ##Public Fields
 
 ###reportCheckDigit

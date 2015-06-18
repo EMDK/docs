@@ -4,22 +4,19 @@ This class provides access to fetch the diagnostics information.
  
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	  paramId
-	  DiagnosticData diagnosticData =  PsObject.diagnostic.getDiagnosticData(DiagnosticParamId paramId
-	  ,DiagnosticConfig diagnosticconfig);
+	paramId
+	DiagnosticData diagnosticData =  PsObject.diagnostic.getDiagnosticData(DiagnosticParamId paramId
+	,DiagnosticConfig diagnosticconfig);
 
 
 ##Public Methods
 
 ### getDiagnosticData
 
-**public DiagnosticData getDiagnosticData( paramId, DiagnosticConfig diagnosticconfig)**
+**public DiagnosticData getDiagnosticData(int paramId, DiagnosticConfig diagnosticconfig)**
 
 Get the values for all the parameters or the specified parameter ID.
 

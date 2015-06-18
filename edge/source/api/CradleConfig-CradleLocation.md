@@ -3,11 +3,9 @@
 The class for provides access to the cradle location. 
  The values modified will take effective only by calling setConfig().
 
-
-
 ##Constructors
 
-**CradleConfig.CradleLocation**
+###CradleLocation
 
 Constructor
 
@@ -17,19 +15,19 @@ wall
 
 
 
-int
+**Type:** int
 
 row
 
 
 
-int
+**Type:** int
 
 column
 
 
 
-int
+**Type:** int
 
 ##Public Fields
 

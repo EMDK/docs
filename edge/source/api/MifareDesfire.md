@@ -7,76 +7,53 @@ Provides access to MIFARE DESFire properties and I/O operations on an IsoDep
 
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	  
-	 public class MainActivity  extends Activity implements EMDKListener {
-	
-	 SecureNfcManager secureNfcManager;
-	 EMDKManager emdkManager;
-	 SamType samType;
-	 MifareDesfire mifaredesfire;
-	 MifareSam mifareSam;
-	
-	  protected void onCreate(Bundle savedInstanceState) {
-	
-	   EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
-	  }
-	
-	 public void onOpened(EMDKManager emdkManager) {
-	
-	  this.emdkManager = emdkManager;
-	
-	   this.secureNfcManager = (secureNfcManager)
-	 				this.emdkManager.getInstance(FEATURE_TYPE.SECURENFC);
-	
-	 	if(this.secureNfcManager != null){
-	
-	 	try{
-	
-	 		samType = secureNfcManager.getAvailableSam();
-	
-	 		} catch (SecureNfcException e) {
-	
-	    		e.printStackTrace();
-	  	}
-	
-	 	if (samType.equals(SamType.MIFARE)) {
-	
-	 		mifareSam = (MifareSam) secureNfcMgr.getSamInstance(samType);
-	
-	  }
-	
-	    if(mifareSam != null){
-	
-	 		try {
-	     	SamMode samMode = mifareSam.connect();
-	
-	      SamKey samKey = new SamKey();
-	 		samKey.keyNum = 0x00;
-	 		samKey.keyVer = 0x00;
-	
-	 		mifareSam.authenticateSam(authKey, samKey,null);
-	
-	 	    mifareSam.close();
-	
-	 		} catch (MifareSamException e) {
-	 	    	e.printStackTrace();
-	  	  }
-	 	   }
-	   }
+	public class MainActivity  extends Activity implements EMDKListener {
+	SecureNfcManager secureNfcManager;
+	EMDKManager emdkManager;
+	SamType samType;
+	MifareDesfire mifaredesfire;
+	MifareSam mifareSam;
+	protected void onCreate(Bundle savedInstanceState) {
+	EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
+	}
+	public void onOpened(EMDKManager emdkManager) {
+	this.emdkManager = emdkManager;
+	this.secureNfcManager = (secureNfcManager)
+	this.emdkManager.getInstance(FEATURE_TYPE.SECURENFC);
+	if(this.secureNfcManager != null){
+	try{
+	samType = secureNfcManager.getAvailableSam();
+	} catch (SecureNfcException e) {
+	e.printStackTrace();
+	}
+	if (samType.equals(SamType.MIFARE)) {
+	mifareSam = (MifareSam) secureNfcMgr.getSamInstance(samType);
+	}
+	if(mifareSam != null){
+	try {
+	SamMode samMode = mifareSam.connect();
+	SamKey samKey = new SamKey();
+	samKey.keyNum = 0x00;
+	samKey.keyVer = 0x00;
+	mifareSam.authenticateSam(authKey, samKey,null);
+	mifareSam.close();
+	} catch (MifareSamException e) {
+	e.printStackTrace();
+	}
+	}
+	}
 
 
 ##Public Methods
 
 ### enable
 
-**public void enable( tag)**
+**public void enable(Tag tag)**
 
-Enable I/O operations to the tag from IsoDep object and SAM
+Enable I/O operations to tfhe tag from IsoDep object and SAM
  communication. May cause RF activity and may block. Must not be called
  from the main application thread. A blocked call will be canceled with
  MiFareDesfireExpection by calling close() from another thread. Only one
@@ -121,7 +98,7 @@ The exception will be thrown if it fails to disable the tag.
 
 ### authenticate
 
-**public void authenticate(MifareDesfire.AuthenticateType authType,  cardKeyNum, SamKey samkey, SamDiverseParams samDiverseParams)**
+**public void authenticate(MifareDesfire.AuthenticateType authType, int cardKeyNum, SamKey samkey, SamDiverseParams samDiverseParams)**
 
 Authenticates card master key and application key by using SAM This is an
  I/O operation and will block until complete. It must not be called from
@@ -159,7 +136,7 @@ The exception will be thrown if it fails to authenticate the
 
 ### getKeyVersion
 
-**public byte getKeyVersion( keyNum)**
+**public byte getKeyVersion(byte keyNum)**
 
 Retrieves current version of specified card key.On Tag lost connection
  needs to re-established by calling enable API in the application.This is
@@ -180,12 +157,15 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 The exception will be thrown if it fails to retrieves current
              version of specified card key.
 
-Example Usage:
+ 
 
-	:::java
-    mifareDesfire.selectApplication(APP_ID);
+**Example Usage:**
+	
+	:::java	
+	mifareDesfire.selectApplication(APP_ID);
+	mifareDesfire.getKeyVersion(keynum);
+	
 
-    mifareDesfire.getKeyVersion(keynum);
 
 ### getApplicationIDs
 
@@ -206,10 +186,16 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 The exception will be thrown if it fails to retrieves AIDs of
              all active card applications.
 
- Example Usage:
 
- 	:::java
- 	int[] getAppIDs =  mifareDesfire.getApplicationIDs();
+
+ 
+
+**Example Usage:**
+	
+	:::java	
+	int[] getAppIDs =  mifareDesfire.getApplicationIDs();
+	
+
 
 ### getFreeMemory
 
@@ -249,10 +235,13 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 The exception will be thrown if it fails to retrieves the ISO
              7816-4 DF names of all active card applications.
  
-Example Usage:
+
+**Example Usage:**
 	
-	:::java
+	:::java	
 	DFNames dfnames[] = mifareDesfire.getDFNames();
+	
+
 
 ### getKeySettings
 
@@ -274,18 +263,21 @@ The exception will be thrown if it fails to retrieves master
              key settings and application key settings of selected card
              application or card.
  
-Example Usage:
 
-	:::java
+**Example Usage:**
+	
+	:::java	
 	mifareDesfire.selectApplication(APP_ID);
 	KeySettings keySettings = mifareDesfire.getKeySettings();
+	
 
 
 ### selectApplication
 
-**public void selectApplication( appID)**
+**public void selectApplication(int appID)**
 
-Selects specified card application.On Tag lost connection needs to re-established by calling enable API in the application.This is a
+Selects specified card application.On Tag lost connection needs to
+ re-established by calling enable API in the application.This is a
  synchronous call.
 
 **Parameters:**
@@ -336,11 +328,17 @@ Retrieves native file IDs or ISO 7816-4 file IDs of active files within
 
 fileIDType - Type of file IDs to be retrieved.
 
-Example Usage:
 
-	:::java
+            
+
+**Example Usage:**
+	
+	:::java	
 	mifareDesfire.selectApplication(APP_ID);
 	int[] getFileIDs= mifareDesfire.getFileIDs(FileIDType.NATIVE or FileIDType.ISO7816);
+	
+
+
 **Returns:**
 
 int
@@ -355,7 +353,7 @@ The exception will be thrown if it fails to retrieves native
 
 ### getFileSettings
 
-**public FileSettings getFileSettings( fileID)**
+**public FileSettings getFileSettings(byte fileID)**
 
 Retrieves file settings (properties) of specified file.On Tag lost
  connection needs to re-established by calling enable API in the
@@ -377,21 +375,29 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 The exception will be thrown if it fails to retrieves file
              settings (properties) of specified file.
 
-Example Usage:
+ 
 
-	::java
+**Example Usage:**
+	
+	:::java	
 	mifareDesfire.selectApplication(APP_ID);
 	FileSettings fileSettings = getFileSettings(fileID)
+	
+
 
 ### readData
 
-**public byte readData( fileID, MifareDesfire.FileCommMode fileCommMode,  readOffset,  bytesToBeRead)**
+**public byte readData(byte fileID, MifareDesfire.FileCommMode fileCommMode, int readOffset, int bytesToBeRead)**
 
 Reads data from standard data or backup data file. Depending on
  communication settings of file, data read from card will be either plain
  or enciphered. Preceding authentication, either with the keys specified
  for Read or Read&Write access is required.On Tag lost connection needs to
  re-established by calling enable API in the application.
+
+
+
+ 
 
 **Parameters:**
 
@@ -418,25 +424,27 @@ com.symbol.emdk.securenfc.MifareDesfireExpection
 The exception will be thrown if it fails to read the data
              from the file.
 
-Example Usage:
+ 
 
-	:::java
+**Example Usage:**
+	
+	:::java	
 	mifareDesfire.selectApplication(APP_ID);
-
 	SamKey lSamKeyForRead = new SamKey();
 	lSamKeyForRead.keyNum = 0x03;// 0x51;//0x03;
 	lSamKeyForRead.keyVer = 0x00;
-
-	mifareDesfire.authenticate(AuthenticateType.NATIVE, CARD_KEY_FOR_READ,lSamKeyForRead , null);
-
-	//Communication type can be either Plain or Enchipered depends on the communication type assigned to the application while creating on the tag .
-
-	byte[] rawData = mifareDesfire.readData(STD_ID,Communication_Type, 0, 0);
+	mifareDesfire.authenticate(AuthenticateType.NATIVE,
+	CARD_KEY_FOR_READ,lSamKeyForRead , null);
+	//Communication type can be either Plain or Enchipered depends on the communication type
+	assigned to the application while creating on the tag .
+	byte[] rawData = mifareDesfire.readData(STD_ID,Communication_Type,
+	0, 0);
+	
 
 
 ### writeData
 
-**public void writeData( fileID, MifareDesfire.FileCommMode fileCommMode,  writeOffset,  writeDataBuffer)**
+**public void writeData(byte fileID, MifareDesfire.FileCommMode fileCommMode, int writeOffset, byte writeDataBuffer)**
 
 Writes data to standard or backup data file. Preceding authentication,
  either with the keys specified for Write or Read&Write access is
@@ -472,7 +480,7 @@ The exception will be thrown if it fails to write the data to
 
 ### getValue
 
-**public int getValue( fileID)**
+**public int getValue(byte fileID)**
 
 Retrieves value stored in value file.On Tag lost connection needs to
  re-established by calling enable API in the application.
@@ -494,7 +502,7 @@ The exception will be thrown if it fails to retieve the value
 
 ### credit
 
-**public void credit(MifareDesfire.CreditType creditType,  fileID, MifareDesfire.FileCommMode fileCommMode,  value)**
+**public void credit(MifareDesfire.CreditType creditType, byte fileID, MifareDesfire.FileCommMode fileCommMode, int value)**
 
 Increases a value stored in a value file with specified value.Depending
  on communication settings of file, data read from card will be either
@@ -529,7 +537,7 @@ The exception will be thrown if it fails to credit the value
 
 ### debit
 
-**public void debit( fileID, MifareDesfire.FileCommMode fileCommMode,  value)**
+**public void debit(byte fileID, MifareDesfire.FileCommMode fileCommMode, int value)**
 
 Decreases value stored in a value file with specified value.Depending on
  communication settings of file, data read from card will be either plain
@@ -560,7 +568,7 @@ The exception will be thrown if it fails to debit the value
 
 ### readRecord
 
-**public byte readRecord( fileID, MifareDesfire.FileCommMode fileCommMode,  recordOffset,  recordsToBeRead)**
+**public byte readRecord(byte fileID, MifareDesfire.FileCommMode fileCommMode, int recordOffset, int recordsToBeRead)**
 
 Reads records from cyclic or linear record file.Depending on
  communication settings of file, data read from card will be either plain
@@ -597,7 +605,7 @@ The exception will be thrown if it fails to read the data
 
 ### writeRecord
 
-**public void writeRecord( fileID, MifareDesfire.FileCommMode fileCommMode,  recordOffset,  recordSize,  writeRecordBuffer)**
+**public void writeRecord(byte fileID, MifareDesfire.FileCommMode fileCommMode, int recordOffset, int recordSize, byte writeRecordBuffer)**
 
 Writes records to cyclic or linear record file. Depending on
  communication settings of file, data read from card will be either plain
@@ -638,7 +646,7 @@ The exception will be thrown if it fails to write the data to
 
 ### resetRecord
 
-**public void resetRecord( fileID)**
+**public void resetRecord(byte fileID)**
 
 Resets cyclic or linear record file to empty state. Preceding
  authentication, with key specified for Read&Write access is required.The

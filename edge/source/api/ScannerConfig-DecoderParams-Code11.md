@@ -3,8 +3,6 @@
 The Code11 class provides access to parameters that are available for
  the Code11 decoder.
 
-
-
 ##Public Fields
 
 ###length1
@@ -12,18 +10,11 @@ The Code11 class provides access to parameters that are available for
 Use to set decode length. The supported range is 0 to 55.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code11.length1 = 4;
+	code11.length1 = 4;
 
 
 **Type:**
@@ -35,18 +26,11 @@ int
 Use to set decode length. The supported range is 0 to 55
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code11.length2 = 55;
+	code11.length2 = 55;
 
 
 **Type:**
@@ -58,18 +42,11 @@ int
 Sets the reader to read the bar code twice before accepting data.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code11.redundancy = true;
+	code11.redundancy = true;
 
 
 **Type:**
@@ -84,18 +61,11 @@ Check the integrity of all Code 11 symbols to verify that the
  code. Use enum  ScannerConfig.VerifyCheckDigit.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code11.verifyCheckDigit = VerifyCheckDigit.NO;
+	code11.verifyCheckDigit = VerifyCheckDigit.NO;
 
 
 **Type:**
@@ -107,18 +77,11 @@ com.symbol.emdk.barcode.ScannerConfig.VerifyCheckDigit
 Transmit Code 11 data with or without the check digit.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	code11.reportCheckDigit = false;
+	code11.reportCheckDigit = false;
 
 
 **Type:**

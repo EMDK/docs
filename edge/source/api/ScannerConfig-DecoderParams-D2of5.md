@@ -3,8 +3,6 @@
 The D2OF5 class provides access to parameters that are available for
  the D2OF5 decoder.
 
-
-
 ##Public Fields
 
 ###length1
@@ -12,18 +10,11 @@ The D2OF5 class provides access to parameters that are available for
 Used to set decode lengths. The valid range is 0 to 55.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	d2of5.length1 = 0;
+	d2of5.length1 = 0;
 
 
 **Type:**
@@ -35,18 +26,11 @@ int
 Used to set decode lengths. The valid range is 0 to 55.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	d2of5.length2 = 14;
+	d2of5.length2 = 14;
 
 
 **Type:**
@@ -58,18 +42,11 @@ int
 Sets the reader to read the bar code twice before accepting data.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	d2of5.redundancy = true;
+	d2of5.redundancy = true;
 
 
 **Type:**

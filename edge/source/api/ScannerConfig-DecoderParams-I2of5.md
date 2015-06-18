@@ -3,8 +3,6 @@
 The I2of5 class provides access to parameters that are available for
  the I2of5 decoder.
 
-
-
 ##Public Fields
 
 ###length1
@@ -12,18 +10,11 @@ The I2of5 class provides access to parameters that are available for
 Use to set decode lengths. The valid range is 0 to 55.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	i2of5.length1 = 14;
+	i2of5.length1 = 14;
 
 
 **Type:**
@@ -35,18 +26,11 @@ int
 Use to set decode lengths. The valid range is 0 to 55.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	i2of5.length2 = 10;
+	i2of5.length2 = 10;
 
 
 **Type:**
@@ -58,18 +42,11 @@ int
 Sets the reader to read the bar code twice before accepting data.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	i2of5.redundancy = true;
+	i2of5.redundancy = true;
 
 
 **Type:**
@@ -82,18 +59,11 @@ The check digit type to verify. Use enum
   ScannerConfig.CheckDigitType.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	i2of5.verifyCheckDigit = CHECK_DIGIT_TYPE.NO;
+	i2of5.verifyCheckDigit = CHECK_DIGIT_TYPE.NO;
 
 
 **Type:**
@@ -105,18 +75,11 @@ com.symbol.emdk.barcode.ScannerConfig.CheckDigitType
 Transmit Interleaved 2 of 5 data with or without the check digit.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	i2of5.reportCheckDigit = true;
+	i2of5.reportCheckDigit = true;
 
 
 **Type:**
@@ -131,18 +94,11 @@ Convert 14-character Interleaved 2 of 5 bar codes to EAN-13, and
  digit.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	i2of5.convertToEan13 = true;
+	i2of5.convertToEan13 = true;
 
 
 **Type:**
@@ -156,18 +112,11 @@ Specifies security level
  Use enum  ScannerConfig.SecurityLevel.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	i2of5.securityLevel = SecurityLevel.LEVEL_1;
+	i2of5.securityLevel = SecurityLevel.LEVEL_1;
 
 
 **Type:**

@@ -2,8 +2,6 @@
 
 SAM information
 
-
-
 ##Public Fields
 
 ###hardwareInfo

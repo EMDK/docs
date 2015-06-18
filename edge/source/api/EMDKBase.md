@@ -1,6 +1,10 @@
 #EMDKBase
-This is the base class for all the EMDK manager classes derived from.
 
-**Version:**
+This is the base class for all the EMDK manager classes derived from.<br><br>
 
-1.0
+##Constructors
+
+###EMDKBase
+
+
+

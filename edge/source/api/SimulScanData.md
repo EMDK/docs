@@ -4,33 +4,29 @@ The SimulScanData object gives scanning result
 
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-		public void onSimulScanData(SimulScanData simulscanData) {
-	
-			Date timestamp = new Date(simulscanData.getTimestamp());
-			List<SimulScanElement> simulscanDataElements = simulscanData.getElements();
-			List<SimulScanRegion> simulscanDataRegions = new ArrayList<SimulScanRegion>();
-			for (SimulScanElement curElement : simulscanDataElements)
-			{
-				if (curElement instanceof SimulScanRegion) {
-					Log.d(TAG, ((SimulScanRegion) curElement).getName());
-				} else if (curElement instanceof SimulScanGroup) {
-					List<SimulScanRegion> regionsInGroup = ((SimulScanGroup)curElement).getRegions();
-					for (SimulScanRegion curRegion : regionsInGroup){
-						Log.d(TAG, Group:+ ((SimulScanGroup)curElement).getName() + Region:+ ((SimulScanRegion) curRegion).getName());
-					}
-				}
-			}
+	public void onSimulScanData(SimulScanData simulscanData) {
+	Date timestamp = new Date(simulscanData.getTimestamp());
+	List<SimulScanElement> simulscanDataElements = simulscanData.getElements();
+	List<SimulScanRegion> simulscanDataRegions = new ArrayList<SimulScanRegion>();
+	for (SimulScanElement curElement : simulscanDataElements)
+	{
+	if (curElement instanceof SimulScanRegion) {
+	Log.d(TAG, ((SimulScanRegion) curElement).getName());
+	} else if (curElement instanceof SimulScanGroup) {
+	List<SimulScanRegion> regionsInGroup = ((SimulScanGroup)curElement).getRegions();
+	for (SimulScanRegion curRegion : regionsInGroup){
+	Log.d(TAG, Group:+ ((SimulScanGroup)curElement).getName() + Region:+ ((SimulScanRegion) curRegion).getName());
+	}
+	}
+	}
 
 
 ##Constructors
 
-**SimulScanData**
+###SimulScanData
 
 
 

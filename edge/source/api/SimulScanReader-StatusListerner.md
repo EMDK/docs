@@ -4,15 +4,12 @@ An interface for notifying client applications to notify scan events.
  
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	  public class MainActivity extends Activity implements StatusListerner
-	  .. .. ..
-	  
+	public class MainActivity extends Activity implements StatusListerner
+	.. .. ..
+	
 
 
 ##Public Methods

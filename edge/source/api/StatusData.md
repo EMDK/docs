@@ -2,11 +2,9 @@
 
 This class provides the Status detail of ScanAndPair.
 
-
-
 ##Constructors
 
-**StatusData**
+###StatusData
 
 
 

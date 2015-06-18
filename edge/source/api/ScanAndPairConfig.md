@@ -4,8 +4,6 @@ The ScanAndPairConfig class provides a way to configure the settings to use it i
  These settings must be done before calling the scanAndPair() or scanAnUnpair() methods and do not modify the this while the 
  method is processing its job.
 
-
-
 ##Public Methods
 
 ### resetToDefaults

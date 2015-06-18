@@ -7,8 +7,6 @@ The ReaderParams class holds the parameters for a
  Config.ScannerParams, Config.ReaderParams)
  will be set automatically.
 
-
-
 ##Public Fields
 
 ###readerSpecific

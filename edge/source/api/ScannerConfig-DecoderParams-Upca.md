@@ -3,8 +3,6 @@
 The Upca class provides access to parameters that are available for
  the Upca decoder.
 
-
-
 ##Public Fields
 
 ###reportCheckDigit

@@ -4,23 +4,20 @@ The ScannerConfig class provides access to scanner configuration settings.
 
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	ScannerConfig scannerConfig = scanner.getConfig(scannerConfig);
-	  scannerConfig.scanParams.decodeHapticFeedback = true;
-	  scannerConfig.decoderParams.codabar.length1 = 6;
-	  scanner.setConfig(scannerConfig);
+	ScannerConfig scannerConfig = scanner.getConfig(scannerConfig);
+	scannerConfig.scanParams.decodeHapticFeedback = true;
+	scannerConfig.decoderParams.codabar.length1 = 6;
+	scanner.setConfig(scannerConfig);
 
 
 ##Public Methods
 
 ### isParamSupported
 
-**public boolean isParamSupported( param)**
+**public boolean isParamSupported(java.lang.String param)**
 
 This method helps to check scanner config parameters supported
  Returns true if specified parameter is supported.
@@ -39,9 +36,6 @@ This method helps to check scanner config parameters supported
 	config1.decoderParams.codabar.enabled = true;
 	}
 	scanner.setConfig(config1);
-	
-	
-	
 
 
 **Parameters:**
@@ -132,6 +126,12 @@ Controls the preamble applied to the bar code Preamble characters are
 
  
 
+**Example Usage:**
+	
+	:::java	
+	Preamble.NONE;
+
+
 **Values:**
 
 * **NONE** -No preamble
@@ -145,6 +145,12 @@ Controls the preamble applied to the bar code Preamble characters are
 Option for concatenating pairs of ISBT128 code types.
 
  
+
+**Example Usage:**
+	
+	:::java	
+	Isbt128ContactMode.NEVER;
+
 
 **Values:**
 
@@ -167,6 +173,12 @@ This parameter allows the user to select decoding on inverse HanXin bar codes.
 
  
 
+**Example Usage:**
+	
+	:::java	
+	HanXinInverse.DISABLED;
+
+
 **Values:**
 
 * **DISABLED** -Disables decoding of inverse HanXin symbologies
@@ -183,6 +195,12 @@ The scanner offers four levels of decode security for UPC/EAN bar codes.
  choose only that level of security necessary for the application.
 
  
+
+**Example Usage:**
+	
+	:::java	
+	SecurityLevel.LEVEL_0;
+
 
 **Values:**
 
@@ -211,6 +229,12 @@ Sets the number of times a bar code is read to confirm an accurate
 
  
 
+**Example Usage:**
+	
+	:::java	
+	LinearSecurityLevel.SHORT_OR_CODABAR;
+
+
 **Values:**
 
 * **SHORT_OR_CODABAR** -Two times read redundancy if short bar code or Codabar.
@@ -227,6 +251,12 @@ Sets the number of times a bar code is read to confirm an accurate
 Verify data integrity.
 
  
+
+**Example Usage:**
+	
+	:::java	
+	CheckDigitType.NO;
+
 
 **Values:**
 
@@ -248,6 +278,12 @@ The number of check digits to be verified. With MSI symbols, one check
 
  
 
+**Example Usage:**
+	
+	:::java	
+	CheckDigit.ONE;
+
+
 **Values:**
 
 * **ONE** -Verify one check digit.
@@ -261,6 +297,12 @@ Check the integrity of all Code 11 symbols to verify that the data
  digit mechanism for the decoded Code 11 bar code.
 
  
+
+**Example Usage:**
+	
+	:::java	
+	VerifyCheckDigit.NO;
+
 
 **Values:**
 
@@ -277,6 +319,12 @@ Two algorithms are possible for the verification of the second MSI check
 
  
 
+**Example Usage:**
+	
+	:::java	
+	CheckDigitScheme.MOD_11_10;
+
+
 **Values:**
 
 * **MOD_11_10** -First check digit is MOD 11 and second check digit is MOD 10.
@@ -288,6 +336,12 @@ Two algorithms are possible for the verification of the second MSI check
 Describes the UCC link mode state.
 
  
+
+**Example Usage:**
+	
+	:::java	
+	UCCLinkMode.LINK_FLAG_IGNORED;
+
 
 **Values:**
 
@@ -310,6 +364,12 @@ Allows the imager to decode only the bar code that is directly under the
 
  
 
+**Example Usage:**
+	
+	:::java	
+	PickList.DISABLED;
+
+
 **Values:**
 
 * **DISABLED** -Disables Picklist mode. Any bar code within the field of view can be
@@ -328,6 +388,12 @@ A Code ID character identifies the code type of a scanned bar code. This
 
  
 
+**Example Usage:**
+	
+	:::java	
+	CodeIdType.NONE;
+
+
 **Values:**
 
 * **NONE** -No prefix.
@@ -341,6 +407,12 @@ A Code ID character identifies the code type of a scanned bar code. This
 Supplemental modes
 
  
+
+**Example Usage:**
+	
+	:::java	
+	SupplementalMode.NO;
+
 
 **Values:**
 
@@ -394,6 +466,12 @@ Supported Coupon modes
 
  
 
+**Example Usage:**
+	
+	:::java	
+	CouponReport.OLD;
+
+
 **Values:**
 
 * **OLD** -Scanner will read only the old coupon format
@@ -409,6 +487,12 @@ Lists the Bookland formats
 
  
 
+**Example Usage:**
+	
+	:::java	
+	BooklandFormat.ISBN_10;
+
+
 **Values:**
 
 * **ISBN_10** -978 reported in 10 digit mode
@@ -420,6 +504,12 @@ Lists the Bookland formats
 Configures the Viewfinder modes supported for camera scanning.
 
  
+
+**Example Usage:**
+	
+	:::java	
+	ViewFinderMode.ENABLED;
+
 
 **Values:**
 
@@ -437,6 +527,12 @@ Enable/disable illumination depending on ambient light conditions.
 
  
 
+**Example Usage:**
+	
+	:::java	
+	IlluminationMode.OFF;
+
+
 **Values:**
 
 * **OFF** -Illumination turned off during scanning.
@@ -450,6 +546,12 @@ Enable or disable LCD mode (for Blockbuster imager devices only).
 
  
 
+**Example Usage:**
+	
+	:::java	
+	LCDMode.DISABLED;
+
+
 **Values:**
 
 * **DISABLED** -Disables LCD mode
@@ -461,6 +563,12 @@ Enable or disable LCD mode (for Blockbuster imager devices only).
 This parameter allows the user to select decoding on inverse 1D bar codes.
 
  
+
+**Example Usage:**
+	
+	:::java	
+	Inverse1DMode.DISABLED;
+
 
 **Values:**
 

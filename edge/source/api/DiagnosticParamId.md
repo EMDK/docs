@@ -2,11 +2,9 @@
 
 The diagnostic parameter IDs.
 
-
-
 ##Constructors
 
-**DiagnosticParamId**
+###DiagnosticParamId
 
 
 
@@ -80,7 +78,7 @@ int
 
 ###BATTERY_STATUS_ALL
 
-Gets all the diagnostics parameter.
+Gets all the Battery parameters.Except Time since Reboot .
 
 **Type:**
 
@@ -88,7 +86,7 @@ int
 
 ###ALL
 
-Gets all the diagnostics parameter including manufacturing date.
+Gets all the diagnostics parameter including Time since Reboot.
 
 **Type:**
 

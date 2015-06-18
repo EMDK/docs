@@ -2,8 +2,6 @@
 
 Master key setting type
 
-
-
 ##Public Fields
 
 ###masterKeyChangeable

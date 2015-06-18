@@ -6,13 +6,10 @@ The UPCEAN class provides access to parameters that are available for the UPC/EA
 
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	config.upcEanParams.booklandCode = true;
+	config.upcEanParams.booklandCode = true;
 
 
 ##Public Fields
@@ -24,18 +21,11 @@ Flag to enable Bookland code decoding.
  and is used on books and book related products internationally.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.booklandCode = true;
+	upcEan.booklandCode = true;
 
 
 **Type:**
@@ -48,18 +38,11 @@ Specifies the bookland format to use. Use enum
   ScannerConfig.BooklandFormat.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.booklandFormat = BooklandFormat.ISBN_10;
+	upcEan.booklandFormat = BooklandFormat.ISBN_10;
 
 
 **Type:**
@@ -73,18 +56,11 @@ If this is set it converts DataBar bar codes to UPC/EAN format.
  check in the checkbox indicates that the option is enabled.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.convertDataBarToUPCEAN = true;
+	upcEan.convertDataBarToUPCEAN = true;
 
 
 **Type:**
@@ -97,18 +73,11 @@ Enables Coupon code decoding. Note that in order to successfully
  decode Coupon codes, all of the correct decoders must be enabled.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.couponCode = true;
+	upcEan.couponCode = true;
 
 
 **Type:**
@@ -128,18 +97,11 @@ boolean
 Flag to enable random weight check digit verification.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.randomWeightCheckDigit = true;
+	upcEan.randomWeightCheckDigit = true;
 
 
 **Type:**
@@ -156,18 +118,11 @@ The scanner of fers four levels of decode security for UPC/EAN
   ScannerConfig.SecurityLevel.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.securityLevel = SecurityLevel.LEVEL_0;
+	upcEan.securityLevel = SecurityLevel.LEVEL_0;
 
 
 **Type:**
@@ -179,18 +134,11 @@ com.symbol.emdk.barcode.ScannerConfig.SecurityLevel
 Flag to enable length 2 supplementals.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.supplemental2 = false;
+	upcEan.supplemental2 = false;
 
 
 **Type:**
@@ -202,18 +150,11 @@ boolean
 Flag to enable length 5 supplementals.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.supplemental5 = false;
+	upcEan.supplemental5 = false;
 
 
 **Type:**
@@ -225,18 +166,11 @@ boolean
 The supplemental mode. Use enum  ScannerConfig.SupplementalMode.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.supplementalMode = SupplementalMode.S_378_379;
+	upcEan.supplementalMode = SupplementalMode.S_378_379;
 
 
 **Type:**
@@ -253,18 +187,11 @@ Retry count for auto-discriminating for supplementals. Possible
  or Supplementals 414-419-434-439 (2 to 20, default 10).
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.supplementalRetries = 10;
+	upcEan.supplementalRetries = 10;
 
 
 **Type:**
@@ -284,18 +211,11 @@ Used to differentiate between old coupon (UPC/EAN and Code128)
  Use enum  ScannerConfig.CouponReport.
 
  
- 
-
- 
- 
-
-
 
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	upcEan.couponReport = CouponReport.OLD;
+	upcEan.couponReport = CouponReport.OLD;
 
 
 **Type:**

@@ -3,8 +3,6 @@
 The ScanAndPair provides simple methods to scan a Bluetooth barcode (name or address) of a remote Bluetooth device 
  and pair/unpair with the remote Bluetooth device.
 
-
-
 ##Public Methods
 
 ### isPreviousCommandPending
@@ -20,7 +18,7 @@ boolean
 
 ### scanAndPair
 
-**public ScanAndPairResults scanAndPair( pin)**
+**public ScanAndPairResults scanAndPair(java.lang.String pin)**
 
 This is an asynchronous method. The status of the scanAndPair() method will be returned if the callback is registered.
  If the always scan is enabled in the configuration, this method scans a barcode to get the Bluetooth address or 

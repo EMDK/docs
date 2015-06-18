@@ -2,8 +2,6 @@
 
 The SimulScanGroup class represents a processed SimulScanTemplateGroup.
 
-
-
 ##Public Methods
 
 ### getRegions

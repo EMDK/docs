@@ -4,13 +4,10 @@ SimulScanReaderInfo provides information of the reader device.
  
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	 	readerInfo.getFriendlyName();
+	readerInfo.getFriendlyName();
 
 
 ##Public Methods
@@ -27,9 +24,6 @@ Returns the friendly name of the Device.
 	
 	:::java	
 	String name = readerInfo.getFriendlyName();
-	
-	
-	
 
 
 **Returns:**
@@ -48,9 +42,6 @@ Returns the reader device type
 	
 	:::java	
 	SimulScanDeviceType deviceType = readerInfo.getDeviceType();
-	
-	
-	
 
 
 **Returns:**
@@ -64,6 +55,12 @@ com.symbol.emdk.simulscan.SimulScanReaderInfo.DeviceType
 List of supported scanner device type.
  
  
+
+**Example Usage:**
+	
+	:::java	
+	SimulScanDeviceType.CAMERA;
+
 
 **Values:**
 

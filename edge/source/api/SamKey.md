@@ -3,11 +3,9 @@
 Samkey class will be assigned with the keys present on the MifareSam and used
  for the authentication purpose.
 
-
-
 ##Constructors
 
-**SamKey**
+###SamKey
 
 
 

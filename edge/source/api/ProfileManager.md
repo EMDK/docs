@@ -20,7 +20,7 @@ This method tells whether the previous process profile request is pending or not
 
 **Returns:**
 
-boolean - Returns whether the previous process profile request is pending or not. 
+boolean - Returns whether the previous process profile request is pending or not.
 
 ###processProfile(String profileName, ProfileManager.PROFILE_FLAG profileFlag, Document extraData)
 Processes the given profile based on the data provided and the flag and return status of the action.
@@ -42,13 +42,13 @@ Processes the given profile based on the data provided and the flag and return s
 
 * **profileFlag** - [ProfileManager.PROFILE_FLAG](ProfileManager.PROFILE_FLAG) If the profileFlag is set to SET, and if the given profile is not available in the EMDKConfig.xml, it will look for valid profile in extraData argument and if present, the profile will be added to the internal XML volatile repository and also applied to the device. If the profile is present in the EMDKConfig.xml, it will be applied to the device. If profileFlag is set to GET and if the profile is present in the internal repository, it will be returned in extraData.
 
-* **extraData** - This can be used to provide data for processing action. This parameter is only supported for DataCapture profile features.
+* **extraData** - This can be used to provide data for processing action.
 
 **Returns:**
 
 com.symbol.emdk.EMDKResults - [EMDKResults](EMDKResults) object.
 
-###processProfile(String profileName, ProfileManager.PROFILE_FLAG profileFlag, java.lang.String[] extraData)
+###processProfile(String profileName, ProfileManager.PROFILE_FLAG profileFlag, .String[] extraData)
 Processes the given profile based on the data provided and the flag and return status of the action.
 
 **Example Usage:**
@@ -64,7 +64,7 @@ Processes the given profile based on the data provided and the flag and return s
 
 * **profileFlag** - [ProfileManager.PROFILE_FLAG](ProfileManager.PROFILE_FLAG) If the profileFlag is set to SET, and if the given profile is not available in the EMDKConfig.xml, it will look for valid profile in extraData argument and if present, the profile will be added to the internal XML volatile repository and also applied to the device. If the profile is present in the EMDKConfig.xml, it will be applied to the device. If profileFlag is set to GET and if the profile is present in the internal repository, it will be returned in extraData.
 
-* **extraData** - This can be used to provide data for processing action. 
+* **extraData** - This can be used to provide data for processing action.
 
 **Returns:**
 
@@ -93,13 +93,13 @@ Processes the given profile based on the data provided and the flag and return s
 
 * **profileFlag** - [ProfileManager.PROFILE_FLAG](ProfileManager.PROFILE_FLAG) If the profileFlag is set to SET, and if the given profile is not available in the EMDKConfig.xml, it will look for valid profile in extraData argument and if present, the profile will be added to the internal XML volatile repository and also applied to the device. If the profile is present in the EMDKConfig.xml, it will be applied to the device. If profileFlag is set to GET and if the profile is present in the internal repository, it will be returned in extraData.
 
-* **extraData** - [ProfileConfig](ProfileConfig) This can be used to provide data for processing action. This parameter is only supported for DataCapture profile features.
+* **extraData** - [ProfileConfig](ProfileConfig) This can be used to provide data for processing action.
 
 **Returns:**
 
 com.symbol.emdk.EMDKResults - [EMDKResults](EMDKResults) object.
 
-###CreateNameValuePair(java.lang.String emdkName, java.lang.String paramName, java.lang.String paramValue)
+###CreateNameValuePair(String emdkName, String paramName, String paramValue)
 This function creates a name value pair string according to the Name-Value pair request. The return string is compatible with com.symbol.emdk.ProfileManager. processProfile(String profileName, PROFILE_FLAG profileFlag, String[] extraData) function’s extraData array element. If this function failed it throws InvalidParameterException exception.
 
 **Parameters:**
@@ -115,19 +115,19 @@ This function creates a name value pair string according to the Name-Value pair 
 This function returns the String in the format:
 
 	:::xml
-	<emdk_name>.<param_name>=<param_value> 
+	<emdk_name>.<param_name>=<param_value>
 
 
-###processProfileAsync(java.lang.String profileName, ProfileManager.PROFILE_FLAG profileFlag, org.w3c.dom.Document extraData)
+###processProfileAsync(String profileName, ProfileManager.PROFILE_FLAG profileFlag, Document extraData)
 Processes the given profile based on the data provided and the flag and return status of the request. This is an asynchronous method and result will be returned through the registered callback.
 
 **Example Usage:**
 
 	:::java
 	public class MainActivity extends Activity implements EMDKListener, DataListener {
- 
-        profileManager.addDataListener(this); 
- 
+
+        profileManager.addDataListener(this);
+
         profileManager.processProfileAsync("Profile1", PROFILE_FLAG.GET, null);
 
 **Parameters:**
@@ -136,7 +136,7 @@ Processes the given profile based on the data provided and the flag and return s
 
 **profileFlag** - ProfileManager.PROFILE_FLAG
 
-If the profileFlag is set to SET, and if the given profile is not available in the EMDKConfig.xml, it will look for valid profile in extraData argument and if present, the profile will be added to the internal XML volatile repository and also applied to the device. If the profile is present in the EMDKConfig.xml, it will be applied to the device. The result will be returned to the application via data listener callback. 
+If the profileFlag is set to SET, and if the given profile is not available in the EMDKConfig.xml, it will look for valid profile in extraData argument and if present, the profile will be added to the internal XML volatile repository and also applied to the device. If the profile is present in the EMDKConfig.xml, it will be applied to the device. The result will be returned to the application via data listener callback.
 
 If profileFlag is set to GET and if the profile is present in the internal repository, it will be returned via data listener callback.
 
@@ -147,16 +147,16 @@ If profileFlag is set to GET and if the profile is present in the internal repos
 [EMDKResults](EMDKResults) object.
 
 
-###processProfileAsync(java.lang.String profileName, ProfileManager.PROFILE_FLAG profileFlag, java.lang.String[] extraData)
+###processProfileAsync(String profileName, ProfileManager.PROFILE_FLAG profileFlag, String[] extraData)
 Processes the given profile based on the data provided and the flag and return status of the request. This is an asynchronous method and result will be returned through the registered callback.
 
 **Example Usage:**
 
 	:::java
 	public class MainActivity extends Activity implements EMDKListener, DataListener {
- 
+
         profileManager.addDataListener(this);
-  
+
         profileManager.processProfileAsync("Profile1", PROFILE_FLAG.SET, extraData);
 
 **Parameters:**
@@ -176,23 +176,23 @@ If profileFlag is set to GET and if the profile is present in the internal repos
 [EMDKResults](EMDKResults) object.
 
 
-###processProfileAsync(java.lang.String profileName, ProfileManager.PROFILE_FLAG profileFlag, ProfileConfig extraData)
+###processProfileAsync(String profileName, ProfileManager.PROFILE_FLAG profileFlag, ProfileConfig extraData)
 Processes the given profile based on the data provided and the flag and return status of the request. This is an asynchronous method and result will be returned through the registered callback.
 
 **Example Usage:**
 
 	:::java
 	public class MainActivity extends Activity implements EMDKListener, DataListener {
- 
+
         profileManager.addDataListener(this);
-  
+
         profileManager.processProfileAsync("Profile1", PROFILE_FLAG.SET, null);
 
 **Parameters:**
 
 **profileName** - Name of the profile.
 
-**profileFlag** - ProfileManager.PROFILE_FLAG 
+**profileFlag** - ProfileManager.PROFILE_FLAG
 
 If the profileFlag is set to SET, and if the given profile is not available in the EMDKConfig.xml, it will look for valid profile in extraData argument and if present, the profile will be added to the internal XML volatile repository and also applied to the device. If the profile is present in the EMDKConfig.xml, it will be applied to the device.
 
@@ -225,7 +225,7 @@ listener
 
 **Returns:**
 
-void    
+void
 
 
 
@@ -247,5 +247,4 @@ All the possible actions for [ProfileManager.processProfile(String, PROFILE_FLAG
 
 * **RESET** - Resets the modified profile data available on the application cache to default profile created during the application development. This flag will not set/modify any profile to any component on the device without calling the process profile with SET flag. After resetting, calling process profile with GET flag returns the reseted profile.
 
-* **CHECK_COMPATIBILITY** - Validates the characteristic feature version in the existing profile if extraData is null, otherwise extra data profiles characteristic feature version. This validates only the profile version of the each feature (characteristic node version in the profile data), but not the individual fields. Calling process profile with this flag internally gets version of the different DSDs, the time required depends on numbers of characteristic features in a profile.   
-
+* **CHECK_COMPATIBILITY** - Validates the characteristic feature version in the existing profile if extraData is null, otherwise extra data profiles characteristic feature version. This validates only the profile version of the each feature (characteristic node version in the profile data), but not the individual fields. Calling process profile with this flag internally gets version of the different DSDs, the time required depends on numbers of characteristic features in a profile.

@@ -5,15 +5,12 @@ An interface for notifying client applications when the external scanner
  
  
 
-
-
 **Example Usage:**
 	
 	:::java	
-	 	
-	  public class MainActivity extends Activity implements ScannerConnectionListener
-	  .. .. ..
-	  
+	public class MainActivity extends Activity implements ScannerConnectionListener
+	.. .. ..
+	
 
 
 ##Public Methods

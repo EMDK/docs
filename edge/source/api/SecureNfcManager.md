@@ -5,119 +5,6 @@ This class provides access to obtain the object to communicate with the
  
  
 
-
-
-**Example Usage:**
-	
-	:::java	 
-	 
-	 public class MainActivity  extends Activity implements EMDKListener {
-	  
-	             SecureNfcManager secureNfcManager;
-	             EMDKManager emdkManager;
-	  		   SamType samType;
-	 			  MifareSam mifareSam ;
-	  
-	             @Override
-	             protected void onCreate(Bundle savedInstanceState) {
-	  
-	                EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
-	             }
-	  
-	             @Override
-	             public void onOpened(EMDKManager emdkManager) {
-	                   
-	                   this.emdkManager = emdkManager;
-	                  this.secureNfcManager = (secureNfcManager)
-	 					this.emdkManager.getInstance(FEATURE_TYPE.SECURENFC);
-	  				
-	  				if(this.secureNfcManager != null){
-	  							
-	  					try{
-	  
-	 						 samType = secureNfcManager.getAvailableSam();
-	 
-	 						} catch (SecureNfcException e) {
-	             						
-	             				e.printStackTrace();
-	             			}
-	 							
-	 						if (samType.equals(SamType.MIFARE)) {
-	 
-	 						mifareSam = (MifareSam) secureNfcMgr.getSamInstance(samType);
-	  
-	  						}
-	  
-	            			if(mifareSam != null){
-	         
-	 							try {
-	                        		SamMode samMode = mifareSam.connect();
-	                        
-	                        		mifareSam.authenticateSam(authKey, samKey,null);
-	                        		
-	                        		mifareSam.close();
-	                        
-	 								} catch (MifareSamException e) {
-	 						 
-	 									e.printStackTrace();
-	       			}
-	  			}
-	  		}
-	       }
-	             
-	       public void onNewIntent(Intent intent) {
-	 		
-	 				if (intent != null)
-	 					tagDetection(intent);
-	 			}
-	 
-	 		private void tagDetection(Intent intent) {
-	 		
-	 		if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())
-	 				|| NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())
-	 				|| NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction())) {
-	 
-	 			 lTag	 = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-	 
-	 			
-	 			try {
-	 
-	 				TagTechType tagType = secureNfcMgr.getTagTechType(lTag);
-	 
-	 					if (tagType.equals(TagTechType.MIFARE_DESFIRE)) {
-	 	
-	 					mMifareDesfire = (MifareDesfire) secureNfcMgr.getTagTechInstance(tagType);
-	 				 
-	 				} else if (tagType.equals(TagTechType.MIFARE_PLUS_SL3)) {
-	 	
-	 				mifarePlusSl3 = (MifarePlusSL3) secureNfcMgr
-	 								.getTagTechInstance(tagType);
-	 			 }
-	 
-	 			} catch (SecureNfcException e) {
-	 			
-	 				e.printStackTrace();
-	 			}
-	 
-	 			}
-	 		}
-	  
-	 		    @Override
-	           public void onDestroy() {
-	 				if(this.emdkManager != null)
-	                   this.emdkManager.release();
-	 				}
-	  
-	           @Override
-	            public void onClosed() {
-	                this.emdkManager.release();
-	             }
-	 
-	  
-	 	}
-	 
-
-
 ##Public Methods
 
 ### getAvailableSam
@@ -152,7 +39,7 @@ com.symbol.emdk.securenfc.SamBase
 
 ### getTagTechType
 
-**public TagTechType getTagTechType( tag)**
+**public TagTechType getTagTechType(Tag tag)**
 
 This method returns the tag type discovered by the device.
 

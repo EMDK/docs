@@ -12,6 +12,68 @@ This class is designed for the NFC applications to perform secure communication 
  
  
 
+**Example Usage:**
+	
+	:::java	
+	
+	
+	public class MainActivity extends Activity implements EMDKListener {
+	
+	SecureNfcManager secureNfcManager;
+	EMDKManager emdkManager;
+	PassThruApduProcessor passThruApduProcessor;
+	
+	
+	protected void onCreate(Bundle savedInstanceState) {
+	
+	EMDKResults results = EMDKManager.getEMDKManager(
+	getApplicationContext(), this);
+	}
+	
+	
+	public void onOpened(EMDKManager emdkManager) {
+	
+	this.emdkManager = emdkManager;
+	
+	this.secureNfcManager = (secureNfcManager) this.emdkManager
+	.getInstance(FEATURE_TYPE.SECURENFC);
+	
+	if (this.secureNfcManager != null) {
+	
+	if(secureNfcMgr!= null){
+	
+	passThruApduProcessor = secureNfcMgr.getPassThruApduInstance();
+	
+	try {
+	passThruApduProcessor.enable(ProtocolType.T1);
+	
+	passThruApduProcessor.disable();
+	
+	}catch (PassThruApduException e) {
+	
+	e.printStackTrace();
+	}
+	
+	}
+	}
+	}
+	
+	
+	public void onDestroy() {
+	if (this.emdkManager != null)
+	this.emdkManager.release();
+	}
+	
+	
+	public void onClosed() {
+	this.emdkManager.release();
+	}
+	
+	}
+	
+	}
+	
+	
 
 
 ##Public Methods
@@ -78,7 +140,7 @@ The exception will be thrown if it fails to retrieve version
 
 ### process
 
-**public byte process( cmdApdu,  expectedRespLength,  userFormattedProtocolFrame)**
+**public byte process(byte cmdApdu, short expectedRespLength, boolean userFormattedProtocolFrame)**
 
 Sends the Command APDU (C-APDU) (Application Protocol Data Unit) and
  receives Response APDU (R-APDU) from connected contactless smart cards.

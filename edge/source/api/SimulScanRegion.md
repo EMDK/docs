@@ -2,8 +2,6 @@
 
 The SimulScanRegion class represents a processed SimulScanTemplateRegion.
 
-
-
 ##Public Methods
 
 ### getRegionType

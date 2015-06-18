@@ -4,45 +4,39 @@ This is the primary object to access the SimulScan feature.
  
  
 
-
-
 **Example Usage:**
 	
-	:::java	
-	 	public class MainActivity extends Activity implements EMDKListener,
-			SimulScanDataEventListerner, SimulScanStatusEventListerner {
+	:::java	public class MainActivity extends Activity implements EMDKListener,
+	SimulScanDataEventListerner, SimulScanStatusEventListerner {
+	protected void onCreate(Bundle savedInstanceState) {
+	//..
+	EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
+	}
+	public void onOpened(EMDKManager emdkManager) {
+	this.emdkManager = emdkManager;
+	}
+	//...
+	simulscanManager = (SimulScanManager)this.emdkManager.getInstance(FEATURE_TYPE.SimulScan);
+	//...
+	List<SimulScanReaderInfo> readerInfoList = simulscanManager.getSupportedDevicesInfo();
+	SimulScanReader reader = simulscanManager.getDevice(readerInfoList.get(0));
+	reader.addDataListener(callbackObj);
+	reader.addStatusListener(callbackObj);
+	reader.enable();
+	// set template before calling read
+	reader.read();
 	
-		  	protected void onCreate(Bundle savedInstanceState) {
-	 			//..
-	   		 EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
-			}
+	//...
+	reader.cancelRead();
 	
-			public void onOpened(EMDKManager emdkManager) {
-				this.emdkManager = emdkManager;
-		 	}
+	//...
+	reader.disable();
 	
-		//...
-		simulscanManager = (SimulScanManager)this.emdkManager.getInstance(FEATURE_TYPE.SimulScan);
-	  //...
-	  List<SimulScanReaderInfo> readerInfoList = simulscanManager.getSupportedDevicesInfo();
-	  SimulScanReader reader = simulscanManager.getDevice(readerInfoList.get(0));
-	  reader.addDataListener(callbackObj);
-	  reader.addStatusListener(callbackObj);
-	  reader.enable();
-	  // set template before calling read
-	  reader.read();
-	  
-	  //...
-	  reader.cancelRead();
-	  
-	  //...
-	  reader.disable();
-	  
-	  //..
-	  
-	  EMDKManager.release(FEATURE_TYPE.SimulScan);
-	  
-		}
+	//..
+	
+	EMDKManager.release(FEATURE_TYPE.SimulScan);
+	
+	}
 
 
 ##Public Methods

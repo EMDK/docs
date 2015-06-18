@@ -5,11 +5,9 @@ This class is used by the ScanAndPairTool class. Specifies the scanning related 
  the scanned data. NOTE: The maximum allowed length of the barcode that can be scanned is 123 
  characters.
 
-
-
 ##Constructors
 
-**ScanAndPairConfig.ScanInfo**
+###ScanInfo
 
 Default Constructor for ScanInfo class to assign the default values to its members.
 

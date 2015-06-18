@@ -1,6 +1,8 @@
 #ScanAndPairException
 
-The methods of ScanAndPair object throws ScanAndPairException when an error occurs. The error could be due to:
+The methods of ScanAndPair object throws ScanAndPairException when an error occurs.
+
+The error could be due to:
 
 1. Client using the API incorrectly OR
 2. Because an unexpected error occurred
