@@ -3,6 +3,8 @@
 ##Introduction
 The EMDK for Android provides developers with a comprehensive set of tools to easily create Secure NFC application for use with the Zebra Technologies Corporation mobility device.
 
+>NOTE: At this time only MifarePlus 4K memory contactless Security level 3 cards are not supported, only 2k cards are supported.
+
 ##SecureNfcManager Usage
 
 The APIs provided by this class are used to determine the type of SAM available in the mobile device, get the instance of the SAM object, to know the type of the tag detected by the device and to get the instance of the tag type object.

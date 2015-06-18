@@ -15,11 +15,11 @@ A Code ID character identifies the code type of a scanned bar code.
  Select a code ID character to insert between the prefix and the
  decoded symbol. Use enum  ScannerConfig.CodeIdType.
 
- 
+
 
 **Example Usage:**
-	
-	:::java	
+
+	:::java
 	scanParams.codeIdType = CODE_ID_TYPE.NONE;
 
 
@@ -36,16 +36,18 @@ Select an audio tone to sound upon a good decode.
  (decodeAudioFeedbackUri in ScanParams) to avoid access violation. Therefore any audio tones meant for this
  purpose must be stored under shared public directories (Music/ , Ringtones/) or shared 'external storage'.
 
- 
+
 
 **Example Usage:**
-	
-	:::java	
+
+	:::java
 	scanParams.decodeAudioFeedbackURI = "system/media/audio/notifications/decode-short.wav";
 	scanParams.decodeAudioFeedbackUri = "sdcard/sample-audio.wav";
 	scanParams.decodeAudioFeedbackUri = "sdcard/sample-audio.ogg";
 	scanParams.decodeAudioFeedbackUri = "/sdcard/sample-audio.wav";
 
+    //To achieve no feedback (silent) upon a good decode, specify an empty string as below:
+    //scanParams.decodeAudioFeedbackURI = "";
 
 **Type:**
 
@@ -55,11 +57,11 @@ java.lang.String
 
 Enable the device to vibrate upon a good decode.
 
- 
+
 
 **Example Usage:**
-	
-	:::java	
+
+	:::java
 	scanParams.decodeHapticFeedback = true;
 
 
@@ -72,11 +74,11 @@ boolean
 Decode LED ON duration upon successful decode in milliseconds.
  This value can be from 0ms to 1000ms with a step of 25ms.
 
- 
+
 
 **Example Usage:**
-	
-	:::java	
+
+	:::java
 	scanParams.decodeLEDTime = 75;
 
 
@@ -89,11 +91,11 @@ int
 The audio stream type refers to type of streaming on which the scan beep should be played.
  The decodeAudioFeedbackUri specified must be available for the audio streaming type specified.
 
- 
+
 
 **Example Usage:**
-	
-	:::java	
+
+	:::java
 	scanParams.audioStreamType = AudioStreamType.RINGER;
 
 
@@ -105,15 +107,14 @@ com.symbol.emdk.barcode.ScannerConfig.AudioStreamType
 
 Decoding LED Notification.
 
- 
+
 
 **Example Usage:**
-	
-	:::java	
+
+	:::java
 	scanParams.decodeLEDFeedback = true;
 
 
 **Type:**
 
 boolean
-
