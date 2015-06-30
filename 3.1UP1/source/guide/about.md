@@ -25,7 +25,7 @@ Although EMDK for Android has been designed to work with all Symbol mobile compu
 * MC67 - OS Update image v01.28.14 or higher (JellyBean)
 * MC92 - KitKat
 * TC55 - OS Update image v01.74.00 or higher (JellyBean)
-* TC55 - KitKat
+* TC55 - OS Update image v02.52.02 or higher (KitKat)
 * TC70 - OS Update image v11.24.14 or higher (KitKat)
 * TC75 - KitKat
 
