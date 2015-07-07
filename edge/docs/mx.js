@@ -37,7 +37,7 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
                                         os: 'JB',
                                         notes: ''
@@ -79,9 +79,9 @@ var mxVersions = [
                                 name: 'Allow Application To Submit XML',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -143,9 +143,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -202,9 +202,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -267,9 +267,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -332,9 +332,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -397,9 +397,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -462,9 +462,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -527,9 +527,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -568,9 +568,9 @@ var mxVersions = [
                                 name: 'Allow All Applications To Submit XML',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -609,9 +609,9 @@ var mxVersions = [
                                 name: 'Allow No Applications To Submit XML',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -650,9 +650,9 @@ var mxVersions = [
                                 name: 'Allow Specified Applications To Submit XML',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -709,9 +709,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -768,9 +768,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -827,9 +827,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -904,9 +904,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -970,9 +970,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1036,9 +1036,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1102,9 +1102,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1168,9 +1168,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1234,9 +1234,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1300,9 +1300,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1371,9 +1371,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1437,9 +1437,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1503,9 +1503,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1551,9 +1551,9 @@ var mxVersions = [
                                 name: 'Enable Access to App Info for All Applications ',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1593,9 +1593,9 @@ var mxVersions = [
                                 name: 'Disable Access to App Info for All Applications ',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1813,9 +1813,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1883,9 +1883,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -1948,9 +1948,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2018,9 +2018,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2083,9 +2083,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2234,9 +2234,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2269,9 +2269,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2297,9 +2297,9 @@ var mxVersions = [
                                 name: 'Turn On',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2320,9 +2320,9 @@ var mxVersions = [
                                 name: 'Turn Off',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2378,9 +2378,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2448,9 +2448,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2572,9 +2572,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2637,9 +2637,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2702,9 +2702,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2767,9 +2767,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2832,9 +2832,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2897,9 +2897,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -2962,9 +2962,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3032,9 +3032,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3097,9 +3097,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3162,9 +3162,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3227,9 +3227,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3292,9 +3292,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3357,9 +3357,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3434,9 +3434,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3499,9 +3499,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3569,9 +3569,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3634,9 +3634,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3699,9 +3699,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3763,9 +3763,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3822,9 +3822,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3898,9 +3898,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -3963,9 +3963,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4033,9 +4033,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4098,9 +4098,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4168,9 +4168,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4233,9 +4233,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4309,9 +4309,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4374,9 +4374,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4450,9 +4450,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4515,9 +4515,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4585,9 +4585,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4650,9 +4650,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4720,9 +4720,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -4785,9 +4785,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5092,9 +5092,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5139,9 +5139,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5186,9 +5186,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5233,9 +5233,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5280,9 +5280,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5551,9 +5551,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5616,9 +5616,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5681,9 +5681,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5746,9 +5746,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5816,9 +5816,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5881,9 +5881,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5933,9 +5933,9 @@ var mxVersions = [
                                 name: 'Show Menu Option',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -5974,9 +5974,9 @@ var mxVersions = [
                                 name: 'Do not Show Menu Option',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6020,9 +6020,9 @@ var mxVersions = [
                                 name: 'Show Menu Option',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6061,9 +6061,9 @@ var mxVersions = [
                                 name: 'Do not Show Menu Option',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6107,9 +6107,9 @@ var mxVersions = [
                                 name: 'Show Menu Option',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6148,9 +6148,9 @@ var mxVersions = [
                                 name: 'Do not Show Menu Option',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6194,9 +6194,9 @@ var mxVersions = [
                                 name: 'Turn On',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6235,9 +6235,9 @@ var mxVersions = [
                                 name: 'Turn Off',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6311,9 +6311,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6358,9 +6358,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6382,9 +6382,9 @@ var mxVersions = [
                                 compatibility: [
 
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6406,9 +6406,9 @@ var mxVersions = [
                                 compatibility: [
 
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6430,9 +6430,9 @@ var mxVersions = [
                                 compatibility: [
 
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6477,9 +6477,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6512,9 +6512,9 @@ var mxVersions = [
                                 compatibility: [
 
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6553,9 +6553,9 @@ var mxVersions = [
                                 name: 'Disable',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6605,9 +6605,9 @@ var mxVersions = [
                                 name: 'Enable Setting Access',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6640,9 +6640,9 @@ var mxVersions = [
                                 name: 'Disable Setting Access',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6680,9 +6680,9 @@ var mxVersions = [
                                 name: 'Disable Setting Access',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6721,9 +6721,9 @@ var mxVersions = [
                                 name: 'Enable Setting Access',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6767,9 +6767,9 @@ var mxVersions = [
                                 name: 'Disable Setting Access',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6808,9 +6808,9 @@ var mxVersions = [
                                 name: 'Enable Setting Access',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6854,9 +6854,9 @@ var mxVersions = [
                                 name: 'Disable Setting Access',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6895,9 +6895,9 @@ var mxVersions = [
                                 name: 'Enable Setting Access',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -6965,9 +6965,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7024,9 +7024,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7088,9 +7088,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7147,9 +7147,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7206,9 +7206,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7265,9 +7265,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7324,9 +7324,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7388,9 +7388,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7452,9 +7452,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7511,9 +7511,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7570,9 +7570,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7629,9 +7629,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7688,9 +7688,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7741,9 +7741,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7805,9 +7805,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7869,9 +7869,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7928,9 +7928,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -7987,9 +7987,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8051,9 +8051,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8110,9 +8110,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8174,9 +8174,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8631,9 +8631,9 @@ var mxVersions = [
                                 name: 'Enable Usage',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8654,9 +8654,9 @@ var mxVersions = [
                                 name: 'Disable Usage',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8677,9 +8677,9 @@ var mxVersions = [
                                 name: 'Clear Clipboard - True',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8700,9 +8700,9 @@ var mxVersions = [
                                 name: 'Clear Clipboard - False',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8729,9 +8729,9 @@ var mxVersions = [
                                 name: 'Enable',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8752,9 +8752,9 @@ var mxVersions = [
                                 name: 'Disable',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8786,9 +8786,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8815,9 +8815,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8843,9 +8843,9 @@ var mxVersions = [
                                 name: 'Enable',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8866,9 +8866,9 @@ var mxVersions = [
                                 name: 'Disable',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8918,9 +8918,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -8965,9 +8965,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9012,9 +9012,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9059,9 +9059,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9106,9 +9106,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9153,9 +9153,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9200,9 +9200,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9247,9 +9247,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9294,9 +9294,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9341,9 +9341,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9388,9 +9388,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9435,9 +9435,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9482,9 +9482,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9529,9 +9529,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9576,9 +9576,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9623,9 +9623,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9670,9 +9670,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9717,9 +9717,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9764,9 +9764,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9811,9 +9811,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9845,9 +9845,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9874,9 +9874,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9903,9 +9903,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9932,9 +9932,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9966,9 +9966,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -9995,9 +9995,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10053,9 +10053,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10118,9 +10118,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10176,9 +10176,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10229,9 +10229,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10299,9 +10299,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10364,9 +10364,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10410,9 +10410,9 @@ var mxVersions = [
                                 name: 'Enable',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10445,9 +10445,9 @@ var mxVersions = [
                                 name: 'Disable',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10491,9 +10491,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10532,9 +10532,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10572,9 +10572,9 @@ var mxVersions = [
                                 name: 'Enable',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -10607,9 +10607,9 @@ var mxVersions = [
                                 name: 'Disable',
                                 compatibility: [
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -11517,9 +11517,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -11582,9 +11582,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -11647,9 +11647,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -11712,9 +11712,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -11777,9 +11777,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -11842,9 +11842,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -11895,9 +11895,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -11942,9 +11942,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -11989,9 +11989,9 @@ var mxVersions = [
                                         notes: ''
                                     },
                                     {
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -12344,9 +12344,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -12409,9 +12409,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -12474,9 +12474,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
@@ -12539,9 +12539,9 @@ var mxVersions = [
                                         notes: ''
                                     },
 									{
-                                        name: 'TC70 JB',
+                                        name: 'TC70 KK',
                                         device: 'TC70',
-                                        os: 'JB',
+                                        os: 'KK',
                                         notes: ''
                                     },
                                     {
