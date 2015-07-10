@@ -16,8 +16,8 @@ $(document).ready(function(){
 		menuHeight: '100%',
 		menuWidth:'200px',
 		backItemIcon: 'fa fa-angle-left',
-  		groupIcon: 'fa fa-angle-right',  
-		
+  		groupIcon: 'fa fa-angle-right',
+
 		//Get links to work
 		onItemClick: function() {
 			// Get Anchor href
@@ -52,10 +52,10 @@ $(document).ready(function(){
 			shouldSync();
 		}
 	});
-	
+
 	//Cutom ToC siszing
 	sizeTOC();
-	
+
 	//Clear Search
 	$("#searchBox").val("");
 
@@ -63,22 +63,22 @@ $(document).ready(function(){
 	$("#searchBox").keyup(function() {
 		search();
 	});
-	
+
 	//Search popover
 	$("#searchBox").popover();
-	
+
 	//Verson popover
 	$("#versions").popover();
 	var popover = $("#versions").data('bs.popover');
 	var html = "";
-	
+
 	for(var i = 0; i<versionsList.length; i++)
 	{
 		html += '<li><div class="versionLink" data-link="' + versionsList[i].page + '">' + versionsList[i].Number + '</div></li>';
 	}
-	
+
 	popover.options.content = '<div><ul class="nav nav-list">' + html + '</ul></div>';
-	
+
 	$("#versions").click(function() {
 		$(".versionLink").click(function() {
 			var newLink = $(this).attr("data-link");
@@ -86,27 +86,27 @@ $(document).ready(function(){
 			window.location = newLink;
 		});
 	});
-	
+
 	//Check for url change
 	$(window).on('hashchange', function(e)
 	{
 		loadHash();
 	});
-	
+
 	//Check for page re size
 	$(window).resize(function() {
 		$("#menu").multilevelpushmenu('redraw');
 		sizeTOC();
 	});
-	
+
 	//Load doc
 	loadHash();
-	
+
 	//Check for placeholder
 	if (document.createElement("input").placeholder == undefined) {
 		$("#searchBox").val("Search");
 		$("#searchBox").css("color", "#999999");
-		
+
 		$("#searchBox").blur(function() {
 			if($("#searchBox").val() == "")
 			{
@@ -114,7 +114,7 @@ $(document).ready(function(){
 				$("#searchBox").css("color", "#999999");
 			}
 		});
-		
+
 		$("#searchBox").focus(function() {
 			if($("#searchBox").val() == "Search")
 			{
@@ -123,12 +123,12 @@ $(document).ready(function(){
 			}
 		});
 	}
-	
+
 	//Open search?
 	$("#searchBox").focus(function() {
 		if($("#searchBox").val() != "")
 		{
-			//Do we have results? 
+			//Do we have results?
 			if(searchResults.length > 0)
 			{
 				//Show results
@@ -166,14 +166,14 @@ function loadHash()
 
 
 //Custom function for resizing TOC to allow for scrollable list
-function sizeTOC()	
+function sizeTOC()
 {
 	var newHeight = $(window).height();
 	newHeight -= $("#docsHeader").outerHeight(true);
 	newHeight -=  $(".levelHolderClass h2").outerHeight(true);
-	
+
 	var uls = $(".levelHolderClass ul");
-	
+
 	for(var i = 0; i<uls.size(); i++)
 	{
 		if($($(uls[i]).parent()).children().size() == 2)
@@ -188,7 +188,7 @@ function sizeTOC()
 	}
 }
 
-//Should we sync the menue? 
+//Should we sync the menue?
 var shouldOpen = true;
 function shouldSync()
 {
@@ -197,7 +197,7 @@ function shouldSync()
 		if($('#menu').multilevelpushmenu('comparepaths', $('#menu').multilevelpushmenu('activemenu'), $('#menu').multilevelpushmenu('findmenusbytitle', menuStrcture[0].title), false).length == 0)
 		{
 			shouldOpen = false;
-			
+
 			//console.log("Start Find");
 			findHash();
 			//console.log("Find Done");
@@ -213,12 +213,12 @@ function shouldSync()
 function findHash()
 {
 	var hash = location.hash.replace("#","");
-	
+
 	if(hash.split("?").length>1)
 	{
 		hash = hash.split("?")[0];
 	}
-	
+
 	//console.log("Start");
 	if(hash == "")
 	{
@@ -226,7 +226,7 @@ function findHash()
 		$('#menu').multilevelpushmenu('expand' , $('#menu').multilevelpushmenu('findmenusbytitle', menuStrcture[0].title));
 	}
 	else
-	{	
+	{
 		syncMenu(hash);
 	}
 	//console.log("Done");
@@ -243,16 +243,16 @@ function syncMenu(hash){
 			//Find activemenu
 			var act = $('#menu').multilevelpushmenu('activemenu');
 			var actPath = $('#menu').multilevelpushmenu('pathtoroot', $(act));
-			
+
 			//We are not at root
 			if(actPath.length > 0){
 				//Lets Search for a match
 				var menuMatchArray = getArray(menuStrcture, 'link', '#' + hash);
-				
+
 				var x = 0;
 				var y = 0;
 				var found = false;
-				
+
 				serch:
 				for(x = 0; x<menuMatchArray.length; x++)
 				{
@@ -260,7 +260,7 @@ function syncMenu(hash){
 					{
 						if(menuMatchArray[x][y].link != '#' + hash){
 							var item = $('#menu').multilevelpushmenu('finditemsbyname' , menuMatchArray[x][y].name);
-							
+
 							if($('#menu').multilevelpushmenu('comparepaths', $(item), $(act), false).length == 1){
 								found = true;
 								break serch;
@@ -268,9 +268,9 @@ function syncMenu(hash){
 						}
 					}
 				}
-				
+
 				if(found){
-					//Use the one on this level 
+					//Use the one on this level
 					theMenuName = menuMatchArray[x][y].name;
 				}
 				else{
@@ -287,26 +287,26 @@ function syncMenu(hash){
 			//Get menu name from link
 			theMenuName = menuMatches[0].name;
 		}
-				
+
 		//get the Menu item
 		theItem = $('#menu').multilevelpushmenu('finditemsbyname' , theMenuName);
 		//console.log("Got Item");
-		
+
 		//get parent which should be the menu level
 		var pathToRoot = undefined;
 		if(theItem.length > 1){
-			//Is this level already open? 
+			//Is this level already open?
 			for(var i = 0; i<theItem.length; i++)
 			{
 				var temp = $('#menu').multilevelpushmenu('pathtoroot', $(theItem[i]));
-				
+
 				if($('#menu').multilevelpushmenu('menuexpanded', $(temp[temp.length-2]))){
 					pathToRoot = temp;
 					break;
 				}
 			}
-			
-			//Still can't find? 
+
+			//Still can't find?
 			if(pathToRoot == undefined){
 				//Get first item
 				pathToRoot = $('#menu').multilevelpushmenu('pathtoroot', $(theItem[0]));
@@ -315,11 +315,11 @@ function syncMenu(hash){
 		else{
 			pathToRoot = $('#menu').multilevelpushmenu('pathtoroot', $(theItem[0]));
 		}
-		
+
 		if(pathToRoot != false){
 			parentItem = pathToRoot[pathToRoot.length-2];
 			//console.log("Got Parent Item");
-			
+
 			//Check if we need to go to root
 			if($('#menu').multilevelpushmenu('comparepaths', $(parentItem), $('#menu').multilevelpushmenu('findmenusbytitle', 'Help'), false).length == 0){
 				//Load root
@@ -342,7 +342,7 @@ function syncMenu(hash){
 
 //Loads a doc by doc Key
 function loadDoc(key){
-	//Close Search 
+	//Close Search
 	$("#searchBox").popover("hide");
 
 	//Load doc
@@ -357,7 +357,7 @@ function loadDoc(key){
 		//console.log(key_scrollto);
 	}
 	var html = "";
-	
+
 	//Check if doc exist
 	if(getByKey(key) != undefined)
 	{
@@ -380,15 +380,18 @@ function loadDoc(key){
 		toc = null;
 	}
 	$("#pushobj").append('<div id="toc" class="panel panel-primary"> <div class="panel-heading">IN THIS DOCUMENT &nbsp;<i class="pull-right icon-bug fa fa-bug" title="Report a Doc Issue"></i><i class="pull-left cursorPointer fa fa-minus-square"></i><i class="pull-left cursorPointer fa fa-plus-square"></i></div><div id="inThisdoc"><div id="tocList"></div><div id="tocNav"><div id="tocNavText"></div><button type="button" class="btn btn-primary" id="btnPrevious"><i class="fa fa-arrow-circle-left"></i> Previous</button><button type="button" class="btn btn-primary" id="btnNext">Next <i class="fa fa-chevron-circle-right"></i></button></div></div></div>');
-	
+
 	//Create new ToC
 	toc = $("#tocList").tocify({
 		selectors: "h2,h3",
 		context: "#markdownDoc",
+		highlightOnScroll:false,
+		showAndHideOnScroll:false,
+		smoothScroll:false,
 		history:false,
-		scrollTo:52
+		//scrollTo:52
 	}).data("toc-tocify");
-	
+
 	$(".icon-bug").click(function(){
 	    var url = "http://github.com/emdk/docs/issues/new?title=Doc Issue:" + document.title + '&body=' + encodeURIComponent('Page: ' + window.location.href);
 	    window.open(url);
@@ -404,14 +407,14 @@ function loadDoc(key){
 		$('#toc .fa-minus-square').show();
 
 		$('#inThisdoc').show();
-	});	
+	});
 	$('#toc .fa-minus-square').click(function() {
 		$('#toc .fa-plus-square').show();
 		$('#toc .fa-minus-square').hide();
 
 		$('#inThisdoc').hide();
-	});	
-	
+	});
+
 	//Setup toc buttons
 	$('#btnNext').click(function() {
 		if(spanHolder != null)
@@ -419,7 +422,7 @@ function loadDoc(key){
 			$(spanHolder).removeClass("highlightSelected");
 			spanHolder = null;
 		}
-	
+
 		if(spanLoc + 1 < spanHighlights.length)
 		{
 			spanLoc++;
@@ -441,7 +444,7 @@ function loadDoc(key){
 			$(spanHolder).removeClass("highlightSelected");
 			spanHolder = null;
 		}
-	
+
 		if(spanLoc > 0)
 		{
 			spanLoc--;
@@ -457,7 +460,7 @@ function loadDoc(key){
 			$(spanHolder).addClass("highlightSelected");
 		}
 	});
-	
+
 	//hide if nothing to show
 	if ($("#tocList").html() == ''){
 		$('#toc').hide();
@@ -465,7 +468,7 @@ function loadDoc(key){
 	else{
 		$('#toc').show();
 	}
-	
+
 	//Scroll to top
 	scroll_position = 0;
 	if (key_scrollto != ''){
@@ -486,53 +489,53 @@ function loadDoc(key){
 				  window.prettyPrint && prettyPrint()
 				})
 	  }(window.jQuery);
-	
+
 	//Get H tags
 	var hTags = $("#markdownDoc :header");
 	for(var i = 0; i<hTags.length; i++)
 	{
 		//Allow for line wrap on pirod
-		$(hTags[i]).html($(hTags[i]).html().replace(/\./g, '.&#8203;'));   
-	}	
-	
+		$(hTags[i]).html($(hTags[i]).html().replace(/\./g, '.&#8203;'));
+	}
+
 	//Get images
 	var imgTags = $("#markdownDoc").find('img');
 	for(var i = 0; i<imgTags.length; i++)
 	{
-		//Image Model		
+		//Image Model
 		$(imgTags[i]).click(function(){
 			//Set Image
 			$("#modalImg").html( '<a href="' + $(this).attr("src") + '" target="_blank"><img title="" slt="img" src="' + $(this).attr("src") + '"></img></a>');
-			
+
 			//Size box
 			if(this.naturalWidth  > ($(document).width()- 100))
 			{
-				$(".modal-dialog").css("width", ($(document).width() - 100) + "px"); 
+				$(".modal-dialog").css("width", ($(document).width() - 100) + "px");
 			}
 			else
 			{
 				$(".modal-dialog").css("width", (this.naturalWidth +44) + "px");
 			}
-			
+
 			if(this.naturalHeight  > ($(window).height()- 120))
 			{
-				$(".modal-body").css("height", ($(window).height() - 120) + "px"); 
+				$(".modal-body").css("height", ($(window).height() - 120) + "px");
 			}
 			else
 			{
 				$(".modal-body").css("height", (this.naturalHeight+44) + "px");
 			}
-			
+
 			//Show
 			$('#basicModal').modal('show');
-			
+
 			setTimeout(function(){
 				$("#modalImg").scrollTop(0);
 				$("#modalImg").scrollLeft(0);
 			},200);
 		});
 	}
-	
+
 	//Get links
 	var aTags = $("#markdownDoc").find('a');
 	for(var i = 0; i<aTags.length; i++)
@@ -546,12 +549,12 @@ function loadDoc(key){
 			}
 		}
 	}
-	
+
 	//Highlighttext
 	setTimeout(function(){
 		highlightText();
 	},1000);
-	
+
 	//Find hash in ToC
 	findHash();
 }
@@ -562,28 +565,28 @@ function scrollTo(item)
 	$("html, body").animate({ scrollTop: $(item).offset().top -  $("#docsHeader").outerHeight(true)}, 500);
 }
 
-function getByKey(key) 
+function getByKey(key)
 {
 	var found = null;
 
-	for (var i = 0; i < docs.length; i++) 
+	for (var i = 0; i < docs.length; i++)
 	{
 		var element = docs[i];
 
-		if (element.key == key) 
+		if (element.key == key)
 		{
 		   found = element;
-	    } 
+	    }
 	}
-	
+
 	return found;
 }
 
 function highlightText()
 {
-	//Unhighlight any selections 
+	//Unhighlight any selections
 	$("#markdownDoc").unhighlight();
-	
+
 	//Check for placeholder
 	if (document.createElement("input").placeholder == undefined) {
 		//Check for word "Search"
@@ -592,18 +595,18 @@ function highlightText()
 			return;
 		}
 	}
-	
+
 	//Highlight for each work in search
-	var words = $("#searchBox").val().split(" "); 
+	var words = $("#searchBox").val().split(" ");
 	for(var i = 0; i<words.length; i++)
 	{
 		$("#markdownDoc").highlight(words[i]);
-	}		
+	}
 
 	//Highlight for each work in search
 	spanHighlights = $(".highlight");
-	
-	//Do we have highlights 
+
+	//Do we have highlights
 	if(spanHighlights.length > 0)
 	{
 		//Scroll to first highlight
@@ -612,8 +615,8 @@ function highlightText()
 		scrollTo(spanHighlights[spanLoc]);
 		spanHolder = spanHighlights[spanLoc];
 		$(spanHolder).addClass("highlightSelected");
-		
-		//Display in this doc info 
+
+		//Display in this doc info
 		$("#tocNav").show();
 		$("#tocNavText").text('There are ' + spanHighlights.length + ' results in the document.');
 	}
@@ -628,7 +631,7 @@ function highlightText()
 function search()
 {
 	highlightText();
-		
+
 	var options = {
 		caseSensitive: false,
 		includeScore: false,
@@ -639,45 +642,45 @@ function search()
 		maxPatternLength: 32,
 		keys: ["md", "name"]
 	};
-		
+
 	var fuse = new Fuse(docs, options); // "list" is the item array
-		
+
 	searchResults = fuse.search($("#searchBox").val());
-		
+
 	var html = "";
 	for(var i = 0; i<searchResults.length; i++)
 	{
 		html += '<li><a href="#' + searchResults[i].key + '">' + searchResults[i].name.replace(/\./g, '.&#8203;') + '</a></li>';
 	}
-	
+
 	if(searchResults.length>0)
 	{
 		//Show results
 		var popover = $("#searchBox").data('bs.popover');
 		popover.options.content = '<div id="searchRes"><ul class="nav nav-list">' + html +'</ul></div>';
-		
+
 		//Show box
 		$("#searchBox").popover("show");
-		
+
 		// Handler for search results click
 		$('#searchRes li').click(function() {
-			//Hide Search results	
+			//Hide Search results
 			$("#searchBox").popover("hide");
 			//collapse menu
 			//$('#menu').multilevelpushmenu('collapse');
-		});	
+		});
 
-		//handler for closing popover		
+		//handler for closing popover
 		$('.popover-title').click(function() {
 			$("#searchBox").popover("hide");
-		});		
+		});
 	}
 	else
 	{
 		//Clear results
 		var popover = $("#searchBox").data('bs.popover');
 		popover.options.content = '<div id="searchRes"><ul class="nav nav-list">' + html +'</ul></div>';
-		
+
 		//Hide results div
 		$("#searchBox").popover("hide");
 	}
@@ -687,14 +690,14 @@ function search()
 function getObjects(obj, key, val) {
 
 	var objects = [];
-	
+
 	for (var i in obj){
 		if (!obj.hasOwnProperty(i)){
 			continue;
 		}
 		if (typeof obj[i] == 'object') {
 			objects = objects.concat(getObjects(obj[i], key, val));
-		} 
+		}
 		else if (i == key && obj[key] == val) {
 			objects.push(obj);
 		}
@@ -712,7 +715,7 @@ function getArray(obj, key, val, save) {
 function getArrayInner(obj, key, val, save) {
 
 	var objects = [];
-	
+
 	for (var i in obj) {
 		if(obj[i] instanceof Array){
 			var temp = getArrayInner(obj[i], key, val, save);
@@ -744,7 +747,7 @@ function getArrayInner(obj, key, val, save) {
 			objects.push(obj);
 		}
 	}
-	
+
 	if(objects.length > 1){
 		//console.log(objects);
 		return objects;
