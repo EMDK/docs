@@ -1707,24 +1707,6 @@ var mxVersions = [
                                         device: 'MC18',
                                         os: 'KK',
                                         notes: ''
-                                    },
-                                    {
-                                        name: 'TC55 KK',
-                                        device: 'TC55',
-                                        os: 'KK',
-                                        notes: ''
-                                    },
-                                    {
-                                        name: 'TC70 KK',
-                                        device: 'TC70',
-                                        os: 'KK',
-                                        notes: ''
-                                    },
-                                    {
-                                        name: 'TC75 KK',
-                                        device: 'TC75',
-                                        os: 'KK',
-                                        notes: ''
                                     }
                                 ]
                             }
@@ -1751,24 +1733,6 @@ var mxVersions = [
                                     {
                                         name: 'MC18 KK',
                                         device: 'MC18',
-                                        os: 'KK',
-                                        notes: ''
-                                    },
-                                    {
-                                        name: 'TC55 KK',
-                                        device: 'TC55',
-                                        os: 'KK',
-                                        notes: ''
-                                    },
-                                    {
-                                        name: 'TC70 KK',
-                                        device: 'TC70',
-                                        os: 'KK',
-                                        notes: ''
-                                    },
-                                    {
-                                        name: 'TC75 KK',
-                                        device: 'TC75',
                                         os: 'KK',
                                         notes: ''
                                     }
