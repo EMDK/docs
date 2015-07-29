@@ -1,4 +1,4 @@
-#Personal Shopper Programmer's Guide
+#Personal Shopper Programming Guide
 
 ##Introduction
 The EMDK for Android provides developers with a set of tools to easily create Personal shopper applications for use with the MC18 enterprise mobility device
@@ -25,7 +25,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
 
     if(personalShopper == null)
     {
-    	//This feature is not supported on the device in use.
+      //This feature is not supported on the device in use.
     }
 
 **For smart cradle interactions, use the ‘cradle’ member variable of the personalShopper object**
@@ -64,7 +64,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
                  // Successfully unlocked the device
            }
            else{
-    	   // Failure in unlocking
+         // Failure in unlocking
            }
     }catch (CradleException e) {
            e.printStackTrace();
@@ -84,7 +84,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
                  // Successfully flashed the leds
            }
            else{
-    	   // Failure in flashing LEDs
+         // Failure in flashing LEDs
            }
     }catch (CradleException e) {
            e.printStackTrace();
@@ -102,7 +102,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
                  // Fast charge enabled
            }
            else{
-    	   // Fast charge disabled
+         // Fast charge disabled
            }
     }catch (CradleException e) {
            e.printStackTrace();
@@ -120,7 +120,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
     }
 
 
-**To fetch cradle location information – row,wall,column**
+**To fetch cradle location information - row,wall,column**
 
     :::java
     try {
@@ -130,7 +130,7 @@ The following code snippets illustrate the typical usage of the Personal Shopper
                  // location.row, location.column, location.wall successfully read.
            }
            else{
-    	   // failure in reading location information.
+         // failure in reading location information.
            }
     }catch (CradleException e) {
            e.printStackTrace();
@@ -156,12 +156,12 @@ The following code snippets illustrate the typical usage of the Personal Shopper
     try {
     personalShopper.cradle.disable();
     } catch (CradleException e) {
-    	e.printStackTrace();
+      e.printStackTrace();
     }
 
 
 ##Diagnostic
-**To get Diagnostic interface, use the ‘diagnostic’ member variable of the personalShopper object**
+**To get Diagnostic interface, use the 'diagnostic' member variable of the personalShopper object**
 
 To get Diagnostic Parameters like Battery state of health, State of charge , Time to Empty , Manufacturing Date, Required Charging time , Charging elapsed time ,Days since battery replaced and time since last reboot.
 
