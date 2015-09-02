@@ -68,7 +68,7 @@ The following APIs are used when you wish to handle all barcode scanning entirel
 * [Collection.ScanData](../api/Collection-ScanData)
 
 ###InterfaceConfig
-* [InterfaceConfig](../api/BarcodeInterfaceConfig)
+* [InterfaceConfig](../api/InterfaceConfig)
 
 ###ScanDataCollection
 * [ScanDataCollection](../api/ScanDataCollection)
