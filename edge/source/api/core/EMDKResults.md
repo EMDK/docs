@@ -173,8 +173,7 @@ Defines all the extended status codes the library returns.
  </ul>
  </br>
 
-* **FEATURE_NOT_UNIQUE_IN_EXTRADATA** -The Feature and Feature name combination is not unique in provided 
-extraData. 
+* **FEATURE_NOT_UNIQUE_IN_EXTRADATA** -The Feature and Feature name combination is not unique in provided extraData. 
  <ul>
  <li>Returned in: com.symbol.emdk.emdkservice.ProfileService.setProfile(String, String) when feature merging</li>
  </ul>
@@ -258,4 +257,8 @@ Defines all the status codes the library returns.
 * **PROCESSING** -The processing of profile started, the result will be returned through the data listener callback registered.
 
 * **NO_DATA_LISTENER** -The asynchronous method (Ex: processProfileAsync) is issued without adding the data listener.
+
+* **FEATURE_NOT_READY_TO_USE** -The requested feature is not ready to use. Try later.
+
+* **FEATURE_NOT_SUPPORTED** -The requested feature is not supported on this device.
 

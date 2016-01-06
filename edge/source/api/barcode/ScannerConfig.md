@@ -606,7 +606,7 @@ Set laser scanner power mode
 
 ###ScannerConfig.SkipOnUnSupported
 
-
+Describes what to do when the scanner config fields are not supported for the specified scanner.
 
 **Values:**
 
@@ -617,4 +617,14 @@ Set laser scanner power mode
 * **UNSUPPORTED_VALUE** -Skips the only unsupported values and continues with next.
 
 * **ALL** -Skips both unsupported paramters and values and continues with next.
+
+###ScannerConfig.AimingPattern
+
+Describes the aiming pattern to be turned ON/OFF.
+
+**Values:**
+
+* **OFF** -Aiming pattern is turned off.
+
+* **ON** -Aiming pattern is turned on.
 

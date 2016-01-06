@@ -69,12 +69,9 @@ Processes the given profile based on the data provided and the flag and return s
 **Parameters:**
 
 `profileName` - Name of the profile. ex: '<b>Profile1</b>'. </br>
-
  <ul>
 	<li>You can also specify just part of the profile when a fully qualified name of the following format is given: [profileName][featureType][name in profile parameter] to just edit part of the profile. For example, if my profile is called 'Profile1' and the name in profile parameter is 'myName'. Passing 'profileName' as 'Profile1/ActivitySelection/myName' will just process this part of the profile.</li>
-  <li>Valid [featureType]: ActivitySelection, Barcode, MSR, Intent, Keystroke, IP.</li>
-
-
+ <li>Valid [featureType]: ActivitySelection, Barcode, MSR, Intent, Keystroke, IP.</li>
  </ul>
 
 `profileFlag` -  ProfileManager.PROFILE_FLAG <br><br>
