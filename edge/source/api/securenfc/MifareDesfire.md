@@ -129,7 +129,7 @@ Authenticates card master key and application key by using SAM This is an
  application.
  
  NOTE : This API must not be called from the main application thread since
- it is time consuming operation.
+ it is time consuming operation.  Also, The application ID must be selected using the selectApplication() method before calling the authenticate() method to authenticate card with SAM.
 
 **Parameters:**
 
