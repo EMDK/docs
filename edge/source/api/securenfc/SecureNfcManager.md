@@ -15,7 +15,7 @@ Gets the available SAM on the device.
 
 **Returns:**
 
-com.symbol.emdk.securenfc.SecureNfcManager.SamType
+com.symbol.emdk.securenfc.SecureNfcManager.SamType - SamType
 
 **Throws:**
 
@@ -31,11 +31,11 @@ This method returns the object to authenticate between SAM with the Host.
 
 **Parameters:**
 
-samType
+`samType`
 
 **Returns:**
 
-com.symbol.emdk.securenfc.SamBase
+com.symbol.emdk.securenfc.SamBase - SamBase
 
 ### getTagTechType
 
@@ -45,12 +45,12 @@ This method returns the tag type discovered by the device.
 
 **Parameters:**
 
-tag - - Contactless tag already detected by device. We get this
+`tag` - - Contactless tag already detected by device. We get this
             through the EXTRA_TAG information from the intent.
 
 **Returns:**
 
-com.symbol.emdk.securenfc.SecureNfcManager.TagTechType
+com.symbol.emdk.securenfc.SecureNfcManager.TagTechType - TagTechType
 
 **Throws:**
 
@@ -68,11 +68,11 @@ Returns the tag technology object based for the Tag type passed. For
 
 **Parameters:**
 
-tagType
+`tagType`
 
 **Returns:**
 
-com.symbol.emdk.securenfc.TagTechBase
+com.symbol.emdk.securenfc.TagTechBase - TagTechBase
 
 ### getPassThruApduInstance
 
@@ -95,7 +95,7 @@ Returns the PassThruApduProcessor object to securely communicate with
 
 **Returns:**
 
-com.symbol.emdk.securenfc.PassThruApduProcessor
+com.symbol.emdk.securenfc.PassThruApduProcessor - PassThruApduProcessor object.
 
 ##Public Enums
 

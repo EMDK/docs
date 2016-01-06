@@ -1,4 +1,4 @@
-###RegionType
+#RegionType
 
 The data type contained within the region
 

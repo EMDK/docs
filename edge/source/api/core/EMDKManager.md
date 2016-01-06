@@ -24,9 +24,9 @@ This is static method and it is the key function to get the EMDKManager object.
 
 **Parameters:**
 
-context - The application context should be provided by the user.
+`context` - The application context should be provided by the user.
 
-emdkListener - The EMDK Listener for listener callbacks.
+`emdkListener` - The EMDK Listener for listener callbacks.
 
 **Returns:**
 
@@ -48,7 +48,7 @@ This method returns an object instance which has derived from EMDKBase. Based on
 
 **Parameters:**
 
-featureType - The  EMDKManager.FEATURE_TYPE the object to be created.
+`featureType` - The  EMDKManager.FEATURE_TYPE the object to be created.
 
 **Returns:**
 
@@ -89,7 +89,7 @@ This method releases resources of a given manager type. Instance variable is not
 
 **Parameters:**
 
-featureType - Type of  EMDKManager.FEATURE_TYPE to be released. Only the given feature related manager will be cleared if it has been constructed.
+`featureType` - Type of  EMDKManager.FEATURE_TYPE to be released. Only the given feature related manager will be cleared if it has been constructed.
 
 **Returns:**
 

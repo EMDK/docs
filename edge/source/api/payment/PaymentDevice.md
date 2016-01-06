@@ -15,7 +15,8 @@ Checks if the connection with the payment device is enabled or not.
 
 **Returns:**
 
-boolean
+boolean - true : if the connection with the payment device is enabled 
+ 		   false : if the connection with payment device is not enabled
 
 ### getDeviceInfo
 
@@ -25,7 +26,7 @@ Returns information about the payment device.
 
 **Returns:**
 
-com.symbol.emdk.payment.DeviceInfo
+com.symbol.emdk.payment.DeviceInfo - Returns the DeviceInfo object.
 
 ### enable
 
@@ -125,7 +126,11 @@ Gets payment device configuration settings. On success the results will
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentConfig
+com.symbol.emdk.payment.PaymentConfig - Returns the PaymentConfig object.
+ 
+         Possible Error codes: SUCCESS, FAILURE, COMMUNICATION_ERROR,
+         CONNECTION_ERROR, INVALID_OBJECT, INVALID_VALUE,
+         PREVIOUS_COMMAND_PENDING, NULL_POINTER, DEVICE_NOT_ENABLED
 
 **Throws:**
 
@@ -160,11 +165,15 @@ Sets payment device configuration settings. This method sets the modified
 
 **Parameters:**
 
-config
+`config`
 
 **Returns:**
 
-void
+void - Returns the status of the setConfig method.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         INVALID_VALUE, PREVIOUS_COMMAND_PENDING, NULL_POINTER
 
 **Throws:**
 
@@ -193,7 +202,11 @@ This method enables the keypad on the payment device. The keypad must be explici
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         PREVIOUS_COMMAND_PENDING
 
 ### enableKeypad
 
@@ -208,7 +221,7 @@ This method enables the keypad on the payment device. The keypad must be explici
 
 **Parameters:**
 
-timeOut - The timeOut specifies how long the payment device's keypad should be in enabled state.
+`timeOut` - The timeOut specifies how long the payment device's keypad should be in enabled state.
  The timeOut value unit is milliseconds.
  
  
@@ -221,7 +234,11 @@ timeOut - The timeOut specifies how long the payment device's keypad should be i
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         PREVIOUS_COMMAND_PENDING
 
 ### disableKeypad
 
@@ -239,7 +256,11 @@ Disables the keypad on the payment device.
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         PREVIOUS_COMMAND_PENDING
 
 ### readCardData
 
@@ -252,26 +273,45 @@ Reads the card data from the PAYMENT device. This is asynchronous call
 
 **Parameters:**
 
-amount - Amount for the transaction; this value is required to enable
+`amount` - Amount for the transaction; this value is required to enable
             EMV contactless transactions. Allowed unto a maximum of 7
             digits.
 
-otherAmount - For future use. Any additional amount information for the
+`otherAmount` - For future use. Any additional amount information for the
             transaction; this value is used only used if EMV Contactless
             is supported. Allowed upto a maximum of 7 digits.
 
-readMode - Card reading mode (swipe
+`readMode` - Card reading mode (swipe, insert, touch, manual or all)
+            supported by payment device for reading card.
 
-readTimeOut - Read timeout in milliseconds. Application can set the timeout.
+`readTimeOut` - Read timeout in milliseconds. Application can set the timeout.
             But value must within threshold set by the payment device.
 
-readCardMessage - The  ReadCardMessage class provides option configure the messages
+`readCardMessage` - The  ReadCardMessage class provides option configure the messages
             displayed on payment device while reading the card data on payment device
  
 
+**Example Usage:**
+	
+	:::java	
+	readCardMessage = new ReadCardMessage();
+	readCardMessage.messageTitle ="MessageTitle";
+	readCardMessage.screen1.message1 = "$2000.00";
+	readCardMessage.screen1.message2 = "Transaction...";
+	paymentDevice.readCardData(1, 4, ReadMode.ALL, 2000, readCardMessage);
+
+
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         NULL_POINTER, COMMUNICATION_ERROR, CONNECTION_ERROR,
+         INVALID_OBJECT, PREVIOUS_COMMAND_PENDING, TIMED_OUT,
+         OPERATION_CANCELLED, LOW_POWER_OPERATION_CANCELLED,
+         TLV_DATA_ERROR, CARD_SWIPE_ERROR, CARD_BLOCKED,
+         CHIP_READ_NO_APP_ERROR, CARD_INSERTION_ERROR, CARD_REMOVED,
+         CARD_EXPIRED, CARD_SWIPE_ERROR
 
 ### readCardData
 
@@ -284,23 +324,32 @@ Reads the card data from the PAYMENT device. This is asynchronous call
 
 **Parameters:**
 
-amount - Amount for the transaction; this value is required to enable
+`amount` - Amount for the transaction; this value is required to enable
             EMV contactless transactions. Allowed unto a maximum of 7
             digits.
 
-otherAmount - For future use. Any additional amount information for the
+`otherAmount` - For future use. Any additional amount information for the
             transaction; this value is used only used if EMV Contactless
             is supported. Allowed upto a maximum of 7 digits.
 
-readMode - Card reading mode (swipe
+`readMode` - Card reading mode (swipe, insert, touch, manual or all)
+            supported by payment device for reading card.
 
-readTimeOut - Read timeout in milliseconds. Application can set the timeout.
+`readTimeOut` - Read timeout in milliseconds. Application can set the timeout.
             But value must within threshold set by the payment device.
  
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         NULL_POINTER, COMMUNICATION_ERROR, CONNECTION_ERROR,
+         INVALID_OBJECT, PREVIOUS_COMMAND_PENDING, TIMED_OUT,
+         OPERATION_CANCELLED, LOW_POWER_OPERATION_CANCELLED,
+         TLV_DATA_ERROR, CARD_SWIPE_ERROR, CARD_BLOCKED,
+         CHIP_READ_NO_APP_ERROR, CARD_INSERTION_ERROR, CARD_REMOVED,
+         CARD_EXPIRED, CARD_SWIPE_ERROR
 
 ### promptPin
 
@@ -320,27 +369,43 @@ Requests for a PIN and gets the encrypted PIN block. The encrypted data
 
 **Parameters:**
 
-accountNumber - The account number or masked PAN used with the entered PIN to
+`accountNumber` - The account number or masked PAN used with the entered PIN to
             create the encrypted PIN Block (8 to 19 numeric digits).
 
-minPinLength - Minimum PIN Length.
+`minPinLength` - Minimum PIN Length.
 
-maxPinLength - Maximum PIN Length. A maximum length of up to 12 characters is
+`maxPinLength` - Maximum PIN Length. A maximum length of up to 12 characters is
             allowed.
 
-isPinOptional - If this flag is set True
+`isPinOptional` - If this flag is set True, the PIN entry optional. If this flag
+            is set to false, the PIN entry is mandatory.
 
-readTimeOut - Read timeout in milliseconds. Application can set the timeout.
+`readTimeOut` - Read timeout in milliseconds. Application can set the timeout.
             But value must within threshold set by the payment device.
 
-promptPinMessage - The PromptPinMessage class provides option configure the
+`promptPinMessage` - The PromptPinMessage class provides option configure the
             messages displayed on the payment device while reading the PIN.
 
  
 
+**Example Usage:**
+	
+	:::java	
+	promptPINMessage = new PromptPinMessage();
+	promptPINMessage.messageTitle ="MessageTitle";
+	promptPINMessage.screen1.message1 = "Sale $1,000.00";
+	promptPINMessage.screen1.message2 = "Transaction..";
+	paymentDevice.promptPin("0123456789012345", 4, 12, true, 2000, promptPinMessage);
+
+
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         NULL_POINTER, COMMUNICATION_ERROR, CONNECTION_ERROR,
+         INVALID_OBJECT, PREVIOUS_COMMAND_PENDING, TIMED_OUT,
+         OPERATION_CANCELLED, INVALID_PIN_LENGTH, NO_DUKPT_KEY,
+         INVALID_VALUE,LOW_POWER_OPERATION_CANCELLED
 
 ### promptPin
 
@@ -358,22 +423,41 @@ Requests for a PIN and gets the encrypted PIN block. The encrypted data
 
 **Parameters:**
 
-accountNumber - The account number or masked PAN used with the entered PIN to create the
+`accountNumber` - The account number or masked PAN used with the entered PIN to create the
             encrypted PIN Block (8 to 19 numeric digits).
 
-minPinLength - Minimum PIN Length.
+`minPinLength` - Minimum PIN Length.
 
-maxPinLength - Maximum PIN Length. A maximum length of up to 12 characters is
+`maxPinLength` - Maximum PIN Length. A maximum length of up to 12 characters is
             allowed.
 
-isPinOptional - If this flag is set True
+`isPinOptional` - If this flag is set True, the PIN entry optional. If this flag
+            is set to false, the PIN entry is mandatory.
 
-readTimeOut - Read timeout in milliseconds. Application can set the timeout.
+`readTimeOut` - Read timeout in milliseconds. Application can set the timeout.
             But value must within threshold set by the payment device.
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         <p>
+         <blockquote>
+ 
+         <pre>
+ {@code
+ Example Usage:
+ 	paymentDevice.promptPin("0123456789012345", 4, 12, true, 2000);
+ }
+ </pre>
+ 
+         </blockquote>
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         NULL_POINTER, COMMUNICATION_ERROR, CONNECTION_ERROR,
+         INVALID_OBJECT, PREVIOUS_COMMAND_PENDING, TIMED_OUT,
+         OPERATION_CANCELLED, INVALID_PIN_LENGTH, NO_DUKPT_KEY,
+         INVALID_VALUE,LOW_POWER_OPERATION_CANCELLED
 
 ### promptMenu
 
@@ -387,34 +471,49 @@ Displays two lines of messages on the PAYMENT device and provides a menu
 
 **Parameters:**
 
-messageLine1 - Message Line 1 to display on the PINPad screen. Maximum
+`messageLine1` - Message Line 1 to display on the PINPad screen. Maximum
             characters allowed for Choice + Message = 18 characters. For
-            example
+            example, if Choice is 6 characters, maximum message length is
+            12 characters. Messages longer than maximum message length
+            will be truncated.
 
-messageLine2 - Message Line 2 to display on the PINPad screen. Maximum
+`messageLine2` - Message Line 2 to display on the PINPad screen. Maximum
             characters allowed for Choice + Message = 18 characters. For
-            example
+            example, if Choice is 6 characters, maximum message length is
+            12 characters. Messages longer than maximum message length
+            will be truncated.
 
-choice1 - Choice text for selection from the PINPad using the function
+`choice1` - Choice text for selection from the PINPad using the function
             keys. Choice string can consist of up to 8 characters.
 
-choice2 - Choice text for selection from the PINPad using the function
+`choice2` - Choice text for selection from the PINPad using the function
             keys. Choice string can consist of up to 8 characters.
 
-choice3 - Choice text for selection from the PINPad using the function
+`choice3` - Choice text for selection from the PINPad using the function
             keys. Choice string can consist of up to 8 characters.
 
-choice4 - Choice text for selection from the PINPad using the function
+`choice4` - Choice text for selection from the PINPad using the function
             keys. Choice string can consist of up to 8 characters.
 
-timeOut - Timeout in milliseconds. Application can set the timeout. But
+`timeOut` - Timeout in milliseconds. Application can set the timeout. But
             value must within threshold set by the payment device.
  
  
 
+**Example Usage:**
+	
+	:::java	
+	paymentDevice.promptMenu("messageLine1","messageLine2","choice1","choice2","choice3","choice4",timeOut);
+
+
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         NULL_POINTER, COMMUNICATION_ERROR, CONNECTION_ERROR,
+         INVALID_OBJECT, PREVIOUS_COMMAND_PENDING, TIMED_OUT,
+         CANCEL_KEY_PRESSED, OK_KEY_PRESSED, LOW_POWER_OPERATION_CANCELLED
 
 ### promptAdditionalInfo
 
@@ -430,29 +529,41 @@ Requests the user to confirm the amount and surcharge passed by the
 
 **Parameters:**
 
-amount - Transaction amount value that is to be displayed.
+`amount` - Transaction amount value that is to be displayed.
 
-langCode - Numeric value denoting the language code for determining the
+`langCode` - Numeric value denoting the language code for determining the
             displayed language of the pre-defined prompt.
 
-promptForTip - Indicates whether or not to prompt for tip and return the
+`promptForTip` - Indicates whether or not to prompt for tip and return the
             amount entered.
 
-cashBack - Indicates whether or not to prompt for cashback and return the
+`cashBack` - Indicates whether or not to prompt for cashback and return the
             amount selected. The user would select the cashback amount
-            from 4 pre-defined choices - $20
+            from 4 pre-defined choices - $20, $40, $60 and $100. These
+            choices cannot be modified.
 
-surcharge - An optional surcharge amount that is to be displayed and
+`surcharge` - An optional surcharge amount that is to be displayed and
             confirmed. A zero amount
             will cause this prompt to be bypassed
 
-timeOut - Read timeout. Application can set the timeout. But value must
+`timeOut` - Read timeout. Application can set the timeout. But value must
             within threshold set by the payment device.
  
 
+**Example Usage:**
+	
+	:::java	
+	paymentDevice.promptAdditionalInfo(1.25, 0,true, true,1.25, 60000);
+
+
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - PaymentResults Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         NULL_POINTER, COMMUNICATION_ERROR, CONNECTION_ERROR,
+         INVALID_OBJECT, PREVIOUS_COMMAND_PENDING, TIMED_OUT,
+         OPERATION_CANCELLED, LOW_POWER_OPERATION_CANCELLED.
 
 ### promptMessage
 
@@ -467,28 +578,40 @@ Displays a maximum of 4 lines of messages on the payment device. This
 
 **Parameters:**
 
-messageLine1 - A message to display on line 1 of the PINPad screen. May
+`messageLine1` - A message to display on line 1 of the PINPad screen. May
             consist of up to 16 characters
 
-messageLine2 - A message to display on line 2 of the PINPad screen. May
+`messageLine2` - A message to display on line 2 of the PINPad screen. May
             consist of up to 16 characters
 
-messageLine3 - A message to display on line 2 of the PINPad screen. May
+`messageLine3` - A message to display on line 2 of the PINPad screen. May
             consist of up to 16 characters
 
-messageLine4 - A message to display on line 4 of the PINPad screen. May
+`messageLine4` - A message to display on line 4 of the PINPad screen. May
             consist of up to 16 characters
 
-getUserConfirmation - True or False. Allows the user to press OK (Enter key)
+`getUserConfirmation` - True or False. Allows the user to press OK (Enter key), CANCEL
+            or CORR keys in response to the displayed messages.
 
-timeOut - Read timeout. Application can set the timeout. But value must
+`timeOut` - Read timeout. Application can set the timeout. But value must
             within threshold set by the payment device.
  
  
 
+**Example Usage:**
+	
+	:::java	
+	paymentDevice.promptMessage("messageLine1","messageLine2","messageLine3","messageLine4",true, timeOut);
+
+
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - PaymentResults Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         NULL_POINTER, COMMUNICATION_ERROR, CONNECTION_ERROR,
+         INVALID_OBJECT, PREVIOUS_COMMAND_PENDING, TIMED_OUT,
+         OK_KEY_PRESSED, OK_KEY_PRESSED, LOW_POWER_OPERATION_CANCELLED
 
 ### abort
 
@@ -513,7 +636,14 @@ Abort or cancel previously issued request to device and display welcome
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         LOW_POWER_OPERATION_CANCELLED,PREVIOUS_COMMAND_PENDING
+ 
+         Error code if previous request are Enable, PromptPin PromptPin
+         with message, AuthorizeCard and completeOnlineEmv :CANNOT_ABORT.
 
 ### getBatteryLevel
 
@@ -539,7 +669,12 @@ Query the battery level of the payment device.
 
 **Returns:**
 
-com.symbol.emdk.payment.BatteryData
+com.symbol.emdk.payment.BatteryData - Returns the BatteryData object which contains battery level of
+         the requested device and the PaymentResults.
+ 
+	
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT
 
 ### createMac
 
@@ -552,7 +687,7 @@ This is a required transaction for Canada. Accepts a String of data to be
 
 **Parameters:**
 
-u8MacData - String of data to be MAC'ed. The length of the key should be
+`u8MacData` - String of data to be MAC'ed. The length of the key should be
             16/32/48 bytes in HEX format.
  
 
@@ -564,7 +699,15 @@ u8MacData - String of data to be MAC'ed. The length of the key should be
 
 **Returns:**
 
-com.symbol.emdk.payment.MacData
+com.symbol.emdk.payment.MacData - Returns MacData class object status with MacBlock if call is
+         issued successfully. After the method is processed, returns
+         status and MacBlock.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         LOW_POWER_OPERATION_CANCELLED, INVALID_VALUE,
+         MAC_KEY_CREATE_ERROR, MAC_BLOCK_CREATE_ERROR,
+         INVALID_MAC_KEY_LENGTH
 
 ### validateMac
 
@@ -577,25 +720,36 @@ Validates the response MAC and displays any authorization messages
 
 **Parameters:**
 
-u8MacBlock - u8-character MAC Block to verify
+`u8MacBlock` - u8-character MAC Block to verify
 
-langCode - Numeric value denoting the language code for determining the
+`langCode` - Numeric value denoting the language code for determining the
             displayed language of the card entry prompts.
 
-u8TpkKey - PIN (TPK) Key
+`u8TpkKey` - PIN (TPK) Key
 
-u8TakKey - MAC (TAK) Key
+`u8TakKey` - MAC (TAK) Key
 
-message1 - Message Line 1 (0-16 bytes)
+`message1` - Message Line 1 (0-16 bytes)
 
-message2 - Message Line 2 (0-16 bytes)
+`message2` - Message Line 2 (0-16 bytes)
 
-u8MacData - Buffer to hold all data to be MAC'ed
+`u8MacData` - Buffer to hold all data to be MAC'ed
  
+
+**Example Usage:**
+	
+	:::java	
+	paymentDevice.validateMac("u8MacBlock", 0, "", "", "message1", "message2","1112131415161718");
+
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults after the request is successfully
+         issued.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         LOW_POWER_OPERATION_CANCELLED, INVALID_VALUE, INVALID_DATA_LENGTH
 
 ### completeOnlineEmv
 
@@ -608,19 +762,36 @@ Completes an online EMV transaction for PIN management. The application
 
 **Parameters:**
 
-hostDecision - HostDecision enum value which is the decision indicator from
+`hostDecision` - HostDecision enum value which is the decision indicator from
             the host response.
 
-displayResult - Indicator to note whether or not to display the final response
-            message. The valid values are: false - Do not display
+`displayResult` - Indicator to note whether or not to display the final response
+            message. The valid values are: false - Do not display, true -
+            Display
 
-tagData - List of EMV data which contains EMV tag and its values.
+`tagData` - List of EMV data which contains EMV tag and its values.
  
  
+
+**Example Usage:**
+	
+	:::java	
+	ArrayList<TagData> emvDataList = new ArrayList<TagData>();
+	emvDataList.add(new TagData("5A085413330089601075"));
+	paymentDevice.completeOnlineEmv(HostDecision.HOST_AUTHORIZED, true, emvDataList );
+
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         LOW_POWER_OPERATION_CANCELLED, INVALID_VALUE,
+         OPERATION_CANCELLED, CARD_INSERTION_ERROR, NULL_POINTER,
+         CARD_REMOVED, EMV_TRANSACTION_DENIED, EMV_TRANSACTION_ERROR,
+         CARD_NOT_AUTHORIZED, GAC_CARD_LOOPBACK, GAC_RESPONSE_ERROR,
+         TLV_DATA_ERROR,API_SEQUENCE_ERROR
 
 ### getEmvTags
 
@@ -638,11 +809,16 @@ Gets tag information from the inserted card.
 
 **Parameters:**
 
-emvTags
+`emvTags`
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         LOW_POWER_OPERATION_CANCELLED, NULL_POINTER,
+         CARD_INSERTION_ERROR, TLV_DATA_ERROR
 
 ### setEmvTags
 
@@ -656,7 +832,7 @@ Sets tag information for the inserted card. Valid EMV tag IDs and tag
 
 **Parameters:**
 
-emvTagData - List of emv tag ID and its values be set on the inserted card.
+`emvTagData` - List of emv tag ID and its values be set on the inserted card.
            
             
  
@@ -672,7 +848,12 @@ emvTagData - List of emv tag ID and its values be set on the inserted card.
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         LOW_POWER_OPERATION_CANCELLED, NULL_POINTER,
+         CARD_INSERTION_ERROR, EMV_APP_NOT_SELECTED, TLV_DATA_ERROR
 
 ### authorizeCard
 
@@ -688,29 +869,37 @@ Authorizes the EMV transaction amounts using the inserted chip (EMV)
 
 **Parameters:**
 
-amount - Transaction amount value.
+`amount` - Transaction amount value.
 
-otherAmount - Other transaction amount value.
+`otherAmount` - Other transaction amount value.
 
-merchatDecision - The merchant decision notes additional handling for the EMV
+`merchatDecision` - The merchant decision notes additional handling for the EMV
             request based on required processor handling.
 
-tags - is an list of EMV tags that is required at this transaction
+`tags` - is an list of EMV tags that is required at this transaction
             stage to be retrieved.
 
-displayResult - True or False. True= display result on Payment device display.
+`displayResult` - True or False. True= display result on Payment device display.
 
-pinTryExceedStatus
+`pinTryExceedStatus`
 
-displayAmount - True or False. True= displays amount on Payment device display
+`displayAmount` - True or False. True= displays amount on Payment device display
 
-displayAppExpired
+`displayAppExpired`
 
-timeOut
+`timeOut`
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns the PaymentResults.
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         LOW_POWER_OPERATION_CANCELLED, NULL_POINTER,
+         CARD_INSERTION_ERROR, CARD_BLOCKED, CARD_BLOCKED, CARD_REMOVED,
+         EMV_APP_ADD_ERROR, EMV_TRANSACTION_DENIED, EMV_TRANSACTION_ERROR,
+         NO_DUKPT_KEY, CARD_AUTHENTICATION_FAILED, GET_ONLINE_PIN_FAILED,
+         APP_EXPIRED, GAC_CARD_LOOPBACK, GAC_RESPONSE_ERROR,
+         TLV_DATA_ERROR,API_SEQUENCE_ERROR
 
 ### getLowBatteryThreshold
 
@@ -730,7 +919,11 @@ Gets the acceptable low battery level. If the battery drops below this
 
 **Returns:**
 
-com.symbol.emdk.payment.BatteryData
+com.symbol.emdk.payment.BatteryData - Returns the BatteryData object holds low battery threshold value
+         and PaymentResult.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT
 
 ### setLowBatteryThreshold
 
@@ -743,9 +936,14 @@ Sets the acceptable low battery level. If the battery drops below this
 
 **Parameters:**
 
-lowThreshold - Below this value
+`lowThreshold` - Below this value, some of the commands will not execute. Note:
+            The values for PD40-100 device are 0 - Low power, almost 0% 1 -
+            The battery icon display 1 grid ( 1% to 25%) 2 - The battery
+            icon display 2 grids (25% to 50 %) 3 - The battery icon
+            display 3 grids (50% to 75%) 4 - The battery icon display 4
+            grids (75% to 100%)
 
-lowBatterMessage - The message to be displayed when the battery level goes below
+`lowBatterMessage` - The message to be displayed when the battery level goes below
             the low threshold.
             
  Note :The battery check will be done only for the following commands:
@@ -759,9 +957,19 @@ lowBatterMessage - The message to be displayed when the battery level goes below
 		8.	authorizeCard	            
  
 
+**Example Usage:**
+	
+	:::java	
+	paymentDevice.setLowBatteryThreshold(2,"The power is in battery grid2");
+
+
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         NULL_POINTER
 
 ### getInterfaceConfig
 
@@ -772,7 +980,20 @@ This method provides access to get the interface configurations object.
 
 **Returns:**
 
-com.symbol.emdk.payment.InterfaceConfig
+com.symbol.emdk.payment.InterfaceConfig - Returns InterfaceConfig object on success.
+ 
+ <p>
+ <blockquote>
+ 
+ <pre>
+ {@code
+ Example Usage:
+  InterfaceConfig interfaceConfig = paymentDevice.getInterfaceConfig();  
+
+ }
+ </pre>
+ 
+ </blockquote>
 
 **Throws:**
 
@@ -803,7 +1024,7 @@ This method provides access to set the interface configurations like connect to 
 
 **Parameters:**
 
-interfaceConfig - The Parameters to use for this payment device configurations.
+`interfaceConfig` - The Parameters to use for this payment device configurations.
 
 **Returns:**
 
@@ -827,11 +1048,17 @@ Instruct the user to remove the EMV card inserted in the payment device. This is
 
 **Parameters:**
 
-message1 - The message which gives the information of type of card.
+`message1` - The message which gives the information of type of card.
 
-message2 - the message which gives instructions to user for the removal of the card.
+`message2` - the message which gives instructions to user for the removal of the card.
  
  
+
+**Example Usage:**
+	
+	:::java	
+	paymentDevice.removeCard("EMVCard", "please remove the Card");
+
 
 **Returns:**
 
@@ -853,15 +1080,25 @@ downloadFile is an asynchronous call. The method allows the application to downl
 
 **Parameters:**
 
-downloadType - This indicates the type of File to download either DownloadType.EMVPARA or DownloadType.FIRMARE  file.
+`downloadType` - This indicates the type of File to download either DownloadType.EMVPARA or DownloadType.FIRMARE  file.
 
-filePath - This is  file location accepted for downloading files.
+`filePath` - This is  file location accepted for downloading files.
  
  
+
+**Example Usage:**
+	
+	:::java	
+	paymentDevice.downloadFile(DownloadType.EMVPARAM, "//Sdcard//Payment//EmvParam");
+
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         NULL_POINTER,PREVIOUS_COMMAND_PENDING
 
 ### downloadFile
 
@@ -873,15 +1110,34 @@ downloadFile is an asynchronous call. The application must be able to download o
 
 **Parameters:**
 
-downloadType - The type of File to download such as  EMV parameter 
+`downloadType` - The type of File to download such as  EMV parameter ,Firmware file, etc.
 
-fileData - The  complete download data.The partial data is not allowed.
+`fileData` - The  complete download data.The partial data is not allowed.
  
  
+
+**Example Usage:**
+	
+	:::java	
+	
+	
+	
+	
+	in = new FileInputStream("//sdcard//Payment//EmvParam");
+	int bufferSize = in.available();
+	byte[] emvParamBuffer = new byte[bufferSize];
+	
+	while ((byteread = in.read(emvParamBuffer)) != -1) 
+	result = paymentDevice.downloadFile(DownloadType.EMVPARA, emvParamBuffer));
+
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns PaymentResults.
+ 
+         Possible Error codes: SUCCESS, FAILURE, DEVICE_NOT_ENABLED,
+         COMMUNICATION_ERROR, CONNECTION_ERROR, INVALID_OBJECT,
+         NULL_POINTER,PREVIOUS_COMMAND_PENDING
 
 ### getDateTime
 
@@ -893,7 +1149,14 @@ The getDateTime method is blocking (synchronous) call which retrieves the date a
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String
+ Returns the date and time string  in the format "YYYY-MM-DD HH:MM:SS"
+ 		YYYY  = four-digit year
+ 		MM    = two-digit month (01=January, etc.)
+ 		DD    = two-digit day of month (01 through 31)
+ 		HH    = two digits of hour (00 through 23)
+ 		MM    = two digits of minute (00 through 59)
+ 		SS    = two digits of second (00 through 59)
 
 **Throws:**
 
@@ -915,15 +1178,19 @@ The setDateTime method is blocking (synchronous) call which helps to
 
 **Parameters:**
 
-dateTime - - Date and time string  in the format "YYYY-MM-DD HH:MM:SS". The date and time can be separated  by space.
+`dateTime` - - Date and time string  in the format "YYYY-MM-DD HH:MM:SS". The date and time can be separated  by space.
 
  Where
  		YYYY  = four-digit year.
- 		MM    = two-digit month (01=January
+ 		MM    = two-digit month (01=January, etc.).
+ 		DD    = two-digit day of month (01 through 31).
+ 		HH    = two digits of hour (00 through 23) (am/pm NOT allowed).
+ 		MM 	  = two digits of minute (00 through 59).
+ 		SS    = two digits of second (00 through 59).
 
 **Returns:**
 
-void
+void - Returns NONE.
 
 **Throws:**
 
@@ -943,7 +1210,7 @@ The client application can register to get data notification via callbacks.
 
 **Parameters:**
 
-listener - The DataListener callabck object.
+`listener` - The DataListener callabck object.
 
 **Returns:**
 
@@ -964,7 +1231,7 @@ The client application can un-register to get data notification via callbacks.
 
 **Parameters:**
 
-listener
+`listener`
 
 **Returns:**
 

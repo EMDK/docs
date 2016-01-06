@@ -29,7 +29,7 @@ Returns information about the  reader device.
 
 **Returns:**
 
-com.symbol.emdk.simulscan.SimulScanReaderInfo
+com.symbol.emdk.simulscan.SimulScanReaderInfo - Returns the SimulScanReaderInfo object.
 
 ### isReadPending
 
@@ -39,7 +39,8 @@ Another read() cannot be submitted while a read is pending.
 
 **Returns:**
 
-java.lang.Boolean
+java.lang.Boolean - boolean
+ 			Returns true if a read is pending.
 
 ### enable
 
@@ -103,7 +104,8 @@ Returns reader enabled state
 
 **Returns:**
 
-boolean
+boolean - boolean
+ 			Returns true if reader is enabled.
 
 ### getConfig
 
@@ -123,7 +125,8 @@ Gets the current configuration settings for this reader device.
 
 **Returns:**
 
-com.symbol.emdk.simulscan.SimulScanConfig
+com.symbol.emdk.simulscan.SimulScanConfig - SimulScanConfig
+          The valid reader configuration object will be returned on successful get.
 
 **Throws:**
 
@@ -154,7 +157,7 @@ Changes the settings for this reader device.
 
 **Parameters:**
 
-config - The Parameters to use for this reader device.
+`config` - The Parameters to use for this reader device.
 
 **Returns:**
 
@@ -224,7 +227,7 @@ The client can register to get data notification via callbacks.
 
 **Parameters:**
 
-dataListener - The DataListerner callabck object.
+`dataListener` - The DataListerner callabck object.
 
 **Returns:**
 
@@ -238,7 +241,7 @@ The client can unregister to not get data notification via callbacks.
 
 **Parameters:**
 
-dataListener - The DataListerner callback object to be unregistered
+`dataListener` - The DataListerner callback object to be unregistered
 
 **Returns:**
 
@@ -252,7 +255,7 @@ The client can register to get status notification via callbacks.
 
 **Parameters:**
 
-statusListener - The StatusListerner callback object
+`statusListener` - The StatusListerner callback object
 
 **Returns:**
 
@@ -266,7 +269,7 @@ The client can unregister to not get status notification via callbacks.
 
 **Parameters:**
 
-statusListener - The StatusListerner callback object to be unregistered
+`statusListener` - The StatusListerner callback object to be unregistered
 
 **Returns:**
 

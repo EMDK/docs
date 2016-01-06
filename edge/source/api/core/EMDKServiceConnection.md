@@ -32,9 +32,9 @@ IEMDKService
 
 **Parameters:**
 
-name
+`name`
 
-service
+`service`
 
 **Returns:**
 
@@ -48,7 +48,7 @@ void
 
 **Parameters:**
 
-name
+`name`
 
 **Returns:**
 

@@ -1,4 +1,4 @@
-###PaymentResults
+#PaymentResults
 
 Defines all the error codes the payment API returns.
  <br><br>

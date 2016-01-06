@@ -18,9 +18,9 @@ PersonalShopperHelper only for internal usage.
 
 **Parameters:**
 
-context
+`context`
 
-emdkServiceConnection
+`emdkServiceConnection`
 
 **Returns:**
 
@@ -34,7 +34,7 @@ com.symbol.emdk.personalshopper.PersonalShopper
 
 **Parameters:**
 
-PersonalShopper
+`PersonalShopper`
 
 **Returns:**
 

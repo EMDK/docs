@@ -26,7 +26,7 @@ Returns the the current status
 
 **Returns:**
 
-com.symbol.emdk.simulscan.SimulScanStatusData.SimulScanStatus
+com.symbol.emdk.simulscan.SimulScanStatusData.SimulScanStatus - SimulScanStatus
 
 ### getFriendlyName
 
@@ -37,7 +37,7 @@ Returns the friendly name of the Reader from which the SimulScanStatusData
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String
 
 ##Public Enums
 

@@ -49,7 +49,7 @@ Returns list of supported reader devices information.
 
 **Returns:**
 
-java.util.List
+java.util.List - Returns list of supported reader devices information.
 
 ### getDevice
 
@@ -59,7 +59,7 @@ java.util.List
 
 **Parameters:**
 
-simulscanReaderInfo - The SimulScanReadInfo specifies which reader the application wants.
+`simulscanReaderInfo` - The SimulScanReadInfo specifies which reader the application wants.
 
 **Returns:**
 
@@ -79,7 +79,7 @@ Exception will be throw if any error occurs
 
 **Parameters:**
 
-deviceIdentifier - The device identifier specifies which reader the application wants.
+`deviceIdentifier` - The device identifier specifies which reader the application wants.
 
 **Returns:**
 

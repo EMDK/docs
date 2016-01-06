@@ -1,4 +1,4 @@
-###ScannerResults
+#ScannerResults
 
 Defines all the error codes the barcode scanning API returns.
  <br><br>

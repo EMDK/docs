@@ -22,13 +22,16 @@ Get the values for all the parameters or the specified parameter ID.
 
 **Parameters:**
 
-paramId
+`paramId`
 
-diagnosticconfig
+`diagnosticconfig`
 
 **Returns:**
 
-com.symbol.emdk.personalshopper.DiagnosticData
+com.symbol.emdk.personalshopper.DiagnosticData - DiagnosticData : Manufacturing date, Battery capacity in Percentage ,
+ Battery State of Health in Percentage ,Battery capacity in Minutes,
+ Device charging time in minutes  ,Days since battery was last replaced ,
+ Time since last reboot in minutes , Battery charging time required for shopping trip
 
 **Throws:**
 

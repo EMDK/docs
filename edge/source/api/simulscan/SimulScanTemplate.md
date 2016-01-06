@@ -17,7 +17,8 @@ Returns a list of SimulScanTemplateElements that are contained in this template
 
 **Returns:**
 
-java.util.List
+java.util.List - a list of SimulScanTemplateElement objects 
+ 			Returns true if reader is enabled.
 
 ### getHeight
 
@@ -27,7 +28,8 @@ Returns the height of the template
 
 **Returns:**
 
-int
+int - int 
+ 			The template's height
 
 ### getWidth
 
@@ -37,7 +39,8 @@ Returns the width of the template
 
 **Returns:**
 
-int
+int - int 
+ 			The template's width
 
 ### getId
 
@@ -47,7 +50,8 @@ Returns the number of the template
 
 **Returns:**
 
-int
+int - int 
+ 			The template's number
 
 ### getName
 
@@ -57,5 +61,6 @@ Returns the friendly name of the template
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String 
+ 			The template's name
 

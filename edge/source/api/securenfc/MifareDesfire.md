@@ -84,7 +84,7 @@ Enable I/O operations to tfhe tag from IsoDep object and SAM
 
 **Parameters:**
 
-tag - Contactless tag already detected by device. We get this
+`tag` - Contactless tag already detected by device. We get this
             through the EXTRA_TAG information from the intent.
 
 **Returns:**
@@ -133,16 +133,17 @@ Authenticates card master key and application key by using SAM This is an
 
 **Parameters:**
 
-authType - Type of authentication to be used.
+`authType` - Type of authentication to be used.
 
-cardKeyNum - Card key number to be used for authentication. Valid range is
+`cardKeyNum` - Card key number to be used for authentication. Valid range is
             from 0x00 to 0x0D.
 
-samkey - SAM key to be used for authentication.
+`samkey` - SAM key to be used for authentication.
 
-samDiverseParams - Diversification parameters for current key. If diversification
+`samDiverseParams` - Diversification parameters for current key. If diversification
             is not required by current key then this parameter should be
-            NULL. This is not supported
+            NULL. This is not supported, hence application should pass
+            null.
 
 **Returns:**
 
@@ -165,11 +166,11 @@ Retrieves current version of specified card key.On Tag lost connection
 
 **Parameters:**
 
-keyNum - Key number to retrieve version information.
+`keyNum` - Key number to retrieve version information.
 
 **Returns:**
 
-byte
+byte - Returns key version.
 
 **Throws:**
 
@@ -201,7 +202,7 @@ Retrieves AIDs of all active card applications.On Tag lost connection
 
 **Returns:**
 
-int
+int - Returns application IDs.
 
 **Throws:**
 
@@ -233,7 +234,7 @@ Gets total number of free user memory bytes available on card.On Tag lost
 
 **Returns:**
 
-int
+int - Returns the free space on the card
 
 **Throws:**
 
@@ -252,7 +253,8 @@ Retrieves the ISO 7816-4 DF names of all active card applications.On Tag
 
 **Returns:**
 
-com.symbol.emdk.securenfc.MifareDesfire.DFNames
+com.symbol.emdk.securenfc.MifareDesfire.DFNames - Returns ISO 7816-4 DF names and number of active card
+         applications
 
 **Throws:**
 
@@ -281,7 +283,8 @@ Retrieves master key settings and application key settings of selected
 
 **Returns:**
 
-com.symbol.emdk.securenfc.MifareDesfire.KeySettings
+com.symbol.emdk.securenfc.MifareDesfire.KeySettings - Returns master key settings and application key settings of
+         selected card application. Refer to KeySettings for more details.
 
 **Throws:**
 
@@ -313,7 +316,7 @@ Selects specified card application.On Tag lost connection needs to
 
 **Parameters:**
 
-appID - AID of application to be selected.
+`appID` - AID of application to be selected.
 
 **Returns:**
 
@@ -336,7 +339,12 @@ Retrieves card version information such manufacturing, software and
 
 **Returns:**
 
-com.symbol.emdk.securenfc.MifareDesfire.CardVersionInfo
+com.symbol.emdk.securenfc.MifareDesfire.CardVersionInfo - MifareDesfire version information such as Software\Hardware
+         Information such as Vendor ID ,type,version ,storage size
+         ,protocol
+ 
+         and Manufacturer information such as unique serial number ,
+         production batch number and production date
 
 **Throws:**
 
@@ -357,7 +365,7 @@ Retrieves native file IDs or ISO 7816-4 file IDs of active files within
 
 **Parameters:**
 
-fileIDType - Type of file IDs to be retrieved.
+`fileIDType` - Type of file IDs to be retrieved.
  
  
             
@@ -376,7 +384,8 @@ fileIDType - Type of file IDs to be retrieved.
 
 **Returns:**
 
-int
+int - Returns native file IDs or ISO 7816-4 file IDs of active files
+         within the currently selected application.
 
 **Throws:**
 
@@ -396,12 +405,12 @@ Retrieves file settings (properties) of specified file.On Tag lost
 
 **Parameters:**
 
-fileID - ID of file whose settings are to be retrieved. Should be
+`fileID` - ID of file whose settings are to be retrieved. Should be
             within range 0x00-0x1F.
 
 **Returns:**
 
-com.symbol.emdk.securenfc.MifareDesfire.FileSettings
+com.symbol.emdk.securenfc.MifareDesfire.FileSettings - Retrieved file setting.Refer FileSettings for more Info.
 
 **Throws:**
 
@@ -439,21 +448,21 @@ Reads data from standard data or backup data file. Depending on
 
 **Parameters:**
 
-fileID - ID of standard or backup data file to be read. Should be
+`fileID` - ID of standard or backup data file to be read. Should be
             within range 0x00-0x1F.
 
-fileCommMode - File communication mode.
+`fileCommMode` - File communication mode.
 
-readOffset - File offset from which data is to be read. Should be within
+`readOffset` - File offset from which data is to be read. Should be within
             range 0x00 to (file size - 1)
 
-bytesToBeRead - Number of bytes to be read. Should be within range
+`bytesToBeRead` - Number of bytes to be read. Should be within range
             0x00000000-0x00FFFFFF. To read all the data from the specified
-            offset
+            offset, give 0 as input.
 
 **Returns:**
 
-byte
+byte - Returns data read.
 
 **Throws:**
 
@@ -500,15 +509,15 @@ Writes data to standard or backup data file. Preceding authentication,
 
 **Parameters:**
 
-fileID - ID of standard or backup data file to be written. Should be
+`fileID` - ID of standard or backup data file to be written. Should be
             within range 0x00-0x1F.
 
-fileCommMode - File communication mode
+`fileCommMode` - File communication mode
 
-writeOffset - File offset at which data is to be written. Should be within
+`writeOffset` - File offset at which data is to be written. Should be within
             range 0x00 to (file size - 1).
 
-writeDataBuffer - Buffer having data to be written.
+`writeDataBuffer` - Buffer having data to be written.
 
 **Returns:**
 
@@ -530,11 +539,11 @@ Retrieves value stored in value file.On Tag lost connection needs to
 
 **Parameters:**
 
-fileID
+`fileID`
 
 **Returns:**
 
-int
+int - Returns the value in the Value file
 
 **Throws:**
 
@@ -558,13 +567,13 @@ Increases a value stored in a value file with specified value.Depending
 
 **Parameters:**
 
-creditType - Credit type should be normal or limited.
+`creditType` - Credit type should be normal or limited.
 
-fileID - Value file to credited. Should be within range 0x00-0x1F.
+`fileID` - Value file to credited. Should be within range 0x00-0x1F.
 
-fileCommMode - File communication mode.
+`fileCommMode` - File communication mode.
 
-value - Value by which currently stored value should be increased.
+`value` - Value by which currently stored value should be increased.
             Only positive values are allowed.
 
 **Returns:**
@@ -592,11 +601,11 @@ Decreases value stored in a value file with specified value.Depending on
 
 **Parameters:**
 
-fileID - Value file to be debited. Should be within range 0x00-0x1F.
+`fileID` - Value file to be debited. Should be within range 0x00-0x1F.
 
-fileCommMode - File communication mode.
+`fileCommMode` - File communication mode.
 
-value - Value by which currently stored value should be decreased.
+`value` - Value by which currently stored value should be decreased.
 
 **Returns:**
 
@@ -623,21 +632,21 @@ Reads records from cyclic or linear record file.Depending on
 
 **Parameters:**
 
-fileID - Linear or cyclic file to be read. Should be within range
+`fileID` - Linear or cyclic file to be read. Should be within range
             0x00-0x1F.
 
-fileCommMode - File communication mode.
+`fileCommMode` - File communication mode.
 
-recordOffset - Record number from which read should start. Should be within
+`recordOffset` - Record number from which read should start. Should be within
             range 0x00000000 to (existing records - 1).
 
-recordsToBeRead - Number of records to be read. Should be within range
+`recordsToBeRead` - Number of records to be read. Should be within range
             0x00000000 - (existing records - offset). To read all the
-            records from the specified offset
+            records from the specified offset, give 0 as input.
 
 **Returns:**
 
-byte
+byte - Buffer having read records.
 
 **Throws:**
 
@@ -663,18 +672,18 @@ Writes records to cyclic or linear record file. Depending on
 
 **Parameters:**
 
-fileID - Linear or cyclic file to be written. Should be within range
+`fileID` - Linear or cyclic file to be written. Should be within range
             0x00-0x1F.
 
-fileCommMode - File communication mode
+`fileCommMode` - File communication mode
 
-recordOffset - Record number from which write should start. Should be within
+`recordOffset` - Record number from which write should start. Should be within
             range 0x00000000 to (records - 1).
 
-recordSize - Size of record to be written i.e. should be equal to size of
+`recordSize` - Size of record to be written i.e. should be equal to size of
             writeRecordBuffer
 
-writeRecordBuffer - Record buffer to write
+`writeRecordBuffer` - Record buffer to write
 
 **Returns:**
 
@@ -700,7 +709,7 @@ Resets cyclic or linear record file to empty state. Preceding
 
 **Parameters:**
 
-fileID - Cyclic or linear file to be cleared. Should be within range
+`fileID` - Cyclic or linear file to be cleared. Should be within range
             0x00-0x1F.
 
 **Returns:**
@@ -770,7 +779,8 @@ Checks if the connection with the tag is enabled or not.
 
 **Returns:**
 
-boolean
+boolean - true : if connection with the tag is enabled false : if the
+         connection with tag is not enabled
 
 **Throws:**
 

@@ -12,7 +12,7 @@ Returns the processed data type of this region
 
 **Returns:**
 
-com.symbol.emdk.simulscan.RegionType
+com.symbol.emdk.simulscan.RegionType - RegionType
 
 ### getImage
 
@@ -22,7 +22,7 @@ Returns the captured region image
 
 **Returns:**
 
-YuvImage
+YuvImage - YuvImage
 
 ### getAbsoluteConfidence
 
@@ -32,7 +32,7 @@ Returns the absolute confidence of OCR results
 
 **Returns:**
 
-int
+int - int
 
 ### getRelativeConfidence
 
@@ -42,7 +42,7 @@ Returns the relative confidence of OCR results
 
 **Returns:**
 
-int
+int - int
 
 ### getData
 

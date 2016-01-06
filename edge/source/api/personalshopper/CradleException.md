@@ -18,5 +18,5 @@ Returns the CradleResults enum.
 
 **Returns:**
 
-com.symbol.emdk.personalshopper.CradleResults
+com.symbol.emdk.personalshopper.CradleResults - Error type (Cradle Result)
 

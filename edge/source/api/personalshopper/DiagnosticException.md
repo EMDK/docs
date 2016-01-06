@@ -18,5 +18,5 @@ Returns the DiagnosticResults enum.
 
 **Returns:**
 
-com.symbol.emdk.personalshopper.DiagnosticResults
+com.symbol.emdk.personalshopper.DiagnosticResults - Error type (Diagnostic Result)
 

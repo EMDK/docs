@@ -55,7 +55,7 @@ Returns the scanned template.
 
 **Returns:**
 
-com.symbol.emdk.simulscan.SimulScanTemplate
+com.symbol.emdk.simulscan.SimulScanTemplate - Returns SimulScanTemplate template object
 
 ### getElements
 
@@ -65,5 +65,5 @@ Returns a list of scanned elements.
 
 **Returns:**
 
-java.util.List
+java.util.List - Returns a List object of SimulScanElement objects
 

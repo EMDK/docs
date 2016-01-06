@@ -17,7 +17,8 @@ Returns the friendly name of the element
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String 
+ 			The element's name
 
 ### getRegionNumber
 
@@ -27,5 +28,6 @@ Returns the region number of the element
 
 **Returns:**
 
-int
+int - int
+ 			The element's region number
 

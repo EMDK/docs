@@ -62,5 +62,5 @@ Returns the friendly name of the MultiTemplate object
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String
 

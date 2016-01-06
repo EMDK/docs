@@ -40,11 +40,11 @@ This method helps to check scanner config parameters supported
 
 **Parameters:**
 
-param
+`param`
 
 **Returns:**
 
-boolean
+boolean - 
 
 ### resetToDefault
 
@@ -55,7 +55,7 @@ Resets the scanner parameters to defaults values for the specified scanner.
 
 **Parameters:**
 
-scanner
+`scanner`
 
 **Returns:**
 

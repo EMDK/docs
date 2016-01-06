@@ -13,7 +13,7 @@ Returns a list of SimulScanRegion objects that represents a collection of proces
 
 **Returns:**
 
-java.util.List
+java.util.List - List of SimulScanRegion objects
 
 ### getData
 

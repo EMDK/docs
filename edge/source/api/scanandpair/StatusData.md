@@ -18,7 +18,7 @@ State of the scanAndPair or scanAndUnpair method.
 
 **Returns:**
 
-com.symbol.emdk.scanandpair.StatusData.ScanAndPairStates
+com.symbol.emdk.scanandpair.StatusData.ScanAndPairStates - 
 
 ### getResult
 
@@ -29,7 +29,7 @@ When the state is ERROR, this method can be used to find out the
 
 **Returns:**
 
-com.symbol.emdk.scanandpair.ScanAndPairResults
+com.symbol.emdk.scanandpair.ScanAndPairResults - ScanAndPairResults
 
 ###StatusData.ScanAndPairStates
 

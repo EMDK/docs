@@ -16,7 +16,7 @@ Returns additional processed data as an object of type Object
 
 **Returns:**
 
-java.lang.Object
+java.lang.Object - Object
 
 ### getElementNumber
 
@@ -26,7 +26,7 @@ Returns unique identifier of this element
 
 **Returns:**
 
-int
+int - int
 
 ### getName
 
@@ -36,5 +36,5 @@ Returns the friendly name of this element
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String
 

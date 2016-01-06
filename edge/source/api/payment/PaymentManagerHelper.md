@@ -18,9 +18,9 @@ Helper class. EMDK internal use only
 
 **Parameters:**
 
-context - The application context
+`context` - The application context
 
-emdkServiceConnection - The EMDKServiceConnection object
+`emdkServiceConnection` - The EMDKServiceConnection object
 
 **Returns:**
 
@@ -40,7 +40,7 @@ com.symbol.emdk.payment.PaymentException
 
 **Parameters:**
 
-paymentManager
+`paymentManager`
 
 **Returns:**
 

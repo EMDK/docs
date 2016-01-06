@@ -1,4 +1,4 @@
-###SimulScanResults
+#SimulScanResults
 
 Defines all the error codes the SimulScan API returns.
 

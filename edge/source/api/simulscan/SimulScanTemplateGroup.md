@@ -13,5 +13,5 @@ Returns a list of SimulScanTemplateRegion objects that represents a collection o
 
 **Returns:**
 
-java.util.List
+java.util.List - List of SimulScanTemplateRegion objects
 

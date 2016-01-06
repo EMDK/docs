@@ -12,7 +12,8 @@ Returns the height of this template region
 
 **Returns:**
 
-int
+int - int 
+ 			The template region's height
 
 ### getWidth
 
@@ -22,7 +23,8 @@ Returns the width of this template region
 
 **Returns:**
 
-int
+int - int 
+ 			The template region's width
 
 ### getRegionType
 
@@ -32,7 +34,8 @@ Returns the type of data contained within this region
 
 **Returns:**
 
-com.symbol.emdk.simulscan.RegionType
+com.symbol.emdk.simulscan.RegionType - RegionType 
+ 			The RegionType
 
 ### getX
 
@@ -42,7 +45,8 @@ Returns the X coordinate of this template region
 
 **Returns:**
 
-int
+int - int 
+ 			The X coordinate of the template region
 
 ### getY
 
@@ -52,5 +56,6 @@ Returns the Y coordinate of this template region
 
 **Returns:**
 
-int
+int - int 
+ 			The Y coordinate of the template region
 

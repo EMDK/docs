@@ -23,9 +23,9 @@ Do not expose to user.
 
 **Parameters:**
 
-context - The application context
+`context` - The application context
 
-emdkServiceConnection - The EMDKServiceConnection object
+`emdkServiceConnection` - The EMDKServiceConnection object
 
 **Returns:**
 
@@ -45,7 +45,7 @@ com.symbol.emdk.securenfc.SecureNfcException
 
 **Parameters:**
 
-secureNfcManager
+`secureNfcManager`
 
 **Returns:**
 

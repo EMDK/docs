@@ -20,7 +20,7 @@ Returns true if it is a default payment device else false.
 
 **Returns:**
 
-boolean
+boolean - 
 
 ### getFirmwareVersion
 
@@ -58,7 +58,7 @@ Returns the friendly name of the Device.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns the friendly name
 
 ### getMacAddress
 
@@ -76,7 +76,7 @@ Returns the MacAdress of the remote device.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns the MacAdress of the remote device.
 
 ### getConnectionType
 
@@ -94,7 +94,7 @@ Returns the payment device connection type to mobile computer
 
 **Returns:**
 
-com.symbol.emdk.payment.DeviceInfo.ConnectionType
+com.symbol.emdk.payment.DeviceInfo.ConnectionType - Returns the ConnectionType
 
 ### getDeviceType
 
@@ -112,7 +112,7 @@ Returns the payment device type
 
 **Returns:**
 
-com.symbol.emdk.payment.DeviceInfo.DeviceType
+com.symbol.emdk.payment.DeviceInfo.DeviceType - Returns the DeviceType
 
 ##Public Enums
 

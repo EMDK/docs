@@ -14,7 +14,7 @@ Returns list of supported scanner devices information.
 
 **Returns:**
 
-java.util.List
+java.util.List - Returns list of supported scanner devices information.
 
 ### getDevice
 
@@ -26,11 +26,11 @@ This method returns the scanner object if the scanner info specified is valid
 
 **Parameters:**
 
-scannerInfo
+`scannerInfo`
 
 **Returns:**
 
-com.symbol.emdk.barcode.Scanner
+com.symbol.emdk.barcode.Scanner - Returns the scanner object if scanner friendly name is valid. Otherwise null is returned.
 
 ### getDevice
 
@@ -40,7 +40,7 @@ com.symbol.emdk.barcode.Scanner
 
 **Parameters:**
 
-deviceIdentifier - The device identifier specifies which scanner the application wants.
+`deviceIdentifier` - The device identifier specifies which scanner the application wants.
 
 **Returns:**
 
@@ -55,7 +55,7 @@ Add ScannerConnectionListener to receive scanner connection changes via
 
 **Parameters:**
 
-connectionListener
+`connectionListener`
 
 **Returns:**
 
@@ -70,7 +70,7 @@ Remove ScannerConnectionListener to receive scanner connection changes
 
 **Parameters:**
 
-connectionListener
+`connectionListener`
 
 **Returns:**
 

@@ -81,7 +81,7 @@ Connects to the SAM to perform I/O operations. Application must call
 
 **Returns:**
 
-com.symbol.emdk.securenfc.MifareSam.SamMode
+com.symbol.emdk.securenfc.MifareSam.SamMode - SamMode
 
 **Throws:**
 
@@ -98,7 +98,10 @@ Returns manufacturing related information of the MIFARESAM.
 
 **Returns:**
 
-com.symbol.emdk.securenfc.MifareSam.SamInfo
+com.symbol.emdk.securenfc.MifareSam.SamInfo - MifareSam version information such as Software\Hardware
+         Information such as Vendor ID ,type,version ,storage size
+         ,protocol and Manufacturer information such as unique serial number ,
+         production batch number and production year/week
 
 **Throws:**
 
@@ -119,11 +122,11 @@ Performs the SAM authentication. If the SAM is in AV1 mode, performs
 
 **Parameters:**
 
-authKey - Authentication key to be used.
+`authKey` - Authentication key to be used.
 
-samKey - SAM key to be used for authentication
+`samKey` - SAM key to be used for authentication
 
-additionalAuthData - Additional authentication data.
+`additionalAuthData` - Additional authentication data.
 
 **Returns:**
 

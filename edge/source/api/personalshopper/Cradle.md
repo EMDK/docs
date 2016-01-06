@@ -12,7 +12,7 @@ This method enables the communication to interact with the cradle.
 
 **Returns:**
 
-void
+void - none
 
 **Throws:**
 
@@ -28,7 +28,7 @@ This disables communication to interact with the cradle.
 
 **Returns:**
 
-void
+void - none
 
 **Throws:**
 
@@ -44,7 +44,7 @@ Check if cradle has already been enabled
 
 **Returns:**
 
-boolean
+boolean - true, if enabled;false, if disabled.
 
 **Throws:**
 
@@ -60,7 +60,7 @@ This method gets the information of cradle.
 
 **Returns:**
 
-com.symbol.emdk.personalshopper.CradleInfo
+com.symbol.emdk.personalshopper.CradleInfo - CradleInfo : serial number, part number, firmware version, hardware id etc
 
 **Throws:**
 
@@ -80,13 +80,13 @@ This unlocks terminal from cradle and flashes the LED.
 
 **Parameters:**
 
-unlockDuration
+`unlockDuration`
 
-ledFlashInfo
+`ledFlashInfo`
 
 **Returns:**
 
-com.symbol.emdk.personalshopper.CradleResults
+com.symbol.emdk.personalshopper.CradleResults - CradleResults
 
 **Throws:**
 
@@ -102,13 +102,13 @@ The LED can be flashed to identify device location without unlocking the cradle.
 
 **Parameters:**
 
-ledFlashCount
+`ledFlashCount`
 
-ledFlashInfo
+`ledFlashInfo`
 
 **Returns:**
 
-com.symbol.emdk.personalshopper.CradleResults
+com.symbol.emdk.personalshopper.CradleResults - CradleResults
 
 **Throws:**
 

@@ -13,7 +13,7 @@ Returns the method type so that the PaymentDataBase class can be type
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentData.DataType
+com.symbol.emdk.payment.PaymentData.DataType - Return the method type
 
 ### getResult
 
@@ -23,7 +23,7 @@ This method can used to obtain the payment response status.
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentResults
+com.symbol.emdk.payment.PaymentResults - Returns PaymentResults;
 
 ##Public Enums
 

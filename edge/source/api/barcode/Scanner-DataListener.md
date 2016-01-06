@@ -23,7 +23,7 @@ This is the callback method upon data availability.
 
 **Parameters:**
 
-scanDataCollection - Collection of scan data.
+`scanDataCollection` - Collection of scan data.
 
 **Returns:**
 

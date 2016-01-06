@@ -20,7 +20,7 @@ Returns true if it is a default scanner else false.
 
 **Returns:**
 
-boolean
+boolean - 
 
 ### getFriendlyName
 
@@ -38,7 +38,7 @@ Returns the friendly name of the Device.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns the friendly name
 
 ### getModelNumber
 
@@ -57,7 +57,7 @@ Returns the scanner device model number. This information will be available only
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns the model string
 
 ### getDeviceType
 
@@ -75,7 +75,7 @@ Returns the scanner device type
 
 **Returns:**
 
-com.symbol.emdk.barcode.ScannerInfo.DeviceType
+com.symbol.emdk.barcode.ScannerInfo.DeviceType - Returns the DeviceType
 
 ### getConnectionType
 
@@ -93,7 +93,7 @@ Returns the scanner connection type to mobile computer
 
 **Returns:**
 
-com.symbol.emdk.barcode.ScannerInfo.ConnectionType
+com.symbol.emdk.barcode.ScannerInfo.ConnectionType - Returns the ConnectionType
 
 ### getDecoderType
 
@@ -112,7 +112,7 @@ Returns the barcode scanning type supported by scanner.
 
 **Returns:**
 
-com.symbol.emdk.barcode.ScannerInfo.DecoderType
+com.symbol.emdk.barcode.ScannerInfo.DecoderType - Returns the DECODER_TYPE
 
 ### isConnected
 

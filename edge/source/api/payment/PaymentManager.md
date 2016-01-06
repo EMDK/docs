@@ -33,7 +33,7 @@ Returns list of supported payment devices information.
 
 **Returns:**
 
-java.util.ArrayList
+java.util.ArrayList - Returns list of payment devices information.
 
 ### getDevice
 
@@ -44,7 +44,7 @@ This method returns the PaymentDevice object based on device identifier specifie
 
 **Parameters:**
 
-deviceIdentifier - The device identifier specifies which payment device the application wants.
+`deviceIdentifier` - The device identifier specifies which payment device the application wants.
 
 **Returns:**
 
@@ -60,7 +60,7 @@ This method returns the PaymentDevice object if the Device info specified is val
 
 **Parameters:**
 
-deviceInfo - provides information on DeviceInfo class.
+`deviceInfo` - provides information on DeviceInfo class.
 
 **Returns:**
 
@@ -76,9 +76,9 @@ The getDevice method gets payment object which can be used to enable and communi
 
 **Parameters:**
 
-deviceName - provides information like deviceName or macaddress of the devices.
+`deviceName` - provides information like deviceName or macaddress of the devices.
 
-isMacAddress - decides if deviceName is macaddress or the name of the device.
+`isMacAddress` - decides if deviceName is macaddress or the name of the device.
 
 **Returns:**
 
@@ -93,9 +93,9 @@ Add PaymentConnectionListener to receive remote payment device connection change
 
 **Parameters:**
 
-connectionListener
+`connectionListener`
 
-deviceIdentifier - - Type of device connections to notify. Not supported in this version..
+`deviceIdentifier` - - Type of device connections to notify. Not supported in this version..
 
 **Returns:**
 
@@ -110,7 +110,7 @@ Remove PaymentConnectionListener to receive payment device connection changes
 
 **Parameters:**
 
-connectionListener
+`connectionListener`
 
 **Returns:**
 
@@ -126,11 +126,11 @@ This method gets the list of payment devices paired with Mobile Device based on 
 
 **Parameters:**
 
-deviceType
+`deviceType`
 
 **Returns:**
 
-java.util.ArrayList
+java.util.ArrayList - Returns list of DeviceInfo objects.
 
 **Throws:**
 
@@ -147,11 +147,12 @@ This method checks  whether the payment device is in use and which POS applicati
 
 **Parameters:**
 
-deviceType
+`deviceType`
 
 **Returns:**
 
-java.lang.String
+java.lang.String - The return value is empty string if the payment device is not used by any POS app else returns 
+ 			the POS App name if the payment is used.
 
 ##Public Enums
 

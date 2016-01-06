@@ -15,7 +15,7 @@ Returns the friendly name of scanner for which the data is returned.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns scanner index to the supported devices list.
 
 ### getResult
 
@@ -33,7 +33,7 @@ This method used to obtain the scanned result.
 
 **Returns:**
 
-com.symbol.emdk.barcode.ScannerResults
+com.symbol.emdk.barcode.ScannerResults - ScannerResults object
 
 ### getScanData
 
@@ -51,7 +51,7 @@ This method is used to obtain the scanned data list.
 
 **Returns:**
 
-java.util.ArrayList
+java.util.ArrayList - Returns the collection of scan data.
 
 ##Public Enums
 

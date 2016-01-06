@@ -12,7 +12,7 @@ Gets the cradle location.
 
 **Returns:**
 
-com.symbol.emdk.personalshopper.CradleConfig.CradleLocation
+com.symbol.emdk.personalshopper.CradleConfig.CradleLocation - CradleLocation (row, column, wall)
 
 **Throws:**
 
@@ -28,11 +28,11 @@ Sets the cradle location.
 
 **Parameters:**
 
-cradleLocation
+`cradleLocation`
 
 **Returns:**
 
-int
+int - none
 
 **Throws:**
 
@@ -48,11 +48,11 @@ Sets fast charging state of cradle. True for fast charging and false slow chargi
 
 **Parameters:**
 
-isFastChargingState - (true - to enable fast charge
+`isFastChargingState` - (true - to enable fast charge, false - to disable fast charge)
 
 **Returns:**
 
-int
+int - none
 
 **Throws:**
 
@@ -68,7 +68,7 @@ Gets fast charging state of the cradle. If the returned value is true, then the 
 
 **Returns:**
 
-boolean
+boolean - ChargeMode (true - fast charge enabled, false - fast charge disabled)
 
 **Throws:**
 

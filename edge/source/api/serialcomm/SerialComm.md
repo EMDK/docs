@@ -61,13 +61,13 @@ Writes a specified number of bytes from buffer to the opened communication chann
 
 **Parameters:**
 
-data - The byte array that contains the data to write.
+`data` - The byte array that contains the data to write.
 
-bytesToWrite - The number of bytes to write.
+`bytesToWrite` - The number of bytes to write.
 
 **Returns:**
 
-int
+int - Data bytes written.
 
 **Throws:**
 
@@ -92,12 +92,12 @@ This method reads the available data and returns immediately. If no data is avai
 
 **Parameters:**
 
-readTimeOut - Wait for data until timeout. The timeout unit is  milli seconds. 
+`readTimeOut` - Wait for data until timeout. The timeout unit is  milli seconds. 
  		  A timeout of zero means the calling read will wait forever unless interrupted by disable or release.
 
 **Returns:**
 
-byte
+byte - Read data buffer. Null will be returned if no data available.
 
 **Throws:**
 

@@ -22,7 +22,7 @@ Enable I/O operations to the tag from IsoDep object and SAM
 
 **Parameters:**
 
-tag - Contactless tag already detected by device. We get this
+`tag` - Contactless tag already detected by device. We get this
             through the EXTRA_TAG information from the intent.
 
 **Returns:**
@@ -64,21 +64,29 @@ Performs 'First authentication' on specified block number using SAM key.
 
 **Parameters:**
 
-keyBlockNo - Key Block Number of the block to be authenticated.(range
+`keyBlockNo` - Key Block Number of the block to be authenticated.(range
             0x4000 to 0x404F depending card size). keyBlockNo represent a
             key in the card which is the same key that SamKey represent in
             the SAM.
 
-samkey - SAM key to be used for authentication. Only AES key should be
+`samkey` - SAM key to be used for authentication. Only AES key should be
             used.
 
-samDiverseParams - Diversification parameters for current key. If present
+`samDiverseParams` - Diversification parameters for current key. If present, then
+            valid length of this parameter is between 1 to 31 bytes. If
+            diversification is not required by current key then this
+            parameter should be NULL. This parameter is not supported
+            currently,application should pass null.
 
-pcdCap2 - Capabilities of PCD. If present
+`pcdCap2` - Capabilities of PCD. If present, then valid length of this
+            parameter is between 1 to 6 bytes, where all bytes should be
+            0x00. Values other than 0x00 are reserved for future use. If
+            PCD capabilities are not required then this parameter should
+            be NULL.
 
 **Returns:**
 
-byte
+byte - PICC capabilities received from card.
 
 **Throws:**
 
@@ -116,15 +124,19 @@ Performs 'Following authentication' on specified block number using SAM
 
 **Parameters:**
 
-keyBlockNo - Key Block Number of the block to be authenticated.(range
+`keyBlockNo` - Key Block Number of the block to be authenticated.(range
             0x4000 to 0x404F depending card size) . keyBlockNo represent a
             key in the card which is the same key that SamKey represent in
             the SAM.
 
-samkey - SAM key to be used for authentication. Only AES key should be
+`samkey` - SAM key to be used for authentication. Only AES key should be
             used.
 
-samDiverseParams - Diversification parameters for current key. If present
+`samDiverseParams` - Diversification parameters for current key. If present, then
+            valid length of this parameter is between 1 to 31 bytes. If
+            diversification is not required by current key then this
+            parameter should be NULL. This parameter is not supported
+            currently, there application should pass null.
 
 **Returns:**
 
@@ -186,24 +198,24 @@ Reads specified number of blocks starting from specified block number.
 
 **Parameters:**
 
-isEncrypted - false: Communication between device and card will be plain
+`isEncrypted` - false: Communication between device and card will be plain
             true: Communication between device and card will be encrypted
 
-macOnCmd - false: Command sent to card will not be MACed true: Command
+`macOnCmd` - false: Command sent to card will not be MACed true: Command
             sent to card will be MACed
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-blockNumber - Card block number from which multiple blocks have to be read.
+`blockNumber` - Card block number from which multiple blocks have to be read.
             (range 0x00 to 0xFF depending card size)
 
-numOfBlocks - Number of blocks to be read. Maximum of 216 blocks can be
-            read
+`numOfBlocks` - Number of blocks to be read. Maximum of 216 blocks can be
+            read, which excludes sector trailer.
 
 **Returns:**
 
-byte
+byte - Buffer having read block data.
 
 **Throws:**
 
@@ -249,16 +261,17 @@ Writes specified number of blocks starting from specified block number.
 
 **Parameters:**
 
-encrypted - false: Communication between device and card will be plain
+`encrypted` - false: Communication between device and card will be plain
             true: Communication between device and card will be encrypted
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-blockNo - Card block number from which multiple blocks have to be
+`blockNo` - Card block number from which multiple blocks have to be
             written(range 0x00 to 0xFF depending card size)
 
-blockData - Data to be written. Maximum of upto 3 blocks can be written
+`blockData` - Data to be written. Maximum of upto 3 blocks can be written,
+            length of data to be written can either be 16/32/48 bytes.
 
 **Returns:**
 
@@ -312,14 +325,14 @@ Validates whether specified block is value block or not.This call should
 
 **Parameters:**
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-blockNumber - Block number to be validated
+`blockNumber` - Block number to be validated
 
 **Returns:**
 
-boolean
+boolean - Returns specified block is value block or not.
 
 **Throws:**
 
@@ -357,21 +370,21 @@ Reads value from specified value block.This call should be preceded with
 
 **Parameters:**
 
-encrypted - false: Communication between device and card will be plain
+`encrypted` - false: Communication between device and card will be plain
             true: Communication between device and card will be encrypted
 
-macOnCmd - false: Command sent to card will not be MACed true: Command
+`macOnCmd` - false: Command sent to card will not be MACed true: Command
             sent to card will be MACed
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-blockNumber - Card value block number to be read. (range 0x00 to 0xFF
+`blockNumber` - Card value block number to be read. (range 0x00 to 0xFF
             depending card size)
 
 **Returns:**
 
-int
+int - Value read from value block
 
 **Throws:**
 
@@ -416,16 +429,16 @@ Writes value to a specified value block.This call should be preceded with
 
 **Parameters:**
 
-encrypted - false: Communication between device and card will be plain
+`encrypted` - false: Communication between device and card will be plain
             true: Communication between device and card will be encrypted
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-blockNumber - Card value block number to be written(range 0x00 to 0xFF
+`blockNumber` - Card value block number to be written(range 0x00 to 0xFF
             depending card size)
 
-value - Value to be written
+`value` - Value to be written
 
 **Returns:**
 
@@ -478,13 +491,13 @@ Increments contents of given value block by specified value and stores
 
 **Parameters:**
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-blockNumber - Card value block to be incremented(range 0x00 to 0xFF
+`blockNumber` - Card value block to be incremented(range 0x00 to 0xFF
             depending card size)
 
-value - Value to be incremented
+`value` - Value to be incremented
 
 **Returns:**
 
@@ -535,13 +548,13 @@ Decrements contents of given value block by specified value and stores
 
 **Parameters:**
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-blockNumber - Card value block to be decremented(range 0x00 to 0xFF
+`blockNumber` - Card value block to be decremented(range 0x00 to 0xFF
             depending card size)
 
-value - Value to be decremented
+`value` - Value to be decremented
 
 **Returns:**
 
@@ -566,10 +579,10 @@ Restores transfer buffer i.e. copies contents of specified value block to
 
 **Parameters:**
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-blockNumber - Card value block to be decremented(range 0x00 to 0xFF
+`blockNumber` - Card value block to be decremented(range 0x00 to 0xFF
             depending card size)
 
 **Returns:**
@@ -595,10 +608,10 @@ Transfers contents of value block stored in transfer buffer to specified
 
 **Parameters:**
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-blockNumber - Card block whose contents is replaced by transfer buffer(range
+`blockNumber` - Card block whose contents is replaced by transfer buffer(range
             0x00 to 0xFF depending card size).
 
 **Returns:**
@@ -626,14 +639,14 @@ Performs combined operation of increment() and transfer() on specified
 
 **Parameters:**
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-srcblockNumber - Source block for increment
+`srcblockNumber` - Source block for increment
 
-destBlockNumber - Destination block for transfer
+`destBlockNumber` - Destination block for transfer
 
-value - Value to be added
+`value` - Value to be added
 
 **Returns:**
 
@@ -679,14 +692,14 @@ Performs combined operation of decrement() and transfer() on specified
 
 **Parameters:**
 
-macOnResponse - false: Response received from card will not be MACed true:
+`macOnResponse` - false: Response received from card will not be MACed true:
             Response received from card will be MACed
 
-srcblockNumber - Source block for increment
+`srcblockNumber` - Source block for increment
 
-destBlockNumber - Destination block for transfer
+`destBlockNumber` - Destination block for transfer
 
-value - Value to be subtracted
+`value` - Value to be subtracted
 
 **Returns:**
 
@@ -711,7 +724,8 @@ Checks if the connection with the tag is enabled or not.This is a
 
 **Returns:**
 
-boolean
+boolean - true : if connection with the tag is enabled false : if the
+         connection with tag is not enabled
 
 **Throws:**
 

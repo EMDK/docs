@@ -28,11 +28,11 @@ Gets the version of the specified  VersionManager.VERSION_TYPE
 
 **Parameters:**
 
-versionKey -  VersionManager.VERSION_TYPE
+`versionKey` -  VersionManager.VERSION_TYPE
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Version number
 
 ##Public Enums
 

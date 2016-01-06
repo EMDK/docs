@@ -12,5 +12,5 @@ Returns EMV tag data list.
 
 **Returns:**
 
-java.util.ArrayList
+java.util.ArrayList - TagData EMVData data list.
 

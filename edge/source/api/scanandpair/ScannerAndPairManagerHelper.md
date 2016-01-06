@@ -18,11 +18,11 @@ Helper class. EMDK internal use only
 
 **Parameters:**
 
-emdkManager
+`emdkManager`
 
-context
+`context`
 
-emdkServiceConnection
+`emdkServiceConnection`
 
 **Returns:**
 
@@ -36,7 +36,7 @@ com.symbol.emdk.scanandpair.ScanAndPairManager
 
 **Parameters:**
 
-scanAndPairManager
+`scanAndPairManager`
 
 **Returns:**
 

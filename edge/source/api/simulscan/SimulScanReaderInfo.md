@@ -28,7 +28,8 @@ Returns the friendly name of the Device.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String
+ 		Returns the friendly name
 
 ### getDeviceType
 
@@ -46,7 +47,8 @@ Returns the reader device type
 
 **Returns:**
 
-com.symbol.emdk.simulscan.SimulScanReaderInfo.DeviceType
+com.symbol.emdk.simulscan.SimulScanReaderInfo.DeviceType - SimulScanDeviceType
+ 		Returns the SimulScanDeviceType
 
 ##Public Enums
 

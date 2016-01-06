@@ -28,7 +28,7 @@ Returns the raw decoded data as byte array.
 
 **Returns:**
 
-byte
+byte - Returns raw barcode data byte array.
 
 ### getData
 
@@ -38,7 +38,7 @@ Returns the scanned barcode data string encoded in UTF-8 format.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns barcode data string. Empty string will be returned if any error occurs.
 
 ### getLabelType
 
@@ -48,7 +48,7 @@ Returns label type of the scanned data.
 
 **Returns:**
 
-com.symbol.emdk.barcode.ScanDataCollection.LabelType
+com.symbol.emdk.barcode.ScanDataCollection.LabelType - Returns LabelType
 
 ### getTimeStamp
 
@@ -59,5 +59,5 @@ Returns the time at which the barcode was scanned.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns time stamp string
 

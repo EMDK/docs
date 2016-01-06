@@ -12,7 +12,7 @@ Returns the card read mode for the processed transaction. The ReadMode.ALL will 
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentDevice.ReadMode
+com.symbol.emdk.payment.PaymentDevice.ReadMode - ReadMode Card read mode.
 
 ### getAccountNumber
 
@@ -24,7 +24,7 @@ Returns the account number
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String Account number.
 
 ### getCardHolderName
 
@@ -34,7 +34,7 @@ Returns the card holder name in the format Last name/First name.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String Account holder name.
 
 ### getExpiryDate
 
@@ -44,7 +44,7 @@ Returns the expiry date in the format MMYY.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String Expiry date.
 
 ### getTrack1Data
 
@@ -54,7 +54,7 @@ Returns the track1 data.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String Track1 data.
 
 ### getTrack2Data
 
@@ -66,7 +66,7 @@ Returns the track2 data.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String Track2 data.
 
 ### getTrack3Data
 
@@ -78,7 +78,7 @@ Returns the track3 data.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - String Track3 data.
 
 ### getTrack1Status
 
@@ -131,7 +131,7 @@ Returns the Key Serial Number (KSN) used for the encrypting the data.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns key serial number.
 
 ### getDataEncryptionType
 
@@ -141,7 +141,7 @@ Returns the data encryption type used to encrypt the data.
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentDevice.DataEncryptionType
+com.symbol.emdk.payment.PaymentDevice.DataEncryptionType - Data encryption type.
 
 ### getTagData
 
@@ -153,7 +153,7 @@ Returns list of object containing EMV tags and its values.
 
 **Returns:**
 
-java.util.ArrayList
+java.util.ArrayList - String Tag data list.
 
 ### getCardEncodeType
 
@@ -163,5 +163,5 @@ Returns the type of encoding that was found on the card.
 
 **Returns:**
 
-com.symbol.emdk.payment.PaymentDevice.CardEncodeType
+com.symbol.emdk.payment.PaymentDevice.CardEncodeType - Returns Card Encoding Type.
 

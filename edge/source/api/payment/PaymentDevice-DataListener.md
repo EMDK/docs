@@ -31,7 +31,9 @@ This is the callback method upon data or status notification.
 
 **Parameters:**
 
-data - Payment data Object. Based on the type of the data
+`data` - Payment data Object. Based on the type of the data, this
+            object can type cast to corresponding data class to obtain
+            the data.
 
 **Returns:**
 

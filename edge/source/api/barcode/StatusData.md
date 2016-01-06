@@ -30,7 +30,7 @@ Returns the friendly name of scanner for which the status data is returned.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns scanner index to the supported devices list.
 
 ##Public Enums
 

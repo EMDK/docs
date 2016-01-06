@@ -22,7 +22,7 @@ This is the callback method upon scan status event occurs.
 
 **Parameters:**
 
-statusData - StatusData object.
+`statusData` - StatusData object.
 
 **Returns:**
 

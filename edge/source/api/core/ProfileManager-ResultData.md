@@ -12,7 +12,7 @@ Class for holding status of processProfileAsync method.
 
 **Returns:**
 
-com.symbol.emdk.EMDKResults
+com.symbol.emdk.EMDKResults - EMDKResults
 
 ### getProfileName
 

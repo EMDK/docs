@@ -23,7 +23,7 @@ This is the callback method upon data availability.
 
 **Parameters:**
 
-simulScanData
+`simulScanData`
 
 **Returns:**
 

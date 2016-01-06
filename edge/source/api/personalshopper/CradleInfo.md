@@ -12,7 +12,7 @@ Returns the serial number of the cradle. The empty string returned if not availa
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns serial number of the Cradle (null if not available)
 
 ### getPartNumber
 
@@ -22,7 +22,7 @@ Returns the part number of the cradle. The empty string returned if not availabl
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns part number of the Cradle (null if not available)
 
 ### getDateOfManufacture
 
@@ -33,7 +33,7 @@ Returns Date of manufacture in the format MM/DD/YY. i.e. 4/10/2014 means April 1
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns date of manufacture of the Cradle (null if not available)
 
 ### getHardwareID
 
@@ -43,7 +43,7 @@ Returns the hardware ID of the cradle.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns hardware id of the Cradle (null if not available)
 
 ### getFirmwareVersion
 
@@ -53,5 +53,5 @@ Return the firmware version of cradle.
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Returns firmware version of the Cradle (null if not available)
 

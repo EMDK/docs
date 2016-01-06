@@ -14,7 +14,7 @@ This method provides information if any of the previous request is pending.
 
 **Returns:**
 
-boolean
+boolean - Boolean value
 
 ### scanAndPair
 
@@ -29,11 +29,11 @@ This is an asynchronous method. The status of the scanAndPair() method will be r
 
 **Parameters:**
 
-pin - Pin required to pair with the Bluetooth device.
+`pin` - Pin required to pair with the Bluetooth device.
 
 **Returns:**
 
-com.symbol.emdk.scanandpair.ScanAndPairResults
+com.symbol.emdk.scanandpair.ScanAndPairResults - Returns success if the scan and pair request is successfully initiated.
 
 ### scanAndUnpair
 
@@ -47,7 +47,7 @@ This is an asynchronous method. The status of the scanAndUnpair() method will be
 
 **Returns:**
 
-com.symbol.emdk.scanandpair.ScanAndPairResults
+com.symbol.emdk.scanandpair.ScanAndPairResults - Returns success if the scan and unpair request is successfully initiated.
 
 ### getStatus
 
@@ -57,7 +57,7 @@ This method provides an option to get the current or recent status of scanAndPai
 
 **Returns:**
 
-com.symbol.emdk.scanandpair.StatusData
+com.symbol.emdk.scanandpair.StatusData - StatusData object.
 
 ### addStatusListener
 
@@ -67,7 +67,7 @@ The client can register to get status notification via callbacks.
 
 **Parameters:**
 
-listener
+`listener`
 
 **Returns:**
 
@@ -87,7 +87,7 @@ The client can un-register to get status notification via callbacks.
 
 **Parameters:**
 
-listener
+`listener`
 
 **Returns:**
 

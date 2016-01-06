@@ -18,5 +18,5 @@ Returns the SimulScanResults object that provides additional information on the 
 
 **Returns:**
 
-com.symbol.emdk.simulscan.SimulScanResults
+com.symbol.emdk.simulscan.SimulScanResults - SimulScanResults
 

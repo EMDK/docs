@@ -12,5 +12,5 @@ Returns the choice string selected by the user
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Choice string selected by the user.
 

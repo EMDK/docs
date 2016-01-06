@@ -24,9 +24,9 @@ Called to notify the client when the payment device has been connected or discon
 
 **Parameters:**
 
-deviceInfo - The payment device information.
+`deviceInfo` - The payment device information.
 
-connectionState - The payment device connection status object.
+`connectionState` - The payment device connection status object.
 
 **Returns:**
 

@@ -36,7 +36,7 @@ Called to notify the client when the EMDKManager object has been opened and its 
 
 **Parameters:**
 
-emdkManager
+`emdkManager`
 
 **Returns:**
 

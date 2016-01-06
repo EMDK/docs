@@ -14,7 +14,7 @@ This is the callback method to be called upon the processProfileAsync task compl
 
 **Parameters:**
 
-resultData - ResultData object.
+`resultData` - ResultData object.
 
 **Returns:**
 

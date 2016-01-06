@@ -23,9 +23,9 @@ Called to notify the client when the scanner device has been connected or discon
 
 **Parameters:**
 
-scannerInfo - The ScannerInfo object of the affected scanner.
+`scannerInfo` - The ScannerInfo object of the affected scanner.
 
-connectionState - The new connection state.
+`connectionState` - The new connection state.
 
 **Returns:**
 

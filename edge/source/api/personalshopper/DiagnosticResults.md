@@ -1,4 +1,4 @@
-###DiagnosticResults
+#DiagnosticResults
 
 Defines all the error codes the diagnostic API returns.
  <br><br>

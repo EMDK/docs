@@ -26,7 +26,7 @@ Returns scanner enabled state.
 
 **Returns:**
 
-boolean
+boolean - Returns true if scanner is enabled.
 
 ### isReadPending
 
@@ -36,7 +36,7 @@ Another read() cannot be submitted while a read is pending.
 
 **Returns:**
 
-boolean
+boolean - Returns true if a read is pending.
 
 ### getScannerInfo
 
@@ -46,7 +46,7 @@ Returns information about the  scanner device.
 
 **Returns:**
 
-com.symbol.emdk.barcode.ScannerInfo
+com.symbol.emdk.barcode.ScannerInfo - Returns the ScannerInfo object.
 
 ### getConfig
 
@@ -66,7 +66,8 @@ Gets the current configuration settings for this scanner device.
 
 **Returns:**
 
-com.symbol.emdk.barcode.ScannerConfig
+com.symbol.emdk.barcode.ScannerConfig - scannerConfig
+            The valid scanner configuration object will be returned on successful get.
 
 **Throws:**
 
@@ -92,7 +93,7 @@ Changes the settings for this scanner device. The unsupported parameters will be
 
 **Parameters:**
 
-scannerConfig - The Parameters to use for this scanner device.
+`scannerConfig` - The Parameters to use for this scanner device.
 
 **Returns:**
 
@@ -241,7 +242,7 @@ The client can register to get data notification via callbacks.
 
 **Parameters:**
 
-listener - The DataListener callabck object.
+`listener` - The DataListener callabck object.
 
 **Returns:**
 
@@ -255,7 +256,7 @@ The client can un-register to get data notification via callbacks.
 
 **Parameters:**
 
-listener
+`listener`
 
 **Returns:**
 
@@ -269,7 +270,7 @@ The client can register to get status notification via callbacks.
 
 **Parameters:**
 
-listener
+`listener`
 
 **Returns:**
 
@@ -283,7 +284,7 @@ The client can un-register to get status notification via callbacks.
 
 **Parameters:**
 
-listener
+`listener`
 
 **Returns:**
 
@@ -313,7 +314,7 @@ com.symbol.emdk.barcode.ScannerException
 
 **Parameters:**
 
-interfaceConfig
+`interfaceConfig`
 
 **Returns:**
 

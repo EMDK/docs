@@ -86,7 +86,7 @@ Enables connection between host device and Secure Access Module (SAM).
 
 **Parameters:**
 
-protocolType - Protocol to be used for communication between card reader
+`protocolType` - Protocol to be used for communication between card reader
             (SAM) and contactless cards. This parameter is added for future use only.
 
 **Returns:**
@@ -125,11 +125,11 @@ Retrieves version of smart card stack or connected smart card.
 
 **Parameters:**
 
-versionType
+`versionType`
 
 **Returns:**
 
-java.lang.String
+java.lang.String - Version string
 
 **Throws:**
 
@@ -153,17 +153,20 @@ Sends the Command APDU (C-APDU) (Application Protocol Data Unit) and
 
 **Parameters:**
 
-cmdApdu - Command APDU (C-APDU) to be processed by smart card
+`cmdApdu` - Command APDU (C-APDU) to be processed by smart card
 
-expectedRespLength - Length of expected response. Pass this parameter as 0
+`expectedRespLength` - Length of expected response. Pass this parameter as 0, when
+            expected response length is unknown while calling this API.
 
-userFormattedProtocolFrame - This parameter applicable for only T1 protocol. Typically user
+`userFormattedProtocolFrame` - This parameter applicable for only T1 protocol. Typically user
             will provide this parameter as false. true: User provides
-            frame header
+            frame header, Command APDU (C-APDU) and trailer. false: User
+            provides only Command APDU (C-APDU). Typically user will
+            provide this parameter as false.
 
 **Returns:**
 
-byte
+byte - Response APDU (R-APDU) received from smart card (tags).
 
 **Throws:**
 

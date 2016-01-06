@@ -18,9 +18,9 @@ Helper class. EMDK internal use only
 
 **Parameters:**
 
-context
+`context`
 
-emdkServiceConnection
+`emdkServiceConnection`
 
 **Returns:**
 
@@ -34,7 +34,7 @@ com.symbol.emdk.barcode.BarcodeManager
 
 **Parameters:**
 
-barcodeManager
+`barcodeManager`
 
 **Returns:**
 
