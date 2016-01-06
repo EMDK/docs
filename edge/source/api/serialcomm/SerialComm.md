@@ -51,7 +51,7 @@ com.symbol.emdk.serialcomm.SerialCommException
 
 ### write
 
-**public int write(byte data, int bytesToWrite)**
+**public int write(byte[] data, int bytesToWrite)**
 
 Writes a specified number of bytes from buffer to the opened communication channel. 
  This method returns the numbers bytes written. Exception will be thrown in case of any errors.

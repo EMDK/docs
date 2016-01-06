@@ -92,7 +92,7 @@ com.symbol.emdk.EMDKResults
 
 ### processProfile
 
-**public EMDKResults processProfile(java.lang.String profileName, ProfileManager.PROFILE_FLAG profileFlag, java.lang.String extraData)**
+**public EMDKResults processProfile(java.lang.String profileName, ProfileManager.PROFILE_FLAG profileFlag, java.lang.String[] extraData)**
 
 Processes the given profile based on the data provided and the flag and return status of the action. 
  
@@ -199,7 +199,7 @@ com.symbol.emdk.EMDKResults
 
 ### processProfileAsync
 
-**public EMDKResults processProfileAsync(java.lang.String profileName, ProfileManager.PROFILE_FLAG profileFlag, java.lang.String extraData)**
+**public EMDKResults processProfileAsync(java.lang.String profileName, ProfileManager.PROFILE_FLAG profileFlag, java.lang.String[] extraData)**
 
 Processes the given profile based on the data provided and the flag and return status of the request. 
  This is an asynchronous method and result will be returned through the registered callback.

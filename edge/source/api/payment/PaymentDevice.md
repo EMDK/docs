@@ -1102,7 +1102,7 @@ com.symbol.emdk.payment.PaymentResults - Returns PaymentResults.
 
 ### downloadFile
 
-**public PaymentResults downloadFile(PaymentDevice.DownloadType downloadType, byte fileData)**
+**public PaymentResults downloadFile(PaymentDevice.DownloadType downloadType, byte[] fileData)**
 
 downloadFile is an asynchronous call. The application must be able to download or update the file such as EMV parameter,Firmware file or font file to the payment Device.
  The  downloadFile status will be returned through the registered callback.Once application starts download, other requests are not allowed and the PREVIOUS_COMMAND_PENDING 

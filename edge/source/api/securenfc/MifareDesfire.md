@@ -496,7 +496,7 @@ The exception will be thrown if it fails to read the data
 
 ### writeData
 
-**public void writeData(byte fileID, MifareDesfire.FileCommMode fileCommMode, int writeOffset, byte writeDataBuffer)**
+**public void writeData(byte fileID, MifareDesfire.FileCommMode fileCommMode, int writeOffset, byte[] writeDataBuffer)**
 
 Writes data to standard or backup data file. Preceding authentication,
  either with the keys specified for Write or Read&Write access is
@@ -657,7 +657,7 @@ The exception will be thrown if it fails to read the data
 
 ### writeRecord
 
-**public void writeRecord(byte fileID, MifareDesfire.FileCommMode fileCommMode, int recordOffset, int recordSize, byte writeRecordBuffer)**
+**public void writeRecord(byte fileID, MifareDesfire.FileCommMode fileCommMode, int recordOffset, int recordSize, byte[] writeRecordBuffer)**
 
 Writes records to cyclic or linear record file. Depending on
  communication settings of file, data read from card will be either plain
